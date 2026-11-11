@@ -107,12 +107,12 @@ const LEALTO_CALENDLY_URL = ""; // VALIDAR: Lealto's Calendly event URL (e.g. ht
 
   /* ---------- loyalty mechanics switcher (real app screens) ---------- */
   var MECH = {
-    sellos: ['Sellos', 'Lo más simple para que tus clientes regresen seguido y vuelvan a comprar.', 'Sellos-1000.webp', 930],
-    cashback: ['Cashback', 'Cada compra le devuelve algo a tu cliente y le da una razón para regresar.', 'Cashback-1000.webp', 930],
+    sellos: ['Sellos', 'Cada visita suma un sello. Lo más simple para que regresen seguido.', 'Sellos-1000.webp', 930],
+    cashback: ['Cashback', 'Cada compra le regresa saldo a tu cliente para su próxima visita.', 'Cashback-1000.webp', 930],
     premios: ['Premios', 'Tus clientes juntan puntos con el tiempo y los cambian por premios.', 'Premios-1000.webp', 930],
-    cuponera: ['Cuponera', 'Lanza promociones y descuentos que controlas y puedes medir.', 'Cuponera-1000.webp', 906],
-    rifas: ['Rifas electrónicas', 'Sorteos en los que tus clientes participan con sus compras o acciones, con trazabilidad.', 'Gasolineras-1000.webp', 930],
-    membresias: ['Membresías', 'Para acceso exclusivo, suscripciones o beneficios que se repiten.', 'Membresias-1000.webp', 905],
+    cuponera: ['Cuponera', 'Cupones con límite de usos, horario y reporte de canjes.', 'Cuponera-1000.webp', 906],
+    rifas: ['Rifas electrónicas', 'Tus clientes participan en sorteos con sus compras o acciones. Todo queda registrado.', 'Gasolineras-1000.webp', 930],
+    membresias: ['Membresías', 'Beneficios solo para miembros: acceso exclusivo o suscripción.', 'Membresias-1000.webp', 905],
     personalizado: ['Personalizado', 'Si tu negocio necesita una lógica distinta, la diseñamos contigo.', 'Personalizado-1000.webp', 960]
   };
   var mech = $('[data-mech]');
@@ -246,6 +246,10 @@ const LEALTO_CALENDLY_URL = ""; // VALIDAR: Lealto's Calendly event URL (e.g. ht
   var step2 = modal.querySelector('[data-dm-step="2"]');
   var calWrap = modal.querySelector('[data-dm-cal]');
   var fallback = modal.querySelector('[data-dm-fallback]');
+  var micro = modal.querySelector('[data-dm-micro]');
+  var stepTag = modal.querySelector('[data-dm-steptag]');
+  var TAG_CAL = 'Paso 2 de 2 · Elige tu horario', TAG_FB = 'Paso 2 de 2 · Confirma tu demo';
+  if (LEALTO_CALENDLY_URL) { micro.textContent = 'En el siguiente paso eliges día y hora.'; stepTag.textContent = TAG_CAL; }
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var lastTrigger = null, closeTimer = null, calendlyLoading = null;
   var FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea,[tabindex]:not([tabindex="-1"])';
@@ -350,13 +354,14 @@ const LEALTO_CALENDLY_URL = ""; // VALIDAR: Lealto's Calendly event URL (e.g. ht
     var q = []; p.forEach(function (val, key) { q.push(key + '=' + encodeURIComponent(val)); });
     return LEALTO_CALENDLY_URL + (LEALTO_CALENDLY_URL.indexOf('?') > -1 ? '&' : '?') + q.join('&');
   }
-  function showFallback() { calWrap.innerHTML = ''; fallback.hidden = false; }
+  function showFallback() { calWrap.innerHTML = ''; fallback.hidden = false; stepTag.textContent = TAG_FB; }
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!validate()) return;
     showStep(2);
     calWrap.innerHTML = ''; fallback.hidden = true;
+    stepTag.textContent = LEALTO_CALENDLY_URL ? TAG_CAL : TAG_FB;
     if (!LEALTO_CALENDLY_URL) { showFallback(); }
     else {
       var url = calendlyUrl();
@@ -371,5 +376,27 @@ const LEALTO_CALENDLY_URL = ""; // VALIDAR: Lealto's Calendly event URL (e.g. ht
   modal.querySelector('[data-dm-back]').addEventListener('click', function () {
     calWrap.innerHTML = ''; showStep(1);
     var first = form.querySelector('input'); if (first) first.focus();
+  });
+})();
+
+/* ---------- Use-case pages: mechanics tabs (Attio solution-page tab switcher) ---------- */
+(function () {
+  'use strict';
+  Array.prototype.forEach.call(document.querySelectorAll('[data-uc-tabs]'), function (box) {
+    var tabs = Array.prototype.slice.call(box.querySelectorAll('[role="tab"]'));
+    var panels = Array.prototype.slice.call(box.querySelectorAll('[role="tabpanel"]'));
+    var caps = Array.prototype.slice.call(box.querySelectorAll('[data-uc-cap]'));
+    function select(i, focus) {
+      tabs.forEach(function (t, k) { var on = k === i; t.setAttribute('aria-selected', on ? 'true' : 'false'); t.tabIndex = on ? 0 : -1; if (on && focus) t.focus(); });
+      panels.forEach(function (p, k) { p.classList.toggle('is-on', k === i); });
+      caps.forEach(function (c, k) { c.hidden = k !== i; });
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(i); });
+      t.addEventListener('keydown', function (e) {
+        var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (!d) return;
+        e.preventDefault(); select((i + d + tabs.length) % tabs.length, true);
+      });
+    });
   });
 })();
