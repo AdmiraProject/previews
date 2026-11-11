@@ -90,6 +90,11 @@ const LEALTO_CALENDLY_URL = ""; // VALIDAR: Lealto's Calendly event URL (e.g. ht
     var card = $('.dmodal-card', dm), form = $('#dmForm'), s1 = $('.dm-step1', dm), s2 = $('.dm-step2', dm);
     var cal = $('#dmCal'), fb = $('#dmFallback'), lastTrigger = null, calLoaded = null;
     var F = function (id) { return document.getElementById(id); };
+    // truthful step-1 note: depends on whether a real Calendly URL is configured
+    var micro = F('dmMicro');
+    if (micro) micro.textContent = LEALTO_CALENDLY_URL ? 'En el siguiente paso eliges día y hora.' : 'En el siguiente paso confirmas tu demo en lealto.com.';
+    // step 2 header matches v1: "Confirma tu demo" while the calendar is not connected, "Elige tu horario" once it is
+    if (LEALTO_CALENDLY_URL) { var s2t = F('dmStep2T'), s2 = F('dmStep2'); if (s2t) s2t.textContent = 'Elige tu horario'; if (s2) s2.setAttribute('aria-label', 'Paso 2 de 2: elige tu horario'); }
 
     function lock(on) {
       if (on) {
@@ -113,6 +118,8 @@ const LEALTO_CALENDLY_URL = ""; // VALIDAR: Lealto's Calendly event URL (e.g. ht
       lastTrigger = trigger || document.activeElement;
       showStep(1);
       if (email) F('dm-email').value = email;
+      var indPre = document.body.getAttribute('data-industry');
+      if (indPre && !F('dm-ind').value) F('dm-ind').value = indPre;
       dm.hidden = false;
       requestAnimationFrame(function () { dm.classList.add('is-open'); });
       lock(true);
