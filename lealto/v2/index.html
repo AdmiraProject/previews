@@ -1,0 +1,833 @@
+<!doctype html>
+<!--
+VALIDAR (confirmar con Lealto / Alfredo Rojas antes de publicar):
+1. Conteo de módulos: el sitio ES lista 18, el EN dice "+30", el brief dice "35+". Aquí NO se muestra ningún número.
+2. WhatsApp / enlace de agenda: no existe número público ni calendario. No se muestra CTA de WhatsApp (ver slot comentado en la barra móvil).
+3. Permisos del muro de logos y de casos (Applebee's, Chevrolet Peregrina, BTicino, Santandreu, Fill n Go, Moyo, Vainilla, MediSmart, Spectrum Brands, Protexa).
+4. HubSpot e integraciones por nombre: solo se muestran categorías (POS, CRM, ERP, NPS, E-commerce, API). Sin logos de integraciones.
+5. Atribución de Max Borge: "Director de Mercado - Legrand Centroamerica" (home) vs "Max Borge de BTicino" (caso). Aquí: BTicino.
+6. ICP "15–50 puntos de venta" (brief) vs "+12 Puntos de venta" (plan Corporativo). No se muestra ninguna cifra de puntos de venta.
+7. "Somos AWS Partners" y "Soporte 24/7 vía plataforma de tiquetes": confirmar vigencia antes de reutilizar.
+8. "+125 implementaciones" y "14 países de Latinoamérica": confirmar que siguen vigentes (fuente: presentación corporativa 2026).
+9. Cuentas activas en México para la barra superior: Applebee's México, Protexa, Chevrolet Peregrina (Puebla).
+10. Tiempos de implementación: sin cifra pública. La sección "Cómo se implementa" no muestra plazos.
+11. Ortografía Andrés/Andres Vargas (Vainilla Beauty) y cuál de sus dos citas usar. Aquí: cita corta del home.
+12. Una línea por industria solo existe públicamente para 6 industrias; las otras 6 se muestran sin descripción.
+13. Pantalla del hero: proviene del set de demos por industria (demo Automotriz "TOPCARS"), rotulada como ejemplo. Si Lealto autoriza una pantalla real de cliente (p. ej. Applebee’s México), reemplazarla y atribuirla.
+14. Planes Pro / Plus / Corporativo: solo se mencionan en la FAQ (sin precios). Confirmar si se quiere una fila de planes.
+15. Insignia de Huawei AppGallery solo disponible en inglés ("EXPLORE IT ON"); pedir versión en español.
+-->
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lealto · App de lealtad con su marca para empresas medianas y grandes</title>
+<meta name="description" content="Lealto es una plataforma de fidelización y Customer Engagement: lealtad, cupones, encuestas, rifas, ventas en la app y notificaciones push en una experiencia digital con su marca, integrada a su POS, CRM o ERP.">
+<link rel="icon" type="image/png" href="../assets/logo/favicon.png">
+<link rel="preload" href="../assets/fonts/Metropolis-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Shared SVG defs: gradients, L mark and icon set -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gL" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#108FD1"/><stop offset="1" stop-color="#12F8FC"/></linearGradient>
+    <linearGradient id="gS" x1="0" y1="1" x2="1" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#108FD1"/><stop offset="1" stop-color="#12F8FC"/></linearGradient>
+    <symbol id="lmark" viewBox="0 0 21 36.5">
+      <path d="M12.37 1.27C12.37.57 12.94 0 13.64 0h6.01c.7 0 1.27.57 1.27 1.27v21.56c0 .7-.57 1.27-1.27 1.27h-6.01c-.7 0-1.27-.57-1.27-1.27V1.27Z" fill="url(#gL)"/>
+      <path d="M1.27 0C.57 0 0 .57 0 1.27V35.2c0 .7.57 1.27 1.27 1.27h18.38c.7 0 1.27-.57 1.27-1.27v-6.03c0-.7-.57-1.27-1.27-1.27H9.82c-.7 0-1.27-.57-1.27-1.27V1.27C8.55.57 7.99 0 7.29 0H1.27Z" fill="url(#gL)"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z" fill="currentColor"/></symbol>
+    <symbol id="i-play-c" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9.2"/><path d="M10 8.6v6.8l5.4-3.4z" stroke-linejoin="round"/></g></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.5 3.7 5.5 3.7 9s-1.3 6.5-3.7 9c-2.4-2.5-3.7-5.5-3.7-9S9.6 5.5 12 3z"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.6 2.6L16 9.6"/></g></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2.2"/><path d="M11 18h2"/></g></symbol>
+    <!-- module family icons (stroke uses the logo gradient) -->
+    <symbol id="m-star" viewBox="0 0 48 48"><g fill="none" stroke="url(#gL)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><circle cx="24" cy="24" r="17"/><path d="M24 14l3.1 6.4 7 1-5.1 5 1.2 7L24 30.1l-6.2 3.3 1.2-7-5.1-5 7-1z"/></g></symbol>
+    <symbol id="m-ticket" viewBox="0 0 48 48"><g fill="none" stroke="url(#gL)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M7 14h34v6a4 4 0 0 0 0 8v6H7v-6a4 4 0 0 0 0-8z"/><path d="M19.5 29.5l9-11"/><circle cx="19.5" cy="19.5" r="1.6"/><circle cx="28.5" cy="28.5" r="1.6"/></g></symbol>
+    <symbol id="m-survey" viewBox="0 0 48 48"><g fill="none" stroke="url(#gL)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="11" y="8" width="26" height="33" rx="4"/><path d="M18 8h12v5H18zM17 22h3M24 22h7M17 29h3M24 29h7M17 35.5h3M24 35.5h4"/></g></symbol>
+    <symbol id="m-gift" viewBox="0 0 48 48"><g fill="none" stroke="url(#gL)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="9" y="20" width="30" height="20" rx="3"/><path d="M7 14h34v6H7zM24 14v26M24 14c-3-6-10-6.5-10-2.5S19 14 24 14zm0 0c3-6 10-6.5 10-2.5S29 14 24 14z"/></g></symbol>
+    <symbol id="m-bag" viewBox="0 0 48 48"><g fill="none" stroke="url(#gL)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M10 16h28l-2 25H12z"/><path d="M18 16v-3a6 6 0 0 1 12 0v3M18 23v1.5a6 6 0 0 0 12 0V23"/></g></symbol>
+    <symbol id="m-bell" viewBox="0 0 48 48"><g fill="none" stroke="url(#gL)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M12 32V22a12 12 0 0 1 24 0v10l3 4H9z"/><path d="M20 39.5a4 4 0 0 0 8 0M35 9.5c2.6 1.6 4.4 4 5 7M13 9.5c-2.6 1.6-4.4 4-5 7"/></g></symbol>
+    <symbol id="m-sliders" viewBox="0 0 48 48"><g fill="none" stroke="url(#gL)" stroke-width="3" stroke-linecap="round"><path d="M9 14h18M35 14h4M9 24h6M23 24h16M9 34h20M37 34h2"/><circle cx="31" cy="14" r="4"/><circle cx="19" cy="24" r="4"/><circle cx="33" cy="34" r="4"/></g></symbol>
+    <symbol id="m-plus" viewBox="0 0 48 48"><g fill="none" stroke="url(#gL)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="8" y="8" width="14" height="14" rx="3"/><rect x="26" y="8" width="14" height="14" rx="3"/><rect x="8" y="26" width="14" height="14" rx="3"/><path d="M33 27v12M27 33h12"/></g></symbol>
+    <symbol id="m-code" viewBox="0 0 48 48"><g fill="none" stroke="url(#gL)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M16 15l-9 9 9 9M32 15l9 9-9 9M27 11l-6 26"/></g></symbol>
+    <symbol id="d-data" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></g></symbol>
+    <symbol id="d-link" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></g></symbol>
+    <symbol id="d-cloud" viewBox="0 0 24 24"><path d="M7 18.5h10.2a4.2 4.2 0 0 0 .6-8.4A6 6 0 0 0 6.3 11.6 3.5 3.5 0 0 0 7 18.5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="s-fb" viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.2c0-.9.3-1.4 1.5-1.4h1.4V5.1c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7V11H8.4v3h2.3v7z" fill="currentColor"/></symbol>
+    <symbol id="s-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.8"/></g><circle cx="16.8" cy="7.2" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="s-yt" viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.3 5 12 5 12 5s-6.3 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.7 2 12 2 12s0 3.3.4 4.8a2.5 2.5 0 0 0 1.8 1.8c1.5.4 7.8.4 7.8.4s6.3 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.5.4-4.8.4-4.8s0-3.3-.4-4.8zM10 15V9l5.2 3z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<!-- ========== Promo bar + nav (sticky) ========== -->
+<div class="site-top" id="top">
+  <div class="promo" id="promo">
+    <p class="promo-txt">Lealto en México: Applebee’s México, Protexa y Chevrolet Peregrina operan su programa con Lealto. <a class="promo-link" href="#casos">Ver casos reales</a></p>
+    <button class="promo-x" type="button" aria-label="Cerrar aviso"><svg width="20" height="20"><use href="#i-close"/></svg></button>
+  </div>
+  <header class="nav" id="nav">
+    <div class="nav-in w1320">
+      <a class="nav-logo" href="#top" aria-label="Lealto, inicio">
+        <img class="logo-dark" src="../assets/logo/logo-default.svg" width="108" height="37" alt="Lealto">
+        <img class="logo-light" src="../assets/logo/logo-default-alt.svg" width="108" height="37" alt="" aria-hidden="true">
+      </a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="#plataforma">Plataforma</a>
+        <a href="#modulos">Módulos</a>
+        <a href="#industrias">Industrias</a>
+        <a href="#casos">Casos de éxito</a>
+        <a href="#partners">Partners</a>
+      </nav>
+      <div class="nav-right">
+        <a class="nav-lang" href="https://lealto.com/en/" hreflang="en"><svg width="20" height="20" aria-hidden="true"><use href="#i-globe"/></svg>EN</a>
+        <span class="nav-div" aria-hidden="true"></span>
+        <a class="nav-faq" href="#faq">Preguntas frecuentes</a>
+        <a class="btn btn-primary btn-sm" href="https://lealto.com/contactenos/">Solicitar demo estratégica</a>
+      </div>
+      <button class="nav-burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Abrir menú"><svg width="24" height="24"><use href="#i-menu"/></svg></button>
+    </div>
+    <nav class="mnav" id="mnav" aria-label="Menú móvil" hidden>
+      <a href="#plataforma">Plataforma</a>
+      <a href="#modulos">Módulos</a>
+      <a href="#industrias">Industrias</a>
+      <a href="#casos">Casos de éxito</a>
+      <a href="#implementacion">Cómo se implementa</a>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a href="#partners">Partners</a>
+      <a href="https://lealto.com/en/" hreflang="en">English</a>
+      <a class="btn btn-primary btn-block" href="https://lealto.com/contactenos/">Solicitar demo estratégica</a>
+    </nav>
+  </header>
+</div>
+
+<main id="main">
+
+<!-- ========== 1. HERO ========== -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-grid w1320">
+    <div class="hero-copy">
+      <p class="eyebrow-chip">
+        <svg width="12" height="20" aria-hidden="true"><use href="#lmark"/></svg>
+        <span>Plataforma de lealtad</span><span class="muted">para empresas medianas y grandes</span>
+      </p>
+      <div class="hero-text">
+        <h1 id="hero-h" class="h1">Su propia app de lealtad, con su marca</h1>
+        <p class="lead hero-sub">Para que sus clientes regresen: lealtad, cupones, encuestas, rifas, ventas en la app y notificaciones push, integrados a su POS, CRM o ERP.</p>
+      </div>
+      <div class="hero-form-wrap">
+        <form class="email-form" action="https://lealto.com/contactenos/" method="get" data-goto="https://lealto.com/contactenos/">
+          <label class="sr-only" for="hero-email">Correo de trabajo</label>
+          <input id="hero-email" type="email" autocomplete="email" placeholder="Correo de trabajo*" required>
+          <button class="btn btn-primary" type="submit">Solicitar demo estratégica</button>
+        </form>
+        <p class="form-note">Le llevaremos al formulario de demo de Lealto.</p>
+      </div>
+      <button class="tour-link" type="button" data-video-open><svg width="24" height="24" aria-hidden="true"><use href="#i-play-c"/></svg>Ver Lealto en video</button>
+      <ul class="accolades" aria-label="Lealto en cifras">
+        <li><svg width="22" height="22" aria-hidden="true"><use href="#i-globe"/></svg><strong>14 países</strong><span>de Latinoamérica</span></li>
+        <li><svg width="22" height="22" aria-hidden="true"><use href="#i-check"/></svg><strong>+125</strong><span>implementaciones</span></li>
+        <li><svg width="22" height="22" aria-hidden="true"><use href="#i-phone"/></svg><strong>App Store · Google Play</strong><span>y Huawei AppGallery</span></li>
+      </ul>
+    </div>
+
+    <div class="hero-visual" role="img" aria-label="Ejemplo de app de marca creada con Lealto (demo Automotriz), con tarjetas de módulos ilustrativas">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="phone hero-phone">
+        <div class="phone-status" aria-hidden="true"><span>9:41</span><i class="island"></i><span class="bat"></span></div>
+        <img class="phone-screen" src="../assets/product/screen-2025-05_View3-1.webp" width="600" height="1176" alt="Ejemplo de app de marca de la demo Automotriz de Lealto: saldo acumulado, nivel del usuario y lista de premios" fetchpriority="high">
+      </div>
+      <div class="fcard fc-push" aria-hidden="true">
+        <span class="fc-ic"><svg width="12" height="20"><use href="#lmark"/></svg></span>
+        <span class="fc-t"><b>Notificación push</b><em>Tiene un cupón nuevo esperándole</em></span>
+      </div>
+      <div class="fcard fc-stamps" aria-hidden="true">
+        <b>Sellos</b>
+        <span class="stamps"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        <em>Recompra frecuente</em>
+      </div>
+      <div class="fcard fc-pos" aria-hidden="true">
+        <span class="fc-ok"><svg width="16" height="16"><use href="#i-check"/></svg></span>
+        <span class="fc-t"><b>Web POS · Factura registrada</b><em>Puntos acreditados en tiempo real</em></span>
+      </div>
+      <p class="hero-cap">Ejemplo de app de marca · demo Automotriz de Lealto. Tarjetas: interfaz ilustrativa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 2. PRODUCT SUITE (6 module families) ========== -->
+<section class="sec suite bg-sky" id="modulos" aria-labelledby="suite-h">
+  <div class="w1320 suite-in">
+    <header class="sec-head">
+      <h2 id="suite-h" class="h2">Defina los módulos según los objetivos de su programa</h2>
+      <p class="lead muted">Desde activación comercial hasta data, automatización y comunicación, Lealto ofrece una arquitectura modular lista para evolucionar con su estrategia.</p>
+    </header>
+    <div class="tiles">
+      <article class="tile rv">
+        <span class="tile-ic"><svg width="44" height="44" aria-hidden="true"><use href="#m-star"/></svg></span>
+        <div class="tile-b">
+          <h3 class="t24"><a class="tile-a" href="https://lealto.com/modulos/">Lealtad<svg class="tile-arr" width="24" height="24" aria-hidden="true"><use href="#i-arrow"/></svg></a></h3>
+          <p class="body muted">Puntos, cashback, sellos y niveles de usuario para incentivar el retorno y la recompra en cada transacción.</p>
+          <a class="ulink" href="https://lealto.com/contactenos/">Solicitar demo</a>
+        </div>
+      </article>
+      <article class="tile rv">
+        <span class="tile-ic"><svg width="44" height="44" aria-hidden="true"><use href="#m-ticket"/></svg></span>
+        <div class="tile-b">
+          <h3 class="t24"><a class="tile-a" href="https://lealto.com/modulo/cupones/">Cupones y campañas<svg class="tile-arr" width="24" height="24" aria-hidden="true"><use href="#i-arrow"/></svg></a></h3>
+          <p class="body muted">Cuponera electrónica, anuncios y programación de campañas para activar promociones de forma controlada y medible.</p>
+          <a class="ulink" href="https://lealto.com/contactenos/">Solicitar demo</a>
+        </div>
+      </article>
+      <article class="tile rv">
+        <span class="tile-ic"><svg width="44" height="44" aria-hidden="true"><use href="#m-survey"/></svg></span>
+        <div class="tile-b">
+          <h3 class="t24"><a class="tile-a" href="https://lealto.com/modulo/encuestas-es/">Encuestas y datos<svg class="tile-arr" width="24" height="24" aria-hidden="true"><use href="#i-arrow"/></svg></a></h3>
+          <p class="body muted">Encuestas, actualización de datos y datos custom para obtener retroalimentación y first-party data accionable.</p>
+          <a class="ulink" href="https://lealto.com/contactenos/">Solicitar demo</a>
+        </div>
+      </article>
+      <article class="tile rv">
+        <span class="tile-ic"><svg width="44" height="44" aria-hidden="true"><use href="#m-gift"/></svg></span>
+        <div class="tile-b">
+          <h3 class="t24"><a class="tile-a" href="https://lealto.com/modulo/rifas-es/">Rifas, juegos y referidos<svg class="tile-arr" width="24" height="24" aria-hidden="true"><use href="#i-arrow"/></svg></a></h3>
+          <p class="body muted">Sorteos digitales con trazabilidad, juegos y referidos para hacer crecer su comunidad de forma orgánica.</p>
+          <a class="ulink" href="https://lealto.com/contactenos/">Solicitar demo</a>
+        </div>
+      </article>
+      <article class="tile rv">
+        <span class="tile-ic"><svg width="44" height="44" aria-hidden="true"><use href="#m-bag"/></svg></span>
+        <div class="tile-b">
+          <h3 class="t24"><a class="tile-a" href="https://lealto.com/modulo/pre-pago-giftcards/">Ventas en la app<svg class="tile-arr" width="24" height="24" aria-hidden="true"><use href="#i-arrow"/></svg></a></h3>
+          <p class="body muted">E-commerce, giftcards y pre-pago para que sus clientes compren productos o servicios desde su app.</p>
+          <a class="ulink" href="https://lealto.com/contactenos/">Solicitar demo</a>
+        </div>
+      </article>
+      <article class="tile rv">
+        <span class="tile-ic"><svg width="44" height="44" aria-hidden="true"><use href="#m-bell"/></svg></span>
+        <div class="tile-b">
+          <h3 class="t24"><a class="tile-a" href="https://lealto.com/modulo/notificaciones-push-es/">Automatización y push<svg class="tile-arr" width="24" height="24" aria-hidden="true"><use href="#i-arrow"/></svg></a></h3>
+          <p class="body muted">Notificaciones push, emails automáticos, segmentación y journeys para una comunicación constante y directa.</p>
+          <a class="ulink" href="https://lealto.com/contactenos/">Solicitar demo</a>
+        </div>
+      </article>
+    </div>
+    <div class="banner rv">
+      <div class="banner-media"><img src="../assets/illustrations/lealto-app-a-la-medida.svg" width="264" height="154" alt="" loading="lazy"></div>
+      <div class="banner-b">
+        <h3 class="t24">Desarrollo a la medida</h3>
+        <p class="lead muted">Como propietarios de la tecnología, adaptamos Lealto a los requerimientos específicos de su proyecto: módulos, funciones e integraciones.</p>
+      </div>
+      <div class="banner-ctas">
+        <a class="btn btn-primary" href="https://lealto.com/contactenos/">Solicitar demo</a>
+        <a class="btn btn-outline" href="https://lealto.com/desarrollo-de-app-a-la-medida/">Conocer el proceso</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 3. PLATFORM RIVER (3 alternating rows) ========== -->
+<section class="sec river" id="plataforma" aria-labelledby="river-h">
+  <div class="w1128">
+    <header class="sec-head">
+      <h2 id="river-h" class="h2">Los 4 pilares de una implementación Lealto</h2>
+      <p class="lead muted">Cada despliegue de Lealto combina experiencia de usuario, operación, control administrativo e integración para generar valor real de negocio.</p>
+    </header>
+
+    <div class="rows">
+      <!-- Row 1 -->
+      <div class="row">
+        <div class="row-text rv">
+          <p class="kicker">Pilar 1</p>
+          <h3 class="h3">Experiencia digital white-label</h3>
+          <p class="lead muted">Una experiencia móvil completamente alineada a su marca, diseñada para convertirse en un canal propio de engagement. Lealto se integra con sus sistemas para registrar transacciones y consolidar datos.</p>
+          <div class="ccard">
+            <img class="ccard-logo" src="../assets/clients/logo_chevrolet_peregrina-trim.png" width="300" height="124" alt="Chevrolet Peregrina" loading="lazy">
+            <p class="ccard-num">Más del 85%</p>
+            <p class="body muted">de los usuarios registrados usan la app al menos una vez al mes. Chevrolet Peregrina, Puebla.</p>
+            <a class="ulink" href="https://lealto.com/caso-de-exito/sin-categoria/chevrolet-peregrina/">Leer caso</a>
+          </div>
+        </div>
+        <div class="row-media mech" data-anim>
+          <span class="ui-label">Pantallas de ejemplo de Lealto</span>
+          <nav class="mech-pills" aria-label="Mecánicas de lealtad">
+            <a class="mech-pill" href="#mech-sellos" aria-current="true">Sellos</a>
+            <a class="mech-pill" href="#mech-cashback">Cashback</a>
+            <a class="mech-pill" href="#mech-premios">Premios</a>
+            <a class="mech-pill" href="#mech-cuponera">Cuponera</a>
+            <a class="mech-pill" href="#mech-rifas">Rifas</a>
+            <a class="mech-pill" href="#mech-membresias">Membresías</a>
+            <a class="mech-pill" href="#mech-personalizado">Personalizado</a>
+          </nav>
+          <div class="mech-track" id="mechTrack" tabindex="0" role="region" aria-label="Mecánicas de activación y recompensa">
+            <figure class="mech-panel" id="mech-sellos">
+              <img src="../assets/product/mech-Sellos-1104.webp" width="1104" height="1352" alt="Pantalla de ejemplo de Lealto: Plan de lealtad Sellos" loading="lazy">
+              <figcaption><b>Plan de lealtad Sellos</b><span>Ideal para dinámicas simples de recurrencia y recompra frecuente.</span></figcaption>
+            </figure>
+            <figure class="mech-panel" id="mech-cashback">
+              <img src="../assets/product/mech-Cashback-1104.webp" width="1104" height="1352" alt="Pantalla de ejemplo de Lealto: Plan de lealtad Cashback" loading="lazy">
+              <figcaption><b>Plan de lealtad Cashback</b><span>Perfecto para incentivar retorno y construir valor percibido en cada transacción.</span></figcaption>
+            </figure>
+            <figure class="mech-panel" id="mech-premios">
+              <img src="../assets/product/mech-Premios-1104.webp" width="1104" height="1352" alt="Pantalla de ejemplo de Lealto: Plan de lealtad Premios" loading="lazy">
+              <figcaption><b>Plan de lealtad Premios</b><span>Diseñado para modelos donde el usuario acumula y canjea valor a lo largo del tiempo.</span></figcaption>
+            </figure>
+            <figure class="mech-panel" id="mech-cuponera">
+              <img src="../assets/product/mech-Cuponera-1104.webp" width="1104" height="1185" alt="Pantalla de ejemplo de Lealto: Cuponera electrónica" loading="lazy">
+              <figcaption><b>Cuponera electrónica</b><span>Permite activar promociones, descuentos y estímulos de consumo de forma controlada y medible.</span></figcaption>
+            </figure>
+            <figure class="mech-panel" id="mech-rifas">
+              <img src="../assets/product/mech-Gasolineras-1104.webp" width="1104" height="1352" alt="Pantalla de ejemplo de Lealto: Rifas electrónicas" loading="lazy">
+              <figcaption><b>Rifas electrónicas</b><span>Adecuado para campañas promocionales con lógica de participación, acciones o sorteos con trazabilidad.</span></figcaption>
+            </figure>
+            <figure class="mech-panel" id="mech-membresias">
+              <img src="../assets/product/mech-Membresias-1104.webp" width="1104" height="1186" alt="Pantalla de ejemplo de Lealto: Plan de lealtad Membresías" loading="lazy">
+              <figcaption><b>Plan de lealtad Membresías</b><span>Útil para modelos de acceso exclusivo, suscripción o beneficios recurrentes.</span></figcaption>
+            </figure>
+            <figure class="mech-panel" id="mech-personalizado">
+              <img src="../assets/product/mech-Personalizado-1104.webp" width="1104" height="1026" alt="Pantalla de ejemplo de Lealto: Plan personalizado" loading="lazy">
+              <figcaption><b>Plan personalizado</b><span>Para necesidades específicas donde la empresa requiere una lógica de activación diferenciada.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="row row-rev">
+        <div class="row-text rv">
+          <p class="kicker">Pilar 2</p>
+          <h3 class="h3">Capa operativa en punto de venta</h3>
+          <p class="lead muted">Con Web POS y App POS, su personal registra transacciones, acredita y canjea beneficios, valida cupones y registra clientes en tiempo real. O integre su propio POS vía API.</p>
+          <div class="ccard">
+            <img class="ccard-logo ccard-logo-tile" src="../assets/clients/logo_fillngo.png" width="472" height="232" alt="Fill n Go" loading="lazy">
+            <p class="ccard-num">−90%</p>
+            <p class="body muted">en costos de impresión y logística al digitalizar sus rifas con QR desde la factura.</p>
+            <a class="ulink" href="https://lealto.com/caso-de-exito/sin-categoria/fill-n-go/">Leer caso</a>
+          </div>
+        </div>
+        <div class="row-media ui-pos" data-anim>
+          <span class="ui-label">Interfaz ilustrativa</span>
+          <div class="ui-card pos">
+            <div class="pos-top"><span class="pos-brand"><svg width="10" height="17" aria-hidden="true"><use href="#lmark"/></svg>Web POS</span><span class="pos-store">Sucursal Centro</span></div>
+            <div class="pos-tabs" aria-hidden="true"><span class="on">Acumular</span><span>Canjear</span><span>Cupón</span></div>
+            <div class="pos-field"><span>N.º de factura</span><b class="typed" data-text="F-0048213">F-0048213</b></div>
+            <div class="pos-field"><span>Monto de la compra</span><b class="typed" data-text="$ 640.00">$ 640.00</b></div>
+            <div class="pos-btn">Registrar transacción</div>
+            <div class="pos-ok"><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span><b>Transacción registrada</b><em>Puntos acreditados al cliente</em></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="row">
+        <div class="row-text rv">
+          <p class="kicker">Pilar 3</p>
+          <h3 class="h3">Centro de control administrativo</h3>
+          <p class="lead muted">Un dashboard centralizado para administrar contenidos, campañas, reglas, dinámicas, usuarios y resultados de forma autónoma, con programación de campañas y segmentación de usuarios.</p>
+          <div class="ccard">
+            <img class="ccard-logo" src="../assets/clients/logo_applebees-pad.png" width="372" height="212" alt="Applebee’s México" loading="lazy">
+            <p class="ccard-quote">“…La combinación de cashback, mensajes personalizados y cupones adaptados a cada cliente nos ha permitido aumentar la recompra…”</p>
+            <p class="body muted">Myriam Melero, Applebee’s México</p>
+            <a class="ulink" href="https://lealto.com/caso-de-exito/alimentos/applebees-mexico/">Leer caso</a>
+          </div>
+        </div>
+        <div class="row-media ui-dash" data-anim>
+          <span class="ui-label">Interfaz ilustrativa</span>
+          <div class="ui-card dash">
+            <div class="dash-head"><b>Dashboard estadístico</b><span class="seg">Últimos 30 días</span></div>
+            <div class="dash-chart" aria-hidden="true">
+              <i style="--h:42%"></i><i style="--h:58%"></i><i style="--h:50%"></i><i style="--h:66%"></i><i style="--h:61%"></i><i style="--h:78%"></i><i style="--h:72%"></i><i style="--h:88%"></i>
+            </div>
+            <p class="dash-cap">Transacciones registradas por semana</p>
+            <ul class="dash-camps">
+              <li><span class="dot d1"></span><span>Push · Cupón de cumpleaños</span><b class="st">Programada</b></li>
+              <li><span class="dot d2"></span><span>Cupón 2x1 · Segmento Oro</span><b class="st st-on">Activa</b></li>
+              <li><span class="dot d3"></span><span>Encuesta de satisfacción</span><b class="st st-on">Activa</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 4. VIDEO ========== -->
+<section class="sec video bg-sky" id="video" aria-labelledby="video-h">
+  <div class="video-in">
+    <header class="sec-head video-head">
+      <h2 id="video-h" class="h2">Conozca Lealto en video</h2>
+      <a class="ulink" href="#casos">Ver casos reales</a>
+    </header>
+    <div class="w1128">
+      <div class="video-frame" id="videoFrame">
+        <img src="../assets/product/lealto-video-miniatura-1600.webp" width="1600" height="900" alt="Video corporativo de Lealto: conecte con sus clientes" loading="lazy">
+        <a class="video-play" href="https://www.youtube.com/watch?v=rV9qcg3blW4" data-video-inline>
+          <span class="vp-ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-play"/></svg></span>
+          <span>Reproducir video</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 5. DARK "ONE SYSTEM" ========== -->
+<section class="sec dark" aria-labelledby="dark-h">
+  <div class="w1128">
+    <header class="sec-head">
+      <p class="kicker kicker-w">Pilar 4</p>
+      <h2 id="dark-h" class="h2">Integración con su ecosistema</h2>
+      <p class="lead muted-w">Capacidad de integrarse con sistemas existentes para automatizar flujos, conectar datos y escalar su operación sin rehacer su stack.</p>
+    </header>
+    <div class="row dark-row">
+      <ul class="dark-list">
+        <li class="rv"><span class="dk-ic"><svg width="26" height="26" aria-hidden="true"><use href="#d-data"/></svg></span><div><h3>Datos y operación</h3><p>Perfiles, historial, panel administrativo y reportes para conocer la participación.</p></div></li>
+        <li class="rv"><span class="dk-ic"><svg width="26" height="26" aria-hidden="true"><use href="#d-link"/></svg></span><div><h3>POS, CRM y ERP vía API</h3><p>Conecte Lealto con POS, CRM, ERP, NPS o e-commerce para automatizar procesos y registrar transacciones. Las conexiones se definen en la evaluación de su proyecto.</p></div></li>
+        <li class="rv"><span class="dk-ic"><svg width="26" height="26" aria-hidden="true"><use href="#d-cloud"/></svg></span><div><h3>Operación 100% en la nube</h3><p>Somos AWS Partners. Actualizaciones, hospedaje, capacitación, soporte y seguridad incluidos en la licencia.</p></div></li>
+        <li class="dark-cta"><a class="ulink ulink-w" href="https://lealto.com/contactenos/">Solicitar demo estratégica</a></li>
+      </ul>
+      <div class="net" data-anim role="img" aria-label="Diagrama: la app con su marca conectada a POS, CRM, ERP, NPS, e-commerce y API">
+        <svg class="net-lines" viewBox="0 0 552 552" aria-hidden="true">
+          <g class="ln" fill="none" stroke-linecap="round">
+            <path d="M276 276L276 70"/><path d="M276 276L460 170"/><path d="M276 276L460 382"/><path d="M276 276L276 482"/><path d="M276 276L92 382"/><path d="M276 276L92 170"/>
+          </g>
+          <g class="fl" fill="none" stroke="url(#gS)" stroke-linecap="round" stroke-width="2">
+            <path d="M276 276L276 70"/><path d="M276 276L460 170"/><path d="M276 276L460 382"/><path d="M276 276L276 482"/><path d="M276 276L92 382"/><path d="M276 276L92 170"/>
+          </g>
+          <circle class="ring r1" cx="276" cy="276" r="110"/>
+          <circle class="ring r2" cx="276" cy="276" r="206"/>
+        </svg>
+        <div class="net-hub"><svg width="34" height="58" aria-hidden="true"><use href="#lmark"/></svg></div>
+        <span class="node n1"><svg width="16" height="16" aria-hidden="true"><use href="#i-phone"/></svg>App con su marca</span>
+        <span class="node n2">POS</span>
+        <span class="node n3">CRM</span>
+        <span class="node n4">API</span>
+        <span class="node n5">ERP</span>
+        <span class="node n6">NPS · E-commerce</span>
+        <span class="net-cap">Diagrama ilustrativo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 6. TESTIMONIAL CAROUSEL ========== -->
+<section class="sec tst bg-sky" id="casos" aria-labelledby="tst-h" aria-roledescription="carrusel">
+  <h2 id="tst-h" class="sr-only">Casos de éxito: lo que dicen nuestros clientes</h2>
+  <div class="w1128 tst-wrap">
+    <button class="car-btn tst-prev" type="button" aria-label="Caso anterior" aria-controls="tstTrack"><svg width="24" height="24"><use href="#i-arrow-l"/></svg></button>
+    <div class="tst-track" id="tstTrack" tabindex="0">
+      <article class="tst-slide" aria-roledescription="diapositiva" aria-label="1 de 7">
+        <div class="tst-body">
+          <img class="tst-logo" src="../assets/clients/logo_applebees-pad.png" width="372" height="212" alt="Applebee’s México" loading="lazy">
+          <blockquote class="tst-q"><p>“…La integración con nuestro sistema de facturación ha simplificado el proceso de recopilación de datos y ha hecho posible una personalización a gran escala.”</p></blockquote>
+          <p class="tst-name">Myriam Melero</p>
+          <p class="tst-role">Applebee’s México · Cashback, cupones e integración con facturación</p>
+          <a class="ulink" href="https://lealto.com/caso-de-exito/alimentos/applebees-mexico/">Leer caso</a>
+        </div>
+        <div class="tst-media"><img src="../assets/product/Featured-Applebees.webp" width="432" height="445" alt="App de Applebee’s Rewards México creada con Lealto" loading="lazy"></div>
+      </article>
+      <article class="tst-slide" aria-roledescription="diapositiva" aria-label="2 de 7">
+        <div class="tst-body">
+          <img class="tst-logo" src="../assets/clients/logo_chevrolet_peregrina-trim.png" width="300" height="124" alt="Chevrolet Peregrina" loading="lazy">
+          <blockquote class="tst-q"><p>“…Ahora no solo regresan por sus servicios, sino que confían en nosotros para el mantenimiento completo de sus vehículos…”</p></blockquote>
+          <p class="tst-name">Gerardo Trejo</p>
+          <p class="tst-role">Chevrolet Peregrina · Puebla, México</p>
+          <a class="ulink" href="https://lealto.com/caso-de-exito/sin-categoria/chevrolet-peregrina/">Leer caso</a>
+        </div>
+        <div class="tst-media"><img src="../assets/product/Chevrolet-Premia.webp" width="432" height="445" alt="App Peregrina Te Premia creada con Lealto" loading="lazy"></div>
+      </article>
+      <article class="tst-slide" aria-roledescription="diapositiva" aria-label="3 de 7">
+        <div class="tst-body">
+          <img class="tst-logo tst-logo-sq" src="../assets/clients/Protexa-1.webp" width="208" height="292" alt="Recompensas Protexa" loading="lazy">
+          <blockquote class="tst-q"><p>“…La personalización por sector y la capacidad de premiar acciones específicas han sido clave para fortalecer el compromiso de nuestros empleados…”</p></blockquote>
+          <p class="tst-name">Mariana González</p>
+          <p class="tst-role">Recompensas Protexa · México, beneficios para colaboradores (B2E)</p>
+          <a class="ulink" href="https://lealto.com/caso-de-exito/sin-categoria/recompensas-protexa/">Leer caso</a>
+        </div>
+        <div class="tst-media"><img src="../assets/product/Protexa.webp" width="432" height="445" alt="App Recompensas Protexa creada con Lealto" loading="lazy"></div>
+      </article>
+      <article class="tst-slide" aria-roledescription="diapositiva" aria-label="4 de 7">
+        <div class="tst-body">
+          <img class="tst-logo tst-logo-tile" src="../assets/clients/logo_fillngo.png" width="472" height="232" alt="Fill n Go" loading="lazy">
+          <blockquote class="tst-q"><p>“…hemos fortalecido la relación con nuestros clientes al ofrecerles una experiencia más transparente, sencilla y confiable…”</p></blockquote>
+          <p class="tst-name">Juan Carlos Alvarado</p>
+          <p class="tst-role">Gerente de Fill n Go · Rifas electrónicas</p>
+          <a class="ulink" href="https://lealto.com/caso-de-exito/sin-categoria/fill-n-go/">Leer caso</a>
+        </div>
+        <div class="tst-media"><img src="../assets/product/Featured-FillnGo.webp" width="432" height="445" alt="App de Fill n Go creada con Lealto" loading="lazy"></div>
+      </article>
+      <article class="tst-slide" aria-roledescription="diapositiva" aria-label="5 de 7">
+        <div class="tst-body">
+          <img class="tst-logo" src="../assets/clients/logo_bticino-trim.png" width="388" height="70" alt="BTicino" loading="lazy">
+          <blockquote class="tst-q"><p>“El programa BT Puntos, implementado con la ayuda de Lealto, ha cambiado la manera en que interactuamos con nuestros socios distribuidores e instaladores…”</p></blockquote>
+          <p class="tst-name">Max Borge</p>
+          <p class="tst-role">BTicino · Incentivos B2B para el canal en 8 países</p>
+          <a class="ulink" href="https://lealto.com/caso-de-exito/sin-categoria/bticino/">Leer caso</a>
+        </div>
+        <div class="tst-media"><img src="../assets/product/Featured-BTicino.webp" width="432" height="445" alt="App BT Puntos creada con Lealto" loading="lazy"></div>
+      </article>
+      <article class="tst-slide" aria-roledescription="diapositiva" aria-label="6 de 7">
+        <div class="tst-body">
+          <img class="tst-logo" src="../assets/clients/logo_vainilla.png" width="472" height="230" alt="Vainilla Beauty" loading="lazy">
+          <blockquote class="tst-q"><p>“Hemos afianzado fuertemente las relaciones con nuestros clientes en nuestros 7 puntos de venta, lo cual nos permite un crecimiento tangible y fuerte.”</p></blockquote>
+          <p class="tst-name">Andrés Vargas</p>
+          <p class="tst-role">Vainilla Beauty</p>
+          <a class="ulink" href="https://lealto.com/caso-de-exito/sin-categoria/vainilla-beauty/">Leer caso</a>
+        </div>
+        <div class="tst-media"><img src="../assets/product/Featured-Vainilla.webp" width="432" height="445" alt="App de Vainilla Beauty creada con Lealto" loading="lazy"></div>
+      </article>
+      <article class="tst-slide" aria-roledescription="diapositiva" aria-label="7 de 7">
+        <div class="tst-body">
+          <p class="tst-brand">Spectrum Brands</p>
+          <blockquote class="tst-q"><p>“Estamos muy contentos con el desarrollo a la medida que fue desarrollado para nuestra empresa. El plan es integral a nuestro crecimiento en 13 países.”</p></blockquote>
+          <p class="tst-name">David Blanchard</p>
+          <p class="tst-role">Business Director, Spectrum Brands · Desarrollo a la medida</p>
+          <a class="ulink" href="https://lealto.com/testimonio/spectrum-brands/">Leer testimonio</a>
+        </div>
+        <div class="tst-media tst-media-logo"><img src="../assets/clients/logo_spectrum_brands.svg" width="160" height="160" alt="Spectrum Brands" loading="lazy"></div>
+      </article>
+    </div>
+    <button class="car-btn tst-next" type="button" aria-label="Caso siguiente" aria-controls="tstTrack"><svg width="24" height="24"><use href="#i-arrow"/></svg></button>
+    <div class="tst-dots" role="group" aria-label="Elegir caso"></div>
+  </div>
+</section>
+
+<!-- ========== 7. INDUSTRIAS (added, Rippling tile language) ========== -->
+<section class="sec ind" id="industrias" aria-labelledby="ind-h">
+  <div class="w1128">
+    <header class="sec-head">
+      <h2 id="ind-h" class="h2">Programas de lealtad para su industria</h2>
+      <p class="lead muted">Cada implementación define sus reglas, los módulos que necesita y el alcance de las integraciones, según su sector y su operación.</p>
+    </header>
+    <div class="ind-grid">
+      <a class="ind-card rv" href="https://lealto.com/industria/restaurante-es/">
+        <span class="ind-img"><img src="../assets/product/Restaurantes_Mockup-720.webp" width="720" height="720" alt="App de lealtad para restaurantes" loading="lazy"></span>
+        <div class="ind-b"><h3 class="t24">Restaurantes</h3><span class="body muted">Impulse recurrencia, ticket promedio, cupones, promociones, órdenes, comunicación y first-party data desde un canal digital propio.</span><span class="ulink">Saber más</span></div>
+      </a>
+      <a class="ind-card rv" href="https://lealto.com/industria/retail-es/">
+        <span class="ind-img"><img src="../assets/product/TiendasRetail_Mockup-720.webp" width="720" height="720" alt="App de lealtad para tiendas retail" loading="lazy"></span>
+        <div class="ind-b"><h3 class="t24">Tiendas retail</h3><span class="body muted">Active tráfico, recompra y campañas omnicanal con cupones, beneficios, data y comunicación desde una experiencia propia de marca.</span><span class="ulink">Saber más</span></div>
+      </a>
+      <a class="ind-card rv" href="https://lealto.com/industria/automotriz-es/">
+        <span class="ind-img"><img src="../assets/product/Auto_Mockup-720.webp" width="720" height="720" alt="App de lealtad para la industria automotriz" loading="lazy"></span>
+        <div class="ind-b"><h3 class="t24">Automotriz</h3><span class="body muted">Impulse visitas al taller, recompra de refacciones, trazabilidad promocional y relación directa con usuarios o redes de servicio.</span><span class="ulink">Saber más</span></div>
+      </a>
+      <a class="ind-card rv" href="https://lealto.com/industria/b2b-es/">
+        <span class="ind-img"><img src="../assets/product/B2B_Mockup-720.webp" width="720" height="720" alt="App de incentivos B2B para canales de distribución" loading="lazy"></span>
+        <div class="ind-b"><h3 class="t24">B2B y canales</h3><span class="body muted">Active distribuidores, instaladores, puntos de venta o equipos comerciales con incentivos trazables, comunicación directa y visibilidad del canal.</span><span class="ulink">Saber más</span></div>
+      </a>
+      <a class="ind-card rv" href="https://lealto.com/industria/belleza-es/">
+        <span class="ind-img"><img src="../assets/product/Belleza_Mockup-720.webp" width="720" height="720" alt="App de lealtad para belleza" loading="lazy"></span>
+        <div class="ind-b"><h3 class="t24">Belleza</h3><span class="body muted">Aumente frecuencia de visita, segmentación, niveles de usuario, campañas personalizadas y valor de cliente con una experiencia diseñada para recompra.</span><span class="ulink">Saber más</span></div>
+      </a>
+      <a class="ind-card rv" href="https://lealto.com/industria/clinicas-es/">
+        <span class="ind-img"><img src="../assets/product/Clinicas_Mockup-720.webp" width="720" height="720" alt="App de lealtad para clínicas" loading="lazy"></span>
+        <div class="ind-b"><h3 class="t24">Clínicas</h3><span class="body muted">Fortalezca preferencia, recurrencia y relación con pacientes mediante una plataforma de engagement, beneficios, comunicación y data.</span><span class="ulink">Saber más</span></div>
+      </a>
+    </div>
+    <ul class="ind-mini">
+      <li><a href="https://lealto.com/industria/gasolineras-es/"><img src="../assets/product/Gasolinera_Mockup-480.webp" width="480" height="480" alt="" loading="lazy"><span>Gasolineras</span><svg width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      <li><a href="https://lealto.com/industria/ferreteria-es/"><img src="../assets/product/Ferreteria_Mockup-480.webp" width="480" height="480" alt="" loading="lazy"><span>Ferreterías</span><svg width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      <li><a href="https://lealto.com/industria/farmacia-es/"><img src="../assets/product/Farma_Mockup-480.webp" width="480" height="480" alt="" loading="lazy"><span>Farmacia</span><svg width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      <li><a href="https://lealto.com/industria/centros-comerciales-es/"><img src="../assets/product/Mall_Mockup-480.webp" width="480" height="480" alt="" loading="lazy"><span>Centros comerciales</span><svg width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      <li><a href="https://lealto.com/industria/veterinaria-es/"><img src="../assets/product/Vet_Mockup-480.webp" width="480" height="480" alt="" loading="lazy"><span>Veterinaria</span><svg width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      <li><a href="https://lealto.com/industria/membresias-es/"><img src="../assets/product/Membresias_Mockup-480.webp" width="480" height="480" alt="" loading="lazy"><span>Membresías</span><svg width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+    </ul>
+    <div class="ind-cta"><a class="btn btn-primary" href="https://lealto.com/contactenos/">Solicitar demo estratégica</a><a class="ulink" href="https://lealto.com/demos/">Ver demos por industria</a></div>
+  </div>
+</section>
+
+<!-- ========== 8. CÓMO SE IMPLEMENTA (added) ========== -->
+<section class="sec impl bg-sky" id="implementacion" aria-labelledby="impl-h">
+  <div class="w1128">
+    <header class="sec-head">
+      <h2 id="impl-h" class="h2">Cómo se implementa Lealto</h2>
+      <p class="lead muted">Configurar primero, extender cuando agrega valor real y desarrollar a medida cuando la necesidad lo justifica.</p>
+    </header>
+    <div class="tiles tiles-3">
+      <article class="tile rv">
+        <span class="tile-ic"><svg width="44" height="44" aria-hidden="true"><use href="#m-sliders"/></svg></span>
+        <div class="tile-b"><h3 class="t24">Configurar</h3><p class="body muted">Lealto parte de una base tecnológica modular ya desarrollada, lo que permite acelerar implementaciones y reducir complejidad.</p></div>
+      </article>
+      <article class="tile rv">
+        <span class="tile-ic"><svg width="44" height="44" aria-hidden="true"><use href="#m-plus"/></svg></span>
+        <div class="tile-b"><h3 class="t24">Extender</h3><p class="body muted">Se integran sus sistemas y se incorporan componentes más personalizados según el nivel de necesidad de su proyecto.</p></div>
+      </article>
+      <article class="tile rv">
+        <span class="tile-ic"><svg width="44" height="44" aria-hidden="true"><use href="#m-code"/></svg></span>
+        <div class="tile-b"><h3 class="t24">Desarrollar a medida</h3><p class="body muted">Como propietarios de la tecnología, adaptamos la solución a requerimientos específicos cuando la necesidad lo justifica.</p></div>
+      </article>
+    </div>
+    <div class="steps-card" data-anim>
+      <div class="steps-intro">
+        <h3 class="t24">Proceso de desarrollo de app a la medida</h3>
+        <p class="body muted">Primero revisamos los objetivos de su empresa, los participantes del programa y los sistemas que necesita conectar. Con esa información se define el alcance y se prepara una previsualización para su revisión antes de iniciar la construcción.</p>
+      </div>
+      <ol class="steps">
+        <li><span class="st-n">01</span><b>Análisis de requerimientos</b></li>
+        <li><span class="st-n">02</span><b>Diseño de la experiencia</b></li>
+        <li><span class="st-n">03</span><b>Desarrollo</b></li>
+        <li><span class="st-n">04</span><b>Pruebas y beta</b></li>
+        <li><span class="st-n">05</span><b>Lanzamiento</b></li>
+        <li><span class="st-n">06</span><b>Soporte y mantenimiento</b></li>
+      </ol>
+      <div class="steps-foot">
+        <p class="incl"><span>Incluido en la licencia:</span> actualizaciones · hospedaje · capacitación · soporte · seguridad</p>
+        <a class="ulink" href="https://lealto.com/desarrollo-de-app-a-la-medida/">Conocer el proceso a la medida</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 9. WHAT'S NEW (blog) ========== -->
+<section class="sec blog" id="blog" aria-labelledby="blog-h">
+  <div class="w1320">
+    <header class="sec-head sec-head-left"><h2 id="blog-h" class="h2">Blog Lealto: programas de lealtad</h2></header>
+    <div class="blog-track" id="blogTrack" tabindex="0" aria-label="Artículos recientes">
+      <article class="bcard">
+        <img src="../assets/blog/KA-314-MASTER-1200x630-2.webp" width="1200" height="630" alt="Cliente combina puntos desde su teléfono con un pago en tienda" loading="lazy">
+        <div class="bcard-b"><h3 class="t24">Puntos más dinero: cómo diseñar una redención híbrida</h3><p class="body muted">Conversión transparente, pago seguro, devoluciones, límites, contabilidad y pruebas de extremo a extremo.</p><a class="ulink" href="https://lealto.com/blog/programas-de-lealtad/puntos-mas-dinero-redencion-hibrida/">Leer artículo</a></div>
+      </article>
+      <article class="bcard">
+        <img src="../assets/blog/KA-313-MASTER-1200x630-2.webp" width="1200" height="630" alt="Familia revisa una cuenta de lealtad compartida" loading="lazy">
+        <div class="bcard-b"><h3 class="t24">Cuentas familiares y puntos compartidos: cómo diseñar las reglas</h3><p class="body muted">Roles, aportes, permisos, menores, salidas, controles y una experiencia que el miembro pueda entender.</p><a class="ulink" href="https://lealto.com/blog/programas-de-lealtad/cuentas-familiares-puntos-compartidos-reglas/">Leer artículo</a></div>
+      </article>
+      <article class="bcard">
+        <img src="../assets/blog/KA-312-MASTER-1200x630-2.webp" width="1200" height="630" alt="Especialistas revisan categorías y reglas de puntos en una tienda" loading="lazy">
+        <div class="bcard-b"><h3 class="t24">Puntos por categoría y SKU: cómo diseñar reglas de lealtad</h3><p class="body muted">Objetivos, márgenes, catálogo, excepciones, devoluciones, comunicación y medición verificable.</p><a class="ulink" href="https://lealto.com/blog/programas-de-lealtad/puntos-categoria-sku-reglas-lealtad/">Leer artículo</a></div>
+      </article>
+      <article class="bcard">
+        <img src="../assets/blog/KA-309-MASTER-1200x630-2.webp" width="1200" height="630" alt="Equipo revisa señales operativas en un hospital multisede" loading="lazy">
+        <div class="bcard-b"><h3 class="t24">Customer Engagement para hospitales y clínicas multisede</h3><p class="body muted">Identidad, consentimiento, recordatorios, beneficios, coordinación y medición responsable.</p><a class="ulink" href="https://lealto.com/customer-engagement/customer-engagement-hospitales-clinicas-multisede/">Leer artículo</a></div>
+      </article>
+    </div>
+    <div class="car-foot">
+      <div class="car-prog" aria-hidden="true"><i id="blogProg"></i></div>
+      <div class="car-arrows">
+        <button class="car-btn car-btn-sm blog-prev" type="button" aria-label="Artículos anteriores" aria-controls="blogTrack"><svg width="20" height="20"><use href="#i-arrow-l"/></svg></button>
+        <button class="car-btn car-btn-sm blog-next" type="button" aria-label="Más artículos" aria-controls="blogTrack"><svg width="20" height="20"><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 10. LOGO ROW (in place of award badges) ========== -->
+<section class="logos" aria-labelledby="logos-h">
+  <div class="w1128">
+    <h2 id="logos-h" class="logos-h">Empresas que ya activan crecimiento con Lealto</h2>
+    <ul class="logo-row">
+      <li><img src="../assets/clients/logo_applebees-pad.png" width="372" height="212" alt="Applebee’s" loading="lazy"></li>
+      <li><img src="../assets/clients/logo_chevrolet_peregrina-trim.png" width="300" height="124" alt="Chevrolet Peregrina" loading="lazy"></li>
+      <li><img src="../assets/clients/logo_santandreu-trim.png" width="360" height="110" alt="Santandreu" loading="lazy"></li>
+      <li><img src="../assets/clients/logo_bticino-trim.png" width="388" height="70" alt="BTicino" loading="lazy"></li>
+      <li><img src="../assets/clients/logo_fillngo.png" width="472" height="232" alt="Fill n Go" loading="lazy"></li>
+      <li><img src="../assets/clients/logo_moyo.png" width="472" height="232" alt="Moyo" loading="lazy"></li>
+      <li><img src="../assets/clients/logo_vainilla-gray.png" width="392" height="160" alt="Vainilla Beauty" loading="lazy"></li>
+      <li><img src="../assets/clients/logo_medismart-trim.png" width="348" height="80" alt="MediSmart" loading="lazy"></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========== 13. PARTNERS STRIP (added) ========== -->
+<section class="sec partners bg-sky" id="partners" aria-labelledby="pt-h">
+  <div class="w1128">
+    <div class="pt-card rv">
+      <div class="pt-media"><img src="../assets/illustrations/unase-a-la-red-de-socios-Lealto.webp" width="862" height="874" alt="" loading="lazy"></div>
+      <div class="pt-b">
+        <p class="kicker">Partners para agencias y consultores</p>
+        <h2 id="pt-h" class="h3">Ofrezca programas de lealtad a sus clientes con Lealto</h2>
+        <p class="lead muted">Alianzas para agencias y consultores que quieren ofrecer programas de lealtad a sus clientes.</p>
+        <ul class="pt-list">
+          <li>Soporte dedicado y capacitación</li>
+          <li>Acceso a productos y actualizaciones</li>
+          <li>Marketing y visibilidad conjunta</li>
+          <li>Generación de leads</li>
+          <li>Comisiones y modelos de ingresos recurrentes</li>
+        </ul>
+        <div class="pt-ctas">
+          <a class="btn btn-primary" href="https://lealto.com/partners/">Quiero ser partner</a>
+          <span class="pt-steps">Formulario → Revisión → Reunión de alineación → Firma → Capacitación e integración</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 11. FAQ (added) ========== -->
+<section class="sec faq" id="faq" aria-labelledby="faq-h">
+  <div class="w1128 faq-grid">
+    <div class="faq-side">
+      <h2 id="faq-h" class="h2">Preguntas frecuentes</h2>
+      <p class="lead muted">¿No encontró lo que buscaba? Cuéntenos qué necesita su proyecto.</p>
+      <a class="btn btn-primary" href="https://lealto.com/contactenos/">Solicitar demo estratégica</a>
+    </div>
+    <div class="faq-list">
+      <details class="qa" open>
+        <summary>¿Qué es Lealto?</summary>
+        <div class="qa-a"><p>Lealto es una plataforma tecnológica SaaS de Customer Engagement que permite a empresas B2C, B2B y B2E desplegar experiencias digitales white-label para activar relaciones, transacciones, comunicación y datos desde un canal propio.</p><p>Aunque puede incluir capacidades de loyalty, Lealto va más allá de un programa de puntos: funciona como una infraestructura modular para activar engagement, promociones, automatización, encuestas, gamificación y otras dinámicas relevantes para el crecimiento del negocio.</p></div>
+      </details>
+      <details class="qa">
+        <summary>¿Cómo funciona Lealto?</summary>
+        <div class="qa-a"><p>Lealto combina cuatro capas principales: una experiencia digital bajo su marca, un dashboard administrativo para operar y configurar la estrategia, herramientas operativas para acreditación, validación o interacción, y capacidad de integración vía API con sistemas existentes.</p></div>
+      </details>
+      <details class="qa">
+        <summary>¿Qué integraciones se pueden hacer?</summary>
+        <div class="qa-a"><p>Lealto puede integrarse con sistemas como POS, CRM, ERP, NPS, e-commerce u otras fuentes operativas, permitiendo automatizar procesos, registrar transacciones, consolidar datos y habilitar experiencias más conectadas.</p><p>Cada integración requiere revisar la disponibilidad de API, los permisos de acceso, los datos que se intercambiarán y el alcance del proyecto. Las conexiones se definen durante la evaluación de su implementación.</p></div>
+      </details>
+      <details class="qa">
+        <summary>¿Lealto requiere desarrollo desde cero?</summary>
+        <div class="qa-a"><p>No necesariamente. Lealto parte de una base tecnológica modular ya desarrollada, lo que permite acelerar implementaciones y reducir complejidad. Dependiendo del proyecto, se pueden configurar capacidades existentes, integrar sistemas o incorporar componentes más personalizados según el nivel de necesidad del cliente.</p></div>
+      </details>
+      <details class="qa">
+        <summary>¿Cuánto tiempo toma la implementación?</summary>
+        <div class="qa-a"><p>Depende de los módulos, las integraciones y la operación de su empresa. <strong>Lo vemos en su demo estratégica</strong>: ahí definimos el alcance de su proyecto.</p><p><a class="ulink" href="https://lealto.com/contactenos/">Solicitar demo estratégica</a></p></div>
+      </details>
+      <details class="qa">
+        <summary>¿Cuánto cuesta Lealto?</summary>
+        <div class="qa-a"><p>Lealto se licencia en tres planes, Pro, Plus y Corporativo, y la propuesta se define según los módulos y las integraciones que necesita. <strong>Lo vemos en su demo estratégica.</strong></p><p><a class="ulink" href="https://lealto.com/precios-licencias-es/">Ver planes</a></p></div>
+      </details>
+      <details class="qa">
+        <summary>¿Lealto es solo para programas de lealtad?</summary>
+        <div class="qa-a"><p>No. Loyalty es una de las capacidades que Lealto puede habilitar, pero la plataforma también puede utilizarse para promociones, activación comercial, comunicación, encuestas, programas para canal de distribución, iniciativas internas con colaboradores, membresías, gamificación y otras estrategias de Customer Engagement.</p></div>
+      </details>
+      <details class="qa">
+        <summary>¿Lealto funciona para B2B o solo B2C?</summary>
+        <div class="qa-a"><p>Lealto está diseñado para adaptarse a múltiples modelos de relación. Puede utilizarse en esquemas B2C para clientes finales, en B2B para canales de distribución, partners, instaladores o equipos comerciales, y en B2E para iniciativas dirigidas a colaboradores o redes internas.</p></div>
+      </details>
+      <details class="qa">
+        <summary>¿Se puede hacer una plataforma más personalizada basada en Lealto?</summary>
+        <div class="qa-a"><p>Sí. Como propietarios de la tecnología, podemos adaptar la solución a requerimientos específicos del proyecto. Nuestra filosofía es configurar primero, extender cuando agrega valor real y desarrollar a medida cuando la necesidad lo justifica estratégicamente.</p></div>
+      </details>
+      <details class="qa">
+        <summary>¿Qué tipo de empresas pueden usar Lealto?</summary>
+        <div class="qa-a"><p>Lealto está pensado para empresas que buscan fortalecer relaciones con clientes, distribuidores, puntos de venta, socios o colaboradores mediante una plataforma flexible, integrable y orientada a resultados.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 12. DARK DEMO CTA ========== -->
+<section class="sec cta" id="demo" aria-labelledby="cta-h">
+  <div class="cta-art" aria-hidden="true">
+    <svg class="cta-l cta-l1" width="210" height="365"><use href="#lmark"/></svg>
+    <svg class="cta-l cta-l2" width="120" height="208"><use href="#lmark"/></svg>
+  </div>
+  <div class="cta-in">
+    <h2 id="cta-h" class="h1 cta-h">Conversemos sobre su programa de lealtad</h2>
+    <div class="cta-btns">
+      <a class="btn btn-primary btn-wide" href="https://lealto.com/contactenos/">Solicitar demo estratégica</a>
+      <button class="btn btn-ghost btn-wide" type="button" data-video-open>Ver Lealto en video</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="foot">
+  <div class="foot-top">
+    <div class="w1320">
+      <div class="foot-cols">
+        <div><h2 class="foot-h">Plataforma</h2><ul>
+          <li><a href="https://lealto.com/modulos/">Módulos</a></li>
+          <li><a href="https://lealto.com/precios-licencias-es/">Licencias</a></li>
+          <li><a href="https://lealto.com/ventajas-lealto/">Ventajas</a></li>
+          <li><a href="https://lealto.com/web-pos-es/">Web POS</a></li>
+          <li><a href="https://lealto.com/app-pos-es/">App POS</a></li>
+          <li><a href="https://lealto.com/desarrollo-de-app-a-la-medida/">Desarrollo a la medida</a></li>
+        </ul></div>
+        <div><h2 class="foot-h">Industrias</h2><ul>
+          <li><a href="https://lealto.com/industria/restaurante-es/">Restaurantes</a></li>
+          <li><a href="https://lealto.com/industria/retail-es/">Tiendas retail</a></li>
+          <li><a href="https://lealto.com/industria/automotriz-es/">Automotriz</a></li>
+          <li><a href="https://lealto.com/industria/b2b-es/">B2B</a></li>
+          <li><a href="https://lealto.com/industria/belleza-es/">Belleza</a></li>
+          <li><a href="https://lealto.com/industria/clinicas-es/">Clínicas</a></li>
+          <li><a href="https://lealto.com/industria/gasolineras-es/">Gasolineras</a></li>
+          <li><a href="https://lealto.com/industria/ferreteria-es/">Ferreterías</a></li>
+          <li><a href="https://lealto.com/industria/farmacia-es/">Farmacia</a></li>
+          <li><a href="https://lealto.com/industria/centros-comerciales-es/">Centros comerciales</a></li>
+          <li><a href="https://lealto.com/industria/veterinaria-es/">Veterinaria</a></li>
+          <li><a href="https://lealto.com/industria/membresias-es/">Membresías</a></li>
+        </ul></div>
+        <div><h2 class="foot-h">Casos de éxito</h2><ul>
+          <li><a href="https://lealto.com/caso-de-exito/alimentos/applebees-mexico/">Applebee’s México</a></li>
+          <li><a href="https://lealto.com/caso-de-exito/sin-categoria/chevrolet-peregrina/">Chevrolet Peregrina</a></li>
+          <li><a href="https://lealto.com/caso-de-exito/sin-categoria/recompensas-protexa/">Recompensas Protexa</a></li>
+          <li><a href="https://lealto.com/caso-de-exito/sin-categoria/santandreu/">Santandreu</a></li>
+          <li><a href="https://lealto.com/caso-de-exito/sin-categoria/bticino/">BTicino</a></li>
+          <li><a href="https://lealto.com/caso-de-exito/sin-categoria/fill-n-go/">Fill n Go</a></li>
+          <li><a href="https://lealto.com/casos-de-exito/">Todos los casos</a></li>
+        </ul></div>
+        <div><h2 class="foot-h">Recursos</h2><ul>
+          <li><a href="https://lealto.com/blog-programas-lealtad/">Blog Lealto</a></li>
+          <li><a href="https://lealto.com/preguntas-frecuentes-es/">Preguntas frecuentes</a></li>
+          <li><a href="https://lealto.com/demos/">Demos por industria</a></li>
+          <li><a href="https://lealto.com/paises/mexico/">Lealto en México</a></li>
+          <li><a href="https://lealto.com/paises/">Países</a></li>
+        </ul></div>
+        <div><h2 class="foot-h">Empresa</h2><ul>
+          <li><a href="https://lealto.com/sobre-nosotros-es/">Sobre nosotros</a></li>
+          <li><a href="https://lealto.com/partners/">Partners</a></li>
+          <li><a href="https://lealto.com/contactenos/">Contacto</a></li>
+          <li><a href="mailto:info@lealto.com">info@lealto.com</a></li>
+          <li><a href="https://lealto.com/en/" hreflang="en">English</a></li>
+        </ul></div>
+      </div>
+      <div class="foot-cap">
+        <h2 class="foot-cap-h">Solicite una demo estratégica de Lealto</h2>
+        <div class="foot-cap-f">
+          <form class="email-form email-form-dark" action="https://lealto.com/contactenos/" method="get" data-goto="https://lealto.com/contactenos/">
+            <label class="sr-only" for="foot-email">Correo de trabajo</label>
+            <input id="foot-email" type="email" autocomplete="email" placeholder="Correo de trabajo*" required>
+            <button class="btn btn-primary" type="submit">Solicitar demo</button>
+          </form>
+          <p class="form-note">Le llevaremos al formulario de demo de Lealto.</p>
+        </div>
+      </div>
+      <div class="foot-soc">
+        <ul class="soc">
+          <li><a href="https://www.facebook.com/lealtoloyaltyapps/" aria-label="Lealto en Facebook"><svg width="22" height="22" aria-hidden="true"><use href="#s-fb"/></svg></a></li>
+          <li><a href="https://www.instagram.com/lealtoloyaltyapps/" aria-label="Lealto en Instagram"><svg width="22" height="22" aria-hidden="true"><use href="#s-ig"/></svg></a></li>
+          <li><a href="https://www.youtube.com/@lealto-planesdelealtadpara9993" aria-label="Lealto en YouTube"><svg width="22" height="22" aria-hidden="true"><use href="#s-yt"/></svg></a></li>
+        </ul>
+        <div class="stores">
+          <span>Apps publicadas en:</span>
+          <img src="../assets/misc/Apple-Store.svg" width="120" height="40" alt="App Store" loading="lazy">
+          <img src="../assets/misc/google-play.svg" width="136" height="40" alt="Google Play" loading="lazy">
+          <img src="../assets/misc/app-appgallery-en.svg" width="142" height="42" alt="Huawei AppGallery" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot-word w1320" aria-hidden="true">Lealto</div>
+  <p class="foot-copy">Lealto © 2026 · Pozos de Santa Ana, Costa Rica · Plataforma modular de Customer Engagement para modelos B2C, B2B y B2E.</p>
+</footer>
+
+<!-- Sticky mobile CTA bar -->
+<div class="mbar" id="mbar">
+  <a class="btn btn-primary btn-block" href="https://lealto.com/contactenos/">Solicitar demo estratégica</a>
+  <!-- VALIDAR: WhatsApp. Sin número público; no se muestra botón de WhatsApp. -->
+</div>
+
+<!-- Video modal -->
+<div class="vmodal" id="vmodal" role="dialog" aria-modal="true" aria-label="Video de Lealto" hidden>
+  <div class="vmodal-bg" data-video-close></div>
+  <div class="vmodal-box">
+    <button class="vmodal-x" type="button" data-video-close aria-label="Cerrar video"><svg width="24" height="24"><use href="#i-close"/></svg></button>
+    <div class="vmodal-frame" id="vmodalFrame"></div>
+  </div>
+</div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
