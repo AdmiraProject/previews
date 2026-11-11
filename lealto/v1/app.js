@@ -1,4 +1,5 @@
 /* Lealto v1 — interactions. Everything is visible without JS; JS only adds motion and state. */
+const LEALTO_CALENDLY_URL = ""; // VALIDAR: Lealto's Calendly event URL (e.g. https://calendly.com/lealto/demo). Empty = fallback card.
 (function () {
   'use strict';
   var doc = document.documentElement;
@@ -106,13 +107,13 @@
 
   /* ---------- loyalty mechanics switcher (real app screens) ---------- */
   var MECH = {
-    sellos: ['Sellos', 'Ideal para dinámicas simples de recurrencia y recompra frecuente.', 'Sellos-1000.webp', 930],
-    cashback: ['Cashback', 'Perfecto para incentivar retorno y construir valor percibido en cada transacción.', 'Cashback-1000.webp', 930],
-    premios: ['Premios', 'Diseñado para modelos donde el usuario acumula y canjea valor a lo largo del tiempo.', 'Premios-1000.webp', 930],
-    cuponera: ['Cuponera', 'Permite activar promociones, descuentos y estímulos de consumo de forma controlada y medible.', 'Cuponera-1000.webp', 906],
-    rifas: ['Rifas electrónicas', 'Campañas promocionales con lógica de participación, acciones o sorteos con trazabilidad.', 'Gasolineras-1000.webp', 930],
-    membresias: ['Membresías', 'Útil para modelos de acceso exclusivo, suscripción o beneficios recurrentes.', 'Membresias-1000.webp', 905],
-    personalizado: ['Personalizado', 'Para necesidades específicas donde la empresa requiere una lógica de activación diferenciada.', 'Personalizado-1000.webp', 960]
+    sellos: ['Sellos', 'Lo más simple para que tus clientes regresen seguido y vuelvan a comprar.', 'Sellos-1000.webp', 930],
+    cashback: ['Cashback', 'Cada compra le devuelve algo a tu cliente y le da una razón para regresar.', 'Cashback-1000.webp', 930],
+    premios: ['Premios', 'Tus clientes juntan puntos con el tiempo y los cambian por premios.', 'Premios-1000.webp', 930],
+    cuponera: ['Cuponera', 'Lanza promociones y descuentos que controlas y puedes medir.', 'Cuponera-1000.webp', 906],
+    rifas: ['Rifas electrónicas', 'Sorteos en los que tus clientes participan con sus compras o acciones, con trazabilidad.', 'Gasolineras-1000.webp', 930],
+    membresias: ['Membresías', 'Para acceso exclusivo, suscripciones o beneficios que se repiten.', 'Membresias-1000.webp', 905],
+    personalizado: ['Personalizado', 'Si tu negocio necesita una lógica distinta, la diseñamos contigo.', 'Personalizado-1000.webp', 960]
   };
   var mech = $('[data-mech]');
   if (mech) {
@@ -232,4 +233,143 @@
     if (curve) gsap.fromTo(curve, { strokeDashoffset: 1 }, { strokeDashoffset: 0, ease: 'none', scrollTrigger: { trigger: '.stats', start: 'top 85%', end: 'center 45%', scrub: 0.5 } });
   }
   if (document.readyState === 'complete') initGsap(); else window.addEventListener('load', initGsap);
+})();
+
+
+/* ---------- Demo popup (getadmira.com pattern): form -> Calendly inline, fallback while URL is empty ---------- */
+(function () {
+  'use strict';
+  var modal = document.getElementById('demo-modal');
+  if (!modal) return;
+  var card = modal.querySelector('.dm__card');
+  var form = modal.querySelector('[data-dm-step="1"]');
+  var step2 = modal.querySelector('[data-dm-step="2"]');
+  var calWrap = modal.querySelector('[data-dm-cal]');
+  var fallback = modal.querySelector('[data-dm-fallback]');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lastTrigger = null, closeTimer = null, calendlyLoading = null;
+  var FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea,[tabindex]:not([tabindex="-1"])';
+
+  function lockScroll(on) {
+    var b = document.body;
+    if (on) {
+      var sw = window.innerWidth - document.documentElement.clientWidth;
+      if (sw > 0) b.style.paddingRight = sw + 'px';
+      b.classList.add('dm-lock');
+    } else {
+      b.classList.remove('dm-lock'); b.style.paddingRight = '';
+    }
+  }
+  function showStep(n) {
+    form.hidden = n !== 1; step2.hidden = n !== 2;
+    modal.classList.toggle('is-wide', n === 2);
+  }
+  function open(trigger) {
+    clearTimeout(closeTimer);
+    lastTrigger = trigger || document.activeElement;
+    if (LEALTO_CALENDLY_URL) loadCalendly().catch(function () {});
+    showStep(1);
+    modal.hidden = false;
+    lockScroll(true);
+    void modal.offsetWidth;
+    modal.classList.add('is-open');
+    var first = form.querySelector('input');
+    setTimeout(function () { (first || card).focus(); }, reduce ? 0 : 60);
+  }
+  function close() {
+    modal.classList.remove('is-open');
+    var done = function () { modal.hidden = true; lockScroll(false); if (lastTrigger && lastTrigger.focus) lastTrigger.focus(); };
+    if (reduce) done(); else closeTimer = setTimeout(done, 260);
+  }
+
+  // Triggers: every <a data-demo> (link still works without JS)
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest && e.target.closest('[data-demo]');
+    if (!t) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return; // let "open in new tab" through
+    e.preventDefault();
+    open(t);
+  });
+  modal.addEventListener('click', function (e) { if (e.target.closest('[data-dm-close]')) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (modal.hidden) return;
+    if (e.key === 'Escape') { e.preventDefault(); close(); return; }
+    if (e.key === 'Tab') {
+      var f = Array.prototype.filter.call(card.querySelectorAll(FOCUSABLE), function (el) { return el.offsetParent !== null; });
+      if (!f.length) return;
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && (document.activeElement === first || document.activeElement === card)) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+
+  // Validation (Spanish, inline)
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  function setErr(field, msg) {
+    var wrap = field.closest('.dm__field'), err = document.getElementById(field.id + '-err');
+    if (wrap) wrap.classList.toggle('is-bad', !!msg);
+    if (err) err.textContent = msg || '';
+    field.setAttribute('aria-invalid', msg ? 'true' : 'false');
+    if (err) field.setAttribute('aria-describedby', err.id);
+  }
+  function validate() {
+    var ok = true, firstBad = null;
+    ['dm-name', 'dm-email', 'dm-phone', 'dm-company', 'dm-pos', 'dm-ind'].forEach(function (id) {
+      var el = document.getElementById(id), v = (el.value || '').trim(), msg = '';
+      if (!v) msg = 'Este campo es obligatorio.';
+      else if (id === 'dm-email' && !EMAIL.test(v)) msg = 'Ingresa un correo válido.';
+      else if (id === 'dm-phone' && v.replace(/\D/g, '').length < 6) msg = 'Ingresa un teléfono válido.';
+      setErr(el, msg);
+      if (msg) { ok = false; firstBad = firstBad || el; }
+    });
+    if (firstBad) firstBad.focus();
+    return ok;
+  }
+  form.addEventListener('input', function (e) { if (e.target.closest('.is-bad')) setErr(e.target, ''); });
+
+  function loadCalendly() {
+    if (window.Calendly) return Promise.resolve();
+    if (calendlyLoading) return calendlyLoading;
+    calendlyLoading = new Promise(function (res, rej) {
+      var sc = document.createElement('script');
+      sc.src = 'https://assets.calendly.com/assets/external/widget.js';
+      sc.async = true; sc.onload = res; sc.onerror = rej;
+      document.head.appendChild(sc);
+    });
+    return calendlyLoading;
+  }
+  function calendlyUrl() {
+    var v = function (id) { return (document.getElementById(id).value || '').trim(); };
+    var p = new URLSearchParams();
+    p.set('name', v('dm-name'));
+    p.set('email', v('dm-email'));
+    p.set('a1', (v('dm-cc') ? v('dm-cc') + ' ' : '') + v('dm-phone'));
+    p.set('a2', v('dm-company') + ' · ' + v('dm-pos') + ' puntos de venta · ' + v('dm-ind'));
+    p.set('primary_color', '41b6e6');
+    p.set('hide_gdpr_banner', '1');
+    var q = []; p.forEach(function (val, key) { q.push(key + '=' + encodeURIComponent(val)); });
+    return LEALTO_CALENDLY_URL + (LEALTO_CALENDLY_URL.indexOf('?') > -1 ? '&' : '?') + q.join('&');
+  }
+  function showFallback() { calWrap.innerHTML = ''; fallback.hidden = false; }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!validate()) return;
+    showStep(2);
+    calWrap.innerHTML = ''; fallback.hidden = true;
+    if (!LEALTO_CALENDLY_URL) { showFallback(); }
+    else {
+      var url = calendlyUrl();
+      loadCalendly().then(function () {
+        calWrap.innerHTML = '';
+        window.Calendly.initInlineWidget({ url: url, parentElement: calWrap });
+      }).catch(showFallback);
+    }
+    var back = modal.querySelector('[data-dm-back]');
+    setTimeout(function () { back.focus(); }, 30);
+  });
+  modal.querySelector('[data-dm-back]').addEventListener('click', function () {
+    calWrap.innerHTML = ''; showStep(1);
+    var first = form.querySelector('input'); if (first) first.focus();
+  });
 })();
