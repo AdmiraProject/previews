@@ -1,0 +1,138 @@
+/* Illustrative UI mocks inside the method cards. All sizes in em: 1em = 10px at desktop, scaled fluidly on small screens. */
+.stage{position:relative;font-size:10px;font-family:var(--f-ui);line-height:1.2;color:var(--ink)}
+.stage svg{fill:none;stroke:currentColor;stroke-width:1.600;stroke-linecap:round;stroke-linejoin:round}
+.mock-note{position:absolute;right:1.200em;bottom:.600em;margin:0;font-size:max(1.100em,10px);line-height:1.2;letter-spacing:0;color:var(--blue-ink);opacity:.62;white-space:nowrap}
+
+/* ---------- 1. Publicidad ---------- */
+.st-ads{width:60em;height:56.2em}
+.tiles{position:absolute;left:9em;top:12.5em;display:grid;grid-template-columns:repeat(4,5.8em);grid-auto-rows:5.8em;gap:.9em}
+.tiles i{display:grid;place-items:center;border-radius:.9em;border:.15em solid rgba(143,162,255,.55);background:rgba(255,255,255,.22)}
+.tiles i:nth-child(4n+3),.tiles i:nth-child(4n){transform:translateX(25.6em)}
+.tiles i.on{background:linear-gradient(160deg,#9FB0FF,#7C92F5);border-color:#7388EE;box-shadow:0 .5em 1em rgba(46,69,201,.28);color:#E9EDFF}
+.tiles i svg{width:2.4em;height:2.4em}
+.ad-back,.ad-phone{position:absolute;left:22em;top:3em;width:26.6em;height:48.2em;border-radius:2.4em}
+.ad-back{background:#EEF2FF;border:.2em solid #fff;transform:rotate(5deg) translate(1.2em,.4em);box-shadow:0 1.6em 3em rgba(10,27,140,.12)}
+.ad-phone{display:flex;flex-direction:column;gap:1.1em;padding:1.500em 1.200em 1.200em;background:#FBFCFF;border:.25em solid #fff;box-shadow:0 2em 4.5em rgba(10,27,140,.2)}
+.ad-bars{display:flex;gap:.7em}
+.ad-bars b{flex:1;height:.35em;border-radius:1em;background:#5B74F2}
+.ad-bars b:nth-child(3){opacity:.55}.ad-bars b:nth-child(4){opacity:.25}
+.ad-head{display:flex;align-items:center;justify-content:space-between}
+.ad-head img{width:2.2em;height:auto}
+.ad-head span{width:10.5em;height:1.7em;border-radius:.5em;background:#E4EAFF}
+.ad-img{position:relative;height:21.7em;border-radius:1.4em;overflow:hidden;flex:none;background:#E4EAFF}
+.ad-img img{width:100%;height:100%;object-fit:cover}
+.ad-img em{position:absolute;left:.8em;top:.8em;padding:.3em .7em;border-radius:1em;background:rgba(7,10,19,.6);color:#fff;font-style:normal;font-size:.95em;font-weight:500}
+.ad-body{flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:.7em;padding:1.2em;border-radius:1em;background:#E4EAFF}
+.ad-body span{height:.8em;border-radius:1em;background:#C3CEFF}
+.ad-body span:nth-child(1){width:70%}.ad-body span:nth-child(2){width:88%}.ad-body span:nth-child(3){width:46%}
+.ad-btn{flex:none;display:grid;place-items:center;height:3.8em;border-radius:.6em;background:#8FA2FF;color:#fff;font-size:1.200em;font-weight:700;height:3.1em}
+.chip{position:absolute;display:flex;align-items:center;gap:1em;width:23.5em;height:5.2em;padding:0 1.2em 0 1em;border-radius:1.4em;background:#fff;box-shadow:0 .8em 2em rgba(10,27,140,.16)}
+.chip>i{display:grid;place-items:center;width:3.2em;height:3.2em;border-radius:50%;background:#E4EAFF;color:#2F45C9;flex:none}
+.chip>i svg{width:1.7em;height:1.7em}
+.chip div{display:flex;flex-direction:column;gap:.3em;margin-right:auto}
+.chip small{font-size:.85em;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+.chip b{font-size:1.100em;font-weight:700;color:var(--ink-2)}
+.chip strong{display:flex;align-items:center;gap:.2em;font-size:1.400em;font-weight:700;color:#0A8194}
+.chip strong svg{width:1.1em;height:1.1em;stroke-width:2.400}
+.chip-a{left:1.5em;top:26.6em}
+.chip-b{left:34.5em;top:34.5em}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-.6em)}}
+.js .chip-a{animation:bob 5s ease-in-out infinite}
+.js .chip-b{animation:bob 5.800s ease-in-out -2.400s infinite}
+
+/* ---------- 2. Contenido y diseño ---------- */
+.st-content{width:61.2em;height:50.9em}
+.ls-panel{position:absolute;left:1.5em;top:1.9em;width:26.8em;height:45.3em;display:flex;flex-direction:column;gap:1.1em;padding:1.500em 1.200em 1.200em;background:#F6F8FF;border:.15em solid var(--solid);border-radius:2em;box-shadow:0 .6em 1.4em rgba(2,42,253,.16);color:var(--solid-ink)}
+.ls-head{display:flex;align-items:center;gap:.6em}
+.ls-head svg{width:1.8em;height:1.8em}
+.ls-head svg.ud{width:1.4em;height:1.4em;opacity:.6}
+.ls-head b{font-size:1.200em;font-weight:700}
+.ls-head i{margin-left:auto;width:2.2em;height:2.2em;border-radius:50%;background:url(../../assets/v2/snowball-symbol.png) center/62% no-repeat #fff;border:.1em solid #C9D3FF}
+.ls-tags{display:flex;flex-wrap:wrap;gap:.7em;padding-bottom:1.2em;border-bottom:.1em solid #C9D3FF}
+.ls-tags span{display:flex;align-items:center;gap:.6em;padding:.45em 1em .45em .8em;border-radius:2em;background:var(--solid);color:#fff;font-size:.9em;font-weight:500;white-space:nowrap}
+.ls-tags span::before{content:"";width:.7em;height:.7em;border-radius:50%;background:#fff}
+.ls-tags .dim{background:#6F86FF}.ls-tags .fade{background:#B9C5FF}
+.ls-rows{display:flex;flex-direction:column;gap:.8em;flex:1}
+.ls-rows span{display:flex;align-items:center;justify-content:space-between;flex:1;max-height:2.9em;padding:0 .9em;border:.1em solid #C3CEFF;border-radius:.6em;background:#fff;font-size:1em;letter-spacing:-.01em}
+.ls-rows span::after{content:"";width:.6em;height:.6em;border-radius:50%;background:var(--solid)}
+.ls-btn{flex:none;display:grid;place-items:center;height:3.6em;border-radius:.6em;background:var(--solid-ink);color:#fff;font-size:1em;font-weight:700}
+.ls-arrow{position:absolute;left:30.2em;top:24.300em;width:5.6em;height:1.4em;color:var(--solid);stroke-width:1.200}
+.ls-stack{position:absolute;left:37.1em;top:1.9em;width:20.4em;height:43.8em}
+.ls-stack>i{position:absolute;inset:0;border-radius:1em;border:.12em solid var(--solid)}
+.ls-stack>i:nth-child(1){transform:translate(3em,1.5em);background:#C9D3FF}
+.ls-stack>i:nth-child(2){transform:translate(1.5em,.9em);background:#8FA2FF}
+.ls-poster{position:absolute;inset:0;border-radius:1em;overflow:hidden;border:.12em solid var(--solid-ink);background:#ddd}
+.ls-poster img{width:100%;height:100%;object-fit:cover}
+.ls-poster em{position:absolute;left:.8em;bottom:.8em;padding:.35em .8em;border-radius:1em;background:rgba(7,10,19,.62);color:#fff;font-style:normal;font-size:.95em;font-weight:500}
+.st-content .mock-note{right:auto;left:1.800em;bottom:.800em}
+
+/* ---------- 3. Operación y logística ---------- */
+.st-ops{display:flex;justify-content:center;gap:1em;width:61.2em;height:50.8em}
+.ph{position:relative;display:flex;flex-direction:column;width:30em;height:50.8em;border-radius:2em;background:#fff;overflow:hidden}
+.ph::after{content:"";position:absolute;inset:0;border:.3em solid rgba(79,140,219,.5);border-radius:inherit;pointer-events:none}
+.ph-head{flex:none;display:flex;flex-direction:column;gap:.3em;padding:2.2em 1.8em 1.300em;border-bottom:.1em solid #E3EAF4;background:#fff;position:relative;z-index:1}
+.ph-head b{font-family:var(--f-display);font-weight:500;font-size:2em;letter-spacing:-.02em;color:var(--ink)}
+.ph-head span{font-size:1.200em;color:var(--grey)}
+.ph-scroll{flex:1;min-height:0;overflow:hidden}
+.ph-roll{display:flex;flex-direction:column}
+@keyframes roll{to{transform:translate3d(0,-50%,0)}}
+.js .ph-roll{animation:roll 26s linear infinite}
+.js .ph-roll-b{animation-duration:22s}
+.inv{display:grid;grid-template-columns:1fr auto;align-items:center;gap:.9em 1em;padding:1.400em 1.800em;border-bottom:.1em solid #E3EAF4}
+.inv div{display:flex;flex-direction:column;gap:.3em;min-width:0}
+.inv b{font-size:1.300em;font-weight:700;color:var(--ink)}
+.inv span{font-size:1.100em;color:var(--grey)}
+.inv em{font-style:normal;font-size:1.100em;font-weight:700;padding:.35em .8em;border-radius:1em;white-space:nowrap}
+.inv em.ok{background:#CDF2F9;color:#00505C}.inv em.mid{background:#DCE4FF;color:#0A1B8C}.inv em.low{background:#070A13;color:#fff}
+.inv i{grid-column:1/-1;position:relative;height:.6em;border-radius:1em;background:#E9EEF6;overflow:hidden}
+.inv i::after{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--w);border-radius:inherit;background:linear-gradient(90deg,#022AFD,#33BBFF)}
+.inv-proj{display:flex;flex-direction:column;gap:.8em;padding:1.500em 1.800em;border-bottom:.1em solid #E3EAF4;background:#F5F8FE}
+.inv-proj b{font-size:1.200em;font-weight:700}
+.inv-proj svg{width:100%;height:7em;color:#022AFD;stroke-width:2;overflow:visible}
+.inv-proj svg .a{fill:rgba(2,42,253,.1);stroke:none}
+.inv-proj span{font-size:1.100em;font-weight:500;color:#0A1B8C}
+.shp{display:flex;flex-direction:column;gap:.5em;margin:1.200em 1.500em 0;padding:1.400em;border:.1em solid #DCE5F2;border-radius:1.2em;background:#F9FBFE}
+.shp:last-child{margin-bottom:0}
+.ph-roll-b{padding-bottom:0}
+.shp b{font-size:1.350em;font-weight:700}
+.shp span{font-size:1.100em;color:var(--grey)}
+.shp ol{display:grid;grid-template-columns:repeat(4,1fr);gap:.5em;margin:.6em 0 .3em}
+.shp ol li{height:.55em;border-radius:1em;background:#E3EAF4}
+.shp ol li.d{background:#022AFD}.shp ol li.c{background:#00E1FF}
+.shp em{font-style:normal;font-size:1.100em;font-weight:700;color:#0A8194}
+.shp em.done{color:#022AFD}
+.ph-note{position:absolute;left:0;right:0;bottom:0;z-index:1;margin:0;padding:2.200em 1.800em 1.300em;font-size:max(1em,10px);line-height:1.2;text-align:center;color:var(--grey);background:linear-gradient(to top,#fff 55%,rgba(255,255,255,0))}
+
+/* placement of the visuals inside the cards (desktop) */
+.mv-ads{width:600px;height:562px}
+.mv-content{width:612px;height:509px}
+.mv-ops{width:612px;height:508px}
+/* 1200-1399: cards 2 and 3 are 430 tall on the benchmark; the phones shrink to 400 tall */
+@media (min-width:1200px) and (max-width:1399.98px){
+  .mv-ops{height:430px;display:flex;align-items:center}
+  .st-ops{font-size:7.874px}
+  .mv-content{height:430px;display:flex;align-items:center;overflow:visible}
+}
+
+
+/* dark (ink) card: the light UI panels stay light so they pop */
+.m-solid .ls-arrow{color:#00E1FF}
+.m-solid .mock-note{color:#94A3B8;opacity:1}
+.m-solid .ls-stack>i{border-color:#4D6BFF}
+.m-solid .ls-poster{border-color:#242D42}
+@media (max-width:1199.98px){
+  .mcard-vis{display:flex;justify-content:center;width:100%;height:auto;padding:0}
+  .st-ads{font-size:calc((100vw - 40px) * .8 / 60)}
+  .st-content,.st-ops{font-size:calc((100vw - 40px) * .8 / 61.2)}
+}
+@media (max-width:809.98px){
+  .mcard-vis{padding:0}
+  .st-ads{font-size:calc((100vw - 40px) * .9 / 60)}
+  .st-content{font-size:calc((100vw - 40px) * .9 / 61.2)}
+  .st-ops{font-size:calc((100vw - 40px) * .9 * .7905 / 30);width:auto;height:auto}
+  .ph-note{padding-top:1.600em}
+  .ph-2{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .chip-a,.js .chip-b,.js .ph-roll{animation:none}
+}

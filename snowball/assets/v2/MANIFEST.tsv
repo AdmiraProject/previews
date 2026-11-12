@@ -1,0 +1,37 @@
+file	derived_from	how
+snowball-logo-ink.png	assets/brand/funnel-snowball-logo-white.png	trimmed; symbol recoloured to #022AFD, wordmark to #070A13 (for light backgrounds)
+snowball-symbol.png	assets/brand/favicon.png	trimmed and downscaled
+badge-mercado-libre-platinum.png	assets/client/partners/mercado-libre-platinum.png	trimmed; recoloured to #070A13
+badge-amazon-spn.png	assets/client/partners/amazon-spn-certified-partner.png	trimmed; recoloured to #070A13 (not used on the page yet)
+logos/*.png	assets/client/logos/<brand>-logo.png and assets/client/cases/<brand>-logo.png	trimmed; recoloured to #070A13
+ticker/jess-beauty.mp4 (+.jpg poster)	assets/client/cases/showcase-jess-beauty.gif	9:16 centre crop, H.264, muted
+ticker/grancan.mp4 (+.jpg)	assets/client/cases/showcase-grancan.gif	9:16 centre crop, H.264, muted
+ticker/sarelly.mp4 (+.jpg)	assets/client/cases/showcase-sarelly.gif	9:16 centre crop, H.264, muted
+ticker/cyb.mp4 (+.jpg)	assets/client/cases/cyb-design-showcase.gif	9:16 centre crop, H.264, muted (not used on the page yet)
+ticker/studio-yeke.mp4 (+.jpg)	assets/gen/studio-yeke-loop.mp4	9:16 centre crop (Snowball Studio render in motion)
+ticker/studio-palantum.mp4 (+.jpg)	assets/gen/studio-palantum-loop.mp4	9:16 centre crop (Snowball Studio render in motion)
+ticker/studio-avoroots.jpg	assets/client/studio-site/proyecto-avoroots.png	9:16 crop
+ticker/studio-vits.jpg	assets/client/studio-site/proyecto-vits.png	9:16 crop
+ticker/studio-engi.jpg	assets/client/studio-site/proyecto-engi.png	9:16 crop (not used on the page yet)
+cases/norday.jpg	assets/client/cases/yt-thumb-norday-hDWug3gVZaw-maxres.jpg	copy
+cases/jess-beauty.jpg	assets/client/cases/showcase-jess-beauty.gif	still frame at 1s
+cases/grancan.jpg	assets/client/cases/showcase-grancan.gif	still frame
+cases/sarelly.jpg	assets/client/cases/showcase-sarelly.gif	still frame
+team/team-1.jpg	assets/client/team/snowball-team-photo-3.jpg	portrait crop
+team/team-2.jpg	assets/client/team/snowball-team-photo-6.jpg	portrait crop
+team/team-3.jpg	assets/client/team/snowball-team-photo-7.jpg	portrait crop
+team/team-4.jpg	assets/client/team/snowball-team-banner-new.jpg	portrait crop
+mock/ad-product.jpg	assets/client/studio-site/proyecto-palantum-health.png	square crop (inside the illustrative ad mock)
+mock/listing-avoroots.jpg	assets/client/studio-site/proyecto-avoroots.png	portrait crop (inside the illustrative listing mock)
+mock/listing-yeke.jpg	assets/client/studio-site/proyecto-yeke.jpg	portrait crop (not used on the page yet)
+blog/*.webp	https://snowballpartners.co/images/blog/<same name>.webp	downloaded blog covers (also listed in assets/MANIFEST.tsv)
+fonts/*.woff2 + fonts.css	https://api.fontshare.com/v2/css (Clash Display 300-700, Satoshi 400/500/700, Switzer 400/700)	self-hosted copies of the Fontshare files (ITF Free Font License)
+certs/amazon-spn.png	https://snowballpartners.co/images/partners/amazon-spn-certified-partner.png	RECOLOURED from Snowball's white file (#232F3E wordmark, #FF9900 smile); no official colour file found (search of Amazon SPN pages, Nov 2026)
+certs/mercado-libre-platinum.png	https://snowballpartners.co/images/partners/mercado-libre-platinum.png	RECOLOURED from Snowball's white file (#2D3277 navy, #FFE600 inside the rosette disc); no official colour file found
+certs/mercado-ads-socio-premier.png	https://snowballpartners.co/images/partners/mercado-ads-socio-premier.webp	colour as on their site; trimmed
+certs/amazon-ads-verified-partner.png	https://snowballpartners.co/images/partners/amazon-ads-verified-partner.webp	colour card as on their home hero; trimmed
+certs/shopify-partner.png	https://snowballpartners.co/images/partners/shopify-partner-badge.webp	colour card as on their home hero; trimmed
+certs/tiendanube-partner.png	https://snowballpartners.co/images/partners/tiendanube-partner.webp	colour seal as on their site; trimmed
+logos/studio-engi-products.png	assets/client/studio-site/logos/engi-products.png (snowballstud.io)	trimmed; used as a CSS mask in the testimonial attribution
+logos/studio-vits.png	assets/client/studio-site/logos/vits.png (snowballstud.io)	trimmed; used as a CSS mask in the testimonial attribution
+(inline) hero tile marks	Simple Icons 13.21.0 amazon/shopify/tiktok (CC0) + Mercado Libre handshake traced from assets/client/platforms/mercado-libre-logo.png	brand colours; see assets/MANIFEST.tsv
