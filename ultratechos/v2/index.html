@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="es-CR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ultra Techos — Techos termoacústicos en Costa Rica</title>
+<meta name="description" content="Techos termoacústicos en polímeros para una casa más fresca, silenciosa y protegida. Ingeniería, cortes a medida, transporte e instalación en todo Costa Rica.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="v2.css?v=4">
+<link rel="preload" as="image" href="../assets/img/hotel-aerial.jpg">
+<link rel="stylesheet" href="../assets/shared/ut-lead.css?v=1">
+</head>
+<body>
+
+<!-- ═════════ PROMO BAR (Tesla) ═════════ -->
+<div class="promo" id="promo">
+  <p><strong>Ingeniería de valor sin costo extra:</strong> planos de corte, muestras y visita técnica para tu proyecto. <button class="promo__link" data-lead="promo">Agendá la tuya</button></p>
+</div>
+
+<!-- ═════════ NAV (Figma) ═════════ -->
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <a class="nav__logo" href="#top" aria-label="Ultra Techos — inicio">
+      <img class="logo-w" src="../assets/brand/logo-white.svg" alt="Ultra Techos" width="142" height="49">
+      <img class="logo-c" src="../assets/brand/logo.svg" alt="" width="142" height="49">
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#top">Inicio</a>
+      <a href="#sistemas">Productos</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#resenas">Clientes</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#cotizar">Contacto</a>
+    </nav>
+    <div class="nav__right">
+      <a class="nav__phone" href="tel:+50670121636"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Asesoría</a>
+      <button class="btn btn--sm" data-lead="nav">Cotizar</button>
+      <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mnav" id="mnav">
+    <a href="#top">Inicio</a><a href="#sistemas">Productos</a><a href="#proyectos">Proyectos</a><a href="#resenas">Clientes</a><a href="#servicios">Servicios</a><a href="#cotizar">Contacto</a>
+    <button class="btn" data-lead="menu">Cotizá tu techo</button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ═════════ HERO = Westlake Royal masthead (house builds itself, tile chips) × Tesla /solarpanels copy block × Figma headline ═════════ -->
+<section class="mat hero" id="sistemas" aria-label="Techos termoacústicos Ultra Techos">
+  <div class="mat__bg">
+    <img class="mat__poster" src="../assets/v2/house-final.jpg" alt="Casa tica con techo Ultra Colonial">
+    <video class="mat__video" id="heroVideo" muted playsinline loop preload="auto" aria-hidden="true" poster="../assets/v2/film-0.jpg" data-src="../assets/v2/film.mp4"></video>
+  </div>
+  <div class="mat__intro hero__copy">
+    <h1 class="hero__title">Techos termoacústicos para una casa más fresca, silenciosa y protegida</h1>
+    <p class="hero__sub">Te ayudamos a elegir el techo ideal: aislamiento térmico superior y durabilidad estructural comprobada.</p>
+    <div class="hero__ctas">
+      <button class="btn btn--hero" data-lead="hero">Cotizá tu techo</button>
+      <a class="btn btn--ghost btn--hero" href="#proyectos">Mirá proyectos reales</a>
+    </div>
+  </div>
+  <div class="mat__panel" id="matPanel" aria-live="polite">
+    <div class="mat__copy">
+      <p class="mat__tag" id="matTag"></p>
+      <h3 id="matTitle"></h3>
+      <p id="matText"></p>
+      <p class="mat__ideal"><b>Ideal para:</b> <span id="matIdeal"></span></p>
+      <div class="mat__ctas"><button class="btn" data-lead="material" id="matCta">Cotizar</button><button class="mat__close" id="matClose">Volver</button></div>
+    </div>
+    <div class="mat__obj"><img id="matImg" src="../assets/v2/mat-colonial.webp" alt=""></div>
+  </div>
+  <button class="hero__pause" id="heroPause" aria-label="Pausar animación"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg></button>
+  <div class="mat__chips" role="tablist" aria-label="Sistemas de techo">
+    <button role="tab" data-m="colonial">Ultra Colonial</button>
+    <button role="tab" data-m="ultra35">Ultra 35</button>
+    <button role="tab" data-m="clear">Ultra 35 Clear</button>
+    <button role="tab" data-m="palma">Ultra Palma</button>
+    <button role="tab" data-m="therm">Ultra Therm</button>
+    <button role="tab" data-m="aislante">Aislante</button>
+    <button role="tab" data-m="accesorios">Accesorios</button>
+  </div>
+</section>
+
+<!-- ═════════ SINTILLO (Figma) ═════════ -->
+<div class="ticker" aria-label="Lo que incluye Ultra Techos">
+  <div class="ticker__track">
+    <span>Tecnología de techos</span><i></i><span>Medidas adaptadas</span><i></i><span>Inventario disponible</span><i></i><span>Transporte a todo el país</span><i></i><span>No se oxida</span><i></i><span>Aísla el ruido de la lluvia</span><i></i>
+    <span>Tecnología de techos</span><i></i><span>Medidas adaptadas</span><i></i><span>Inventario disponible</span><i></i><span>Transporte a todo el país</span><i></i><span>No se oxida</span><i></i><span>Aísla el ruido de la lluvia</span><i></i>
+  </div>
+</div>
+
+<!-- ═════════ BENEFITS (Tesla "Save on Electricity Bills" 3-card row) ═════════ -->
+<section class="ben" aria-labelledby="benH">
+  <div class="wrap">
+    <div class="ben__head">
+      <p class="eyebrow">Beneficios clave</p>
+      <h2 id="benH">Un techo pensado para el clima de Costa Rica</h2>
+      <p>Diseñado con polímeros de alta ingeniería para el sol, la lluvia y el salitre: confort adentro y protección duradera para tu inversión.</p>
+    </div>
+    <div class="ben__grid">
+      <article class="ben__card"><span class="ben__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></span><h3>Una casa más fresca</h3><p>Aísla un 33% más que las coberturas metálicas: menos calor adentro y menos aire acondicionado.</p></article>
+      <article class="ben__card"><span class="ben__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>Cero corrosión</h3><p>Sin metal: no se oxida con la humedad ni el salitre. Olvidate de pintar el techo cada año.</p></article>
+      <article class="ben__card"><span class="ben__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4zM23 9l-6 6M17 9l6 6"/></svg></span><h3>Silencio cuando llueve</h3><p>Sus capas y su centro de polímero espumado frenan el ruido del aguacero.</p></article>
+    </div>
+    <ul class="ben__feats" aria-label="Características">
+      <li>No se oxida</li><li>Anticorrosivo</li><li>Aislamiento térmico</li><li>Peso ligero</li><li>A prueba de fuego</li><li>Color estable</li><li>Resistente a rayos UV</li><li>Antiimpacto</li><li>Aislante del ruido</li><li>Impermeable</li><li>Sostenible</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═════════ PROCESS (from the build film steps) ═════════ -->
+<section class="proc" aria-labelledby="procH">
+  <div class="wrap">
+    <p class="eyebrow">Así trabajamos</p>
+    <h2 id="procH">De tus planos a tu techo, sin improvisar</h2>
+    <ol class="proc__row">
+      <li><b>01</b><h3>Validamos tu proyecto</h3><p>Nos contás la etapa de tu obra y nos pasás planos o medidas.</p></li>
+      <li><b>02</b><h3>Ingeniería de valor</h3><p>Despliegue técnico, planos de corte y muestras para tu estructura.</p></li>
+      <li><b>03</b><h3>Corte y transporte</h3><p>Láminas cortadas a la medida de tu techo y entregadas en cualquier lugar del país.</p></li>
+      <li><b>04</b><h3>Tu techo, listo</h3><p>Lo instalamos nosotros o te conectamos con instaladores certificados.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═════════ PROJECTS (Tesla full-bleed renders → real Ultra Techos jobs) ═════════ -->
+<section class="proj" id="proyectos" aria-labelledby="projH">
+  <div class="wrap proj__head">
+    <div><p class="eyebrow">Proyectos destacados</p><h2 id="projH">Techos reales, de la costa a la industria</h2></div>
+    <div class="proj__arrows"><button id="projPrev" aria-label="Proyecto anterior"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button><button id="projNext" aria-label="Proyecto siguiente"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button></div>
+  </div>
+  <div class="proj__rail" id="projRail">
+    <article class="pcard pcard--xl"><video src="../assets/broll/baulas-dji72-1080.mp4" poster="../assets/broll/baulas-dji72.jpg" muted loop playsinline preload="none" data-auto aria-label="Drone cenital sobre los techos blancos de Casa Baulas"></video><div class="pcard__cap"><span>Guanacaste · Residencial</span><h3>Casa Baulas</h3></div></article>
+    <article class="pcard pcard--xl"><video src="../assets/broll/huacas-dji203-1080.mp4" poster="../assets/broll/huacas-dji203.jpg" muted loop playsinline preload="none" data-auto aria-label="Drone sobre las canchas techadas en Huacas"></video><div class="pcard__cap"><span>Ultra 35 en cubierta curva</span><h3>Canchas en Huacas, Guanacaste</h3></div></article>
+    <article class="pcard pcard--xl"><img src="../assets/img/proj-dominical.jpg" alt="Casa Dominical E1 con techo Ultra Therm y paneles solares" loading="lazy"><div class="pcard__cap"><span>Ultra Therm</span><h3>Casa Dominical E1</h3></div></article>
+    <article class="pcard pcard--xl"><img src="../assets/img/proj-plaza-diagonal.jpg" alt="Plaza Diagonal con techo Ultra 35" loading="lazy"><div class="pcard__cap"><span>Ultra 35</span><h3>Plaza Diagonal</h3></div></article>
+    <article class="pcard pcard--xl"><img src="../assets/img/hotel-aerial-orange.jpg" alt="Hotel frente al mar con techos de teja naranja" loading="lazy"><div class="pcard__cap"><span>Hotelería · Ultra Colonial</span><h3>Hotel frente al mar</h3></div></article>
+    <article class="pcard pcard--xl"><video src="../assets/broll/huacas-dji205-1080.mp4" poster="../assets/broll/huacas-dji205.jpg" muted loop playsinline preload="none" data-auto aria-label="Cubiertas curvas Ultra 35"></video><div class="pcard__cap"><span>Ultra 35 en cubierta curva</span><h3>Canchas de pádel</h3></div></article>
+  </div>
+</section>
+
+<!-- ═════════ REVIEWS (Mill.com "What they're saying" bento, 1:1) ═════════ -->
+<section class="rev" id="resenas" aria-labelledby="revH">
+  <div class="rev__head">
+    <h2 id="revH">Lo que dicen de Ultra Techos</h2>
+    <p>Arquitectos, instaladores y clientes de todo el país: el mismo techo, sin óxido y sin ruido.</p>
+  </div>
+  <div class="rev__grid">
+    <!-- col 1 -->
+    <div class="rev__col">
+      <div class="rc rc--award reveal">
+        <img class="rc__logo" src="../assets/brand/logo-white.svg" alt="Ultra Techos" width="120" height="41">
+        <div class="rc__laurel">
+          <svg class="laurel" viewBox="0 0 40 80" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M30 76C12 66 6 44 14 8"/><path d="M14 18c-8-2-10-8-9-12 6 1 10 5 9 12z" fill="currentColor"/><path d="M11 32c-8 0-12-5-12-9 6 0 11 3 12 9z" fill="currentColor"/><path d="M11 46c-8 2-12-2-13-6 6-1 11 1 13 6z" fill="currentColor"/><path d="M15 60c-6 4-12 1-14-3 6-2 11-1 14 3z" fill="currentColor"/></g></svg>
+          <div><span>Seleccionado</span><b>Hotel en el Parque Nacional Tortuguero</b></div>
+          <svg class="laurel laurel--r" viewBox="0 0 40 80" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M30 76C12 66 6 44 14 8"/><path d="M14 18c-8-2-10-8-9-12 6 1 10 5 9 12z" fill="currentColor"/><path d="M11 32c-8 0-12-5-12-9 6 0 11 3 12 9z" fill="currentColor"/><path d="M11 46c-8 2-12-2-13-6 6-1 11 1 13 6z" fill="currentColor"/><path d="M15 60c-6 4-12 1-14-3 6-2 11-1 14 3z" fill="currentColor"/></g></svg>
+        </div>
+      </div>
+      <figure class="rc rc--story reveal">
+        <video class="rc__bgv" src="../assets/video/jp-tortuguero.mp4" poster="../assets/video/jp-tortuguero.jpg" muted loop playsinline preload="none" data-auto></video>
+        <div class="rc__veil"></div>
+        <div class="rc__tag"><span>Tortuguero, Limón</span></div>
+        <blockquote>“Nuestro producto Ultra Colonial fue seleccionado para este proyecto después de un año de pruebas: resistencia a la corrosión, disminución térmica y acústica.”</blockquote>
+        <figcaption><b>Juan Pablo Mafla</b><span>Fundador, Ultra Techos</span></figcaption>
+      </figure>
+    </div>
+    <!-- col 2 -->
+    <div class="rev__col">
+      <div class="rc rc--video reveal" id="vidCard">
+        <video src="../assets/video/heiner-1.mp4" poster="../assets/video/heiner-1.jpg" muted loop playsinline preload="none" data-auto></video>
+        <button class="rc__expand" data-vsrc="../assets/video/heiner-1.mp4" aria-label="Ver video con sonido"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg></button>
+        <div class="rc__vcap"><span>Historias de obra</span><h3>Don Heiner, instalador</h3></div>
+        <button class="rc__pp" aria-label="Pausar video"><svg viewBox="0 0 24 24"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg></button>
+      </div>
+      <article class="rc rc--quote reveal">
+        <div class="rc__stars" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg></div>
+        <p>“Quedé muy agradecido con Juan Pablo y Jorge por la solución a los inconvenientes que se presentaron. El producto es de muy buena calidad y la diferencia térmica es notablemente superior a cualquier otra solución del mercado. Sin duda los volvería a escoger.”</p>
+        <footer><span class="rc__av">G</span><div><b>Geovanny F.</b><span><svg class="rc__glogo" viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg> Reseña de Google · hace 1 mes</span></div></footer>
+      </article>
+    </div>
+    <!-- col 3 -->
+    <div class="rev__col">
+      <a class="rc rc--stat reveal" href="https://www.google.com/maps/place/Ultra+Techos/@9.9688308,-84.1196114,17z" target="_blank" rel="noopener">
+        <div class="rc__num">4.4</div>
+        <div class="rc__small"><svg class="rc__glogo" viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg> 7 reseñas en Google</div>
+        <div class="rc__stars rc__stars--lg" aria-label="4.4 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><span class="rc__part"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg></span></div>
+        <p class="rc__serif">Techos que ya protegen casas, hoteles y bodegas en todo el país</p>
+      </a>
+      <article class="rc rc--blue reveal">
+        <img src="../assets/img/huacas-courts.jpg" alt="Canchas techadas por Ultra Techos en Huacas" loading="lazy">
+        <div class="rc__mark">“</div>
+        <h3>Nuestras láminas tienen medidas de hasta 11,80 metros, lo que hace fácil la instalación. Menos traslapes, menos desperdicio y un techo más limpio.</h3>
+        <p class="rc__who">Heiner</p>
+        <p class="rc__role">Instalador, proyectos Ultra 35</p>
+      </article>
+    </div>
+    <!-- col 4 -->
+    <div class="rev__col">
+      <figure class="rc rc--press reveal" data-vsrc="../assets/broll/reel-lamina.mp4" role="button" tabindex="0" aria-label="Ver video de la arquitecta con sonido">
+        <img src="../assets/broll/reel-lamina-face.jpg" alt="Arquitecta en la Expo Ultra Techos 2026" loading="lazy">
+        <div class="rc__veil"></div>
+        <span class="rc__badge">▶ Video · Expo Ultra Techos 2026</span>
+        <blockquote>“Para nosotros como arquitectos, saber que un producto de una tecnología tan avanzada podemos utilizarlo aquí en Costa Rica sin ningún temor.”</blockquote>
+        <figcaption><b>Arquitecta</b><span>14 años en construcción</span></figcaption>
+      </figure>
+      <article class="rc rc--quote reveal">
+        <div class="rc__stars" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg></div>
+        <p>“Son una empresa pequeña pero en crecimiento, han sido responsables, se les ha pagado los materiales por adelantado, varios millones y han cumplido bien. No todo ha sido perfecto pero han podido resolver. Así que hagan negocio con confianza.”</p>
+        <footer><span class="rc__av">E</span><div><b>Eddy M.</b><span><svg class="rc__glogo" viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg> Reseña de Google · hace 2 meses</span></div></footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ SERVICES (Figma "Nuestros servicios") ═════════ -->
+<section class="serv" id="servicios" aria-labelledby="servH">
+  <div class="wrap serv__in">
+    <div class="serv__copy">
+      <p class="eyebrow eyebrow--light">Ultra Techos</p>
+      <h2 id="servH">Mucho más que láminas</h2>
+      <p>Te acompañamos más allá del material: tecnología de alto desempeño, inventario disponible, logística y soporte técnico para obras residenciales, comerciales e industriales.</p>
+      <button class="btn" data-lead="servicios">Cotizá tu techo</button>
+    </div>
+    <div class="serv__stack">
+      <article class="scard scard--white"><span class="scard__n">01</span><h3>Tecnología de techos de alto desempeño</h3><p>Cubiertas en polímeros ligeras y fáciles de manipular: una instalación más ágil que con soluciones tradicionales.</p><img src="../assets/img/tile-dark.png" alt="Lámina Ultra en polímeros" loading="lazy"></article>
+      <article class="scard scard--orange"><span class="scard__n">02</span><h3>Medidas adaptadas a cada proyecto</h3><p>Diferentes largos de lámina y corte a la medida de tu techo: menos traslapes, menos desperdicio y una instalación más limpia.</p></article>
+      <article class="scard scard--navy"><span class="scard__n">03</span><h3>Inventario disponible</h3><p>Tenemos material en bodega en Heredia para que tu obra no se detenga esperando el techo.</p></article>
+      <article class="scard scard--cream"><span class="scard__n">04</span><h3>Transporte a todo el país</h3><p>Llevamos tu techo a cualquier lugar de Costa Rica. Hasta Tortuguero: en camión hasta La Pavona y en lancha por el río.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ QUOTE FORM (Figma "Cotización directa") ═════════ -->
+<section class="quote" id="cotizar" aria-labelledby="quoteH">
+  <div class="wrap quote__in">
+    <div class="quote__copy">
+      <p class="eyebrow">Cotización directa</p>
+      <h2 id="quoteH">Encontrá el techo ideal para tu proyecto</h2>
+      <p>Completá el formulario y uno de nuestros ingenieros especialistas revisa tu proyecto y te propone la mejor configuración de materiales, cortes y logística.</p>
+      <ul class="quote__info">
+        <li><span><svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg></span><div><b>Asesoría técnica</b><p>Respuesta en menos de 24 horas hábiles.</p></div></li>
+        <li><span><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b>Bodega</b><p>Heredia, Lagunilla · Bodegas Lagunilla #19</p></div></li>
+        <li><span><svg viewBox="0 0 24 24"><path d="M20 15.5a11 11 0 0 1-3.5-.6 1 1 0 0 0-1 .25l-2.2 2.2a15 15 0 0 1-6.6-6.6l2.2-2.2a1 1 0 0 0 .25-1A11 11 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1 17 17 0 0 0 17 17 1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1z"/></svg></span><div><b>WhatsApp</b><p>+506 7012-1636</p></div></li>
+      </ul>
+    </div>
+    <div class="qform" data-form>
+      <div class="qform__steps"><span class="qform__dot is-on">1</span><span class="qform__line"><i></i></span><span class="qform__dot">2</span></div>
+      <form class="qform__f" novalidate>
+        <div class="qform__step is-on" data-step="1">
+          <div class="qgrid">
+            <label>Nombre completo *<input name="nombre" required placeholder="Ej: Juan Pérez" autocomplete="name"></label>
+            <label>WhatsApp / Teléfono *<input name="tel" required placeholder="+506 0000-0000" inputmode="tel" autocomplete="tel"></label>
+            <label>Ubicación del proyecto *<input name="ubicacion" required placeholder="Ej: San José, Santa Ana"></label>
+            <label>Área aproximada (m²)<input name="area" placeholder="Ej: 150" inputmode="numeric"></label>
+          </div>
+          <fieldset class="qradio"><legend>Tipo de proyecto *</legend>
+            <label><input type="radio" name="tipo" value="Residencial" checked><span>Residencial</span></label>
+            <label><input type="radio" name="tipo" value="Comercial / Industrial"><span>Comercial / Industrial</span></label>
+          </fieldset>
+          <button type="button" class="btn btn--wide" data-next>Continuar</button>
+        </div>
+        <div class="qform__step" data-step="2">
+          <fieldset class="qradio"><legend>¿Tenés planos o medidas?</legend>
+            <label><input type="radio" name="planos" value="Sí" checked><span>Sí, los tengo</span></label>
+            <label><input type="radio" name="planos" value="No"><span>Todavía no</span></label>
+          </fieldset>
+          <label class="qsel">Etapa de tu obra<select name="etapa"><option>Estoy planeando</option><option>En construcción</option><option>Cambio de techo existente</option></select></label>
+          <label class="qsel">Sistema que te interesa<select name="sistema"><option>No sé, quiero asesoría</option><option>Ultra Colonial</option><option>Ultra 35</option><option>Ultra 35 Clear</option><option>Ultra Palma</option><option>Ultra Therm</option><option>Aislante Térmico Reflectivo</option></select></label>
+          <label class="qsel">Comentarios<textarea name="msg" rows="3" placeholder="Contanos de tu proyecto"></textarea></label>
+          <div class="qform__row"><button type="button" class="qform__back" data-back>Atrás</button><button type="submit" class="btn btn--wide">Solicitar asesoría</button></div>
+        </div>
+        <div class="qform__done" data-done>
+          <span class="qform__check"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span>
+          <h3>¡Listo, recibimos tu proyecto!</h3>
+          <p>Un ingeniero de Ultra Techos te escribe por WhatsApp en menos de 24 horas hábiles.</p>
+        </div>
+        <p class="qform__legal">Al enviar este formulario aceptás nuestra política de privacidad.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═════════ FOOTER (Figma) ═════════ -->
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div class="foot__brand">
+      <img src="../assets/brand/logo-white.svg" alt="Ultra Techos" width="150" height="52">
+      <p>Especialistas en cubiertas termoacústicas para Costa Rica y Centroamérica.</p>
+      <div class="foot__social">
+        <a href="https://www.facebook.com/" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a>
+        <a href="https://www.instagram.com/" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="https://www.tiktok.com/" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M15 3c.4 2.6 2 4.2 4.6 4.4v3.2a8 8 0 0 1-4.5-1.4V15a6 6 0 1 1-6-6h.5v3.3a2.7 2.7 0 1 0 2.2 2.6V3z"/></svg></a>
+        <a href="https://wa.me/50670121636" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.7-1.2A9 9 0 1 0 12 3z"/></svg></a>
+      </div>
+    </div>
+    <div><h4>Menú</h4><a href="#top">Inicio</a><a href="#sistemas">Productos</a><a href="#proyectos">Proyectos</a><a href="#servicios">Servicios</a><a href="#cotizar">Contacto</a></div>
+    <div><h4>Productos</h4><a href="#sistemas">Ultra 35</a><a href="#sistemas">Ultra 35 Clear</a><a href="#sistemas">Ultra Colonial</a><a href="#sistemas">Ultra Therm</a><a href="#sistemas">Ultra Palma</a><a href="#sistemas">Accesorios</a><a href="#sistemas">Aislantes</a></div>
+    <div><h4>Contacto</h4><p>Teléfono: +506 7012-1636</p><p>Email: info@ultratechos.com</p><p>Dirección: Heredia, Lagunilla, Bodegas Lagunilla, Bodega #19</p></div>
+  </div>
+  <div class="foot__legal">© 2026 Ultratechos S.A. Todos los derechos reservados. <span>|</span> Términos y condiciones <span>|</span> Política de privacidad</div>
+</footer>
+
+<a class="wa" href="https://wa.me/50670121636" aria-label="Escribinos por WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-2.6-1.6 9.6 9.6 0 0 1-1.8-2.2c-.2-.3 0-.5.1-.7l.5-.6.3-.5a.6.6 0 0 0 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c.8.3 1.4.5 1.8.6a4.4 4.4 0 0 0 2 .1 3.3 3.3 0 0 0 2.2-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.6-.4z"/></svg></a>
+
+<!-- lead modal (Figma 2-step form, cloned by JS) -->
+<div class="modal" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="modalH" hidden>
+  <div class="modal__scrim" data-close></div>
+  <div class="modal__box">
+    <button class="modal__x" data-close aria-label="Cerrar"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <p class="eyebrow">Cotización directa</p>
+    <h2 id="modalH">Contanos de tu techo</h2>
+    <div class="modal__slot"></div>
+  </div>
+</div>
+
+<!-- video lightbox -->
+<div class="vbox" id="vbox" hidden><div class="vbox__scrim" data-vclose></div><video controls playsinline></video><button class="modal__x" data-vclose aria-label="Cerrar video"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+
+<script src="v2.js?v=4"></script>
+<script src="../assets/shared/ut-lead.js?v=1" defer></script>
+</body>
+</html>

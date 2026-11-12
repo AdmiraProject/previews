@@ -1,0 +1,92 @@
+/* Ultra Techos — shared quote pop-up, 1:1 with Figma "FORM" (nodes 2298:2998 step 1 · 2298:2941 step 2).
+   Card 691×600, padding 40, radius 16 · stepper 60px circles · cream fields · orange glow pill. Namespaced .utl-* */
+.utl{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;padding:24px;
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;color:#00263A}
+.utl[hidden]{display:none}
+.utl *,.utl *::before,.utl *::after{box-sizing:border-box}
+.utl__scrim{position:absolute;inset:0;background:rgba(0,22,34,.66);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);
+  opacity:0;transition:opacity .35s ease}
+.utl.is-open .utl__scrim{opacity:1}
+.utl__card{position:relative;width:min(691px,100%);min-height:600px;max-height:calc(100dvh - 48px);overflow:auto;
+  background:#fff;border-radius:16px;padding:40px;display:flex;flex-direction:column;
+  box-shadow:0 40px 90px -20px rgba(0,16,26,.55),0 2px 0 rgba(255,255,255,.6) inset;
+  opacity:0;transform:translateY(18px) scale(.97);transition:opacity .38s cubic-bezier(.2,.7,.2,1),transform .5s cubic-bezier(.2,.8,.2,1)}
+.utl.is-open .utl__card{opacity:1;transform:none}
+.utl__x{position:absolute;top:-52px;right:0;width:40px;height:40px;border-radius:50%;border:0;cursor:pointer;
+  background:rgba(255,255,255,.95);color:#00263A;display:grid;place-items:center;box-shadow:0 8px 20px -8px rgba(0,0,0,.4);
+  transition:transform .2s;z-index:2}
+.utl__x:hover{transform:rotate(90deg)}
+.utl__x svg{width:16px;height:16px;stroke:currentColor;stroke-width:2.4;fill:none;stroke-linecap:round}
+.utl__wrap{position:relative;width:min(691px,100%)}
+
+/* stepper */
+.utl__steps{display:flex;align-items:center;gap:32px;margin:0 0 40px}
+.utl__dot{flex:0 0 60px;height:60px;border-radius:50%;display:grid;place-items:center;
+  font:800 28px/1 'Hanken Grotesk','Manrope','Inter',sans-serif;background:#FCF9F3;color:#00263A;
+  transition:background .4s,color .4s,transform .4s}
+.utl__dot.is-on{background:#E77204;color:#fff}
+.utl__line{flex:1;height:2px;background:#E5E2DC;border-radius:2px;position:relative;overflow:hidden}
+
+/* steps */
+.utl__step{display:none;flex-direction:column;flex:1}
+.utl__step.is-on{display:flex;animation:utlIn .45s cubic-bezier(.2,.8,.2,1)}
+.utl__step.is-back{animation:utlBack .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes utlIn{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+@keyframes utlBack{from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:none}}
+.utl__grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 24px}
+.utl__f{display:flex;flex-direction:column;gap:10px;min-width:0}
+.utl__lab{margin:0;font:700 14px/1.3 'Inter',sans-serif;color:#00263A}
+.utl input[type=text],.utl input[type=tel],.utl input[type=email],.utl textarea{
+  width:100%;height:48px;margin:0;padding:0 14px;border:1px solid #E5E2DC;border-radius:8px;background:#FBF8F2;
+  font:400 16px/1.3 'Inter',sans-serif;color:#00263A;outline:none;box-shadow:none;-webkit-appearance:none;appearance:none;
+  transition:border-color .2s,box-shadow .2s,background .2s}
+.utl textarea{height:96px;padding:12px 14px;resize:vertical;line-height:1.5}
+.utl input::placeholder,.utl textarea::placeholder{color:#8A96A0;opacity:1}
+.utl input:focus,.utl textarea:focus{border-color:#E77204;background:#fff;box-shadow:0 0 0 4px rgba(231,114,4,.14)}
+.utl .is-err{border-color:#D93025!important;box-shadow:0 0 0 4px rgba(217,48,37,.12)!important;animation:utlShake .35s}
+@keyframes utlShake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.utl__radios{display:flex;flex-wrap:wrap;gap:12px 20px;margin:0;padding:0;border:0}
+.utl__radios label{display:inline-flex;align-items:center;gap:8px;font:400 16px/1.3 'Inter',sans-serif;color:#00263A;cursor:pointer}
+.utl input[type=radio]{width:18px;height:18px;margin:0;accent-color:#2563EB;cursor:pointer}
+.utl__mt{margin-top:28px}
+.utl__s2 .utl__f+.utl__f{margin-top:28px}
+
+/* actions */
+.utl__act{margin-top:auto;padding-top:40px;display:flex;flex-direction:column;align-items:center}
+.utl__btns{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.utl__btn{height:54px;padding:0 22px;border-radius:999px;border:0;cursor:pointer;white-space:nowrap;
+  font:700 18px/1 'Hanken Grotesk','Manrope','Inter',sans-serif;letter-spacing:-.1px;transition:transform .2s,box-shadow .2s,filter .2s}
+.utl__btn--go{color:#fff;background:linear-gradient(90deg,#E77204 0%,#F7931E 100%);box-shadow:0 16px 34px -10px rgba(247,147,30,.75)}
+.utl__btn--go:hover{transform:translateY(-2px);box-shadow:0 22px 40px -12px rgba(247,147,30,.85);filter:saturate(1.08)}
+.utl__btn--back{background:#fff;color:#00263A;box-shadow:inset 0 0 0 1.5px #00263A}
+.utl__btn--back:hover{background:#00263A;color:#fff}
+.utl__legal{margin:16px 0 0;font:400 12px/1.4 'Inter',sans-serif;color:#5B6B78;text-align:center}
+
+/* success */
+.utl__ok{display:none;flex:1;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px 0}
+.utl.is-done .utl__steps,.utl.is-done .utl__step{display:none}
+.utl.is-done .utl__ok{display:flex;animation:utlIn .5s cubic-bezier(.2,.8,.2,1)}
+.utl__check{width:76px;height:76px;border-radius:50%;background:#E77204;display:grid;place-items:center;margin-bottom:24px;
+  box-shadow:0 16px 34px -10px rgba(247,147,30,.75)}
+.utl__check svg{width:34px;height:34px;stroke:#fff;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:40;stroke-dashoffset:40}
+.utl.is-done .utl__check svg{animation:utlDraw .6s .2s forwards}
+@keyframes utlDraw{to{stroke-dashoffset:0}}
+.utl__ok h3{margin:0 0 10px;font:800 30px/1.15 'Hanken Grotesk','Manrope',sans-serif;letter-spacing:-.6px;color:#00263A}
+.utl__ok p{margin:0 0 28px;max-width:420px;font:400 16px/1.55 'Inter',sans-serif;color:#5B6B78}
+
+html.utl-lock,html.utl-lock body{overflow:hidden!important}
+
+@media (max-width:640px){
+  .utl{padding:12px;align-items:end}
+  .utl__wrap{width:100%}
+  .utl__card{min-height:0;max-height:calc(100dvh - 24px);padding:56px 20px 24px;border-radius:18px}
+  .utl__x{top:12px;right:12px;width:34px;height:34px;background:#F3EFE7;box-shadow:none}
+  .utl__steps{gap:16px;margin-bottom:28px}
+  .utl__dot{flex-basis:48px;height:48px;font-size:22px}
+  .utl__grid{grid-template-columns:1fr;gap:20px}
+  .utl__act{padding-top:28px}
+  .utl__btns{width:100%;flex-direction:column-reverse;gap:10px}
+  .utl__btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){.utl *{animation:none!important;transition:none!important}.utl__check svg{stroke-dashoffset:0}}
