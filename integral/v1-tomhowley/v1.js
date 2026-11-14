@@ -147,7 +147,7 @@
     track.addEventListener('transitionend', function (e) { if (e.target === track) fix(); });
     function layout() {
       w = list.clientWidth / show; pos(idx, false);
-      var m = orig[0].querySelector('.story__img,.quote,img,.reel__b');
+      var m = orig[0].querySelector('.story__img,.qcard,img,.reel__b');
       if (m) el.style.setProperty('--arr', (m.getBoundingClientRect().top - el.getBoundingClientRect().top + m.offsetHeight / 2) + 'px');
     }
     function setup() {
