@@ -405,3 +405,5 @@ html:not(.js) .tp+.tp{margin-top:60px}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
 }
+
+img.qcard__av,img.rv-av{object-fit:cover;padding:0;background:#9C8D7E}

@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="../assets/hero/hero-marmol-macro-parrilla-16x9.jpg" media="(min-width: 768px)">
-<link rel="preload" as="image" href="../assets/hero/hero-marmol-macro-parrilla-4x5.jpg" media="(max-width: 767px)">
+<link rel="preload" as="image" href="../assets/hero/hero-film-16x9.jpg" media="(min-width: 768px)">
+<link rel="preload" as="image" href="../assets/hero/hero-film-4x5.jpg" media="(max-width: 767px)">
 <link rel="stylesheet" href="v1.css">
 </head>
 <body>
@@ -143,13 +143,11 @@
 <!-- ============ S1 HERO: video sequence + left multiply gradient ============ -->
 <section class="hero" aria-label="Integral Design">
   <div class="hero__media">
-    <img class="hero__poster" src="../assets/hero/hero-marmol-macro-parrilla-16x9.jpg" srcset="../assets/hero/hero-marmol-macro-parrilla-4x5.jpg 1080w, ../assets/hero/hero-marmol-macro-parrilla-16x9.jpg 1920w" sizes="(max-width: 767px) 1080px, 1920px" alt="Cubierta y salpicadero de granito negro con parrilla y llave de agua dorada" width="1920" height="1080">
-    <!-- Sequence: granito y parrilla → enchapadora del taller (loop). Each advances on `ended`. -->
-    <video class="hero__v is-on" muted playsinline autoplay preload="metadata" poster="../assets/hero/hero-marmol-macro-parrilla-16x9.jpg" data-name="hero-marmol-macro-parrilla" aria-hidden="true">
-      <source src="../assets/hero/hero-marmol-macro-parrilla-4x5.mp4" type="video/mp4" media="(max-width: 767px)">
-      <source src="../assets/hero/hero-marmol-macro-parrilla-16x9.mp4" type="video/mp4">
+    <img class="hero__poster" src="../assets/hero/hero-film-16x9.jpg" srcset="../assets/hero/hero-film-4x5.jpg 1080w, ../assets/hero/hero-film-16x9.jpg 1920w" sizes="(max-width: 767px) 1080px, 1920px" alt="Cocina negra sin jaladeras con salpicadero de granito negro y dorado, luz LED y llave de latón" width="1920" height="1080">
+    <video class="hero__v is-on" muted playsinline autoplay loop preload="auto" poster="../assets/hero/hero-film-16x9.jpg" data-name="hero-film" aria-hidden="true">
+      <source src="../assets/hero/hero-film-4x5.mp4" type="video/mp4" media="(max-width: 767px)">
+      <source src="../assets/hero/hero-film-16x9.mp4" type="video/mp4">
     </video>
-    <video class="hero__v" muted playsinline preload="none" data-name="hero-fab-enchapadora-logo" aria-hidden="true"></video>
   </div>
   <div class="hero__grad" aria-hidden="true"></div>
   <div class="hero__copy">
@@ -184,7 +182,7 @@
           <span class="qcard__rate"><span class="qcard__stars" aria-hidden="true"><svg viewBox="0 0 120 22" width="96" height="18"><g fill="#F5B301"><path transform="translate(0 0)" d="M11 1.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L11 16.3 5.1 19.6l1.3-6.6L1.5 8.4l6.6-.8z"/><path transform="translate(24 0)" d="M11 1.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L11 16.3 5.1 19.6l1.3-6.6L1.5 8.4l6.6-.8z"/><path transform="translate(48 0)" d="M11 1.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L11 16.3 5.1 19.6l1.3-6.6L1.5 8.4l6.6-.8z"/><path transform="translate(72 0)" d="M11 1.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L11 16.3 5.1 19.6l1.3-6.6L1.5 8.4l6.6-.8z"/><path transform="translate(96 0)" d="M11 1.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L11 16.3 5.1 19.6l1.3-6.6L1.5 8.4l6.6-.8z"/></g></svg></span><span class="qcard__score">4.9</span><span class="qcard__src">Reseñas de Google</span></span>
           <span class="qcard__mark" aria-hidden="true">“</span>
           <blockquote class="qcard__q"><p>Estoy muy agradecida con todo el equipo que hizo posible la cocina que imaginé.”</p></blockquote>
-          <figcaption class="qcard__by"><span class="qcard__rule" aria-hidden="true"></span><span class="qcard__person"><span class="qcard__av" aria-hidden="true">EG</span><span class="qcard__id"><span class="qcard__name">Eva María Garza</span><span class="qcard__who">Clienta de Integral Design</span></span></span></figcaption>
+          <figcaption class="qcard__by"><span class="qcard__rule" aria-hidden="true"></span><span class="qcard__person"><img class="qcard__av" src="../assets/brand/avatars/placeholder-eg.jpg" alt="" width="56" height="56" loading="lazy"><!-- PLACEHOLDER: retrato de muestra generado, no es la persona real; reemplazar con foto real o quitar --><span class="qcard__id"><span class="qcard__name">Eva María Garza</span><span class="qcard__who">Clienta de Integral Design</span></span></span></figcaption>
           <a class="tlink arw qcard__cta" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">Cotiza tu cocina</a>
         </figure>
       </article>
@@ -200,7 +198,7 @@
           <span class="qcard__rate"><span class="qcard__stars" aria-hidden="true"><svg viewBox="0 0 120 22" width="96" height="18"><g fill="#F5B301"><path transform="translate(0 0)" d="M11 1.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L11 16.3 5.1 19.6l1.3-6.6L1.5 8.4l6.6-.8z"/><path transform="translate(24 0)" d="M11 1.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L11 16.3 5.1 19.6l1.3-6.6L1.5 8.4l6.6-.8z"/><path transform="translate(48 0)" d="M11 1.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L11 16.3 5.1 19.6l1.3-6.6L1.5 8.4l6.6-.8z"/><path transform="translate(72 0)" d="M11 1.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L11 16.3 5.1 19.6l1.3-6.6L1.5 8.4l6.6-.8z"/><path transform="translate(96 0)" d="M11 1.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L11 16.3 5.1 19.6l1.3-6.6L1.5 8.4l6.6-.8z"/></g></svg></span><span class="qcard__score">4.9</span><span class="qcard__src">Reseñas de Google</span></span>
           <span class="qcard__mark" aria-hidden="true">“</span>
           <blockquote class="qcard__q"><p>Desde el primer contacto, hasta la entrega del proyecto, un equipo profesional y responsable. Altamente recomendable realizar tu cocina con Integral Design.”</p></blockquote>
-          <figcaption class="qcard__by"><span class="qcard__rule" aria-hidden="true"></span><span class="qcard__person"><span class="qcard__av" aria-hidden="true">IZ</span><span class="qcard__id"><span class="qcard__name">Isaías Zapata</span><span class="qcard__who">Cliente de Integral Design</span></span></span></figcaption>
+          <figcaption class="qcard__by"><span class="qcard__rule" aria-hidden="true"></span><span class="qcard__person"><img class="qcard__av" src="../assets/brand/avatars/placeholder-iz.jpg" alt="" width="56" height="56" loading="lazy"><!-- PLACEHOLDER: retrato de muestra generado, no es la persona real; reemplazar con foto real o quitar --><span class="qcard__id"><span class="qcard__name">Isaías Zapata</span><span class="qcard__who">Cliente de Integral Design</span></span></span></figcaption>
           <a class="tlink arw qcard__cta" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">Cotiza tu cocina</a>
         </figure>
       </article>
@@ -217,7 +215,7 @@
           <span class="qcard__rate"><span class="qcard__stars" aria-hidden="true"><svg viewBox="0 0 120 22" width="96" height="18"><g fill="#F5B301"><path transform="translate(0 0)" d="M11 1.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L11 16.3 5.1 19.6l1.3-6.6L1.5 8.4l6.6-.8z"/><path transform="translate(24 0)" d="M11 1.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L11 16.3 5.1 19.6l1.3-6.6L1.5 8.4l6.6-.8z"/><path transform="translate(48 0)" d="M11 1.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L11 16.3 5.1 19.6l1.3-6.6L1.5 8.4l6.6-.8z"/><path transform="translate(72 0)" d="M11 1.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L11 16.3 5.1 19.6l1.3-6.6L1.5 8.4l6.6-.8z"/><path transform="translate(96 0)" d="M11 1.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L11 16.3 5.1 19.6l1.3-6.6L1.5 8.4l6.6-.8z"/></g></svg></span><span class="qcard__score">4.9</span><span class="qcard__src">Reseñas de Google</span></span>
           <span class="qcard__mark" aria-hidden="true">“</span>
           <blockquote class="qcard__q"><p>Es una gran ventaja tener un asesor que te apoye durante todo el proceso, estoy muy feliz con la cocina que hicieron para mí.”</p></blockquote>
-          <figcaption class="qcard__by"><span class="qcard__rule" aria-hidden="true"></span><span class="qcard__person"><span class="qcard__av" aria-hidden="true">GL</span><span class="qcard__id"><span class="qcard__name">Georgina Lagos</span><span class="qcard__who">Clienta de Integral Design</span></span></span></figcaption>
+          <figcaption class="qcard__by"><span class="qcard__rule" aria-hidden="true"></span><span class="qcard__person"><img class="qcard__av" src="../assets/brand/avatars/placeholder-gl.jpg" alt="" width="56" height="56" loading="lazy"><!-- PLACEHOLDER: retrato de muestra generado, no es la persona real; reemplazar con foto real o quitar --><span class="qcard__id"><span class="qcard__name">Georgina Lagos</span><span class="qcard__who">Clienta de Integral Design</span></span></span></figcaption>
           <a class="tlink arw qcard__cta" href="#cotizar" data-lead="Quiero agendar una llamada">Habla con un asesor</a>
         </figure>
       </article>

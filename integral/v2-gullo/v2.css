@@ -445,3 +445,5 @@ strong { font-weight: 700; }
 .rv-id { display: flex; flex-direction: column; gap: 3px; }
 .rv-who { font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #5F6469; }
 @media (max-width: 800px) { .rv-av { width: 44px; height: 44px; font-size: 14px; } .rv-rate { gap: 8px; font-size: 11px; } }
+
+img.qcard__av,img.rv-av{object-fit:cover;padding:0;background:#9C8D7E}

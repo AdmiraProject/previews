@@ -87,7 +87,7 @@
       v.addEventListener('ended', function () { if (v === vids[cur]) next(); });
       v.addEventListener('error', function () { if (v === vids[cur]) next(); }, true);
     });
-    first.addEventListener('playing', function once() { first.removeEventListener('playing', once); prep(vids[1]); });
+    if (vids.length > 1) first.addEventListener('playing', function once() { first.removeEventListener('playing', once); prep(vids[1]); });
     var p0 = first.play(); if (p0 && p0.catch) p0.catch(function () {});
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (es) {

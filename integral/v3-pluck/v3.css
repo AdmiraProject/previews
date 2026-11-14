@@ -328,3 +328,5 @@ html.lb-open .totop{display:none}
 .rv-av{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#C9BCAE,#9C8D7E);color:#fff;font:600 12px/1 var(--ff-body);letter-spacing:.5px}
 .rv-id{display:flex;flex-direction:column;gap:3px}
 @media (max-width:800px){.rv-av{width:38px;height:38px}}
+
+img.qcard__av,img.rv-av{object-fit:cover;padding:0;background:#9C8D7E}
