@@ -1,0 +1,392 @@
+<!doctype html>
+<!--
+VALIDAR (Liefloré v2 · urbanstems structure) — confirm with Gonzalo before publishing
+1. "2–3 horas" (banner) vs "Express 2–4 h" (delivery page); cutoff 3:30 p. m. (web, used here) vs 4 p. m. (banners). Delivery pills/countdown are computed from 3:30 p. m. Mon–Sat, Mexicali time.
+2. "Entrega gratis" + "Solo 2 por día" on the 100–200 rosas banner: not used here — still valid?
+3. Meses sin intereses terms (only "Pregunta por meses sin intereses" appears, in the FAQ)
+4. Real-time tracking: is the SMS/email map link sent on every order?
+5. Google rating/count (not shown); extra reviewer names from Notion (not used). Review-card photos are real Liefloré arrangements, not the reviewer's own order.
+6. Product studio images in assets/p (AI/stock?) vs real; permission to swap for Drive shots
+7. Dastin web license (used for the hero H1 + accents; headings use Crimson Text, Google Fonts)
+8. Membresía Floral pricing / sellable online (here: WhatsApp CTA, no price)
+9. Loyalty card (10% / envío gratis / 25%) — not shown
+10. Funeral photos: not used (Condolencias card uses the catalog image corona-funeral-1.jpg). Do-not-use (private ribbon names): IMG_7909, IMG_7664 (A&J), tt-7649606159258717448 (Diana) — none appear in v2
+11. "Desde nuestro TikTok" view counts copied from social.json (Nov 13 2026) — they will drift
+12. tt-7682197136108309778 (130 rosas) muestra el rostro de la persona que recibe desde ~0:12 → confirmar permiso o retirar (usado en la tarjeta Graduación y en el muro de TikTok)
+13. lf-core.js oculta las sugerencias del carrito cuando hay un artículo de condolencias
+-->
+<html lang="es-MX" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liefloré · Flores a domicilio en Mexicali</title>
+<meta name="description" content="Florería premium en Mexicali: rosas calidad exportación armadas a mano. Entrega el mismo día si pides antes de las 3:30 p. m.">
+<meta name="robots" content="noindex">
+<meta name="lf-assets" content="../assets/">
+<meta name="theme-color" content="#4D1C49">
+<link rel="icon" href="../assets/brand/favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="v2.css">
+<script>document.documentElement.classList.remove('no-js')</script>
+</head>
+<body data-page="home">
+<a class="skip" href="#main">Saltar al contenido</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="sealp" d="M72,72 m-56,0 a56,56 0 1,1 112,0 a56,56 0 1,1 -112,0"/>
+    <symbol id="i-chev" viewBox="0 0 10 8"><path d="M1 2l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+    <symbol id="i-right" viewBox="0 0 16 16"><path d="M1 8h13M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+    <symbol id="i-left" viewBox="0 0 16 16"><path d="M15 8H2M7 3L2 8l5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+    <symbol id="i-search" viewBox="0 0 17 17"><circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M11.5 11.5L16 16" stroke="currentColor" stroke-width="1.3"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 15 16"><path d="M1 5h13l-1 10H2L1 5z M4.5 5V3.5a3 3 0 016 0V5" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+    <symbol id="i-bagplus" viewBox="0 0 18 18"><path d="M2 6h14l-1 11H3L2 6zM5.5 6V4.5a3.5 3.5 0 017 0V6" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M9 9v5M6.5 11.5h5" stroke="currentColor" stroke-width="1.2"/></symbol>
+    <symbol id="i-burger" viewBox="0 0 20 14"><path d="M0 1h20M0 7h20M0 13h20" stroke="currentColor" stroke-width="1.3"/></symbol>
+    <symbol id="i-x" viewBox="0 0 18 18"><path d="M2 2l14 14M16 2L2 16" stroke="currentColor" stroke-width="1.4"/></symbol>
+    <symbol id="i-star" viewBox="0 0 12 11"><path d="M6 0l1.76 3.6 3.94.56-2.85 2.77.67 3.93L6 9.01 2.48 10.86l.67-3.93L.3 4.16l3.94-.56z" fill="currentColor"/></symbol>
+    <symbol id="i-play" viewBox="0 0 12 12"><path d="M2 1l9 5-9 5z" fill="currentColor"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 12 12"><path d="M2 1h3v10H2zM7 1h3v10H7z" fill="currentColor"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 20 20"><rect x="2" y="4" width="16" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M2 8h16M6 2v4M14 2v4" stroke="currentColor" stroke-width="1.3"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 20 20"><path d="M10 18s6-5.5 6-10a6 6 0 10-12 0c0 4.5 6 10 6 10z" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="10" cy="8" r="2.2" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 20 20"><path d="M1 5h11v9H1zM12 8h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="5" cy="15.5" r="1.8" fill="#fff" stroke="currentColor" stroke-width="1.3"/><circle cx="15" cy="15.5" r="1.8" fill="#fff" stroke="currentColor" stroke-width="1.3"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 16 16"><path d="M1.5 6h13v3h-13zM2.5 9h11v6h-11zM8 6v9M8 6C6 2 3.5 3 4.5 5 5 6 8 6 8 6zm0 0c2-4 4.5-3 3.5-1C11 6 8 6 8 6z" fill="none" stroke="currentColor" stroke-width="1.1"/></symbol>
+    <symbol id="i-filter" viewBox="0 0 16 17"><path d="M1 3h14M1 8.5h14M1 14h14" stroke="currentColor" stroke-width="1.2"/><circle cx="5" cy="3" r="1.8" fill="#f8f8f8" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="8.5" r="1.8" fill="#f8f8f8" stroke="currentColor" stroke-width="1.2"/><circle cx="6" cy="14" r="1.8" fill="#f8f8f8" stroke="currentColor" stroke-width="1.2"/></symbol>
+    <symbol id="i-g2" viewBox="0 0 17 17"><rect x="1" y="1" width="6.5" height="15" rx="1" fill="none" stroke="currentColor" stroke-width="1.2"/><rect x="9.5" y="1" width="6.5" height="15" rx="1" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+    <symbol id="i-g3" viewBox="0 0 17 17"><rect x="1" y="1" width="4" height="15" rx="1" fill="none" stroke="currentColor" stroke-width="1.2"/><rect x="6.5" y="1" width="4" height="15" rx="1" fill="none" stroke="currentColor" stroke-width="1.2"/><rect x="12" y="1" width="4" height="15" rx="1" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 18 18"><circle cx="7.5" cy="7.5" r="6" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M12 12l5 5M5 7.5h5M7.5 5v5" stroke="currentColor" stroke-width="1.3"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.11c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.24-3.27-.68-2.77-1.09-4.53-3.93-4.67-4.11-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.24-.27.53-.34.71-.34l.51.01c.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.69 1.14 1.48 1.84 1.02.91 1.88 1.19 2.15 1.33.27.13.42.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.56.74 1.83.87.27.13.45.2.51.31.07.11.07.64-.17 1.32z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="4.5" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="10" cy="10" r="3.6" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="14.7" cy="5.3" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-tt" viewBox="0 0 20 20"><path d="M13.5 2c.3 2.2 1.7 3.6 4 3.8v2.7c-1.5.1-2.8-.4-4-1.2v5.6c0 3.3-2.4 5.1-5 5.1-2.8 0-4.9-2.1-4.9-4.8 0-3 2.6-5.2 5.8-4.7v2.8c-1.4-.4-3 .4-3 1.9 0 1.1.9 1.9 2 1.9 1.2 0 2.1-.8 2.1-2.4V2z" fill="currentColor"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 20 20"><path d="M11.2 18v-7h2.4l.4-2.8h-2.8V6.5c0-.8.2-1.4 1.4-1.4H14V2.6c-.3 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.6v2.1H6V11h2.4v7z" fill="currentColor"/></symbol>
+    <symbol id="i-g" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 01-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 7.9-2.9l-3.9-3c-1.1.7-2.4 1.2-4 1.2-3.1 0-5.7-2.1-6.6-4.9H1.4v3.1A12 12 0 0012 24z"/><path fill="#FBBC05" d="M5.4 14.4a7.2 7.2 0 010-4.7V6.6h-4a12 12 0 000 10.8z"/><path fill="#EA4335" d="M12 4.8c1.7 0 3.3.6 4.5 1.8l3.4-3.4A12 12 0 001.4 6.6l4 3.1C6.3 6.9 8.9 4.8 12 4.8z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 80 80"><path d="M14 18h40a6 6 0 016 6v20a6 6 0 01-6 6H32l-12 10V50h-6a6 6 0 01-6-6V24a6 6 0 016-6z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M60 30h6a6 6 0 016 6v16a6 6 0 01-6 6h-4v8l-10-8H40a6 6 0 01-6-5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M22 32h28M22 39h20" stroke="#CA9341" stroke-width="1.6"/></symbol>
+    <symbol id="i-store" viewBox="0 0 80 80"><path d="M12 30l6-14h44l6 14" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 30c0 4 3 7 7 7s7-3 7-7c0 4 3 7 7 7s7-3 7-7c0 4 3 7 7 7s7-3 7-7c0 4 3 7 7 7s7-3 7-7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 37v29h48V37M34 66V50h12v16" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M50 46c3-4 7-3 8 0-3 3-6 3-8 0z" fill="none" stroke="#CA9341" stroke-width="1.6"/></symbol>
+    <symbol id="i-qa" viewBox="0 0 80 80"><circle cx="40" cy="40" r="26" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M33 33a7 7 0 1110 6c-2 1-3 2.5-3 5v2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="40" cy="52" r="1.6" fill="#CA9341"/></symbol>
+  </defs>
+</svg>
+
+<header class="hdr" id="top">
+  <div class="ann" role="region" aria-label="Aviso"><p>Entrega el mismo día en Mexicali · pide antes de las 3:30 p. m. <a href="tienda.html">Ver arreglos</a></p></div>
+  <div class="nav">
+    <nav class="nav__l" aria-label="Principal">
+      <button class="nav__icon nav__burger" type="button" aria-label="Abrir menú" aria-controls="mm" aria-expanded="false" data-mm-open><svg viewBox="0 0 20 14" style="width:20px;height:14px"><use href="#i-burger"/></svg></button>
+      <button class="nav__link" type="button" aria-expanded="false" aria-controls="mega" data-mega>Tienda <svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+      <a class="nav__link" href="tienda.html?cat=bouquets-de-rosas">Rosas</a>
+      <a class="nav__link" href="tienda.html?cat=premium">Grandes gestos</a>
+      <a class="nav__link" href="tienda.html?cat=cajas-de-flores">Cajas</a>
+      <a class="nav__link hide-md" href="tienda.html?cat=floreros">Floreros</a>
+      <a class="nav__link hide-md" href="tienda.html?cat=complementos">Complementos</a>
+    </nav>
+    <a class="nav__logo" href="index.html" aria-label="Liefloré, inicio"><img src="../assets/brand/logo.png" alt="Liefloré Flower Boutique" width="164" height="40"></a>
+    <div class="nav__r">
+      <a class="nav__link" href="https://www.lieflores.com/enviar-flores-hoy-mexicali/">Envíos hoy</a>
+      <a class="nav__link hide-md" href="index.html#membresia">Membresía</a>
+      <a class="nav__link hide-md" href="https://www.lieflores.com/contacto/">Contacto</a>
+      <button class="nav__icon" type="button" aria-label="Buscar" aria-expanded="false" aria-controls="srch" data-search><svg><use href="#i-search"/></svg></button>
+      <a class="nav__icon nav__wa" href="https://wa.me/526864321342?text=Hola%20Liefloré%2C%20quiero%20pedir%20un%20arreglo" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" style="width:19px;height:19px"><use href="#i-wa"/></svg></a>
+      <a class="nav__icon" href="#carrito" data-cart-open aria-label="Abrir carrito"><svg viewBox="0 0 15 16" style="width:15px;height:16px"><use href="#i-bag"/></svg><span class="nav__count" data-count hidden>0</span></a>
+    </div>
+    <div class="mega" id="mega" aria-label="Tienda">
+      <div class="mega__top"><span class="mega__title">Tienda</span><a class="btn btn--sm" href="tienda.html" style="text-transform:uppercase;padding:3px 30px 1px;height:54px">Ver todo</a></div>
+      <div class="mega__cols">
+        <div>
+          <p class="mega__lab">Categorías</p>
+          <a class="mega__cat" href="tienda.html?cat=bouquets-de-rosas"><img src="../assets/photo/IMG_7329.jpg" alt="" loading="lazy"><span><b>Bouquets de rosas</b><span>Rosas calidad exportación, de 12 a 150 tallos</span></span></a>
+          <a class="mega__cat" href="tienda.html?cat=premium"><img src="../assets/photo/IMG_8031.jpg" alt="" loading="lazy"><span><b>Grandes gestos</b><span>Arreglos de 100 a 250 rosas</span></span></a>
+          <a class="mega__cat" href="tienda.html?cat=cajas-de-flores"><img src="../assets/p/caja-con-rosas-1.jpg" alt="" loading="lazy"><span><b>Cajas de flores</b><span>Cajas con rosas y cajas primaverales</span></span></a>
+          <a class="mega__cat" href="tienda.html?cat=complementos"><img src="../assets/p/vino-con-chocolates-1.jpg" alt="" loading="lazy"><span><b>Complementos</b><span>Vino, chocolates, ositos y globos</span></span></a>
+        </div>
+        <div class="mega__links">
+          <p class="mega__lab">Destacados</p>
+          <a href="tienda.html?sort=pop">Más pedidos</a>
+          <a href="tienda.html?cat=ramos-mixtos-y-de-temporada">Ramos de temporada</a>
+          <a href="tienda.html?cat=floreros">Floreros</a>
+          <a href="tienda.html?cat=plantas">Plantas</a>
+          <p class="mega__lab" style="margin-top:22px">Entrega</p>
+          <a href="https://www.lieflores.com/enviar-flores-hoy-mexicali/">Envíos hoy en Mexicali</a>
+          <a href="index.html#membresia">Membresía Floral</a>
+        </div>
+        <div class="mega__links">
+          <p class="mega__lab">Ocasiones</p>
+          <a href="tienda.html?occ=aniversario">Aniversario y amor</a>
+          <a href="tienda.html?occ=cumpleanos">Cumpleaños</a>
+          <a href="tienda.html?occ=graduacion">Graduación</a>
+          <a href="tienda.html?occ=mama">Para mamá</a>
+          <a href="tienda.html?occ=porquesi">Porque sí</a>
+          <a href="tienda.html?cat=condolencias">Condolencias</a>
+        </div>
+        <a class="mega__promo" href="tienda.html?cat=premium"><img src="../assets/photo/IMG_8106.jpg" alt="Arreglo de corazón con rosas rojas junto al logo de Liefloré" loading="lazy"><b>Grandes gestos</b><span>Corazones y ramos de 100 a 250 rosas</span><span class="tlink tlink--sm">Ver ahora</span></a>
+        <a class="mega__promo" href="tienda.html?cat=floreros"><img src="../assets/photo/IMG_7329.jpg" alt="Florero con rosas rojas" loading="lazy"><b>Florero de rosas</b><span>Rosas frescas en florero, listas para regalar</span><span class="tlink tlink--sm">Ver ahora</span></a>
+      </div>
+    </div>
+    <div class="srch" id="srch">
+      <form action="tienda.html" role="search"><label class="sr" for="q-top">Buscar</label><input id="q-top" name="q" placeholder="Busca por flor, color u ocasión"><button class="btn btn--dark" type="submit">Buscar</button></form>
+    </div>
+  </div>
+</header>
+<div class="mega__scrim" data-mega-scrim></div>
+
+<div class="mm" id="mm" role="dialog" aria-modal="true" aria-label="Menú" hidden>
+  <div class="mm__top"><img src="../assets/brand/logo.png" alt="Liefloré" width="123" height="30"><button class="mm__x" type="button" aria-label="Cerrar menú" data-mm-close><svg viewBox="0 0 18 18" style="width:14px;height:14px"><use href="#i-x"/></svg></button></div>
+  <form class="mm__search" action="tienda.html" role="search"><label class="sr" for="q-mm">Buscar</label><input id="q-mm" name="q" placeholder="Busca por flor, color u ocasión"><button class="nav__icon" style="width:48px" type="submit" aria-label="Buscar"><svg><use href="#i-search"/></svg></button></form>
+  <nav class="mm__p" aria-label="Menú móvil">
+    <a href="tienda.html">Tienda <span aria-hidden="true">›</span></a>
+    <a href="tienda.html?cat=bouquets-de-rosas">Rosas</a>
+    <a href="tienda.html?cat=premium">Grandes gestos</a>
+    <a href="tienda.html?cat=cajas-de-flores">Cajas de flores</a>
+    <a href="tienda.html?cat=floreros">Floreros</a>
+    <a href="tienda.html?cat=complementos">Complementos</a>
+  </nav>
+  <div class="mm__s">
+    <a href="https://www.lieflores.com/enviar-flores-hoy-mexicali/">Envíos hoy en Mexicali</a>
+    <a href="index.html#membresia" data-mm-close>Membresía Floral</a>
+    <a href="https://www.lieflores.com/nosotros/">Nosotros</a>
+    <a href="https://www.lieflores.com/atencion-al-cliente/">Atención al cliente ›</a>
+    <a href="https://www.lieflores.com/contacto/">Contacto</a>
+    <a href="#carrito" data-cart-open>Carrito</a>
+    <div class="mm__soc">
+      <a href="https://www.tiktok.com/@lieflore.mexicali" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 20 20" style="width:20px;height:20px"><use href="#i-tt"/></svg></a>
+      <a href="https://www.instagram.com/liefloremexicali" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 20 20" style="width:20px;height:20px"><use href="#i-ig"/></svg></a>
+      <a href="https://www.facebook.com/share/187wKEcVVJ/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 20 20" style="width:20px;height:20px"><use href="#i-fb"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<aside class="cd" data-cart aria-hidden="true" aria-label="Carrito" id="carrito">
+  <div class="cd__scrim" data-cart-close></div>
+  <div class="cd__panel" role="dialog" aria-modal="true" aria-labelledby="cd-h">
+    <div class="cd__head"><h2 id="cd-h">Tu carrito (<span data-cart-count>0</span>)</h2><button class="cd__x" type="button" aria-label="Cerrar carrito" data-cart-close><svg><use href="#i-x"/></svg></button></div>
+    <div class="cd__body">
+      <div class="cd__note"><svg><use href="#i-truck"/></svg><p><b>Envío estándar en Mexicali $150</b><br>Entrega el mismo día si pides antes de las 3:30 p. m.</p></div>
+      <div data-cart-lines></div>
+      <div class="cd__up" data-cart-upwrap hidden><h3>Hazlo aún más especial</h3><div data-cart-up></div></div>
+    </div>
+    <div class="cd__foot" data-cart-foot hidden>
+      <details class="cd__gift">
+        <summary><svg><use href="#i-gift"/></svg>Mensaje para la tarjeta</summary>
+        <label for="cd-msg">Escribe lo que dirá la tarjeta</label>
+        <textarea id="cd-msg" maxlength="160" data-msg placeholder="Escribe tu mensaje (opcional)"></textarea>
+        <div class="cnt"><span>Máximo 160 caracteres</span><span><span data-msg-n>0</span> / 160</span></div>
+      </details>
+      <div class="cd__tot"><span>Subtotal:</span><b data-cart-sub>$0</b></div>
+      <button class="btn btn--dark cd__go" type="button" data-checkout>Finalizar pedido</button>
+      <p class="cd__fine">El envío estándar en Mexicali ($150) se suma al confirmar tu pedido. Pago con tarjeta, PayPal o Google Pay</p>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+  <!-- 1.3 Hero -->
+  <section class="hero" aria-label="Portada">
+    <a class="hero__item" href="tienda.html">
+      <picture>
+        <source media="(max-width: 767px)" srcset="../assets/photo/IMG_8106.jpg">
+        <img src="../assets/photo/IMG_7984.jpg" alt="Corazón de rosas rojas junto al muro con el logo de Liefloré en nuestra tienda de Mexicali" fetchpriority="high" width="1600" height="1200">
+      </picture>
+      <span class="hero__badge seal seal--light" aria-hidden="true">
+        <svg class="ring" viewBox="0 0 144 144"><text fill="currentColor" font-family="Montserrat, sans-serif" font-size="11" font-weight="600" letter-spacing="1.5"><textPath href="#sealp" textLength="338" lengthAdjust="spacingAndGlyphs">ENTREGA HOY · MEXICALI · ANTES DE 3:30 P. M. ·</textPath></text></svg>
+        <img src="../assets/brand/png-icono-1.png" alt="">
+      </span>
+      <div class="hero__copy">
+        <div class="lockup">
+          <h1 class="lockup__h">Flores que llegan hoy</h1>
+          <p class="lockup__s">Rosas calidad exportación, armadas a mano en nuestro taller. Entrega el mismo día en Mexicali si pides antes de las 3:30 p. m.</p>
+          <div class="lockup__b"><span class="btn btn--light">Ver arreglos</span></div>
+        </div>
+      </div>
+    </a>
+  </section>
+
+  <!-- 1.4 Ocasiones -->
+  <section class="occ" aria-labelledby="occ-h">
+    <div class="shead"><h2 class="h4" id="occ-h">Flores y regalos para cada ocasión</h2></div>
+    <div class="car" data-car>
+      <button class="car__arrow car__arrow--p" type="button" aria-label="Anterior" data-prev><svg><use href="#i-left"/></svg></button>
+      <div class="car__track" data-track>
+        <a href="tienda.html?occ=aniversario"><div class="occ__img"><img src="../assets/photo/IMG_8109.jpg" alt="Corazón de rosas rojas con moño rojo" loading="lazy"></div><p class="occ__t">Aniversario y amor</p></a>
+        <a href="tienda.html?occ=cumpleanos"><div class="occ__img"><img src="../assets/photo/IMG_6459.jpg" alt="Bouquet de gerberas rosas, lilis y rosas durazno" loading="lazy"></div><p class="occ__t">Cumpleaños</p></a>
+        <a href="tienda.html?occ=graduacion"><div class="occ__img"><img src="../assets/social/tt-7682197136108309778.jpg" alt="Ramo de 130 rosas rojas" loading="lazy"></div><p class="occ__t">Graduación</p></a>
+        <a href="tienda.html?occ=mama"><div class="occ__img"><img src="../assets/photo/IMG_8027.jpg" alt="Ramo grande de rosas rosas y blancas" loading="lazy"></div><p class="occ__t">Para mamá</p></a>
+        <a href="tienda.html?occ=porquesi"><div class="occ__img"><img src="../assets/photo/IMG_7915.jpg" alt="Ramo de tulipanes blancos en papel lila" loading="lazy"></div><p class="occ__t">Porque sí</p></a>
+        <a href="tienda.html?cat=premium"><div class="occ__img"><img src="../assets/photo/IMG_8031.jpg" alt="Ramo de más de 100 rosas en tonos rosas" loading="lazy"></div><p class="occ__t">Grandes gestos</p></a>
+        <a href="tienda.html?cat=floreros"><div class="occ__img"><img src="../assets/photo/IMG_7329.jpg" alt="Florero con rosas rojas y eucalipto" loading="lazy"></div><p class="occ__t">Floreros</p></a>
+        <a href="tienda.html?cat=condolencias"><div class="occ__img"><img src="../assets/p/corona-funeral-1.jpg" alt="Corona funeral de flores blancas" loading="lazy"></div><p class="occ__t">Condolencias</p></a>
+      </div>
+      <button class="car__arrow car__arrow--n" type="button" aria-label="Siguiente" data-next><svg><use href="#i-right"/></svg></button>
+      <div class="sbar" data-sbar aria-hidden="true"><i></i></div>
+    </div>
+  </section>
+
+  <!-- 1.5 Reseñas -->
+  <section class="rev" aria-labelledby="rev-h">
+    <div class="shead"><h2 class="h4" id="rev-h">Lo que dicen de nosotros en Google</h2><a class="tlink" href="https://www.google.com/maps/search/?api=1&amp;query=Liefloré+Mexicali" target="_blank" rel="noopener">Ver en Google</a></div>
+    <div class="car" data-car>
+      <button class="car__arrow car__arrow--p" type="button" aria-label="Anterior" data-prev><svg><use href="#i-left"/></svg></button>
+      <div class="car__track" data-track data-reviews>
+        <figure class="rc">
+          <div class="rc__media"><div class="rc__bg rc__bg--2"><img src="../assets/photo/IMG_8027.jpg" alt="" loading="lazy"></div><div class="rc__bg rc__bg--1"><img src="../assets/photo/IMG_7329.jpg" alt="" loading="lazy"></div><div class="rc__front"><img src="../assets/photo/IMG_8109.jpg" alt="Arreglo de Liefloré" loading="lazy"></div></div>
+          <figcaption><p class="rc__n">Arturo L.</p><p class="rc__m">Reseña en Google</p></figcaption>
+          <span class="stars" role="img" aria-label="5 de 5 estrellas"><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg></span>
+          <blockquote class="rc__q">“Trato increíble y flores hermosas ✨”</blockquote>
+        </figure>
+        <figure class="rc">
+          <div class="rc__media"><div class="rc__bg rc__bg--2"><img src="../assets/photo/IMG_7915.jpg" alt="" loading="lazy"></div><div class="rc__bg rc__bg--1"><img src="../assets/photo/IMG_7339.jpg" alt="" loading="lazy"></div><div class="rc__front"><img src="../assets/photo/IMG_6459.jpg" alt="Arreglo de Liefloré" loading="lazy"></div></div>
+          <figcaption><p class="rc__n">Humberto M.</p><p class="rc__m">Reseña en Google</p></figcaption>
+          <span class="stars" role="img" aria-label="5 de 5 estrellas"><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg></span>
+          <blockquote class="rc__q">“Excelente servicio! Y perfecta atención”</blockquote>
+        </figure>
+        <figure class="rc">
+          <div class="rc__media"><div class="rc__bg rc__bg--2"><img src="../assets/photo/IMG_6457.jpg" alt="" loading="lazy"></div><div class="rc__bg rc__bg--1"><img src="../assets/photo/IMG_8029.jpg" alt="" loading="lazy"></div><div class="rc__front"><img src="../assets/photo/IMG_8031.jpg" alt="Arreglo de Liefloré" loading="lazy"></div></div>
+          <figcaption><p class="rc__n">Fernanda D.</p><p class="rc__m">Reseña en Google</p></figcaption>
+          <span class="stars" role="img" aria-label="5 de 5 estrellas"><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg></span>
+          <blockquote class="rc__q">“Excelentes arreglos, de los mejores ❤️”</blockquote>
+        </figure>
+        <figure class="rc">
+          <div class="rc__media"><div class="rc__bg rc__bg--2"><img src="../assets/photo/IMG_7922.jpg" alt="" loading="lazy"></div><div class="rc__bg rc__bg--1"><img src="../assets/photo/IMG_8106.jpg" alt="" loading="lazy"></div><div class="rc__front"><img src="../assets/photo/IMG_7101.jpg" alt="Arreglo de Liefloré" loading="lazy"></div></div>
+          <figcaption><p class="rc__n">Michelle A.</p><p class="rc__m">Reseña en Google</p></figcaption>
+          <span class="stars" role="img" aria-label="5 de 5 estrellas"><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg></span>
+          <blockquote class="rc__q">“Excelente calidad y servicio✨”</blockquote>
+        </figure>
+        <figure class="rc">
+          <div class="rc__media"><div class="rc__bg rc__bg--2"><img src="../assets/photo/IMG_7339.jpg" alt="" loading="lazy"></div><div class="rc__bg rc__bg--1"><img src="../assets/photo/IMG_8032.jpg" alt="" loading="lazy"></div><div class="rc__front"><img src="../assets/photo/IMG_7922.jpg" alt="Arreglo de Liefloré" loading="lazy"></div></div>
+          <figcaption><p class="rc__n">Irenne A.</p><p class="rc__m">Reseña en Google</p></figcaption>
+          <span class="stars" role="img" aria-label="4 de 5 estrellas"><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="off" viewBox="0 0 12 11"><use href="#i-star"/></svg></span>
+          <blockquote class="rc__q">“Buen precio”</blockquote>
+        </figure>
+        <figure class="rc">
+          <div class="rc__media"><div class="rc__bg rc__bg--2"><img src="../assets/photo/IMG_8110.jpg" alt="" loading="lazy"></div><div class="rc__bg rc__bg--1"><img src="../assets/photo/IMG_7984.jpg" alt="" loading="lazy"></div><div class="rc__front"><img src="../assets/photo/IMG_5798.jpg" alt="Arreglo de Liefloré" loading="lazy"></div></div>
+          <figcaption><p class="rc__n">Ramon O.</p><p class="rc__m">Reseña en Google</p></figcaption>
+          <span class="stars" role="img" aria-label="5 de 5 estrellas"><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg><svg class="" viewBox="0 0 12 11"><use href="#i-star"/></svg></span>
+          <blockquote class="rc__q is-clamp">“La verdad quiero agradecer a Lieflore por el buen trato que an ofrecido y la entraga excelente les doy un 1000 % de calificacion la verdad los recomiendo muchas gracias”</blockquote><button type="button" class="rc__more" data-more aria-expanded="false">Leer completa</button>
+        </figure>
+      </div>
+      <button class="car__arrow car__arrow--n" type="button" aria-label="Siguiente" data-next><svg><use href="#i-right"/></svg></button>
+    </div>
+    <div class="rev__more"><a class="tlink" href="https://www.google.com/maps/search/?api=1&amp;query=Liefloré+Mexicali" target="_blank" rel="noopener">Ver en Google</a></div>
+  </section>
+
+  <!-- 1.6 Banner -->
+  <section class="ban" aria-label="Grandes gestos">
+    <a class="ban__item" href="tienda.html?cat=premium">
+      <img src="../assets/photo/IMG_5797.jpg" alt="Ramo de 100 rosas rojas en envoltura blanca y rosa" loading="lazy">
+      <div class="hero__copy">
+        <div class="lockup">
+          <h2 class="lockup__h">Grandes gestos, en grande</h2>
+          <p class="lockup__s">Ramos y arreglos de 100 a 250 rosas, armados a mano para decirlo en grande. Desde <span data-min-premium>$2,900</span></p>
+          <div class="lockup__b"><span class="btn btn--light">Ver grandes gestos</span></div>
+        </div>
+      </div>
+    </a>
+  </section>
+
+  <!-- 1.7 Más pedidos -->
+  <section class="bs" aria-labelledby="bs-h" id="tienda">
+    <div class="bs__head">
+      <div><h2 class="h4" id="bs-h">Nuestros más pedidos</h2>
+        <div class="tabs" role="tablist" aria-label="Categorías">
+          <button class="tab" role="tab" aria-selected="true" aria-controls="bs-0" data-tab="0">Rosas</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="bs-1" data-tab="1">Cajas</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="bs-2" data-tab="2">Complementos</button>
+        </div>
+      </div>
+      <a class="tlink bs__all" href="tienda.html" data-bs-all>Ver todo</a>
+    </div>
+    <div class="bs__panel" id="bs-0" role="tabpanel"><div class="car" data-car><button class="car__arrow car__arrow--p" type="button" aria-label="Anterior" data-prev><svg><use href="#i-left"/></svg></button><div class="car__track" data-track data-grid="bouquet-de-rosas-clasica,bouquet-de-rosas-premium,ramo-50-rosas-rojas-mexicali,bouquet-50-rosas-con-corazon,bouquet-corazon-de-rosas,ramo-de-100-rosas-mexicali,bouquet-50-rosas-rositas,ramo-de-24-rosas-roja-y-rosas-mexicali"></div><button class="car__arrow car__arrow--n" type="button" aria-label="Siguiente" data-next><svg><use href="#i-right"/></svg></button><div class="sbar" data-sbar aria-hidden="true"><i></i></div></div></div>
+    <div class="bs__panel" id="bs-1" role="tabpanel" hidden><div class="car" data-car><button class="car__arrow car__arrow--p" type="button" aria-label="Anterior" data-prev><svg><use href="#i-left"/></svg></button><div class="car__track" data-track data-grid="florero-de-rosas,caja-con-rosas,24-rosas-rositas-en-florero-mexicali,caja-primaveral-jardin-variado-con-rosas-y-gerberas,caja-de-gerberas-fiusha-domicilio-mexicali,caja-primaveral-aroma-de-rosas-lirios-y-margaritas,caja-primaveral-grande-rosita,bouquet-primaveral"></div><button class="car__arrow car__arrow--n" type="button" aria-label="Siguiente" data-next><svg><use href="#i-right"/></svg></button><div class="sbar" data-sbar aria-hidden="true"><i></i></div></div></div>
+    <div class="bs__panel" id="bs-2" role="tabpanel" hidden><div class="car" data-car><button class="car__arrow car__arrow--p" type="button" aria-label="Anterior" data-prev><svg><use href="#i-left"/></svg></button><div class="car__track" data-track data-grid="vino-con-chocolates,osito-con-bombones,osito-te-amo,globos,complementos-vino-tinto-merlot,osito-de-peluche,foto-personalizada"></div><button class="car__arrow car__arrow--n" type="button" aria-label="Siguiente" data-next><svg><use href="#i-right"/></svg></button><div class="sbar" data-sbar aria-hidden="true"><i></i></div></div></div>
+    <noscript><p style="padding:24px 0;text-align:center"><a class="btn btn--dark" href="https://www.lieflores.com/tienda/">Ver la tienda en lieflores.com</a></p></noscript>
+  </section>
+
+  <!-- 1.8 Membresía (subscription split) -->
+  <section class="sub" id="membresia" aria-labelledby="sub-h">
+    <div class="sub__in">
+      <div class="sub__media" data-autovideo>
+        <img src="../assets/vid/A001_06091458_C051.jpg" alt="Corazón de rosas rojas terminado en nuestro taller" loading="lazy">
+        <video muted loop playsinline preload="none" poster="../assets/vid/A001_06091458_C051.jpg" aria-label="Video: armado a mano del corazón de rosas en nuestro taller"><source src="../assets/vid/A001_06091409_C050.mp4" type="video/mp4"></video>
+        <button class="vbtn" type="button" aria-label="Pausar video" data-vtoggle><svg><use href="#i-pause"/></svg></button>
+      </div>
+      <div class="sub__copy">
+        <div class="sub__lock">
+          <h2 class="sub__h" id="sub-h"><em>Membresía Floral</em>: arreglos sorpresa de alta gama, cada semana, quincena o mes</h2>
+          <p class="sub__s">Tú eliges la frecuencia y nosotros armamos a mano cada arreglo en nuestro taller de Mexicali. Escríbenos y diseñamos tu membresía con atención directa y personalizada</p>
+          <div class="sub__b"><a class="btn btn--dark" href="https://wa.me/526864321342?text=Hola%20Liefloré%2C%20quiero%20informes%20de%20la%20Membresía%20Floral" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" style="width:16px;height:16px"><use href="#i-wa"/></svg>Quiero mi membresía</a></div>
+          <span class="seal seal--light" aria-hidden="true">
+            <svg class="ring" viewBox="0 0 144 144"><text fill="currentColor" font-family="Montserrat, sans-serif" font-size="11" font-weight="600" letter-spacing="1.5"><textPath href="#sealp" textLength="338" lengthAdjust="spacingAndGlyphs">LIEFLORÉ · FLOWER BOUTIQUE · MEXICALI ·</textPath></text></svg>
+            <img src="../assets/brand/png-icono-1.png" alt="">
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1.9 Descubre -->
+  <section class="disc" aria-labelledby="disc-h">
+    <div class="shead"><h2 class="h4" id="disc-h">Del taller a su puerta, hoy</h2></div>
+    <div class="disc__grid">
+      <a class="dc rv" href="https://www.lieflores.com/nosotros/"><div class="dc__img"><img src="../assets/vid/A001_06091329_C048.jpg" alt="Rosas rojas insertadas una a una en la base de corazón, en nuestro taller" loading="lazy"></div><h3 class="dc__t">Armado a mano en nuestro taller</h3><p class="dc__s">Cada arreglo lo supervisa nuestro equipo: selección de flores, colores y envolturas premium</p><span class="tlink">Nosotros</span></a>
+      <a class="dc rv" href="https://www.lieflores.com/enviar-flores-hoy-mexicali/"><div class="dc__img"><img src="../assets/photo/IMG_7273.jpg" alt="Ramo de rosas rojas en el auto, camino a su entrega" loading="lazy"></div><h3 class="dc__t">Entrega el mismo día</h3><p class="dc__s">Pide antes de las 3:30 p. m. y elige entrega hoy en Mexicali. Te enviamos la ruta del repartidor en tiempo real</p><span class="tlink">Envíos hoy</span></a>
+      <a class="dc rv" href="tienda.html?cat=complementos"><div class="dc__img"><img src="../assets/photo/IMG_7101.jpg" alt="Arreglo de rosas rosas con moño dorado" loading="lazy"></div><h3 class="dc__t">Detalles VIP</h3><p class="dc__s">Chocolates gourmet, caligrafía elegante y una tarjeta personalizada con tu mensaje</p><span class="tlink">Ver complementos</span></a>
+    </div>
+  </section>
+
+  <!-- 1.10 UGC staggered -->
+  <section class="ugc" aria-labelledby="ugc-h">
+    <div class="shead shead--c"><h2 class="h4" id="ugc-h">Desde nuestro TikTok</h2><a class="btn btn--dark" href="https://www.tiktok.com/@lieflore.mexicali" target="_blank" rel="noopener">Síguenos</a></div>
+    <div class="car" data-car>
+      <button class="car__arrow car__arrow--p" type="button" aria-label="Anterior" data-prev><svg><use href="#i-left"/></svg></button>
+      <div class="car__track" data-track data-ugc><button type="button" class="ut ut--m" data-ut data-src="../assets/social/tt-7602653570340506887.mp4" data-cap="100 rosas · 2K vistas en TikTok" data-link="https://www.tiktok.com/@lieflore.mexicali/video/7602653570340506887" aria-label="Ver video: 100 rosas"><img src="../assets/social/tt-7602653570340506887.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="../assets/social/tt-7602653570340506887.jpg"></video><span class="ut__play" aria-hidden="true"><svg viewBox="0 0 12 12"><use href="#i-play"/></svg></span><span class="ut__v">2K vistas</span></button><div class="ugc__col"><button type="button" class="ut ut--s" data-ut data-src="../assets/vid/A001_06091409_C050.mp4" data-cap="Armado a mano en nuestro taller" data-link="https://www.tiktok.com/@lieflore.mexicali" aria-label="Ver video: Armado a mano en nuestro taller"><img src="../assets/vid/A001_06091409_C050.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="../assets/vid/A001_06091409_C050.jpg"></video><span class="ut__play" aria-hidden="true"><svg viewBox="0 0 12 12"><use href="#i-play"/></svg></span></button><button type="button" class="ut ut--s" data-ut data-src="../assets/social/tt-7682197136108309778.mp4" data-cap="130 rosas en Mexicali · 1.1K vistas en TikTok" data-link="https://www.tiktok.com/@lieflore.mexicali/video/7682197136108309778" aria-label="Ver video: 130 rosas en Mexicali"><img src="../assets/social/tt-7682197136108309778.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="../assets/social/tt-7682197136108309778.jpg"></video><span class="ut__play" aria-hidden="true"><svg viewBox="0 0 12 12"><use href="#i-play"/></svg></span><span class="ut__v">1.1K vistas</span></button></div><button type="button" class="ut ut--m" data-ut data-src="../assets/social/tt-7577920905800666388.mp4" data-cap="Rosas rosas · 1.6K vistas en TikTok" data-link="https://www.tiktok.com/@lieflore.mexicali/video/7577920905800666388" aria-label="Ver video: Rosas rosas"><img src="../assets/social/tt-7577920905800666388.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="../assets/social/tt-7577920905800666388.jpg"></video><span class="ut__play" aria-hidden="true"><svg viewBox="0 0 12 12"><use href="#i-play"/></svg></span><span class="ut__v">1.6K vistas</span></button><button type="button" class="ut ut--b" data-ut data-src="../assets/social/tt-7604022030635142408.mp4" data-cap="200 rosas rojas · 1K vistas en TikTok" data-link="https://www.tiktok.com/@lieflore.mexicali/video/7604022030635142408" aria-label="Ver video: 200 rosas rojas"><img src="../assets/social/tt-7604022030635142408.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="../assets/social/tt-7604022030635142408.jpg"></video><span class="ut__play" aria-hidden="true"><svg viewBox="0 0 12 12"><use href="#i-play"/></svg></span><span class="ut__v">1K vistas</span></button><button type="button" class="ut ut--m" data-ut data-src="../assets/vid/IMG_4879.mp4" data-cap="Manos armando un ramo de rosas" data-link="https://www.tiktok.com/@lieflore.mexicali" aria-label="Ver video: Manos armando un ramo de rosas"><img src="../assets/vid/IMG_4879.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="../assets/vid/IMG_4879.jpg"></video><span class="ut__play" aria-hidden="true"><svg viewBox="0 0 12 12"><use href="#i-play"/></svg></span></button><div class="ugc__col"><button type="button" class="ut ut--s" data-ut data-src="../assets/social/tt-7598292102681742610.mp4" data-cap="50 rosas rojas y rosas · 757 vistas en TikTok" data-link="https://www.tiktok.com/@lieflore.mexicali/video/7598292102681742610" aria-label="Ver video: 50 rosas rojas y rosas"><img src="../assets/social/tt-7598292102681742610.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="../assets/social/tt-7598292102681742610.jpg"></video><span class="ut__play" aria-hidden="true"><svg viewBox="0 0 12 12"><use href="#i-play"/></svg></span><span class="ut__v">757 vistas</span></button><button type="button" class="ut ut--s" data-ut data-src="../assets/vid/A001_07301008_C058.mp4" data-cap="Rosas rosas en nuestro taller" data-link="https://www.tiktok.com/@lieflore.mexicali" aria-label="Ver video: Rosas rosas en nuestro taller"><img src="../assets/vid/A001_07301008_C058.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="../assets/vid/A001_07301008_C058.jpg"></video><span class="ut__play" aria-hidden="true"><svg viewBox="0 0 12 12"><use href="#i-play"/></svg></span></button></div><button type="button" class="ut ut--m" data-ut data-src="../assets/social/tt-7606557060347612424.mp4" data-cap="Peonías · 737 vistas en TikTok" data-link="https://www.tiktok.com/@lieflore.mexicali/video/7606557060347612424" aria-label="Ver video: Peonías"><img src="../assets/social/tt-7606557060347612424.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="../assets/social/tt-7606557060347612424.jpg"></video><span class="ut__play" aria-hidden="true"><svg viewBox="0 0 12 12"><use href="#i-play"/></svg></span><span class="ut__v">737 vistas</span></button><button type="button" class="ut ut--b" data-ut data-src="../assets/vid/IMG_6458.mp4" data-cap="Bouquet listo afuera de la tienda" data-link="https://www.tiktok.com/@lieflore.mexicali" aria-label="Ver video: Bouquet listo afuera de la tienda"><img src="../assets/vid/IMG_6458.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="../assets/vid/IMG_6458.jpg"></video><span class="ut__play" aria-hidden="true"><svg viewBox="0 0 12 12"><use href="#i-play"/></svg></span></button><button type="button" class="ut ut--m" data-ut data-src="../assets/social/tt-7603176211359042823.mp4" data-cap="Gerberas · 751 vistas en TikTok" data-link="https://www.tiktok.com/@lieflore.mexicali/video/7603176211359042823" aria-label="Ver video: Gerberas"><img src="../assets/social/tt-7603176211359042823.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="../assets/social/tt-7603176211359042823.jpg"></video><span class="ut__play" aria-hidden="true"><svg viewBox="0 0 12 12"><use href="#i-play"/></svg></span><span class="ut__v">751 vistas</span></button></div>
+      <button class="car__arrow car__arrow--n" type="button" aria-label="Siguiente" data-next><svg><use href="#i-right"/></svg></button>
+      <div class="sbar" data-sbar aria-hidden="true"><i></i></div>
+    </div>
+  </section>
+
+  <!-- 1.11 Ayuda -->
+  <section class="cells" aria-label="Atención">
+    <div class="cell rv"><div class="cell__ic"><svg><use href="#i-chat"/></svg></div><h3 class="cell__t">Pide por WhatsApp</h3><p class="cell__s">Atención directa y personalizada, de lunes a sábado de 8:00 a. m. a 6:30 p. m.</p><a class="tlink tlink--sm" href="https://wa.me/526864321342?text=Hola%20Liefloré%2C%20quiero%20pedir%20un%20arreglo" target="_blank" rel="noopener">Escríbenos</a></div>
+    <div class="cell rv"><div class="cell__ic"><svg><use href="#i-store"/></svg></div><h3 class="cell__t">Visítanos en tienda</h3><p class="cell__s">Av. Ignacio López Rayón 801, Independencia, Mexicali, B.C.</p><a class="tlink tlink--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Liefloré+Mexicali" target="_blank" rel="noopener">Cómo llegar</a></div>
+    <div class="cell rv"><div class="cell__ic"><svg><use href="#i-qa"/></svg></div><h3 class="cell__t">¿Tienes dudas?</h3><p class="cell__s">Entregas, pagos con tarjeta, PayPal o Google Pay y personalización de tu pedido</p><a class="tlink tlink--sm" href="https://www.lieflores.com/atencion-al-cliente/">Atención al cliente</a></div>
+  </section>
+</main>
+
+<footer class="ft">
+  <div class="ft__main">
+    <div class="ft__news">
+      <a href="index.html" aria-label="Liefloré, inicio"><img src="../assets/brand/logo.png" alt="Liefloré Flower Boutique" width="213" height="52" loading="lazy"></a>
+      <p class="ft__h">La florería premium femenina de Mexicali. Pide antes de las 3:30 p. m. y elige entrega hoy</p>
+      <a class="ft__field" href="https://wa.me/526864321342?text=Hola%20Liefloré%2C%20quiero%20pedir%20un%20arreglo" target="_blank" rel="noopener"><span>Pide por WhatsApp</span><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg></a>
+    </div>
+    <nav class="ft__nav" aria-label="Pie de página">
+      <div class="ft__col"><h3><button type="button" aria-expanded="false">Tienda<svg viewBox="0 0 10 8" style="width:10px;height:8px"><use href="#i-chev"/></svg></button></h3><div class="ft__links">
+        <a href="tienda.html">Todos los arreglos</a><a href="tienda.html?cat=bouquets-de-rosas">Bouquets de rosas</a><a href="tienda.html?cat=premium">Grandes gestos</a><a href="tienda.html?cat=cajas-de-flores">Cajas de flores</a><a href="tienda.html?cat=floreros">Floreros</a><a href="tienda.html?cat=complementos">Complementos</a><a href="tienda.html?cat=condolencias">Condolencias</a></div></div>
+      <div class="ft__col"><h3><button type="button" aria-expanded="false">Ayuda<svg viewBox="0 0 10 8" style="width:10px;height:8px"><use href="#i-chev"/></svg></button></h3><div class="ft__links">
+        <a href="https://www.lieflores.com/atencion-al-cliente/">Atención al cliente</a><a href="https://www.lieflores.com/enviar-flores-hoy-mexicali/">Envíos hoy en Mexicali</a><a href="https://www.lieflores.com/contacto/">Contacto</a><a href="https://www.lieflores.com/terminos-y-condiciones/">Términos y condiciones</a><a href="https://www.lieflores.com/politicas-de-privacidad/">Privacidad</a></div></div>
+      <div class="ft__col"><h3><button type="button" aria-expanded="false">Liefloré<svg viewBox="0 0 10 8" style="width:10px;height:8px"><use href="#i-chev"/></svg></button></h3><div class="ft__links">
+        <a href="https://www.lieflores.com/nosotros/">Nosotros</a><a href="index.html#membresia">Membresía Floral</a><a href="https://www.lieflores.com/blog/">Guía floral</a><a href="https://www.lieflores.com/tienda/">Tienda en lieflores.com</a></div></div>
+      <div class="ft__col"><h3><button type="button" aria-expanded="false">Visítanos<svg viewBox="0 0 10 8" style="width:10px;height:8px"><use href="#i-chev"/></svg></button></h3><div class="ft__links">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Liefloré+Mexicali" target="_blank" rel="noopener">Av. Ignacio López Rayón 801,<br>Independencia, Mexicali, B.C.</a><p>Lunes a sábado<br>8:00 a. m. – 6:30 p. m.</p><a href="tel:+526864321342">686 432 1342</a></div></div>
+    </nav>
+  </div>
+  <div class="ft__soc">
+    <a href="https://www.tiktok.com/@lieflore.mexicali" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 20 20"><use href="#i-tt"/></svg></a>
+    <a href="https://www.instagram.com/liefloremexicali" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 20 20"><use href="#i-ig"/></svg></a>
+    <a href="https://www.facebook.com/share/187wKEcVVJ/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 20 20"><use href="#i-fb"/></svg></a>
+    <a href="https://wa.me/526864321342" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg></a>
+  </div>
+  <details>
+    <summary>Entregas en Mexicali <svg viewBox="0 0 10 8"><use href="#i-chev"/></svg></summary>
+    <div class="ft__zones">Entregamos en Mexicali, B.C. Para pedidos web antes de las 3:30 p. m. puedes elegir entrega el mismo día. El servicio estándar tiene un costo de $150 MXN; Express, nocturno o ciertas zonas pueden generar un cargo adicional. Valle de Mexicali: la entrega puede ser posible, el costo y las condiciones cambian según el ejido. No hay servicio regular los domingos.</div>
+  </details>
+  <div class="ft__copy"><span>© 2026 Liefloré Flower Boutique · Mexicali, B.C.</span><span>Pago con tarjeta, PayPal o Google Pay</span></div>
+</footer>
+<a class="waf" href="https://wa.me/526864321342?text=Hola%20Liefloré%2C%20quiero%20pedir%20un%20arreglo" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg></a>
+<div class="vm" id="vm" role="dialog" aria-modal="true" aria-label="Video" hidden>
+  <button class="vm__x" type="button" aria-label="Cerrar video" data-vm-close>×</button>
+  <div class="vm__box"><video playsinline controls preload="none"></video><div class="vm__cap"><span data-vm-cap></span><a data-vm-link href="https://www.tiktok.com/@lieflore.mexicali" target="_blank" rel="noopener">Ver en TikTok</a></div></div>
+</div>
+
+<script src="../assets/data.js"></script>
+<script src="../assets/lf-core.js"></script>
+<script src="v2.js"></script>
+</body>
+</html>
