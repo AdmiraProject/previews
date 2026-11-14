@@ -317,3 +317,14 @@ html.lb-open .totop{display:none}
   *,*::before,*::after{transition-duration:.01ms!important;scroll-behavior:auto!important}
   .reels__track{scroll-behavior:auto}
 }
+
+/* Google-style rating + initials avatar on testimonials (4.9 = PLACEHOLDER, see HTML comment) */
+.rv-line{margin:0 0 18px!important}
+.rv-rate{display:inline-flex;align-items:center;gap:8px;font:500 11px/1 var(--ff-body);letter-spacing:1px;text-transform:uppercase;color:#6b6b6b}
+.rv-stars{flex:none}
+.rv-score{font:500 16px/1 var(--ff-body);letter-spacing:0;color:var(--navy)}
+.rv-src{padding-left:8px;border-left:1px solid #d9d4cd}
+.quote cite.rv-by{display:flex;align-items:center;gap:10px;margin-top:8px}
+.rv-av{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#C9BCAE,#9C8D7E);color:#fff;font:600 12px/1 var(--ff-body);letter-spacing:.5px}
+.rv-id{display:flex;flex-direction:column;gap:3px}
+@media (max-width:800px){.rv-av{width:38px;height:38px}}

@@ -434,3 +434,14 @@ strong { font-weight: 700; }
 .card__img .zoom-sink { transform: scale(1.5); transform-origin: 25% 28%; }
 .card:hover .card__img .zoom-sink { transform: scale(1.56); }
 .mreel__note { font-size: 15px; line-height: 1.3; font-weight: 300; color: rgba(255,255,255,.92); margin: -14px 0 24px; }
+
+/* Google-style rating + initials avatar on testimonials (4.9 = PLACEHOLDER, see HTML comment) */
+.rv-rate { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; font: 400 12px/1 var(--ff-body); letter-spacing: 1.5px; text-transform: uppercase; color: #5F6469; }
+.rv-stars { flex: none; }
+.rv-score { font: 400 20px/1 var(--ff-display); letter-spacing: 0; text-transform: none; color: var(--navy); }
+.rv-src { padding-left: 10px; border-left: 1px solid var(--line); }
+.rv-by { display: flex; align-items: center; gap: 14px; }
+.rv-av { flex: none; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(145deg, #C9BCAE, #9C8D7E); color: #fff; font: 700 15px/1 var(--ff-body); letter-spacing: 1px; }
+.rv-id { display: flex; flex-direction: column; gap: 3px; }
+.rv-who { font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #5F6469; }
+@media (max-width: 800px) { .rv-av { width: 44px; height: 44px; font-size: 14px; } .rv-rate { gap: 8px; font-size: 11px; } }
