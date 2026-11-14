@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="../favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GAIP · Grupo Arcoiris — Envases plásticos para farmacéutica, alimentos y cosmética</title>
+<meta name="description" content="Fabricamos goteros, jaraberos, pastilleros, garrafones y tapas en México. 60 máquinas, cuartos limpios ISO 7 y 3 millones de piezas al día.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="v1.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-farma" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10.2 2.8h3.6v3.1l1.7 2.3v11.6a1.4 1.4 0 0 1-1.4 1.4h-4.2a1.4 1.4 0 0 1-1.4-1.4V8.2l1.7-2.3z"/><path d="M8.5 12.2h7M8.5 16.6h7"/></symbol>
+    <symbol id="i-garrafon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2.8h4v2.6c2.9.5 5 2.1 5 4.6v9.1a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V10c0-2.5 2.1-4.1 5-4.6z"/><path d="M5 13.2h14M5 16.6h14"/></symbol>
+    <symbol id="i-tapa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="9.5" rx="8" ry="3.2"/><path d="M4 9.5v5c0 1.8 3.6 3.2 8 3.2s8-1.4 8-3.2v-5"/><path d="M7 12.3v4.4M10 12.9v4.6M14 12.9v4.6M17 12.3v4.4"/></symbol>
+    <symbol id="i-cosme" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2.8" width="8" height="4.2" rx="1"/><path d="M7.2 7h9.6v12.6a1.6 1.6 0 0 1-1.6 1.6H8.8a1.6 1.6 0 0 1-1.6-1.6z"/><path d="M7.2 11h9.6"/></symbol>
+    <symbol id="i-molde" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 7.2 12 3.3l8.5 3.9v9.6L12 20.7l-8.5-3.9z"/><path d="M3.5 7.2 12 11l8.5-3.8M12 11v9.7"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6h10.8v10H2.5zM13.3 9.2h4l3.2 3.3V16h-7.2"/><circle cx="6.4" cy="17.6" r="1.7"/><circle cx="16.8" cy="17.6" r="1.7"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.9 19 6v5.3c0 4.6-3 8.3-7 9.8-4-1.5-7-5.2-7-9.8V6z"/><path d="m8.6 11.9 2.4 2.4 4.4-4.6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#00A0D6" stroke-width="1.6"/><path d="m7.7 12.2 3 3 5.6-6" stroke="#00A0D6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+
+<!-- NAV (formic) -->
+<header class="nav">
+  <a class="nav-logo" href="./" aria-label="GAIP · Grupo Arcoiris"><img src="../assets/brand/logo-white-notag.png" alt="Grupo Arcoiris"></a>
+  <nav class="nav-links">
+    <a href="#farmaceutica">Farmacéutica <span class="caret">▾</span></a>
+    <a href="#alimentaria">Alimentaria <span class="caret">▾</span></a>
+    <a href="#cosmetica">Cosmética</a>
+    <a href="#desarrollos">Desarrollos</a>
+    <a href="aplicaciones/">Aplicaciones</a>
+    <a href="#calidad">Calidad</a>
+    <a href="#empresa">Empresa <span class="caret">▾</span></a>
+  </nav>
+  <div class="nav-cta">
+    <a class="btn-ghost" href="tel:+523336341024">Habla con ventas</a>
+    <a class="btn-solid" href="#cotiza" data-quote>Cotizar</a>
+  </div>
+  <button class="nav-burger" aria-label="Menú" data-quote><span></span></button>
+</header>
+
+<!-- HERO (formic 1:1) -->
+<section class="hero" id="top">
+  <video id="heroVid" autoplay muted loop playsinline preload="auto" poster="../assets/video/hero-poster.jpg" data-src-sm="../assets/video/hero-720.mp4" data-src-lg="../assets/video/hero-1080.mp4"></video>
+  <div class="vid-overlay"></div>
+  <div class="ai-grid"></div>
+  <div class="hero-in">
+    <div class="mono-label">Grupo Arcoiris · GAIP</div>
+    <h1 class="hero-h1">Envases plásticos<br>para la industria<br><em>que no se detiene.</em></h1>
+    <p class="hero-sub">Goteros, jaraberos, garrafones y tapas para farmacéutica, alimentos y cosmética. Hechos en nuestras plantas de Jalisco y Coahuila.</p>
+    <div class="hero-btns">
+      <a class="btn-hero solid" href="#cotiza" data-quote>Solicita tu cotización <span class="arr">→</span></a>
+      <a class="btn-hero outline" href="aplicaciones/">Ver aplicaciones <span class="arr">→</span></a>
+    </div>
+  </div>
+  <div class="scroll-hint"><i></i><span>Scroll</span></div>
+  <div class="vctrl"><button class="video-ctrl" id="vPause">Pausa</button></div>
+</section>
+
+<!-- RESULTS STRIP (formic 1:1) -->
+<section class="results">
+  <div class="rs-eyebrow"><span class="rs-pulse"></span>Capacidad instalada · Tlajomulco + Ramos Arizpe</div>
+  <div class="rs-grid">
+    <div><div class="rs-num" data-count="3000000">3,000,000</div><div class="rs-lbl">Piezas al día</div></div>
+    <div><div class="rs-num" data-count="60">60</div><div class="rs-lbl">Máquinas de inyección, soplo y compresión</div></div>
+    <div><div class="rs-num"><span data-count="40">40</span><small>+</small></div><div class="rs-lbl">Años transformando plástico en México</div></div>
+    <div><div class="rs-num">ISO 7<small>/8</small></div><div class="rs-lbl">Cuartos limpios para farmacéutica</div></div>
+  </div>
+</section>
+
+<!-- SOLUTIONS (formic 1:1) -->
+<section class="sols" id="industrias">
+  <div class="hsection-head">
+    <div class="slabel"><span class="slabel-num">01</span>Industrias</div>
+    <h2>Cada envase. <em>Una sola planta.</em></h2>
+    <p class="blurb">De goteros farmacéuticos a garrafones de 20 litros: envases, tapas y moldes fabricados por GAIP, con documentación lista para tu equipo de Calidad.</p>
+  </div>
+  <div class="sol-grid">
+      <a class="sol-tile" href="aplicaciones/#farmaceutica"><img class="sol-static" src="../assets/tiles/goteros.jpg" alt="" loading="lazy"><video class="sol-anim" muted loop playsinline preload="none" aria-hidden="true" data-src="../assets/tiles/goteros.mp4"></video><span class="sol-overlay"></span><div class="sol-content"><div class="sol-name">Goteros farmacéuticos</div><div class="sol-tag">Hechos en cuarto limpio ISO 7</div></div><div class="sol-hover-overlay"><div class="sol-hover-name">Goteros farmacéuticos</div><div class="sol-hover-text">Gotero, inserto y tapón cónico 15/415 para medicamentos oftálmicos, óticos y nasales. Hermeticidad al 100%, resinas aprobadas por la FDA y fabricación en cuartos limpios ISO 7 e ISO 8.</div></div></a>
+      <a class="sol-tile" href="aplicaciones/#jaraberos"><img class="sol-static" src="../assets/tiles/jaraberos.jpg" alt="" loading="lazy"><video class="sol-anim" muted loop playsinline preload="none" aria-hidden="true" data-src="../assets/tiles/jaraberos.mp4"></video><span class="sol-overlay"></span><div class="sol-content"><div class="sol-name">Jaraberos y pastilleros</div><div class="sol-tag">Boston Round de 20 a 240 ml</div></div><div class="sol-hover-overlay"><div class="sol-hover-name">Jaraberos y pastilleros</div><div class="sol-hover-text">Frascos para jarabes y suspensiones y pastilleros de 25 a 150 ml para sólidos orales, en roscado, cap-to-cap o snap-on, con vasos dosificadores de 24 a 31 mm.</div></div></a>
+      <a class="sol-tile" href="aplicaciones/#garrafones"><img class="sol-static" src="../assets/tiles/garrafones.jpg" alt="" loading="lazy"><video class="sol-anim" muted loop playsinline preload="none" aria-hidden="true" data-src="../assets/tiles/garrafones.mp4"></video><span class="sol-overlay"></span><div class="sol-content"><div class="sol-name">Garrafones de 19 y 20 L</div><div class="sol-tag">PET, policarbonato y PVC</div></div><div class="sol-hover-overlay"><div class="sol-hover-name">Garrafones de 19 y 20 L</div><div class="sol-hover-text">Garrafones de 11, 19 y 20 litros para agua purificada, con asa, área para etiqueta y boca R48, R49 o a presión. Resinas grado alimenticio aprobadas por la FDA.</div></div></a>
+      <a class="sol-tile" href="aplicaciones/#tapas"><img class="sol-static" src="../assets/tiles/tapas.jpg" alt="" loading="lazy"><video class="sol-anim" muted loop playsinline preload="none" aria-hidden="true" data-src="../assets/tiles/tapas.mp4"></video><span class="sol-overlay"></span><div class="sol-content"><div class="sol-name">Tapas de compresión</div><div class="sol-tag">38 y 49 mm con tu logo</div></div><div class="sol-hover-overlay"><div class="sol-hover-name">Tapas de compresión</div><div class="sol-hover-text">Tapas para lácteos, jugos y garrafón en el color de tu marca, con grabado en alto o bajo relieve. Planta certificada FSSC 22000 para tapas de inyección y compresión.</div></div></a>
+      <a class="sol-tile" href="#cosmetica"><img class="sol-static" src="../assets/tiles/cosmetica.jpg" alt="" loading="lazy"><video class="sol-anim" muted loop playsinline preload="none" aria-hidden="true" data-src="../assets/tiles/cosmetica.mp4"></video><span class="sol-overlay"></span><div class="sol-content"><div class="sol-name">Envases cosméticos</div><div class="sol-tag">Cremas, geles y shampoo</div></div><div class="sol-hover-overlay"><div class="sol-hover-name">Envases cosméticos</div><div class="sol-hover-text">Envases cilíndricos rígidos grado alimenticio para cuidado personal. Diseñamos botella, tapa y tapón en la forma y el tamaño que pida tu marca.</div></div></a>
+      <a class="sol-tile" href="#desarrollos"><img class="sol-static" src="../assets/tiles/moldes.jpg" alt="" loading="lazy"><video class="sol-anim" muted loop playsinline preload="none" aria-hidden="true" data-src="../assets/tiles/moldes.mp4"></video><span class="sol-overlay"></span><div class="sol-content"><div class="sol-name">Moldes y prototipos</div><div class="sol-tag">Diseño y CNC en casa</div></div><div class="sol-hover-overlay"><div class="sol-hover-name">Moldes y prototipos</div><div class="sol-hover-text">Moldes de alta especialidad para inyección, extrusión-soplo, inyección-soplo y compresión, con estudio de factibilidad y prototipo a escala antes de producir.</div></div></a>
+      <a class="sol-tile sol-tile-wide" href="#logistica"><img class="sol-static" src="../assets/tiles/logistica.jpg" alt="" loading="lazy"><video class="sol-anim" muted loop playsinline preload="none" aria-hidden="true" data-src="../assets/tiles/logistica.mp4"></video><span class="sol-overlay"></span><div class="sol-content"><div class="sol-name">Logística y abasto</div><div class="sol-tag">Dos plantas, entrega hasta tu andén</div></div><div class="sol-hover-overlay"><div class="sol-hover-name">Logística y abasto</div><div class="sol-hover-text">Producimos en Tlajomulco, Jalisco, y Ramos Arizpe, Coahuila, con soporte de logística y traslado para llevar cada pedido al lugar que nos indiques.</div></div></a>
+  </div>
+  <a class="sol-soon-banner" href="#cotiza" data-quote>
+    <img src="../assets/tiles/banner-moldes.jpg" alt="Diseño de molde en CAD en el área de ingeniería de Grupo Arcoiris" loading="lazy">
+    <div class="sol-soon-content">
+      <div class="sol-soon-head"><div class="sol-soon-tag">Desarrollos especiales</div><div class="sol-soon-name">¿Tu envase aún no existe?</div></div>
+      <div class="sol-soon-desc">Diagnóstico, diseño, molde y corrida piloto con un ingeniero líder de producto. Lo desarrollamos contigo hasta que tu idea esté en la línea.</div>
+      <span class="sol-soon-cta">Habla con ingeniería →</span>
+    </div>
+  </a>
+</section>
+
+<main class="panel">
+  <!-- PLATFORM (motive 1:1) -->
+  <section class="platform">
+    <div class="wrap">
+      <p class="eyebrow">Un solo proveedor, de la resina al andén</p>
+      <h2>Envases, tapas y moldes fabricados bajo un mismo techo.</h2>
+      <div class="diagram rv">
+        <svg class="lines" viewBox="0 0 1160 437" preserveAspectRatio="none" aria-hidden="true">
+          <g id="trunks"></g><g id="pulses"></g>
+        </svg>
+        <div class="hub"><div><i><img src="../assets/brand/mark-white.png" alt=""></i></div></div>
+        <div class="ptiles">
+          <a class="ptile" href="#farmaceutica"><div class="in"><div class="it"><svg><use href="#i-farma"/></svg><b>Farmacéutica</b></div></div></a>
+          <a class="ptile" href="#alimentaria"><div class="in"><div class="it"><svg><use href="#i-garrafon"/></svg><b>Garrafones</b></div></div></a>
+          <a class="ptile" href="#tapas"><div class="in"><div class="it"><svg><use href="#i-tapa"/></svg><b>Tapas y<br>cierres</b></div></div></a>
+          <a class="ptile" href="#cosmetica"><div class="in"><div class="it"><svg><use href="#i-cosme"/></svg><b>Cosmética</b></div></div></a>
+          <a class="ptile" href="#desarrollos"><div class="in"><div class="it"><svg><use href="#i-molde"/></svg><b>Moldes y<br>desarrollos</b></div></div></a>
+          <a class="ptile" href="#calidad"><div class="in"><div class="it"><svg><use href="#i-shield"/></svg><b>Calidad<br>certificada</b></div></div></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- sticky product bar -->
+  <div class="pbar" id="pbar"><div class="pbar-in"><ul>
+    <li><a href="#farmaceutica" class="on"><svg><use href="#i-farma"/></svg>Farmacéutica</a></li>
+    <li><a href="#alimentaria"><svg><use href="#i-garrafon"/></svg>Alimentaria</a></li>
+    <li><a href="#tapas"><svg><use href="#i-tapa"/></svg>Tapas y cierres</a></li>
+    <li><a href="#cosmetica"><svg><use href="#i-cosme"/></svg>Cosmética</a></li>
+    <li><a href="#desarrollos"><svg><use href="#i-molde"/></svg>Desarrollos</a></li>
+    <li><a href="#logistica"><svg><use href="#i-truck"/></svg>Logística</a></li>
+  </ul></div></div>
+
+  <div class="rows" id="rows">
+    <!-- 1 Farmacéutica -->
+    <article class="row" id="farmaceutica">
+      <div class="txt rv">
+        <div class="f-ey"><span class="f-ico"><svg><use href="#i-farma"/></svg></span><span class="eyebrow">Farmacéutica</span></div>
+        <h3>Goteros, jaraberos y pastilleros hechos en cuarto limpio.</h3>
+        <p>Envases para medicamentos oftálmicos, óticos, nasales, jarabes y sólidos orales. Los fabricamos en cuartos limpios ISO 7 e ISO 8 con resinas aprobadas por la FDA.</p>
+        <a class="btn-sec" href="aplicaciones/#farmaceutica">Conoce más</a>
+      </div>
+      <div class="card rv">
+        <div class="shot"><video autoplay muted loop playsinline poster="../assets/video/farma.jpg" data-src="../assets/video/farma.mp4"></video></div>
+        <div class="glass chip" style="left:181px;top:46px"><span class="dot ok">✓</span>Cuarto limpio ISO 7 · en especificación</div>
+        <div class="wire" style="left:205px;top:317px;width:1px;height:44px;border-left-width:1.5px"></div>
+        <div class="glass" style="left:313px;top:219px;width:304px">
+          <div class="g-row"><span class="g-th"><img src="../assets/products/gotero-15ml-roscado-inviolable.png" alt=""></span><div><div class="g-name">Gotero 15 ml</div><div class="g-sub">Roscado inviolable · PEBD</div></div><span class="g-score" style="margin-left:auto">FDA</span></div>
+          <div class="g-row"><span class="g-th"><img src="../assets/products/inserto-15-mm-punta-redonda-1.png" alt=""></span><div><div class="g-name">Inserto 15 mm</div><div class="g-sub">Punta redonda · goteo controlado</div></div></div>
+        </div>
+        <div class="glass chip" style="left:94px;top:361px"><span class="dot inf">◎</span>Drug Master File</div>
+      </div>
+    </article>
+
+    <!-- Banner CRC (motive dashcam banner) -->
+    <section class="banner b1 rv" id="crc">
+      <div class="bt">
+        <p class="b-ey"><mark>Certificada</mark>Tapa CRC 15-415</p>
+        <h3>Cierre a prueba de niños, certificado.</h3>
+        <p>Nuestra tapa 15-415 Child Resistant Closure está certificada para frascos farmacéuticos. También fabricamos tapas CRC de 33 y 38 mm.</p>
+        <a class="btn-sec w" href="aplicaciones/#tapas">Descubre las tapas CRC</a>
+      </div>
+      <div class="crc-glow"></div>
+      <img class="crc" src="../assets/products/crc-38mm.png" alt="Tapa CRC 38 mm de Grupo Arcoiris">
+      <div class="spec"><span>15-415</span><span>CRC 33 mm</span><span>CRC 38 mm</span></div>
+    </section>
+
+    <!-- 2 Alimentaria -->
+    <article class="row rev" id="alimentaria">
+      <div class="txt rv">
+        <div class="f-ey"><span class="f-ico"><svg><use href="#i-garrafon"/></svg></span><span class="eyebrow">Alimentaria</span></div>
+        <h3>Garrafones de 11, 19 y 20 litros en PET, policarbonato y PVC.</h3>
+        <p>Para embotelladoras de agua purificada: resinas grado alimenticio aprobadas por la FDA, área para etiqueta y asa integrada. Elige boca roscada R48, R49 o a presión.</p>
+        <a class="btn-sec" href="aplicaciones/#garrafones">Conoce más</a>
+      </div>
+      <div class="card rv">
+        <div class="shot"><video autoplay muted loop playsinline poster="../assets/video/garrafon.jpg" data-src="../assets/video/garrafon.mp4"></video></div>
+        <div class="glass chip" style="left:228px;top:150px;height:40px;width:40px;padding:0;justify-content:center;border-radius:50%;background:#22A05A;border:2px solid #fff"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M12 3 20 20 12 15 4 20z"/></svg></div>
+        <div class="wire" style="left:183px;top:334px;width:135px;height:40px;border-left-width:1.5px;border-bottom-width:1.5px"></div>
+        <div class="glass" style="left:318px;top:226px;width:310px">
+          <div class="g-row"><span class="g-th"><img src="../assets/products/garrafon-pet-20l.png" alt=""></span><div><div class="g-name">Garrafón PET 20 L</div><div class="g-sub">Boca R49 · con asa</div></div><span style="margin-left:auto;display:flex;align-items:center;gap:6px;font:400 11px/1 var(--sans)"><i style="width:9px;height:9px;border-radius:50%;background:#22C55E"></i>En línea</span></div>
+          <div class="rings">
+            <div class="ring"><svg viewBox="0 0 58 58"><circle cx="29" cy="29" r="26" stroke="rgba(255,255,255,.18)"/><circle cx="29" cy="29" r="26" stroke="#fff" stroke-dasharray="163" stroke-dashoffset="70"/></svg><b>11 L<small>PVC</small></b></div>
+            <div class="ring"><svg viewBox="0 0 58 58"><circle cx="29" cy="29" r="26" stroke="rgba(255,255,255,.18)"/><circle cx="29" cy="29" r="26" stroke="#22C55E" stroke-dasharray="163" stroke-dashoffset="30"/></svg><b>19 L<small>PC</small></b></div>
+            <div class="ring"><svg viewBox="0 0 58 58"><circle cx="29" cy="29" r="26" stroke="rgba(255,255,255,.18)"/><circle cx="29" cy="29" r="26" stroke="#3CC3F0" stroke-dasharray="163" stroke-dashoffset="12"/></svg><b>20 L<small>PET</small></b></div>
+            <div class="ring"><svg viewBox="0 0 58 58"><circle cx="29" cy="29" r="26" stroke="rgba(255,255,255,.18)"/><circle cx="29" cy="29" r="26" stroke="#F5C04A" stroke-dasharray="163" stroke-dashoffset="120"/></svg><b>R49<small>Boca</small></b></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3 Tapas -->
+    <article class="row" id="tapas">
+      <div class="txt rv">
+        <div class="f-ey"><span class="f-ico"><svg><use href="#i-tapa"/></svg></span><span class="eyebrow">Tapas y cierres</span></div>
+        <h3>Tapas de compresión e inyección con tu logo grabado.</h3>
+        <p>Tapas de 38 mm para lácteos y jugos, 49 mm para garrafón y 48 o 58 mm roscadas con liner. Las grabamos en alto o bajo relieve y las fabricamos en el color de tu marca.</p>
+        <a class="btn-sec" href="aplicaciones/#tapas">Conoce más</a>
+      </div>
+      <div class="card rv">
+        <div class="shot"><video autoplay muted loop playsinline poster="../assets/video/tapas.jpg" data-src="../assets/video/tapas.mp4"></video></div>
+        <img class="prod-float" src="../assets/products/compression-molded-closures-02.png" alt="" style="left:420px;top:40px;width:210px">
+        <div class="glass chip" style="left:66px;top:30px"><span class="dot warn">!</span>Grabado en alto relieve</div>
+        <div class="wire" style="left:300px;top:317px;width:1px;height:40px;border-left-width:1.5px"></div>
+        <div class="glass" style="left:300px;top:268px;width:320px;padding:16px 18px">
+          <div class="g-name">Tapa 49 mm · R49 ligera</div>
+          <div class="g-sub" style="margin-top:4px">Compresión · para garrafón · FSSC 22000</div>
+          <div class="swatches"><span style="background:#1E3FBF"></span><span style="background:#2E3192"></span><span style="background:#E8521C"></span><span style="background:#D61F2C"></span><span style="background:#fff"></span><span style="background:#2AA4E0"></span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4 Cosmética -->
+    <article class="row rev" id="cosmetica">
+      <div class="txt rv">
+        <div class="f-ey"><span class="f-ico"><svg><use href="#i-cosme"/></svg></span><span class="eyebrow">Cosmética</span></div>
+        <h3>Envases cilíndricos para cremas, geles y shampoo.</h3>
+        <p>Envases rígidos grado alimenticio para cuidado personal, aptos para líquidos viscosos y polvos. Diseñamos botella, tapa y tapón en la forma y el tamaño que pida tu marca.</p>
+        <a class="btn-sec" href="aplicaciones/#cosmetica">Conoce más</a>
+      </div>
+      <div class="card rv">
+        <div class="shot"><video autoplay muted loop playsinline poster="../assets/video/cosmetica.jpg" data-src="../assets/video/cosmetica.mp4"></video></div>
+        <img class="prod-float" src="../assets/products/personal-care-02.png" alt="" style="left:470px;top:60px;width:170px">
+        <div class="glass" style="left:96px;top:300px;width:330px;padding:14px 16px">
+          <div class="g-name">Envase cilíndrico</div>
+          <div class="g-sub" style="margin-top:4px">Grado alimenticio · materiales que cumplen FDA</div>
+          <div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap">
+            <span class="glass" style="position:static;font:500 10.5px/1 var(--sans);padding:6px 10px;border-radius:20px">Geles</span>
+            <span class="glass" style="position:static;font:500 10.5px/1 var(--sans);padding:6px 10px;border-radius:20px">Cremas</span>
+            <span class="glass" style="position:static;font:500 10.5px/1 var(--sans);padding:6px 10px;border-radius:20px">Shampoo</span>
+            <span class="glass" style="position:static;font:500 10.5px/1 var(--sans);padding:6px 10px;border-radius:20px">Polvos</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5 Desarrollos -->
+    <article class="row" id="desarrollos">
+      <div class="txt rv">
+        <div class="f-ey"><span class="f-ico"><svg><use href="#i-molde"/></svg></span><span class="eyebrow">Moldes y desarrollos</span></div>
+        <h3>De tu idea a la corrida piloto, con moldes propios.</h3>
+        <p>Diseñamos y fabricamos moldes de alta especialidad para inyección, extrusión-soplo, inyección-soplo y compresión. Un ingeniero líder sigue tu proyecto de principio a fin.</p>
+        <a class="btn-sec" href="aplicaciones/#desarrollos">Conoce más</a>
+      </div>
+      <div class="card rv">
+        <div class="shot"><video autoplay muted loop playsinline poster="../assets/video/moldes.jpg" data-src="../assets/video/moldes.mp4"></video></div>
+        <div class="glass" style="left:398px;top:120px;width:246px">
+          <div class="g-row" style="padding:12px 16px"><div class="g-name">Nuevo producto</div><span class="g-sub" style="margin-left:auto">Proyecto 06</span></div>
+          <div class="steps">
+            <div class="step done"><i>✓</i>Diagnóstico</div>
+            <div class="step done"><i>✓</i>Diseño</div>
+            <div class="step done"><i>✓</i>Estudio de factibilidad</div>
+            <div class="step now"><i>4</i>Molde<em>en CNC</em></div>
+            <div class="step"><i>5</i>Corrida piloto</div>
+            <div class="step"><i>6</i>Tu idea materializada</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6 Logística -->
+    <article class="row rev" id="logistica">
+      <div class="txt rv">
+        <div class="f-ey"><span class="f-ico"><svg><use href="#i-truck"/></svg></span><span class="eyebrow">Logística</span></div>
+        <h3>Dos plantas y entrega hasta el lugar que nos indiques.</h3>
+        <p>Producimos en Tlajomulco, Jalisco, y en Ramos Arizpe, Coahuila. Te damos soporte de logística y traslado para que tu pedido llegue a tu planta sin intermediarios.</p>
+        <a class="btn-sec" href="#empresa">Conoce más</a>
+      </div>
+      <div class="card rv">
+        <div class="shot"><video autoplay muted loop playsinline poster="../assets/video/logistica.jpg" data-src="../assets/video/logistica.mp4"></video></div>
+        <div class="wire" style="left:300px;top:334px;width:1px;height:38px;border-left-width:1.5px"></div>
+        <div class="glass" style="left:260px;top:248px;width:350px">
+          <div class="g-row"><span class="dot ok" style="width:12px;height:12px;border-radius:50%"></span><div><div class="g-name">Planta Tlajomulco</div><div class="g-sub">Camino a Buenavista 28 · Jalisco</div></div><em class="g-sub" style="margin-left:auto;font-style:normal">Matriz</em></div>
+          <div class="g-row"><span class="dot inf" style="width:12px;height:12px;border-radius:50%"></span><div><div class="g-name">Planta Ramos Arizpe</div><div class="g-sub">Parque Industrial Finsa · Coahuila</div></div></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Banner Calidad (motive seguridad patrimonial) -->
+    <section class="banner b2 rv" id="calidad">
+      <div class="bt">
+        <p class="b-ey" style="margin-top:9px">Calidad y certificaciones</p>
+        <h3>Documentación lista para que Calidad apruebe sin vueltas.</h3>
+        <p>ISO 9001:2015, FSSC 22000, FDA-IMS, Drug Master File y laboratorio acreditado ANAB ISO/IEC 17025. Usamos resinas 100% vírgenes que cumplen con la FDA.</p>
+        <a class="btn-sec w" href="#cotiza" data-quote>Solicita documentación</a>
+      </div>
+      <div class="wire wire1"></div>
+      <div class="vimg"><video autoplay muted loop playsinline poster="../assets/video/calidad.jpg" data-src="../assets/video/calidad.mp4"></video></div>
+      <div class="glass certcard">
+        <h6>Certificaciones vigentes</h6>
+        <ul><li><i>✓</i>ISO 9001:2015</li><li><i>✓</i>FSSC 22000</li><li><i>✓</i>FDA-IMS</li><li><i>✓</i>Drug Master File</li><li><i>✓</i>ANAB ISO/IEC 17025</li></ul>
+      </div>
+    </section>
+  </div>
+
+  <!-- LOGOS (motive logo bar) -->
+  <section class="logos" id="empresa">
+    <div class="wrap">
+      <h5 class="eyebrow">Fabricamos para laboratorios y embotelladoras líderes</h5>
+      <div class="logo-row">
+        <div class="logo-set on"><img src="../assets/clients/pfizer.png" alt="Pfizer"><img src="../assets/clients/gsk.png" alt="GSK"><img src="../assets/clients/merck.png" alt="Merck"><img src="../assets/clients/pisa.png" alt="PiSA"><img src="../assets/clients/wyeth.png" alt="Wyeth"><img src="../assets/clients/aspen.png" alt="Aspen"></div>
+        <div class="logo-set"><img src="../assets/clients/cocacola.png" alt="Coca-Cola"><img src="../assets/clients/pepsico.png" alt="PepsiCo"><img src="../assets/clients/danone.png" alt="Danone"><img src="../assets/clients/femsa.png" alt="FEMSA"><img src="../assets/clients/arca.png" alt="Arca Continental"><img src="../assets/clients/induveca.png" alt="Induveca"></div>
+        <div class="logo-set"><img src="../assets/clients/schering.png" alt="Schering-Plough"><img src="../assets/clients/sophia.png" alt="Sophia"><img src="../assets/clients/alvartis.png" alt="Alvartis Pharma"><img src="../assets/clients/semsula.png" alt="Semsula"><img src="../assets/clients/gepp.png" alt="GEPP"><img src="../assets/clients/alpina.png" alt="Alpina"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- CONTACT (motive) -->
+<section class="contact" id="cotiza">
+  <div class="wrap">
+    <div class="c-l">
+      <p class="eyebrow">Habla con ventas</p>
+      <h2>Cuéntanos qué envase necesitas y te enviamos tu cotización.</h2>
+      <p class="lead">Con GAIP puedes:</p>
+      <ul>
+        <li><svg><use href="#i-check"/></svg>Surtir goteros, jaraberos, pastilleros, garrafones y tapas con un solo proveedor mexicano.</li>
+        <li><svg><use href="#i-check"/></svg>Pasar auditorías con documentación FDA-IMS, Drug Master File, ISO 9001 y FSSC 22000.</li>
+        <li><svg><use href="#i-check"/></svg>Desarrollar un envase a la medida, desde el molde hasta la corrida piloto.</li>
+      </ul>
+      <p class="rec">Certificados por organismos internacionales</p>
+      <div class="badges">
+        <span class="bd"><img src="../assets/certs/fda.png" alt="FDA" style="max-height:34px"></span>
+        <span class="bd"><img src="../assets/certs/fssc-seal.png" alt="FSSC 22000"></span>
+        <span class="bd"><img src="../assets/certs/fssc-anab.png" alt="FSSC 22000 · ANAB" style="max-height:44px"></span>
+      </div>
+    </div>
+    <form class="form" id="quoteForm" novalidate>
+      <h4>Solicita tu cotización</h4>
+      <div class="fg">
+        <div class="fld"><input name="nombre" placeholder="Nombre" required></div>
+        <div class="fld"><input name="empresa" placeholder="Empresa" required></div>
+        <div class="fld tel full"><span class="pre"><i></i>+52</span><input name="tel" type="tel" placeholder="Teléfono"></div>
+        <div class="fld full"><input name="email" type="email" placeholder="Correo electrónico del trabajo" required></div>
+        <div class="fld sel full"><select name="industria"><option value="">Industria</option><option>Farmacéutica</option><option>Alimentaria · garrafones</option><option>Alimentaria · tapas</option><option>Cosmética y cuidado personal</option><option>Hogar</option><option>Desarrollo especial</option></select></div>
+        <div class="fld full"><input name="producto" placeholder="¿Qué envase buscas? (ej. gotero 15 ml)"></div>
+        <div class="fld sel full"><select name="consumo"><option value="">Consumo mensual estimado</option><option>Menos de 10,000 piezas</option><option>10,000 – 50,000 piezas</option><option>50,000 – 250,000 piezas</option><option>Más de 250,000 piezas</option></select></div>
+      </div>
+      <label class="chk"><input type="checkbox">Sí, quiero recibir información sobre productos y novedades de Grupo Arcoiris. Puedo darme de baja en cualquier momento.</label>
+      <button class="submit" type="submit">Solicitar cotización</button>
+      <p class="legal">Al hacer clic en “Solicitar cotización”, confirmas que leíste y aceptas el <a href="#">Aviso de privacidad de Grupo Arcoiris.</a></p>
+      <div class="done"><h4>¡Gracias!</h4><p class="legal" style="text-align:center">Un ejecutivo de ventas te contactará para revisar tu proyecto.</p></div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER (motive) -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="f-top">
+      <a class="flogo" href="#top"><img src="../assets/brand/logo-white.png" alt="Grupo Arcoiris"></a>
+      <div class="fc">
+        <a href="tel:+523336341024">33 3634 1024</a>
+        <a href="mailto:ventas@grupoarcoiris.com.mx">ventas@grupoarcoiris.com.mx</a>
+        <p class="addr">Camino a Buenavista 28, Tlajomulco de Zúñiga, Jal. · Halcón 240, Parque Industrial Finsa, Ramos Arizpe, Coah.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="#fff"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="#fff"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.1 2.1 2.1 0 0 1 0 4.1zM7.1 20.5H3.6V9h3.5v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1" fill="#fff" stroke="none"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="#fff"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
+        </div>
+      </div>
+      <div><span class="lang"><i></i>MX <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span></div>
+    </div>
+    <div class="f-cols">
+      <div><h5>Farmacéutica</h5><a href="aplicaciones/#farmaceutica">Frascos goteros</a><a href="aplicaciones/#farmaceutica">Frascos jaraberos</a><a href="aplicaciones/#farmaceutica">Frascos pastilleros</a><a href="aplicaciones/#farmaceutica">Insertos y tapones cónicos</a><a href="aplicaciones/#tapas">Tapas CRC</a><a href="aplicaciones/#farmaceutica">Vasos dosificadores</a><a href="aplicaciones/#farmaceutica">Securitainer</a></div>
+      <div><h5>Alimentaria</h5><a href="aplicaciones/#garrafones">Garrafones PVC</a><a href="aplicaciones/#garrafones">Garrafones PC</a><a href="aplicaciones/#garrafones">Garrafones PET</a><a href="aplicaciones/#tapas">Tapas compresión</a><a href="aplicaciones/#tapas">Tapas inyección</a><a href="aplicaciones/#garrafones">Barriles y vitroleros</a></div>
+      <div><h5>Más industrias</h5><a href="aplicaciones/#cosmetica">Cosmética · envase cilíndrico</a><a href="#">Del hogar</a><a href="aplicaciones/#desarrollos">Desarrollos especiales</a><a href="aplicaciones/#desarrollos">Diseño de moldes</a></div>
+      <div><h5>Empresa</h5><a href="#empresa">Nosotros</a><a href="#calidad">Certificaciones</a><a href="#">Blog</a><a href="#">Preguntas frecuentes</a><a href="#cotiza" data-quote>Contactar a ventas</a><a href="#">Aviso de privacidad</a></div>
+    </div>
+    <div class="f-bot"><span>© 2026 Grupo Arcoiris. Plástico que da vida.</span><span>Hecho en México</span></div>
+  </div>
+</footer>
+
+<div class="modal" id="modal"><div id="modalSlot"></div></div>
+<script src="v1.js"></script>
+</body>
+</html>
