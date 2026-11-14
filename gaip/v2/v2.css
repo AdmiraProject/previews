@@ -551,3 +551,10 @@ body.modal-open{overflow:hidden}
   .fa__slide .spec{transition:transform .6s cubic-bezier(.2,.6,.2,1),opacity .5s}
   .fa__slide:not(.is-active) .spec{transform:translateY(14px);opacity:0}
 }
+
+/* Samsara flywheel highlighter: each step label lights in sequence, 1.8 s apart, 12 s loop */
+.cycle__hl rect{fill:#00A0D6}
+.cycle__hl{opacity:0;animation:cycleHL 12s linear infinite both;animation-play-state:paused}
+.cycle.is-play .cycle__hl{animation-play-state:running}
+@keyframes cycleHL{0%{opacity:0}2.1%{opacity:1}15%{opacity:1}17.1%{opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cycle__hl{animation:none;opacity:0}}

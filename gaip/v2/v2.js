@@ -177,17 +177,35 @@
     const steps = T.steps;
     const pt = a => { const r = (a * Math.PI) / 180; return [cx + R * Math.sin(r), cy - R * Math.cos(r)]; };
     const NS = 'http://www.w3.org/2000/svg';
+    const hlq = [];
     steps.forEach((lines, i) => {
       const a = i * 60; const [x, y] = pt(a);
       const t = document.createElementNS(NS, 'text');
       const lh = 26; const y0 = y - ((lines.length - 1) * lh) / 2 + 8;
       lines.forEach((ln, k) => { const ts = document.createElementNS(NS, 'tspan'); ts.setAttribute('x', x.toFixed(1)); ts.setAttribute('y', (y0 + k * lh).toFixed(1)); ts.textContent = ln; t.appendChild(ts); });
-      labels.appendChild(t);
+      const hl = document.createElementNS(NS, 'g'); hl.setAttribute('class', 'cycle__hl'); hl.style.animationDelay = (i * 1.8).toFixed(1) + 's';
+      labels.appendChild(hl); labels.appendChild(t);
+      hlq.push([hl, t]);
       const [x1, y1] = pt(a + gap), [x2, y2] = pt(a + 60 - gap);
       const p = document.createElementNS(NS, 'path');
       p.setAttribute('d', `M${x1.toFixed(1)} ${y1.toFixed(1)} A${R} ${R} 0 0 1 ${x2.toFixed(1)} ${y2.toFixed(1)}`);
       arcs.appendChild(p);
     });
+    // Samsara flywheel: a highlighter block sweeps behind each step label in order (12 s loop)
+    const drawHL = () => hlq.forEach(([hl, t]) => {
+      hl.textContent = '';
+      [...t.querySelectorAll('tspan')].forEach(ts => {
+        const w = ts.getComputedTextLength(), x = +ts.getAttribute('x'), y = +ts.getAttribute('y');
+        const r = document.createElementNS(NS, 'rect');
+        r.setAttribute('x', (x - w / 2 - 7).toFixed(1)); r.setAttribute('y', (y - 21).toFixed(1));
+        r.setAttribute('width', (w + 14).toFixed(1)); r.setAttribute('height', '27'); r.setAttribute('rx', '1.5');
+        hl.appendChild(r);
+      });
+    });
+    (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(drawHL);
+    const fig = labels.closest('svg');
+    if ('IntersectionObserver' in window) new IntersectionObserver(es => es.forEach(e => fig.classList.toggle('is-play', e.isIntersecting)), { threshold: .35 }).observe(fig);
+    else fig.classList.add('is-play');
   }
 
   /* ---------- quote modal ---------- */
