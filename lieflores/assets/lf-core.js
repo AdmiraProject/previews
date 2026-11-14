@@ -8,6 +8,15 @@
   const byH = Object.fromEntries(LF.map(p => [p.h, p]));
   const STORE = 'https://www.lieflores.com';
   const WA = '526864321342';
+  // Every WhatsApp link or window.open to wa.me goes through the lead popup (name, phone, email) first
+  const _open = window.open;
+  window.open = function (url, ...r) { if (typeof url === 'string' && /wa\.me\//.test(url)) { openCheckout(url); return null; } return _open.call(window, url, ...r); };
+  document.addEventListener('click', e => {
+    const a = e.target.closest && e.target.closest('a[href*="wa.me/"]');
+    if (!a || a.closest('#lf-co') || e.metaKey || e.ctrlKey) return;
+    e.preventDefault(); e.stopPropagation(); openCheckout(a.href);
+  }, true);
+  document.head.insertAdjacentHTML('beforeend', '<style>.lf-co-card.lf-co-card--solo{grid-template-columns:1fr!important;width:calc(100% - 32px)!important;max-width:480px!important;height:auto!important;max-height:calc(100% - 32px)!important;align-self:center!important;justify-self:center!important;margin:auto!important;border-radius:10px!important}.lf-co-card--solo .lf-co-actions{grid-template-columns:1fr!important}</style>');
   const SHIP = 150; // "entrega en Mexicali tiene un costo de $150 MXN" (servicio estándar)
   const money = n => '$' + Number(n).toLocaleString('es-MX', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
   const find = h => byH[h];
@@ -82,9 +91,13 @@
   function waText(lead) {
     const ls = lines();
     const items = ls.map(l => `• ${l.q} × ${l.p.t}${l.label ? ' (' + l.label + ')' : ''} — ${money(l.price * l.q)}`).join('\n');
-    const fechaTxt = lead.fecha ? new Date(lead.fecha + 'T12:00:00').toLocaleDateString('es-MX', { weekday: 'long', day: 'numeric', month: 'long' }) : '';
-    return `Hola Liefloré, quiero hacer este pedido:\n${items}\nSubtotal: ${money(subtotal())} (envío aparte)\n\nEntrega: ${fechaTxt} ${lead.horario ? '· ' + lead.horario : ''}\nPara: ${lead.para || ''}\nDirección: ${lead.dir || ''}\nMensaje de tarjeta: ${lead.msg || '—'}\n\nMis datos: ${lead.nombre || ''} · ${lead.tel || ''} · ${lead.email || ''}`;
+    const fechaTxt = lead.fecha && lead.fecha >= isoOf(firstDeliveryDate()) ? new Date(lead.fecha + 'T12:00:00').toLocaleDateString('es-MX', { weekday: 'long', day: 'numeric', month: 'long' }) : '';
+    const extra = [fechaTxt && `Entrega: ${fechaTxt}`, lead.dir && `Dirección: ${lead.dir}`, lead.msg && `Mensaje de tarjeta: ${lead.msg}`].filter(Boolean).join('\n');
+    return `Hola Liefloré, quiero hacer este pedido:\n${items}\nSubtotal: ${money(subtotal())} (envío aparte)\n${extra ? '\n' + extra + '\n' : ''}\n${dataLine(lead)}`;
   }
+  const dataLine = lead => `Mis datos: ${lead.nombre || ''} · ${lead.tel || ''} · ${lead.email || ''}`;
+  // a WhatsApp link from anywhere on the site: keep its prefilled text, add the contact data
+  const withLead = (href, lead) => { let t = 'Hola Liefloré'; try { t = new URL(href).searchParams.get('text') || t; } catch (e) {} return `https://wa.me/${WA}?text=${encodeURIComponent(`${t}\n\n${dataLine(lead)}`)}`; };
   const waUrl = lead => `https://wa.me/${WA}?text=${encodeURIComponent(waText(lead))}`;
   // WooCommerce links add one product: send the main arrangement (not an add-on), highest value first
   const mainLine = () => { const ls = lines(); const flowers = ls.filter(l => !l.p.cats.includes('complementos')); return (flowers.length ? flowers : ls).sort((a, b) => b.price * b.q - a.price * a.q)[0]; };
@@ -93,8 +106,11 @@
   const mxNow = () => new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Tijuana' }));
   const firstDeliveryDate = () => { const d = mxNow(); if (d.getHours() * 60 + d.getMinutes() >= 15 * 60 + 30) d.setDate(d.getDate() + 1); if (d.getDay() === 0) d.setDate(d.getDate() + 1); return d; };
   const isoOf = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-  function openCheckout() {
-    if (!count()) return;
+  let PENDING = null; // wa.me link the visitor clicked; null = cart checkout
+  function go(url) { const w = _open.call(window, url, '_blank', 'noopener'); if (!w) location.href = url; }
+  function openCheckout(href) {
+    PENDING = typeof href === 'string' ? href : null;
+    if (!PENDING && !count()) return;
     let m = document.getElementById('lf-co');
     if (!m) {
       m = document.createElement('div'); m.id = 'lf-co'; m.className = 'lf-co';
@@ -106,24 +122,19 @@
           <form class="lf-co-form" novalidate>
             <p class="lf-co-eb">Último paso</p>
             <h2 id="lf-co-h">¿A quién sorprendemos?</h2>
-            <p class="lf-co-sub">Para pedidos web antes de las 3:30 p. m. puedes elegir entrega el mismo día en Mexicali</p>
+            <p class="lf-co-sub">Déjanos tus datos y seguimos tu pedido por WhatsApp: ahí confirmamos fecha, dirección y mensaje de la tarjeta</p>
             <div class="lf-co-grid">
-              <label>Tu nombre<input name="nombre" autocomplete="name" required></label>
-              <label>Tu WhatsApp<input name="tel" type="tel" inputmode="tel" autocomplete="tel" required></label>
+              <label class="full">Tu nombre<input name="nombre" autocomplete="name" required></label>
+              <label class="full">Tu WhatsApp<input name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="10 dígitos" required></label>
               <label class="full">Tu correo<input name="email" type="email" autocomplete="email" required></label>
-              <label>Fecha de entrega<input name="fecha" type="date" required></label>
-              <label>Horario<select name="horario"><option>Lo antes posible</option><option>Mañana (8 a. m. – 12 p. m.)</option><option>Tarde (12 – 4 p. m.)</option><option>Tarde-noche (4 – 6:30 p. m.)</option></select></label>
-              <label class="full">¿Para quién es?<input name="para" placeholder="Nombre de quien recibe"></label>
-              <label class="full">Dirección de entrega en Mexicali<input name="dir" autocomplete="street-address"></label>
-              <label class="full">Mensaje para la tarjeta<textarea name="msg" rows="2" maxlength="240" placeholder="Opcional"></textarea></label>
             </div>
-            <p class="lf-co-err" role="alert" hidden>Completa tu nombre, WhatsApp, correo y la fecha de entrega</p>
+            <p class="lf-co-err" role="alert" hidden>Completa tu nombre, un WhatsApp de 10 dígitos y tu correo</p>
             <div class="lf-co-actions">
               <button type="submit" class="lf-co-wa" value="wa">Enviar pedido por WhatsApp</button>
               <button type="submit" class="lf-co-pay" value="web">Pagar en línea</button>
             </div>
             <p class="lf-co-note" data-co-note></p>
-            <p class="lf-co-fine">Envío estándar en Mexicali $150 MXN · Pago con tarjeta, PayPal o Google Pay</p>
+            <p class="lf-co-fine">Envío estándar en Mexicali $150 MXN · Entrega el mismo día en pedidos antes de las 3:30 p. m.</p>
           </form>
         </div>`;
       document.body.appendChild(m);
@@ -132,12 +143,13 @@
       f.addEventListener('submit', e => {
         e.preventDefault();
         const how = (e.submitter && e.submitter.value) || 'wa';
-        const lead = Object.fromEntries(new FormData(f).entries());
-        const ok = lead.nombre && (lead.tel || '').replace(/\D/g, '').length >= 10 && /\S+@\S+\.\S+/.test(lead.email || '') && lead.fecha;
+        const lead = Object.assign(getLead(), Object.fromEntries(new FormData(f).entries()));
+        const ok = lead.nombre && (lead.tel || '').replace(/\D/g, '').length >= 10 && /\S+@\S+\.\S+/.test(lead.email || '');
         m.querySelector('.lf-co-err').hidden = !!ok; if (!ok) return;
         try { localStorage.setItem(LEAD, JSON.stringify(lead)); } catch (er) {}
-        document.dispatchEvent(new CustomEvent('lf:lead', { detail: { lead, how, lines: lines() } }));
-        window.open(how === 'wa' ? waUrl(lead) : webCheckoutUrl(), '_blank', 'noopener');
+        document.dispatchEvent(new CustomEvent('lf:lead', { detail: { lead, how, href: PENDING, lines: PENDING ? [] : lines() } }));
+        const url = PENDING ? withLead(PENDING, lead) : how === 'wa' ? waUrl(lead) : webCheckoutUrl();
+        closeCheckout(); go(url);
       });
     }
     const lead = getLead();
@@ -146,10 +158,14 @@
     const sober = lines().some(l => l.p.cats.includes('condolencias'));
     m.querySelector('#lf-co-h').textContent = sober ? 'Datos de entrega' : '¿A quién sorprendemos?';
     m.querySelector('.lf-co-eb').textContent = sober ? 'Con respeto, nos encargamos' : 'Último paso';
-    m.querySelector('[name=para]').placeholder = sober ? 'Nombre de quien recibe o del recinto' : 'Nombre de quien recibe';
-    const d = m.querySelector('[name=fecha]'); const first = isoOf(firstDeliveryDate()); d.min = first; if (!d.value || d.value < first) d.value = first;
+    const link = !!PENDING;
+    if (link && !sober) { m.querySelector('#lf-co-h').textContent = 'Antes de ir a WhatsApp'; m.querySelector('.lf-co-eb').textContent = 'Te atendemos en minutos'; }
+    m.querySelector('.lf-co-pay').style.display = link ? 'none' : '';
+    m.querySelector('.lf-co-wa').textContent = link ? 'Continuar a WhatsApp' : 'Enviar pedido por WhatsApp';
+    m.querySelector('[data-co-sum]').style.display = link ? 'none' : '';
+    m.querySelector('.lf-co-card').classList.toggle('lf-co-card--solo', link);
     m.querySelector('[data-co-sum]').innerHTML = `<img class="lf-co-logo" src="${ASSET}brand/logo.png" alt="Liefloré">` + lines().map(l => `<div class="lf-co-li"><img src="${rel(l.p.img[0])}" alt=""><span>${l.q}</span><div>${esc(l.p.t)}<small>${esc(l.label)}</small></div><b>${money(l.price * l.q)}</b></div>`).join('') + `<div class="lf-co-tot"><span>Subtotal</span><b>${money(subtotal())}</b></div><p class="lf-co-ship">+ envío estándar $150 en Mexicali</p>`;
-    m.querySelector('[data-co-note]').textContent = lines().length > 1 ? 'El pago en línea abre lieflores.com con tu primer arreglo; para pedidos con varios productos te recomendamos WhatsApp' : '';
+    m.querySelector('[data-co-note]').textContent = !link && lines().length > 1 ? 'El pago en línea abre lieflores.com con tu primer arreglo; para pedidos con varios productos te recomendamos WhatsApp' : '';
     Cart.close(); m.classList.add('is-open'); document.documentElement.classList.add('lf-lock');
     setTimeout(() => m.querySelector('[name=nombre]').focus(), 60);
   }
