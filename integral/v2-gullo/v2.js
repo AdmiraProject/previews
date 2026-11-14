@@ -199,9 +199,9 @@
   /* single cinematic film (hero-film): one looping video, no montage/steps */
   if (heroOn && vids.length === 1) {
     var hv = vids[0];
-    hv.poster = HERO + 'film-16x9.jpg';
+    hv.poster = HERO + 'film-16x9.jpg?v=2';
     if (!RM) {
-      hv.src = HERO + 'film-16x9.mp4'; hv.preload = 'auto'; hv.loop = true;
+      hv.src = HERO + 'film-16x9.mp4?v=2'; hv.preload = 'auto'; hv.loop = true;
       var hp = hv.play(); if (hp && hp.catch) hp.catch(function () {});
       new IntersectionObserver(function (en) { if (en[0].isIntersecting) { var q = hv.play(); if (q && q.catch) q.catch(function () {}); } else hv.pause(); }).observe($('.hero'));
     }
