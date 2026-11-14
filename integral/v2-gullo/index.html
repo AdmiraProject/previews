@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Integral Design · Cocinas a la medida en CDMX y Estado de México</title>
+<meta name="description" content="Diseñamos, fabricamos en nuestro taller de Iztapalapa e instalamos cocinas 100% a la medida en CDMX y Estado de México.">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/brand/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/brand/favicon-180.png">
+<script>document.documentElement.className+=' js';</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Newsreader:opsz,wght@6..72,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
+<link rel="stylesheet" href="v2.css">
+</head>
+<body>
+
+<!-- ================= HEADER (Gullo nav#main-header: transparent → solid, mega dropdown) ================= -->
+<header class="hdr" id="hdr">
+  <div class="hdr__wrap">
+    <a class="hdr__wa" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida" aria-label="Cotizar por WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.43-9.43 2.52 0 4.89.98 6.67 2.77a9.36 9.36 0 0 1 2.76 6.67c0 5.2-4.23 9.42-9.43 9.42m8.02-17.45A11.27 11.27 0 0 0 12.05.72C5.8.72.72 5.8.72 12.05c0 2 .52 3.95 1.52 5.66L.62 23.28l5.7-1.5a11.3 11.3 0 0 0 5.73 1.46c6.25 0 11.33-5.08 11.33-11.33 0-3.03-1.18-5.87-3.32-8.01"/></svg>
+    </a>
+    <a class="hdr__logo" href="#top" aria-label="Integral Design, inicio">
+      <img class="logo--light" src="../assets/brand/logo-horizontal-on-dark.png" alt="Integral Design" width="190" height="34">
+      <img class="logo--dark" src="../assets/brand/logo-horizontal-color.png" alt="" width="190" height="34" aria-hidden="true">
+    </a>
+    <div class="hdr__content gs-r gs-load">
+      <nav aria-label="Principal">
+        <ul class="top-nav">
+          <li class="has-mega"><a href="#cocinas">Cocinas</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#taller">Taller</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="hdr__buttons">
+        <a class="hdr__icon" href="https://wa.me/525653921311" data-lead="Quiero cotizar mi cocina a la medida" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+        </a>
+        <a class="hdr__cta" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">Cotizar</a>
+      </div>
+    </div>
+    <button class="hamb" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mmenu"><span></span><span></span><span></span></button>
+  </div>
+
+  <!-- Mega dropdown: overtitle + serif list + 3:2 preview -->
+  <div class="mega" id="mega" aria-hidden="true">
+    <div class="mega__list">
+      <p class="mega__over">Cocinas a la medida</p>
+      <ul>
+        <li><a href="#cocinas" data-slide="0" data-img="0">Cubiertas de granito</a></li>
+        <li><a href="#cocinas" data-slide="1" data-img="1">Bar a la medida</a></li>
+        <li><a href="#cocinas" data-slide="2" data-img="2">Vitrina iluminada</a></li>
+        <li><a href="#cocinas" data-slide="4" data-img="3">Isla con repisas</a></li>
+      </ul>
+    </div>
+    <div class="mega__media">
+      <img class="on" data-src="../assets/hero/hero-marmol-salpicadero-led-16x9.jpg" alt="" width="494" height="330" style="object-position:35% 50%">
+      <img data-src="../assets/stills/photo_bar-rancho-san-juan_IMG_2194-c.jpg" alt="" width="494" height="330" style="object-position:50% 62%">
+      <img data-src="../assets/stills/photo_terrazas2_IMG_2090.jpg" alt="" width="494" height="330" style="object-position:40% 55%">
+      <img data-src="../assets/stills/photo_site_wix-3da873e.jpg" alt="" width="494" height="330" style="object-position:50% 55%">
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu layer (slides from the right, 351 wide) -->
+<div class="mmenu" id="mmenu" aria-hidden="true">
+  <button class="mmenu__x" type="button" aria-label="Cerrar menú"><span></span><span></span></button>
+  <ul>
+    <li><a href="#cocinas" data-m="m-cocinas">Cocinas</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#taller" data-m="m-taller">Taller</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a class="btn btn--block" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">Cotizar mi cocina</a>
+</div>
+<div class="mmenu-dim" aria-hidden="true"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.43-9.43 2.52 0 4.89.98 6.67 2.77a9.36 9.36 0 0 1 2.76 6.67c0 5.2-4.23 9.42-9.43 9.42m8.02-17.45A11.27 11.27 0 0 0 12.05.72C5.8.72.72 5.8.72 12.05c0 2 .52 3.95 1.52 5.66L.62 23.28l5.7-1.5a11.3 11.3 0 0 0 5.73 1.46c6.25 0 11.33-5.08 11.33-11.33 0-3.03-1.18-5.87-3.32-8.01"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 11 20"><path d="M10.5.5 1 10l9.5 9.5" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+  <symbol id="i-next" viewBox="0 0 11 20"><path d="m.5.5 9.5 9.5-9.5 9.5" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 16"><path d="M0 8h22M15 1l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11Z" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path d="M6.6 3.5h3l1.4 4-2 1.3a11 11 0 0 0 6.2 6.2l1.3-2 4 1.4v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 14 8"><path d="m1 1 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+</svg>
+
+<main id="top">
+
+<!-- ================= MOBILE ONLY: stacked full-screen vertical reel (Gullo .scroll-section) ================= -->
+<section class="mreel" id="mreel" aria-label="Integral Design en video">
+  <div class="mreel__track">
+    <article class="mreel__slide" id="m-cocinas">
+      <video muted playsinline loop preload="none" data-poster="../assets/reels/reel-cocina-marmol-parrilla-macro.jpg" data-src="../assets/reels/reel-cocina-marmol-parrilla-macro.mp4"></video>
+      <div class="mreel__txt">
+        <p class="mreel__eyebrow">Cocinas a la medida · CDMX y Edomex</p>
+        <h2 class="mreel__h">La cocina, hecha a tu medida</h2>
+        <a class="mcta" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">Cotizar mi cocina <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </article>
+    <article class="mreel__slide" id="m-taller">
+      <video muted playsinline loop preload="none" data-poster="../assets/reels/reel-fab-corte-tablero-aserrin.jpg" data-src="../assets/reels/reel-fab-corte-tablero-aserrin.mp4"></video>
+      <div class="mreel__txt">
+        <p class="mreel__eyebrow">Taller propio</p>
+        <h2 class="mreel__h">Cortamos cada pieza en Iztapalapa</h2>
+        <a class="mcta" href="#cotizar" data-lead="Quiero agendar una visita técnica">Agendar visita técnica <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </article>
+    <article class="mreel__slide">
+      <video muted playsinline loop preload="none" data-poster="../assets/reels/reel-fab-enchapadora-logo.jpg" data-src="../assets/reels/reel-fab-enchapadora-logo.mp4"></video>
+      <div class="mreel__txt">
+        <p class="mreel__eyebrow">Fabricación</p>
+        <h2 class="mreel__h">Nosotros enchapamos y armamos</h2>
+        <a class="mcta" href="#cotizar" data-lead="Quiero mi render 3D sin costo">Quiero mi render 3D <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </article>
+    <article class="mreel__slide">
+      <video muted playsinline loop preload="none" data-poster="../assets/reels/reel-cocina-isla-granito-luces.jpg" data-src="../assets/reels/reel-cocina-isla-granito-luces.mp4"></video>
+      <div class="mreel__txt">
+        <p class="mreel__eyebrow">Instalación</p>
+        <h2 class="mreel__h mreel__h--tight">Del taller a tu cocina.</h2>
+        <p class="mreel__note">Fabricación en aproximadamente cinco semanas</p>
+        <a class="mcta" href="#cotizar" data-lead="Quiero agendar una llamada">Agendar una llamada <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="mreel__ig" href="https://www.instagram.com/integraldesignmx" target="_blank" rel="noopener" data-no-lead>Ver más en Instagram →</a>
+      </div>
+    </article>
+  </div>
+  <ol class="mreel__dots" aria-hidden="true"><li class="on"></li><li></li><li></li><li></li></ol>
+</section>
+
+<!-- ================= S1 · 100vh video hero: process montage, one serif line bottom-left ================= -->
+<section class="hero" aria-label="Proceso Integral Design en video">
+  <div class="hero__media" aria-hidden="true">
+    <video class="hero__v on" muted playsinline preload="metadata" poster="../assets/hero/hero-marmol-macro-parrilla-16x9.jpg"></video>
+    <video class="hero__v" muted playsinline preload="metadata"></video>
+  </div>
+  <div class="hero__content gs gs-load">
+    <div class="hero__copy">
+      <h1 class="hero__h1">La cocina, hecha a tu medida</h1>
+      <p class="hero__sub">Diseño, fabricación en taller propio e instalación · Solo CDMX y Estado de México</p>
+    </div>
+    <ol class="hero__steps" aria-hidden="true">
+      <li class="on"><span>Piedra</span></li>
+      <li><span>Corte</span></li>
+      <li><span>Sierra</span></li>
+      <li><span>Herrajes</span></li>
+      <li><span>Tu cocina</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= S2 · Collections sliderlink (3:4 cards, progress bar) ================= -->
+<section class="section sliderlink dk" id="cocinas">
+  <div class="container">
+    <div class="intro gs-l">
+      <p class="eyebrow">Cocinas</p>
+      <h2 class="h2">Cocinas a la medida</h2>
+      <p class="p">Diseñadas para <strong>tu espacio</strong>, fabricadas en <strong>nuestro taller</strong> e instaladas por nosotros.</p>
+    </div>
+    <div class="slider gs">
+      <div class="swiper sw-cards" id="sw-col">
+        <div class="swiper-wrapper">
+          <a class="swiper-slide card" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">
+            <span class="card__img r34"><img src="../assets/stills/photo_terrazas01-footage_IMG_6708.jpg" alt="Isla con cubierta de granito negro y lámpara de anillos" width="302" height="402" loading="lazy" style="object-position:50% 60%"></span>
+            <h3 class="h3">Isla de granito</h3>
+          </a>
+          <a class="swiper-slide card" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">
+            <span class="card__img r34"><img src="../assets/stills/photo_bar-rancho-san-juan_IMG_2193-c.jpg" alt="Barra azul marino con cubierta de porcelanato y repisas de nogal iluminadas" width="302" height="402" loading="lazy" style="object-position:75% 70%"></span>
+            <h3 class="h3">Bar a la medida</h3>
+          </a>
+          <a class="swiper-slide card" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">
+            <span class="card__img r34"><img src="../assets/stills/photo_terrazas2_IMG_2094.jpg" alt="Vitrina de vidrio iluminada con jaladeras doradas" width="302" height="402" loading="lazy" style="object-position:22% 50%"></span>
+            <h3 class="h3">Vitrina iluminada</h3>
+          </a>
+          <a class="swiper-slide card" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">
+            <span class="card__img r34"><img src="../assets/stills/photo_site_wix-8ba48aa.jpg" alt="Isla con parrilla de inducción bajo campana de vidrio y muebles de nogal" width="302" height="402" loading="lazy" style="object-position:50% 55%"></span>
+            <h3 class="h3">Isla con campana</h3>
+          </a>
+          <a class="swiper-slide card" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">
+            <span class="card__img r34"><img src="../assets/stills/photo_site_wix-2de67ef.jpg" alt="Isla con repisas abiertas y cubierta en cascada" width="302" height="402" loading="lazy" style="object-position:50% 50%"></span>
+            <h3 class="h3">Isla con repisas</h3>
+          </a>
+          <a class="swiper-slide card" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">
+            <span class="card__img r34"><img src="../assets/stills/photo_cocina-exhibicion_IMG_0163.jpg" alt="Cocina de exhibición con alacenas de nogal y techo de madera" width="302" height="402" loading="lazy" style="object-position:50% 45%"></span>
+            <h3 class="h3">Cocina de exhibición</h3>
+          </a>
+        </div>
+      </div>
+      <div class="ctrl">
+        <div class="ctrl__bar"></div>
+        <button class="ctrl__btn ctrl__prev" type="button" aria-label="Anterior"><svg><use href="#i-prev"/></svg></button>
+        <button class="ctrl__btn ctrl__next" type="button" aria-label="Siguiente"><svg><use href="#i-next"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Reels (SHORTLIST v2 slot b: sliderlink after Collections, 9:16) ================= -->
+<section class="section sliderlink dk" id="videos">
+  <div class="container">
+    <div class="intro gs-l">
+      <p class="eyebrow">Videos</p>
+      <h2 class="h2">Del taller a tu cocina</h2>
+      <p class="p">Así <strong>cortamos, enchapamos y armamos</strong> cada mueble antes de instalarlo en tu casa. <a class="tlink" href="https://www.instagram.com/integraldesignmx" target="_blank" rel="noopener" data-no-lead>Ver más en Instagram →</a></p>
+    </div>
+    <div class="slider gs">
+      <div class="swiper sw-cards" id="sw-reels">
+        <div class="swiper-wrapper">
+          <!-- data-reel = file stem in ../assets/reels -->
+          <div class="swiper-slide card reel" role="button" tabindex="0" data-reel="reel-fab-corte-tablero-aserrin"><span class="card__img r916"><video muted playsinline loop preload="none" data-poster="../assets/reels/reel-fab-corte-tablero-aserrin.jpg" data-src="../assets/reels/reel-fab-corte-tablero-aserrin.mp4"></video></span><h3 class="h3">Corte de tablero</h3></div>
+          <div class="swiper-slide card reel" role="button" tabindex="0" data-reel="reel-fab-sierra-disco-macro"><span class="card__img r916"><video muted playsinline loop preload="none" data-poster="../assets/reels/reel-fab-sierra-disco-macro.jpg" data-src="../assets/reels/reel-fab-sierra-disco-macro.mp4"></video></span><h3 class="h3">Sierra de disco</h3></div>
+          <div class="swiper-slide card reel" role="button" tabindex="0" data-reel="reel-fab-canto-enchapado"><span class="card__img r916"><video muted playsinline loop preload="none" data-poster="../assets/reels/reel-fab-canto-enchapado.jpg" data-src="../assets/reels/reel-fab-canto-enchapado.mp4"></video></span><h3 class="h3">Canto enchapado</h3></div>
+          <div class="swiper-slide card reel" role="button" tabindex="0" data-reel="reel-fab-enchapadora-logo"><span class="card__img r916"><video muted playsinline loop preload="none" data-poster="../assets/reels/reel-fab-enchapadora-logo.jpg" data-src="../assets/reels/reel-fab-enchapadora-logo.mp4"></video></span><h3 class="h3">La enchapadora</h3></div>
+          <div class="swiper-slide card reel" role="button" tabindex="0" data-reel="reel-fab-armado-mueble"><span class="card__img r916"><video muted playsinline loop preload="none" data-poster="../assets/reels/reel-fab-armado-mueble.jpg" data-src="../assets/reels/reel-fab-armado-mueble.mp4"></video></span><h3 class="h3">Armado</h3></div>
+          <div class="swiper-slide card reel" role="button" tabindex="0" data-reel="reel-fab-cajon-cierre-suave"><span class="card__img r916"><video muted playsinline loop preload="none" data-poster="../assets/reels/reel-fab-cajon-cierre-suave.jpg" data-src="../assets/reels/reel-fab-cajon-cierre-suave.mp4"></video></span><h3 class="h3">Cierre suave</h3></div>
+          <div class="swiper-slide card reel" role="button" tabindex="0" data-reel="reel-fab-taller-logo-vinera"><span class="card__img r916"><video muted playsinline loop preload="none" data-poster="../assets/reels/reel-fab-taller-logo-vinera.jpg" data-src="../assets/reels/reel-fab-taller-logo-vinera.mp4"></video></span><h3 class="h3">Nuestro taller</h3></div>
+          <div class="swiper-slide card reel" role="button" tabindex="0" data-reel="reel-cocina-organizador-extraible"><span class="card__img r916"><video muted playsinline loop preload="none" data-poster="../assets/reels/reel-cocina-organizador-extraible.jpg" data-src="../assets/reels/reel-cocina-organizador-extraible.mp4"></video></span><h3 class="h3">Organizador extraíble</h3></div>
+          <div class="swiper-slide card reel" role="button" tabindex="0" data-reel="reel-cocina-tarja-ventana-jardin"><span class="card__img r916"><video muted playsinline loop preload="none" data-poster="../assets/reels/reel-cocina-tarja-ventana-jardin.jpg" data-src="../assets/reels/reel-cocina-tarja-ventana-jardin.mp4"></video></span><h3 class="h3">Tarja al jardín</h3></div>
+          <div class="swiper-slide card reel" role="button" tabindex="0" data-reel="reel-cocina-isla-granito-luces"><span class="card__img r916"><video muted playsinline loop preload="none" data-poster="../assets/reels/reel-cocina-isla-granito-luces.jpg" data-src="../assets/reels/reel-cocina-isla-granito-luces.mp4"></video></span><h3 class="h3">Isla de granito</h3></div>
+          <div class="swiper-slide card reel" role="button" tabindex="0" data-reel="reel-cocina-marmol-parrilla-macro"><span class="card__img r916"><video muted playsinline loop preload="none" data-poster="../assets/reels/reel-cocina-marmol-parrilla-macro.jpg" data-src="../assets/reels/reel-cocina-marmol-parrilla-macro.mp4"></video></span><h3 class="h3">Cubierta y parrilla</h3></div>
+          <div class="swiper-slide card reel" role="button" tabindex="0" data-reel="reel-vestidor-iluminado"><span class="card__img r916"><video muted playsinline loop preload="none" data-poster="../assets/reels/reel-vestidor-iluminado.jpg" data-src="../assets/reels/reel-vestidor-iluminado.mp4"></video></span><h3 class="h3">Vestidor iluminado</h3></div>
+        </div>
+      </div>
+      <div class="ctrl">
+        <div class="ctrl__bar"></div>
+        <button class="ctrl__btn ctrl__prev" type="button" aria-label="Anterior"><svg><use href="#i-prev"/></svg></button>
+        <button class="ctrl__btn ctrl__next" type="button" aria-label="Siguiente"><svg><use href="#i-next"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= S3 · Ranges panel: linked text slider + 6s autoplay image slider ================= -->
+<section class="section ranges dk" id="materiales">
+  <div class="container">
+    <div class="intro intro--wide gs-l">
+      <h2 class="h2">Materiales sin atajos</h2>
+      <p class="p">Trabajamos con <strong>herrajes Blum</strong>, <strong>cubiertas de granito y cuarzo</strong>, desde <strong>melamina hasta maderas premium</strong>, <strong>chapa natural</strong>, <strong>laca</strong> e <strong>iluminación LED</strong>. Colores, acabados y texturas los eliges tú.</p>
+    </div>
+    <div class="ranges__wrap gs">
+      <div class="ranges__text">
+        <div class="swiper" id="sw-rtext">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h3 class="h3">Herrajes Blum</h3>
+              <p class="p">Bisagras, correderas y cajones <strong>Blum</strong> en cada mueble. Mobiliario y herrajes con <strong>3 años de garantía</strong>.</p>
+              <a class="btn" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">Cotizar</a>
+            </div>
+            <div class="swiper-slide">
+              <h3 class="h3">Granito</h3>
+              <p class="p">Piedra natural de <strong>veta marcada</strong> para islas y cubiertas. Cubiertas de granito con <strong>10 años de garantía</strong>.</p>
+              <a class="btn" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">Cotizar</a>
+            </div>
+            <div class="swiper-slide">
+              <h3 class="h3">Cuarzo</h3>
+              <p class="p">Superficie de <strong>tono uniforme</strong>, en el color que elijas. Cubiertas de cuarzo con <strong>10 años de garantía</strong>.</p>
+              <a class="btn" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">Cotizar</a>
+            </div>
+            <div class="swiper-slide">
+              <h3 class="h3">Madera y chapa natural</h3>
+              <p class="p">Desde <strong>melamina</strong> hasta <strong>maderas premium</strong> y <strong>chapa natural</strong>, con el canto enchapado en nuestro taller.</p>
+              <a class="btn" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">Cotizar</a>
+            </div>
+            <div class="swiper-slide">
+              <h3 class="h3">Iluminación LED</h3>
+              <p class="p">Tiras <strong>LED integradas</strong> en alacenas, repisas y salpicaderos.</p>
+              <a class="btn" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">Cotizar</a>
+            </div>
+          </div>
+        </div>
+        <div class="bullets" id="r-bullets"></div>
+      </div>
+      <div class="ranges__media">
+        <div class="swiper" id="sw-rimg">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><span class="card__img r34"><img src="../assets/stills/photo_videos-fabricacion_IMG_4770.jpg" alt="Corredera Blum con seguro naranja bajo un cajón de roble" width="396" height="528" loading="lazy" style="object-position:55% 35%"></span></div>
+            <div class="swiper-slide"><span class="card__img r34"><img src="../assets/stills/hd/photo_terrazas01-fotos_IMG_6707.jpg" alt="Isla con cubierta de granito negro y lámpara de anillos" width="396" height="528" loading="lazy" style="object-position:55% 55%"></span></div>
+            <div class="swiper-slide"><span class="card__img r34"><img src="../assets/stills/photo_terrazas2_IMG_2102.jpg" alt="Cubierta clara de la isla con giratorio y lámpara colgante" width="396" height="528" loading="lazy" style="object-position:60% 60%"></span></div>
+            <div class="swiper-slide"><span class="card__img r34"><img src="../assets/stills/photo_site_wix-936df1b.jpg" alt="Frente de barra con listones de nogal y lámparas de cobre" width="396" height="528" loading="lazy" style="object-position:45% 45%"></span></div>
+            <div class="swiper-slide"><span class="card__img r34"><img src="../assets/stills/photo_cocina-exhibicion_IMG_0152.jpg" alt="Alacenas con puertas de vidrio, rieles de luz y LED bajo alacena" width="396" height="528" loading="lazy" style="object-position:30% 50%"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= S4 · Fullscreen video: scale .5 → 1, text 0.75s later ================= -->
+<section class="section fullscreen" id="taller">
+  <div class="fullscreen__box">
+    <div class="fullscreen__media">
+      <video muted playsinline loop preload="none" data-poster="../assets/hero/hero-fab-enchapadora-logo-16x9.jpg" data-src="../assets/hero/hero-fab-enchapadora-logo-16x9.mp4"></video>
+      <button class="fullscreen__open" type="button" data-video="../assets/hero/hero-fab-enchapadora-logo-16x9.mp4" aria-label="Ver video del taller en grande"></button>
+    </div>
+    <div class="fullscreen__text">
+      <h2 class="h2">Conoce nuestro taller</h2>
+      <p class="p">Cada pieza se <strong>corta, enchapa y arma</strong> en nuestro taller de <strong>Iztapalapa</strong>. Con tu contrato firmado, fabricamos y entregamos en <strong>aproximadamente cinco semanas</strong>.</p>
+      <a class="btn btn--w" href="#cotizar" data-lead="Quiero agendar una visita técnica">Agendar visita técnica</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= S5 · Identity 2-col + 3:1 cinematic strip ================= -->
+<section class="section single" id="nosotros">
+  <div class="container">
+    <div class="single__intro gs">
+      <p class="eyebrow single__full">Nosotros</p>
+      <h2 class="h2 single__half">Integral Design</h2>
+      <a class="btn single__btn" href="#cotizar" data-lead="Quiero agendar una llamada">Agendar una llamada</a>
+      <h3 class="h3 single__half">Diseño, fabricación e instalación bajo un mismo techo.</h3>
+      <p class="p single__half">Somos <strong>fabricantes directos</strong>: el equipo que <strong>diseña tu cocina</strong> la <strong>fabrica en nuestro taller</strong> y la <strong>instala</strong> en tu casa. Trabajamos <strong>solo en CDMX y Estado de México</strong>.</p>
+    </div>
+    <div class="single__media gs">
+      <video muted playsinline loop preload="none" data-poster="../assets/hero/hero-cubierta-marmol-contrapicado-16x9.jpg" data-src="../assets/hero/hero-cubierta-marmol-contrapicado-16x9.mp4" data-src-m="../assets/hero/hero-cubierta-marmol-contrapicado-4x5.mp4"></video>
+    </div>
+  </div>
+</section>
+
+<!-- ================= S6 · Links grid: 3 outlined cards = first three steps of the process ================= -->
+<section class="section links" id="proceso">
+  <div class="container">
+    <div class="intro gs-l">
+      <p class="eyebrow">Proceso</p>
+      <h2 class="h2">Así trabajamos</h2>
+      <p class="p">Los primeros tres pasos son <strong>sin costo</strong>. Después: <strong>contrato</strong>, fabricación en <strong>aproximadamente cinco semanas</strong> e <strong>instalación</strong>.</p>
+    </div>
+  </div>
+  <div class="container links__grid">
+    <div class="lcard gs">
+      <div><p class="lcard__n">01</p><h3 class="h3">Llamada o cita virtual</h3></div>
+      <p class="p">15 a 20 minutos <strong>sin costo</strong> para entender tu espacio y lo que buscas.</p>
+      <a class="btn" href="#cotizar" data-lead="Quiero agendar una llamada">Agendar llamada</a>
+    </div>
+    <div class="lcard gs">
+      <div><p class="lcard__n">02</p><h3 class="h3">Visita técnica</h3></div>
+      <p class="p">Diseñador y asesor van juntos con <strong>muestras físicas</strong> y miden tu espacio. Sin costo.</p>
+      <a class="btn" href="#cotizar" data-lead="Quiero agendar una visita técnica">Agendar visita</a>
+    </div>
+    <div class="lcard gs">
+      <div><p class="lcard__n">03</p><h3 class="h3">Render 3D y cotización</h3></div>
+      <p class="p">Te presentamos diseño, <strong>render 3D</strong> y cotización unos <strong>dos días</strong> después de la visita. Sin costo.</p>
+      <a class="btn" href="#cotizar" data-lead="Quiero mi render 3D sin costo">Quiero mi render</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= S7 · News sliderlink (3:2, 2-up) → Testimonios ================= -->
+<!-- VALIDAR: testimonios publicados en integraldesign.mx; confirmar permiso -->
+<!-- VALIDAR: colonias de las fotos (Terrazas, Mixcoac, Santa Fe) -->
+<section class="section sliderlink posts" id="proyectos">
+  <div class="container">
+    <div class="intro intro--posts gs-l">
+      <p class="eyebrow">Proyectos</p>
+      <h2 class="h2">Lo que dicen nuestros clientes</h2>
+    </div>
+    <div class="slider gs">
+      <div class="swiper sw-cards" id="sw-posts">
+        <div class="swiper-wrapper">
+          <article class="swiper-slide card post">
+            <span class="card__img r32"><img src="../assets/stills/photo_terrazas2_IMG_2084.jpg" srcset="../assets/stills/photo_terrazas2_IMG_2084.jpg 2000w, ../assets/stills/hd/photo_terrazas2_IMG_2084.jpg 2560w" sizes="(max-width: 800px) 92vw, 45vw" alt="Cocina blanca con isla de roble y cubierta de cuarzo" width="633" height="422" loading="lazy" style="object-position:45% 55%"></span>
+            <figure class="post__q">
+              <blockquote class="h3">“Estoy muy agradecida con todo el equipo que hizo posible la cocina que imaginé.”</blockquote>
+              <figcaption class="p"><strong>Eva María Garza</strong></figcaption>
+            </figure>
+            <p class="post__cap">Foto: proyecto Integral Design en Terrazas</p>
+            <a class="btn" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">Cotizar mi cocina</a>
+          </article>
+          <article class="swiper-slide card post">
+            <span class="card__img r32"><img src="../assets/stills/photo_site_wix-770e547.jpg" alt="Tarja de cerámica tipo granja con cubierta de cuarzo" width="633" height="422" loading="lazy" class="zoom-sink" style="object-position:30% 35%"></span>
+            <figure class="post__q">
+              <blockquote class="h3">“Desde el primer contacto, hasta la entrega del proyecto, un equipo profesional y responsable. Altamente recomendable realizar tu cocina con Integral Design.”</blockquote>
+              <figcaption class="p"><strong>Isaías Zapata</strong></figcaption>
+            </figure>
+            <p class="post__cap">Foto: proyecto Integral Design</p>
+            <a class="btn" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">Cotizar mi cocina</a>
+          </article>
+          <article class="swiper-slide card post">
+            <span class="card__img r32"><img src="../assets/stills/photo_terrazas01-fotos_IMG_6721.jpg" srcset="../assets/stills/photo_terrazas01-fotos_IMG_6721.jpg 2000w, ../assets/stills/hd/photo_terrazas01-fotos_IMG_6721.jpg 2560w" sizes="(max-width: 800px) 92vw, 45vw" alt="Isla de granito negro con muebles negros sin jaladeras" width="633" height="422" loading="lazy" style="object-position:58% 45%"></span>
+            <figure class="post__q">
+              <blockquote class="h3">“Es una gran ventaja tener un asesor que te apoye durante todo el proceso, estoy muy feliz con la cocina que hicieron para mí.”</blockquote>
+              <figcaption class="p"><strong>Georgina Lagos</strong></figcaption>
+            </figure>
+            <p class="post__cap">Foto: proyecto Integral Design en Terrazas</p>
+            <a class="btn" href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">Cotizar mi cocina</a>
+          </article>
+        </div>
+      </div>
+      <div class="ctrl">
+        <div class="ctrl__bar"></div>
+        <button class="ctrl__btn ctrl__prev" type="button" aria-label="Anterior"><svg><use href="#i-prev"/></svg></button>
+        <button class="ctrl__btn ctrl__next" type="button" aria-label="Siguiente"><svg><use href="#i-next"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= Footer (dark → navy) + brands bar (replaces EU funding bar) ================= -->
+<footer class="ftr" id="contacto">
+  <div class="ftr__wrap">
+    <a class="ftr__logo gs" href="#top" aria-label="Integral Design, inicio"><img src="../assets/brand/logo-horizontal-on-dark.png" alt="Integral Design" width="190" height="34" loading="lazy"></a>
+    <div class="ftr__row gs">
+      <ul class="ftr__links">
+        <li><svg aria-hidden="true"><use href="#i-pin"/></svg><span>Solo CDMX y Estado de México</span></li>
+        <li><a href="https://wa.me/525653921311" data-lead="Quiero cotizar mi cocina a la medida"><svg aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp (56) 5392 1311</span></a></li>
+        <li><a href="tel:+525593407371" data-no-lead><svg aria-hidden="true"><use href="#i-tel"/></svg><span>(55) 9340 7371</span></a></li>
+        <li><a href="mailto:contacto@integraldesign.mx" data-no-lead><svg aria-hidden="true"><use href="#i-mail"/></svg><span>contacto@integraldesign.mx</span></a></li>
+      </ul>
+      <ul class="ftr__social">
+        <li><a href="https://www.facebook.com/IntegralDesignMX" target="_blank" rel="noopener" data-no-lead aria-label="Facebook"><svg><use href="#i-fb"/></svg></a></li>
+        <li><a href="https://www.instagram.com/integraldesignmx" target="_blank" rel="noopener" data-no-lead aria-label="Instagram"><svg><use href="#i-ig"/></svg></a></li>
+      </ul>
+    </div>
+    <div class="ftr__cols">
+      <div class="ftr__col gs">
+        <button class="ftr__t" type="button" aria-expanded="false">Cocinas <svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul>
+          <li><a href="#cocinas" data-m="m-cocinas">Isla de granito</a></li>
+          <li><a href="#cocinas" data-m="m-cocinas">Bar a la medida</a></li>
+          <li><a href="#cocinas" data-m="m-cocinas">Vitrina iluminada</a></li>
+          <li><a href="#cocinas" data-m="m-cocinas">Isla con campana</a></li>
+          <li><a href="#cocinas" data-m="m-cocinas">Isla con repisas</a></li>
+        </ul>
+      </div>
+      <div class="ftr__col gs">
+        <button class="ftr__t" type="button" aria-expanded="false">Proceso <svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul>
+          <li><a href="#proceso">Llamada o cita virtual</a></li>
+          <li><a href="#proceso">Visita técnica</a></li>
+          <li><a href="#proceso">Render 3D y cotización</a></li>
+          <li><a href="#taller" data-m="m-taller">Fabricación e instalación</a></li>
+        </ul>
+      </div>
+      <div class="ftr__col gs">
+        <button class="ftr__t" type="button" aria-expanded="false">Integral Design <svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#taller" data-m="m-taller">Taller</a></li>
+          <li><a href="#videos" data-m="m-cocinas">Videos</a></li>
+          <li><a href="#proyectos">Testimonios</a></li>
+        </ul>
+      </div>
+      <div class="ftr__col gs">
+        <button class="ftr__t" type="button" aria-expanded="false">Contacto <svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul>
+          <li><a href="#cotizar" data-lead="Quiero cotizar mi cocina a la medida">Cotizar mi cocina</a></li>
+          <li><a href="#cotizar" data-lead="Quiero agendar una visita técnica">Agendar visita técnica</a></li>
+          <li><a href="https://www.instagram.com/integraldesignmx" target="_blank" rel="noopener" data-no-lead>Instagram</a></li>
+          <li><a href="https://www.facebook.com/IntegralDesignMX" target="_blank" rel="noopener" data-no-lead>Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__policy gs">
+      <span>© 2026 Integral Design · Cocinas &amp; Mobiliario</span>
+      <span>Garantía: 3 años en mobiliario y herrajes · 10 años en cubiertas de cuarzo y granito</span>
+      <span>Aceptamos todas las tarjetas de crédito y débito</span>
+    </div>
+  </div>
+  <!-- VALIDAR: "Marcas con las que trabajamos" (no son socios) -->
+  <div class="brands">
+    <span class="brands__t">Marcas con las que trabajamos</span>
+    <img src="../assets/brand/partner-blum.png" alt="Blum" height="22" width="88" loading="lazy">
+    <img src="../assets/brand/partner-subzero.png" alt="Sub-Zero" height="22" width="90" loading="lazy">
+    <img src="../assets/brand/partner-miele.png" alt="Miele" height="22" width="88" loading="lazy">
+    <img src="../assets/brand/partner-smeg.png" alt="Smeg" height="22" width="90" loading="lazy">
+  </div>
+</footer>
+
+<!-- Video lightbox (Fancybox-equivalent) -->
+<div class="lb" id="lb" aria-hidden="true" role="dialog" aria-label="Video">
+  <button class="lb__x" type="button" aria-label="Cerrar video"><span></span><span></span></button>
+  <video class="lb__v" muted playsinline loop controls preload="none"></video>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js" defer></script>
+<script src="v2.js" defer></script>
+<script src="../assets/lead/lead.js" defer></script>
+</body>
+</html>

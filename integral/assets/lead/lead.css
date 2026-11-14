@@ -1,0 +1,40 @@
+/* Integral Design lead popup — nombre, teléfono, correo → WhatsApp.
+   Versions can override: --lead-ink, --lead-accent, --lead-bg, --lead-ff (body), --lead-ff-display (title), --lead-radius */
+.lead-ov{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(18,24,30,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;visibility:hidden;transition:opacity .4s ease,visibility 0s linear .4s}
+.lead-ov.is-open{opacity:1;visibility:visible;transition:opacity .4s ease}
+.lead{--lead-ink:#2D4255;--lead-accent:#B5A799;--lead-bg:#FAF8F5;--lead-ff:var(--ff-body,"Inter",system-ui,-apple-system,sans-serif);--lead-ff-display:var(--ff-display,var(--lead-ff));--lead-radius:var(--radius,2px);
+  position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);width:100%;max-width:880px;max-height:calc(100dvh - 48px);overflow:hidden;background:var(--lead-bg);color:#2F2F2F;border-radius:var(--lead-radius);box-shadow:0 40px 100px rgba(0,0,0,.35);font-family:var(--lead-ff);transform:translateY(28px);opacity:0;transition:transform .6s cubic-bezier(.16,1,.3,1),opacity .5s ease}
+.lead-ov.is-open .lead{transform:none;opacity:1}
+.lead__media{position:relative;min-height:100%;background:#1c232a}
+.lead__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.lead__body{padding:48px 48px 36px;overflow:auto;max-height:calc(100dvh - 48px)}
+.lead__x{position:absolute;top:16px;right:16px;z-index:2;width:44px;height:44px;border:0;background:transparent;cursor:pointer}
+.lead__x span{position:absolute;left:12px;right:12px;top:50%;height:1.5px;background:var(--lead-ink);transform:rotate(45deg);transition:transform .3s}
+.lead__x span+span{transform:rotate(-45deg)}
+.lead__x:hover span{transform:rotate(135deg)}.lead__x:hover span+span{transform:rotate(45deg)}
+.lead__logo{height:28px;width:auto;display:block;margin-bottom:28px}
+.lead__chip{display:block;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8a7c6e;margin-bottom:12px}
+.lead__t{font-family:var(--lead-ff-display);font-size:34px;line-height:1.1;font-weight:400;letter-spacing:-.01em;color:var(--lead-ink);margin:0 0 12px}
+.lead__s{font-size:16px;line-height:1.55;color:#5a5a5a;margin:0 0 28px}
+.lead__f{display:grid;gap:18px}
+.lead__l{display:grid;gap:6px}
+.lead__l>span{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--lead-ink)}
+.lead__i{font:inherit;font-size:17px;padding:12px 0 10px;border:0;border-bottom:1px solid #cfc8bf;border-radius:0;background:transparent;color:#1f2a33;width:100%;transition:border-color .3s}
+.lead__i::placeholder{color:#a9a39c}
+.lead__i:focus{outline:0;border-bottom-color:var(--lead-ink)}
+.lead__l.is-err .lead__i{border-bottom-color:#b3261e}
+.lead__e{font-style:normal;font-size:13px;color:#b3261e;min-height:0}
+.lead__b{margin-top:10px;display:flex;align-items:center;justify-content:center;gap:12px;font:inherit;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:18px 24px;border:0;border-radius:var(--lead-radius);background:var(--lead-ink);color:#fff;cursor:pointer;transition:background .3s,transform .15s}
+.lead__b:hover{background:#1f3040}
+.lead__b:active{transform:scale(.99)}
+.lead__b svg{width:20px;height:20px;flex:none;color:#25D366}
+.lead__p{font-size:12px;line-height:1.5;color:#8b857e;margin:16px 0 0}
+html.lead-lock,html.lead-lock body{overflow:hidden}
+@media (max-width:760px){
+  .lead-ov{align-items:flex-end;padding:0}
+  .lead{grid-template-columns:1fr;max-width:none;max-height:94dvh;border-radius:0;transform:translateY(100%);opacity:1}
+  .lead__media{display:none}
+  .lead__body{padding:36px 22px calc(24px + env(safe-area-inset-bottom));max-height:94dvh}
+  .lead__t{font-size:28px}
+}
+@media (prefers-reduced-motion:reduce){.lead-ov,.lead{transition:none}}
