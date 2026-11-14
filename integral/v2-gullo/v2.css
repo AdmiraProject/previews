@@ -447,3 +447,35 @@ strong { font-weight: 700; }
 @media (max-width: 800px) { .rv-av { width: 44px; height: 44px; font-size: 14px; } .rv-rate { gap: 8px; font-size: 11px; } }
 
 img.qcard__av,img.rv-av{object-fit:cover;padding:0;background:#9C8D7E}
+
+/* ---------- hero CTAs ---------- */
+.btn--ghost { background: transparent; color: var(--white); border-color: rgba(255,255,255,.8); }
+.btn--ghost:hover { background: var(--white); color: var(--navy); border-color: var(--white); }
+.hero__ctas { display: flex; gap: 16px; margin-top: 30px; flex-wrap: wrap; }
+.hero__ctas .btn { min-height: 50px; padding: 14px 34px; }
+
+/* ---------- materials panel: detail rows ---------- */
+.spec { margin: 0 0 30px; display: grid; gap: 0; border-top: 1px solid rgba(45,66,85,.16); }
+.spec > div { display: grid; grid-template-columns: 112px 1fr; gap: 16px; padding: 11px 0; border-bottom: 1px solid rgba(45,66,85,.16); }
+.spec dt { font-size: 12px; line-height: 20px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: #8a7c6e; }
+.spec dd { margin: 0; font-size: 15px; line-height: 20px; font-weight: 300; color: var(--charcoal); }
+.ranges__text .p { margin-bottom: 24px; }
+
+/* ---------- closing CTA band ---------- */
+.endcta { position: relative; margin-top: var(--pad); min-height: 620px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #111a22; text-align: center; color: var(--white); }
+.endcta__bg { position: absolute; inset: 0; }
+.endcta__bg video { width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; }
+.endcta__bg::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(13,20,27,.58) 0%, rgba(13,20,27,.38) 75%), linear-gradient(180deg, rgba(13,20,27,.25), rgba(13,20,27,.5)); }
+.endcta__in { position: relative; max-width: 760px; padding: 90px var(--g); }
+.endcta__eb { color: var(--taupe); margin-bottom: 22px; }
+.endcta__h { color: var(--white); margin-bottom: 24px; text-wrap: balance; text-shadow: 0 2px 24px rgba(0,0,0,.35); }
+.endcta__p { color: rgba(255,255,255,.92); margin: 0 auto 38px; max-width: 600px; text-wrap: pretty; text-shadow: 0 1px 14px rgba(0,0,0,.4); }
+.endcta__p strong { color: var(--white); }
+.endcta__btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.endcta__btns .btn { min-height: 52px; padding: 14px 38px; }
+@media (max-width: 800px) {
+  .endcta { min-height: 560px; }
+  .endcta__in { padding: 70px 20px; }
+  .endcta__btns { flex-direction: column; align-items: stretch; }
+  .spec > div { grid-template-columns: 96px 1fr; gap: 12px; }
+}
