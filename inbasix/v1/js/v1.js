@@ -80,7 +80,8 @@
     $$('[data-v]', root).forEach(box => {
       if (box.dataset.vDone) return; box.dataset.vDone = 1;
       let name = box.dataset.v;
-      if (box.dataset.vm && matchMedia('(max-width:768px)').matches) name = box.dataset.vm;
+      if (box.dataset.vm && matchMedia('(max-width:768px)').matches) name = box.dataset.vm || box.dataset.v;
+      if (!name) return; // slot without a clip (e.g. category banner that uses a photo)
       if (!has(set, name + '.mp4')) { if (name !== box.dataset.v && has(set, box.dataset.v + '.mp4')) name = box.dataset.v; else return; }
       if (RM.matches && !has(set, name + '.jpg')) return; // reduced motion: keep still fallback image
       const fb = box.querySelector('img');

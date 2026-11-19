@@ -16,9 +16,6 @@
   $('[data-count-eq]').textContent = `${Math.floor(withImg.length / 10) * 10} equipos`;
   const pp = I.find('ultrasonido-mindray-consona-n5') || withImg[0];
   const pi = $('[data-promo-prod]'); pi.src = K.pimg(pp, 500);
-  const sellWA = K.WA('Hola Inbasix, quiero vender mi equipo. Marca / modelo / año: ');
-  $$('[data-vende]').forEach(a => { if (a.classList.contains('k-promo')) { a.href = sellWA; a.target = '_blank'; a.rel = 'noopener'; } });
-  $('[data-sell-wa]').href = sellWA;
 
   /* video cards (real Inbasix YouTube videos) */
   const vids = ['M4vJD808YYY', 'P8uv-w941hg', 'uDGo2DVzyas', '1e9kIhxFd2Q', 'e7ztaINKlx4', 'J-1CZizZhpo', 'qCjcrInufV4', 'wrQsnhz3Wdg'];
@@ -70,8 +67,6 @@
     $$('.k-tip video').forEach(x => { if (x !== v) { x.muted = true; const bb = x.parentElement.querySelector('[data-snd]'); if (bb) { bb.innerHTML = IC.mute; bb.setAttribute('aria-label', 'Activar sonido'); } } });
     v.muted = !v.muted; if (!v.muted) v.play().catch(() => {}); b.innerHTML = v.muted ? IC.mute : IC.sound; b.setAttribute('aria-label', v.muted ? 'Activar sonido' : 'Silenciar'); }, true);
 
-  /* steps: mobile CTA follows tab */
-  $$('#k-steps [data-tab]').forEach(t => t.addEventListener('click', () => { const m = $('.k-steps__m'); if (t.dataset.tab === 'v') { m.href = sellWA; m.target = '_blank'; m.textContent = 'Cotizar venta'; } else { m.href = 'coleccion.html'; m.removeAttribute('target'); m.textContent = 'Ver productos'; } }));
 
   /* testimonials, showrooms, brands, faq */
   $('[data-testi]').innerHTML = K.testiHTML();

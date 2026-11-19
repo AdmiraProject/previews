@@ -76,7 +76,7 @@
         <a class="v-pr__row" href="#fin">${IC.cash}<span>Financia a 12–60 meses</span>${IC.right}</a>
       </div>
       <div class="v-panel v-mini"><div><b>Envío a todo México</b><span>Entrega estimada de 3 a 10 días hábiles</span></div><span class="k-chip" aria-hidden="true">${IC.truck}</span></div>
-      <div class="v-panel v-panel--tint v-mini"><div><b>¿Renuevas tu equipo?</b><span>Te ayudamos a vender el actual</span></div><a class="k-chip" href="${WA('Hola Inbasix, quiero vender mi equipo actual para comprar: ' + p.t)}" target="_blank" rel="noopener">${IC.swap}Cotizar</a></div>
+      <div class="v-panel v-panel--tint v-mini"><div><b>¿Dudas con la configuración?</b><span>Habla con un asesor, no con un robot</span></div><a class="k-chip" href="${WA('Hola Inbasix, tengo dudas con la configuración de: ' + p.t)}" target="_blank" rel="noopener">${IC.chat}Asesor</a></div>
       <div class="v-ctas" data-ctas>${ctas(cur)}</div>
       <p class="v-foot">${cur.p ? 'Precios en MXN. Pago seguro en inbasixmedical.com' : 'Te enviamos tu cotización formal en menos de 24 horas'} · <a href="${I.STORE}/pages/politicas-de-venta" target="_blank" rel="noopener">Políticas de venta</a></p>
     </div>`;
@@ -142,18 +142,6 @@
     </div>
   </section>
 
-  <div class="k-wrap v-gap">
-    <section class="v-sell" aria-labelledby="h-sell">
-      <div class="v-sell__img"><img src="${(() => { const x = sameCol.find(y => K.PROD.has(y.h)) || sameCol[3] || sameCol[0] || p; return x.img.length ? K.pimg(x, 700) : K.A + 'brand/logo-navy.png'; })()}" alt="" loading="lazy"></div>
-      <div class="v-sell__c"><h2 id="h-sell">¡Vende tu equipo y estrena otro!</h2>
-        <form class="v-sell__f" data-sell novalidate>
-          <div class="v-select"><select required name="tipo" aria-label="Tipo de equipo"><option value="" disabled selected hidden>Selecciona el tipo de equipo</option>${['Ultrasonido', 'Aparatología estética', 'Rayos X', 'Tomógrafo', 'Resonancia magnética', 'Arco en C', 'Quirófano', 'Equipo veterinario', 'Otro'].map(x => `<option>${x}</option>`).join('')}</select></div>
-          <div class="v-select"><select required name="marca" aria-label="Marca"><option value="" disabled selected hidden>Selecciona la marca</option>${[...new Set(I.P.map(x => K.vendorName(x.vendor)))].sort().concat('Otra').map(x => `<option>${esc(x)}</option>`).join('')}</select></div>
-          <div class="v-select"><select required name="anio" aria-label="Año"><option value="" disabled selected hidden>Selecciona el año</option>${Array.from({ length: 22 }, (_, i) => 2026 - i).map(y => `<option>${y}</option>`).join('')}<option>Antes de 2005</option></select></div>
-          <button class="k-btn k-btn--block" type="submit" disabled>Cotizar venta</button>
-        </form></div>
-    </section>
-  </div>
 
   ${interest.length ? `<section class="k-wrap v-gap v-lat" aria-labelledby="h-int"><h2 class="v-h2" id="h-int">También te podría interesar</h2><div class="k-scroller"><div class="k-track">${interest.map(x => `<div>${K.pcard(x)}</div>`).join('')}</div>${K.arrows()}</div></section>` : ''}
   ${similarPrice.length ? `<section class="k-wrap v-gap v-lat" aria-labelledby="h-sim"><h2 class="v-h2" id="h-sim">${mp != null ? 'Equipos con precio similar' : 'Más equipos de ' + esc(tl.toLowerCase())}</h2><div class="k-scroller"><div class="k-track">${similarPrice.map(x => `<div>${K.pcard(x)}</div>`).join('')}</div>${K.arrows()}</div></section>` : ''}
@@ -256,12 +244,6 @@
     const mf = e.target.closest('[data-mf]'); if (mf) { fi = Math.max(0, Math.min(imgs.length - 1, fi + +mf.dataset.mf)); renderPlayer(); return; }
     const yl = e.target.closest('[data-ytload]'); if (yl) { player.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(yl.dataset.ytload)}?autoplay=1&rel=0" title="${esc(K.YT[yl.dataset.ytload] || p.t)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`; }
   });
-
-  /* sell widget → WhatsApp */
-  const sf = $('[data-sell]');
-  sf.addEventListener('change', () => { sf.querySelector('button').disabled = !sf.checkValidity(); });
-  sf.addEventListener('submit', e => { e.preventDefault(); if (!sf.checkValidity()) return; const f = new FormData(sf);
-    window.open(WA(`Hola Inbasix, quiero vender mi equipo:\n• Tipo: ${f.get('tipo')}\n• Marca: ${f.get('marca')}\n• Año: ${f.get('anio')}\nMe interesa: ${p.t}`), '_blank', 'noopener'); });
 
   /* sticky bottom bar once the buy-box CTAs leave the viewport */
   const sbar = $('[data-sbar]');

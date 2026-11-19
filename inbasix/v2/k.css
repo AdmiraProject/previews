@@ -1142,3 +1142,6 @@ body.has-sbar .k-wa{bottom:120px}
 .k-tcard__h img.k-tcard__pl{width:20px;height:20px;border-radius:0;object-fit:contain}
 .k-tcard__h img.k-tcard__ph{width:48px;height:48px}
 @media (max-width:767px){.k-rsum{flex-wrap:nowrap;overflow-x:auto;margin:8px -20px 0;padding:0 20px 2px;scrollbar-width:none}.k-rsum::-webkit-scrollbar{display:none}.k-rsum__i{flex:none}}
+
+.k-tabs__one{display:inline-flex;align-items:center;height:36px;padding:0 14px;border-radius:6px;font-size:16px;font-weight:600;color:var(--navy)}
+.c-pc--sell p{font-size:16px;color:var(--text);margin-top:-12px}

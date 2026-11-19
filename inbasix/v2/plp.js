@@ -117,8 +117,7 @@
   }
 
   /* ---------- grid + pagination ---------- */
-  const sellWA = K.WA('Hola Inbasix, quiero vender mi equipo. Marca / modelo / año: ');
-  const promoSell = `<div class="c-pc c-pc--sell">${IC.swap}<h3>¡Vende tu equipo y renueva tu clínica!</h3><a class="k-btn k-btn--block" href="${sellWA}" target="_blank" rel="noopener">Cotizar</a></div>`;
+  const promoSell = `<div class="c-pc c-pc--sell">${IC.pin}<h3>Ve los equipos funcionando en un showroom</h3><p>CDMX, Guadalajara, Monterrey y Chihuahua</p><a class="k-btn k-btn--block" href="index.html#showrooms">Ver showrooms</a></div>`;
   const promoAsk = () => `<div class="c-pc c-pc--ask"><img src="${K.PH}real/showroom-ultrasonido.webp" alt="" loading="lazy"><div><h3>¿Buscas otro equipo?</h3><p>Cuéntanos qué necesitas y un asesor te envía tu cotización formal en menos de 24 horas.</p><a class="k-btn k-btn--block" href="${K.WA('Hola Inbasix, busco un equipo que no encontré en el catálogo: ' + (S.q || ''))}" target="_blank" rel="noopener">Hablar con un asesor</a></div></div>`;
   function renderGrid(r) {
     const pages = Math.max(1, Math.ceil(r.length / PER)); if (S.page > pages) S.page = pages;

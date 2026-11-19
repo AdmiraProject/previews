@@ -99,7 +99,6 @@
     ['¿Dónde puedo ver el equipo?', 'En nuestros showrooms de CDMX, Guadalajara, Monterrey y Chihuahua, con salas de exhibición de ultrasonido, quirófano, laparoscopía, endoscopía, neonatología y aparatología estética. El de Guadalajara está en Av. de las Américas 1545, Providencia, 44630 Guadalajara, Jal.'],
     ['¿Qué formas de pago aceptan?', 'Transferencia BBVA a nombre de IMPORTACIONES INBASIX S.A. de C.V., tarjeta de crédito o débito, crédito bancario y arrendamiento puro.'],
     ['¿Qué garantía dan?', 'Garantía estándar del fabricante de 12 meses, con opción de ampliarla a 24, 36 o 48 meses. Después de la garantía te seguimos atendiendo con servicio postventa.'],
-    ['¿Pueden recomprarme el equipo?', 'Te ayudamos a revender tu equipo directo con el cliente final.'],
     ['¿Incluye capacitación?', 'Sí. La capacitación botón por botón está incluida, con instalación profesional y capacitación técnica a tu personal en toda la república.'],
     ['¿Cuál es el tiempo de entrega?', 'De 3 a 10 días hábiles después de confirmado tu pedido.'],
     ['¿Envían fuera del país?', 'Sí. Escríbenos y revisamos contigo el envío fuera de México.'],

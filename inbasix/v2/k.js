@@ -124,7 +124,6 @@
     ['¿Dónde puedo ver el equipo?', 'En nuestros showrooms de CDMX, Guadalajara, Monterrey y Chihuahua, con salas de ultrasonido, quirófano, laparoscopía, endoscopía, neonatología y aparatología estética.'],
     ['¿Qué formas de pago tienen?', 'Transferencia bancaria BBVA a nombre de IMPORTACIONES INBASIX S.A. de C.V., tarjeta de crédito o débito, crédito bancario y arrendamiento puro.'],
     ['¿Qué garantía dan?', 'Garantía estándar del fabricante de 12 meses, con ampliación a 24, 36 o 48 meses. Después de la garantía te damos servicio postventa.'],
-    ['¿Pueden recomprarme el equipo?', 'Te ayudamos a revender tu equipo directo con el cliente final.'],
     ['¿Incluye capacitación?', 'Sí. La capacitación botón por botón está incluida, con instalación profesional y capacitación técnica a tu personal en toda la república.'],
     ['¿Cuál es el tiempo de entrega?', 'La entrega estimada es de 3 a 10 días hábiles después de confirmado tu pedido. Tenemos envíos a todo México.'],
     ['¿Envían fuera del país?', 'Sí, contáctanos para revisar tu envío fuera de México.'],
@@ -221,7 +220,7 @@
 
   /* ---------- shell: bar, header, menu, drawer, footer, wa ---------- */
   const NAV = [
-    ['coleccion.html', 'Productos'], ['index.html#vende', 'Vende tu equipo'], ['index.html#financiamiento', 'Financiamiento'], ['index.html#showrooms', 'Showrooms']
+    ['coleccion.html', 'Productos'], ['index.html#financiamiento', 'Financiamiento'], ['index.html#showrooms', 'Showrooms']
   ];
   const headHTML = (withSearch, plpTools) => `
   <div class="k-bar">Ven a conocernos. Encuentra tu showroom Inbasix más cercano <a href="index.html#showrooms">aquí</a>.</div>
@@ -269,7 +268,7 @@
         <div class="k-foot__logo"><img src="${A}brand/logo-white.png" alt="Inbasix Medical" width="140" height="42"></div>
         <div class="k-foot__cols">
           <div><a href="coleccion.html">Productos</a>${GROUPS.slice(0, 4).map(g => `<a href="${plp({ cat: g.k })}">${g.t}</a>`).join('')}</div>
-          <div><a href="index.html#financiamiento">Financiamiento</a><a href="index.html#vende">Vende tu equipo</a><a href="index.html#showrooms">Showrooms</a><a href="index.html#faq">Preguntas frecuentes</a><a href="index.html#testimonios">Testimonios</a><a href="https://www.youtube.com/@inbasixmedical" target="_blank" rel="noopener">Videos en YouTube</a><a href="${I.STORE}/pages/politicas-de-envio" target="_blank" rel="noopener">Envíos</a><a href="${I.STORE}/pages/politicas-de-devolucion" target="_blank" rel="noopener">Devoluciones</a></div>
+          <div><a href="index.html#financiamiento">Financiamiento</a><a href="index.html#como-comprar">Cómo comprar</a><a href="index.html#showrooms">Showrooms</a><a href="index.html#faq">Preguntas frecuentes</a><a href="index.html#testimonios">Testimonios</a><a href="https://www.youtube.com/@inbasixmedical" target="_blank" rel="noopener">Videos en YouTube</a><a href="${I.STORE}/pages/politicas-de-envio" target="_blank" rel="noopener">Envíos</a><a href="${I.STORE}/pages/politicas-de-devolucion" target="_blank" rel="noopener">Devoluciones</a></div>
           <div><a href="tel:${I.TEL}">${IC.phone}800 462 2749</a><a href="https://wa.me/${I.WA}" target="_blank" rel="noopener">${IC.chat}55 22 33 22 33</a><a href="mailto:contacto@importacionesinbasix.com">${IC.mail}contacto@importacionesinbasix.com</a><span>🇲🇽 México</span></div>
         </div>
       </div>

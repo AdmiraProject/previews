@@ -136,8 +136,6 @@
         <a class="btn btn--cyan" href="https://www.youtube.com/@inbasixmedical" target="_blank" rel="noopener">Ver canal de YouTube</a></div></article>`;
   })();
 
-  /* ---------- 12 · recompra media ---------- */
-  (function iwt() { const box = $('[data-iwt]'); if (box) box.innerHTML = media('loop-samsung', B + 'assets/vid/loop-samsung.jpg', { alt: 'Equipo médico en uso' }); })();
 
   /* ---------- 13 · learn ---------- */
   (function learn() {

@@ -121,7 +121,20 @@
   const LEAD = 'inbasix-lead';
   const getLead = () => { try { return JSON.parse(localStorage.getItem(LEAD) || 'null'); } catch (e) { return null; } };
   const phoneOk = ph => (ph || '').replace(/\D/g, '').length >= 10;
-  function openCheckoutPopup() {
+  const isWa = u => /^(https?:)?\/\/(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)\//i.test(u || '') || /^whatsapp:/i.test(u || '');
+  const nativeOpen = window.open.bind(window);
+  // Adds the captured lead to the WhatsApp message so the advisor gets it in the first message.
+  function waWithLead(url, lead) {
+    try {
+      const u = new URL(url, location.href);
+      let t = u.searchParams.get('text') || 'Hola Inbasix 👋';
+      if (!/Mis datos:/.test(t)) t = `${t}\n\nMis datos:\n${lead.name}\n${lead.phone}\n${lead.email}`;
+      u.searchParams.delete('text');
+      const rest = u.searchParams.toString();
+      return `${u.origin}${u.pathname}?text=${encodeURIComponent(t)}${rest ? '&' + rest : ''}`; // %20 encoding (not '+') so WhatsApp renders spaces
+    } catch (e) { return url; }
+  }
+  function ensureModal() {
     let m = document.getElementById('ib-co');
     if (!m) {
       m = document.createElement('div');
@@ -152,28 +165,72 @@
         const ok = lead.name && lead.name.trim().length > 2 && phoneOk(lead.phone) && /\S+@\S+\.\S+/.test(lead.email);
         m.querySelector('.ib-co-err').hidden = !!ok; if (!ok) return;
         try { localStorage.setItem(LEAD, JSON.stringify(lead)); } catch (er) {}
+        const btn0 = m.querySelector('.ib-co-go');
+        if (m.dataset.mode === 'wa') { // WhatsApp gate: lead captured → open the original WhatsApp link
+          document.dispatchEvent(new CustomEvent('inbasix:lead', { detail: { lead, source: 'whatsapp', url: m._waUrl } }));
+          const url = waWithLead(m._waUrl, lead);
+          btn0.disabled = true; btn0.textContent = 'Abriendo WhatsApp…';
+          const w = nativeOpen(url, '_blank', 'noopener');
+          if (!w) location.href = url; // popup blocked → same tab
+          setTimeout(closeCo, 300);
+          return;
+        }
         document.dispatchEvent(new CustomEvent('inbasix:lead', { detail: { lead, lines: lines() } }));
         const pay = checkoutUrl(lead), wa = lines().some(l => l.quote) ? quoteUrl(lead) : null;
         const btn = m.querySelector('.ib-co-go'); btn.disabled = true; btn.textContent = pay ? 'Llevándote al pago seguro…' : 'Abriendo WhatsApp…';
-        if (wa && pay) window.open(wa, '_blank', 'noopener');
+        if (wa && pay) nativeOpen(wa, '_blank', 'noopener');
         setTimeout(() => { location.href = pay || wa; }, 450);
       });
     }
+    return m;
+  }
+  function showModal(m) {
+    const lead = getLead() || {};
+    m.querySelectorAll('input[name]').forEach(i => { if (lead[i.name]) i.value = lead[i.name]; });
+    m.querySelector('.ib-co-err').hidden = true;
+    m.querySelector('.ib-co-go').disabled = false;
+    Cart.close();
+    m.classList.add('is-open'); document.documentElement.classList.add('ib-lock');
+    setTimeout(() => { const f = m.querySelector('input[name=name]'); if (f) f.focus(); }, 60);
+  }
+  /* WhatsApp gate: every WhatsApp link/button on the site asks nombre, teléfono, correo first, then opens WhatsApp. */
+  function openWhatsAppPopup(url) {
+    const m = ensureModal();
+    m.dataset.mode = 'wa'; m._waUrl = url || `https://wa.me/${WA}`;
+    m.querySelector('.ib-co-eyebrow').textContent = 'Antes de abrir WhatsApp';
+    m.querySelector('#ib-co-h').textContent = '¿Con quién tenemos el gusto?';
+    m.querySelector('[data-co-sub]').textContent = 'Déjanos tus datos y un asesor de Inbasix te responde por WhatsApp. Habla con expertos, no con robots.';
+    m.querySelector('.ib-co-go').textContent = 'Continuar a WhatsApp';
+    m.querySelector('[data-co-sum]').innerHTML = '';
+    m.querySelector('[data-co-sum]').hidden = true;
+    showModal(m);
+  }
+  function openCheckoutPopup() {
+    const m = ensureModal();
+    m.dataset.mode = 'checkout'; m.querySelector('[data-co-sum]').hidden = false;
+    m.querySelector('#ib-co-h').textContent = '¿A quién le enviamos tu pedido?';
     const ls = lines(); const hasPaid = ls.some(l => !l.quote), hasQuote = ls.some(l => l.quote);
     m.querySelector('[data-co-sub]').textContent = hasPaid
       ? (hasQuote ? 'Te llevamos al pago seguro de inbasixmedical.com y un asesor te envía por WhatsApp la cotización de los equipos sin precio.' : 'Te llevamos al pago seguro de inbasixmedical.com con tus datos ya capturados.')
       : 'Un especialista te envía tu cotización formal por WhatsApp en menos de 24 horas.';
     m.querySelector('.ib-co-go').textContent = hasPaid ? 'Continuar al pago' : 'Enviar solicitud de cotización';
-    m.querySelector('.ib-co-go').disabled = false;
     m.querySelector('.ib-co-eyebrow').textContent = hasPaid ? 'Último paso antes de pagar' : 'Último paso para tu cotización';
-    const lead = getLead() || {};
-    m.querySelectorAll('input[name]').forEach(i => { if (lead[i.name]) i.value = lead[i.name]; });
     m.querySelector('[data-co-sum]').innerHTML = ls.map(l => `<div class="ib-co-li"><img src="${img(l.p.img[0], 120)}" alt=""><span class="ib-co-q">${l.q}</span><div>${shortName(l.p)}<small>${l.v.t !== 'Default Title' ? l.v.t : l.p.vendor}</small></div><b>${l.quote ? 'A cotizar' : money(l.v.p * l.q)}</b></div>`).join('') +
       (hasPaid ? `<div class="ib-co-tot"><span>Subtotal</span><b>${money(subtotal())}</b></div>` : '');
-    Cart.close();
-    m.classList.add('is-open'); document.documentElement.classList.add('ib-lock');
-    setTimeout(() => { const f = m.querySelector('input[name=name]'); if (f) f.focus(); }, 60);
+    showModal(m);
   }
+  // Catch every WhatsApp link (capture phase, before any version's own handlers) and any script that opens WhatsApp.
+  document.addEventListener('click', e => {
+    if (e.defaultPrevented || e.button > 0 || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    const a = e.target.closest('a[href]');
+    if (!a || a.closest('#ib-co') || !isWa(a.getAttribute('href'))) return;
+    e.preventDefault(); e.stopImmediatePropagation();
+    openWhatsAppPopup(a.href);
+  }, true);
+  window.open = function (url, ...rest) {
+    if (isWa(String(url || ''))) { openWhatsAppPopup(String(url)); return null; }
+    return nativeOpen(url, ...rest);
+  };
   function closeCo() { const m = document.getElementById('ib-co'); if (m) m.classList.remove('is-open'); document.documentElement.classList.remove('ib-lock'); }
 
   /* ---------- global wiring ---------- */
@@ -206,5 +263,5 @@
   async function body(h) { try { return await (await fetch(BASE + 'assets/p/' + encodeURIComponent(h) + '.json')).json(); } catch (e) { return null; } }
 
   window.IBK = { P, find, inCol, money, money0, img, minPrice, maxCompare, priced, isQuote, priceLabel, shortName, pdp, add, setQty, lines, subtotal, count, clear,
-    checkoutUrl, quoteUrl, getLead, Cart, openCheckoutPopup, STORE, WA, TEL, body, watch, BASE, COLS: window.IBX_COLS || [] };
+    checkoutUrl, quoteUrl, getLead, Cart, openCheckoutPopup, openWhatsAppPopup, STORE, WA, TEL, body, watch, BASE, COLS: window.IBX_COLS || [] };
 })();

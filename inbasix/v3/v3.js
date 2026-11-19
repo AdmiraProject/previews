@@ -157,7 +157,7 @@
   function megaHTML(m) {
     const groups = m.groups.map(g => `<div class="mega__g"><h3><a href="${catUrl(g.h)}">${esc(g.t)}</a></h3>${g.subs.map(([t, hs]) => { const l = linkList(hs, 4); return l ? `<h4>${esc(t)}</h4><ul>${l}</ul>` : ''; }).join('')}</div>`).join('');
     return `<div class="mega" role="region" aria-label="${esc(m.t)}"><div class="mega__in"><div class="mega__groups">${groups}</div>
-      <div class="mega__rail"><ul><li><a href="${catUrl(m.h)}">Ver todo ${esc(m.t.toLowerCase())}</a></li><li><a href="index.html#financiamiento">Financiamiento</a></li><li><a href="index.html#showrooms">Showrooms</a></li><li><a href="index.html#recompra">Recompra de equipo</a></li><li><a href="${STORE}/pages/faq" target="_blank" rel="noopener">Preguntas frecuentes</a></li></ul>
+      <div class="mega__rail"><ul><li><a href="${catUrl(m.h)}">Ver todo ${esc(m.t.toLowerCase())}</a></li><li><a href="index.html#financiamiento">Financiamiento</a></li><li><a href="index.html#showrooms">Showrooms</a></li><li><a href="index.html#cotizacion">Cotización en 24 horas</a></li><li><a href="${STORE}/pages/faq" target="_blank" rel="noopener">Preguntas frecuentes</a></li></ul>
       <div class="sup"><a href="tel:${K.TEL}">${I.phone}800 462 2749</a><a href="${WA()}" target="_blank" rel="noopener">${I.wa}WhatsApp</a><a href="index.html#showrooms">${I.pin}Showrooms</a></div></div></div></div>`;
   }
 
@@ -236,7 +236,7 @@
         ${c('Aparatología', [[catUrl('nubway'), 'Nubway'], [catUrl('gilaser'), 'GiLáser'], [catUrl('serie-antienvejecimiento'), 'Antienvejecimiento'], [catUrl('serie-para-adelgazar-y-dar-forma'), 'Moldeado corporal'], [catUrl('serie-para-depilacion'), 'Depilación']])}
         ${c('Imagenología', [[catUrl('tomografos'), 'Tomógrafos'], [catUrl('resonancia-magnetica'), 'Resonancia magnética'], [catUrl('medicina-nuclear'), 'Medicina nuclear'], [catUrl('arco-en-c'), 'Arco en C'], [catUrl('rayos-x-y-digitalizadores'), 'Rayos X'], [catUrl('mastografos'), 'Mastógrafos'], [catUrl('quirofano'), 'Quirófano']])}
         ${c('Fillers', [[catUrl('rejubeau'), 'Rejubeau'], [catUrl('youthfill'), 'YouthFill'], [catUrl('fillers'), 'Todos los fillers'], [catUrl('equipo-veterinario'), 'Equipo veterinario']])}
-        ${c('Inbasix', [['index.html#financiamiento', 'Financiamiento'], ['index.html#showrooms', 'Showrooms'], ['index.html#recompra', 'Recompra de equipo'], ['index.html#aprende', 'Capacitación'], ['https://www.youtube.com/@inbasixmedical', 'Canal de YouTube', 1], [`${STORE}/pages/faq`, 'Preguntas frecuentes', 1]])}
+        ${c('Inbasix', [['index.html#financiamiento', 'Financiamiento'], ['index.html#showrooms', 'Showrooms'], ['index.html#cotizacion', 'Cotización en 24 horas'], ['index.html#aprende', 'Capacitación'], ['https://www.youtube.com/@inbasixmedical', 'Canal de YouTube', 1], [`${STORE}/pages/faq`, 'Preguntas frecuentes', 1]])}
         ${c('Contacto', [[`tel:${K.TEL}`, 'Tel. 800 462 2749'], [WA(), 'WhatsApp 55 22 33 22 33', 1], ['mailto:contacto@importacionesinbasix.com', 'Correo'], ['index.html#showrooms', 'Showroom Guadalajara']])}
       </div>
       <div class="ftr__bot"><div class="pw">
