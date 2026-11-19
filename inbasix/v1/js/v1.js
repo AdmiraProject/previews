@@ -62,15 +62,8 @@
   }
 
   /* ---------- video availability (one directory listing request; no 404 noise) ---------- */
-  const VIDS = (async () => {
-    try {
-      const r = await fetch(K.BASE + 'assets/vid/', { cache: 'no-store' });
-      if (!r.ok) return null;
-      const t = await r.text();
-      if (!/Directory listing|Index of/i.test(t)) return null; // static host without listings: assume the planned files exist
-      return new Set([...t.matchAll(/href="([^"?#]+)"/g)].map(m => decodeURIComponent(m[1]).replace(/^.*\//, '')));
-    } catch (e) { return null; }
-  })();
+  // All planned files exist in assets/vid (see MEDIA.md); no directory probe (static hosts 404 on folder URLs).
+  const VIDS = Promise.resolve(null);
   const has = (set, f) => !set || set.has(f);
   function makeVideo(name, set, opts) {
     const v = document.createElement('video');
