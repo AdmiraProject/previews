@@ -858,3 +858,9 @@ body.v3{font-size:18px;line-height:28px;color:var(--ink);background:#fff}
 }
 /* shared-kit patch (reported): the modal logo stretches as a flex item */
 .v3 .act__logo{align-self:flex-start;width:auto}
+/* hero rating (render placeholders) */
+.hero__stars{display:inline-flex;gap:2px;color:#F5A524}
+.hero__stars svg{width:15px;height:15px;fill:currentColor}
+.hero__sep{width:1px;height:14px;background:var(--line-2);margin:0 4px}
+.hero__rate .hero__stars{display:inline-flex;gap:2px}
+.rating-badge .stars{display:inline-flex}
