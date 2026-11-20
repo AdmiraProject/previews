@@ -1,0 +1,65 @@
+/* Enlace Visual activation flow. Theme via vars set by each version:
+   --evf-font, --evf-display, --evf-ink, --evf-mute, --evf-line, --evf-accent, --evf-accent-ink, --evf-tint, --evf-r, --evf-btn-r */
+.evf{--f:var(--evf-font,system-ui,sans-serif);--fd:var(--evf-display,var(--f));--ink:var(--evf-ink,#0d1b2e);--mute:var(--evf-mute,#5b6b80);--line:var(--evf-line,#d8e1ec);--acc:var(--evf-accent,#0B67CD);--acc-ink:var(--evf-accent-ink,#fff);--tint:var(--evf-tint,#eef4fc);--r:var(--evf-r,14px);--br:var(--evf-btn-r,999px);
+  position:fixed;inset:0;z-index:1000;background:#fff;color:var(--ink);font-family:var(--f);display:flex;flex-direction:column;opacity:0;transform:translateY(16px);transition:opacity .35s cubic-bezier(.2,.7,.2,1),transform .45s cubic-bezier(.2,.7,.2,1);-webkit-font-smoothing:antialiased}
+.evf.on{opacity:1;transform:none}
+.evf[hidden]{display:none}
+html.evf-open,html.evf-open body{overflow:hidden}
+.evf *{box-sizing:border-box}
+.evf-top{flex:none}
+.evf-bar{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;max-width:1440px;margin:0 auto;width:100%}
+.evf-logo img{height:34px;width:auto;display:block}
+.evf-count{font-size:14px;letter-spacing:.02em;color:var(--mute)}
+.evf-x{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:background .2s}
+.evf-x:hover{background:var(--tint)}.evf-x svg{width:18px;height:18px}
+.evf-prog{height:4px;background:var(--tint)}
+.evf-prog i{display:block;height:100%;background:var(--acc);transform-origin:0 50%;transform:scaleX(.25);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.evf-body{flex:1;overflow:auto;padding:64px 24px 40px}
+.evf-step{max-width:620px;margin:0 auto}
+.evf-step.in{animation:evf-in .45s cubic-bezier(.2,.7,.2,1) both}
+@keyframes evf-in{from{opacity:0;transform:translateX(calc(var(--d,1) * 28px))}to{opacity:1;transform:none}}
+.evf-step h2{font-family:var(--fd);font-weight:var(--evf-h-w,500);font-size:clamp(30px,3.4vw,44px);line-height:1.1;letter-spacing:-.02em;margin:0 0 14px;outline:0}
+.evf-step>p{font-size:18px;line-height:1.5;color:var(--mute);margin:0 0 36px;max-width:540px}
+.evf-opts{display:grid;gap:12px}
+.evf-opt{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;padding:16px 20px 16px 24px;border:1.5px solid var(--line);border-radius:var(--r);background:#fff;cursor:pointer;transition:border-color .2s,background .2s,box-shadow .2s,transform .15s}
+.evf-opt:hover{border-color:var(--acc);box-shadow:0 6px 20px -12px rgba(11,103,205,.5)}
+.evf-opt:active{transform:scale(.995)}
+.evf-opt:focus-visible{outline:3px solid color-mix(in srgb,var(--acc) 35%,transparent);outline-offset:2px}
+.evf-opt[aria-checked=true]{border-color:var(--acc);background:var(--tint)}
+.evf-ot{display:flex;flex-direction:column;gap:4px}
+.evf-ot b{font-size:18px;font-weight:500;line-height:1.3;color:var(--ink)}
+.evf-ot small{font-size:14px;color:var(--mute)}
+.evf-ck{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;color:transparent;transition:all .2s}
+.evf-ck svg{width:16px;height:16px}
+.evf-opt[aria-checked=true] .evf-ck{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+.evf-fields{display:grid;gap:14px}
+.evf-f{position:relative;display:block}
+.evf-f input{width:100%;height:64px;border:1.5px solid var(--line);border-radius:var(--r);padding:24px 18px 8px;font:400 17px var(--f);color:var(--ink);background:#fff;outline:0;transition:border-color .2s,box-shadow .2s}
+.evf-f input:focus{border-color:var(--acc);box-shadow:0 0 0 4px color-mix(in srgb,var(--acc) 14%,transparent)}
+.evf-f span{position:absolute;left:19px;top:21px;font-size:17px;color:var(--mute);pointer-events:none;transform-origin:0 0;transition:transform .2s,color .2s}
+.evf-f input:focus+span,.evf-f input:not(:placeholder-shown)+span{transform:translateY(-12px) scale(.74);color:var(--acc)}
+.evf-f em,.evf-ec{display:block;font-style:normal;font-size:13px;color:#c0392b;min-height:0;margin-top:6px}
+.evf-f em:empty,.evf-ec:empty{display:none}
+.evf-c{display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.5;color:var(--mute);cursor:pointer;margin-top:6px}
+.evf-c input{position:absolute;opacity:0;pointer-events:none}
+.evf-box{flex:none;width:22px;height:22px;border:1.5px solid var(--line);border-radius:6px;display:grid;place-items:center;color:transparent;margin-top:1px;transition:all .2s}
+.evf-box svg{width:14px;height:14px}
+.evf-c input:checked+.evf-box{background:var(--acc);border-color:var(--acc);color:#fff}
+.evf-c input:focus-visible+.evf-box{outline:3px solid color-mix(in srgb,var(--acc) 35%,transparent)}
+.evf-c a{color:var(--acc)}
+.evf-foot{flex:none;border-top:1px solid var(--line);background:#fff}
+.evf-fin{max-width:1440px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.evf-back{all:unset;cursor:pointer;font-size:16px;color:var(--ink);text-decoration:underline;text-underline-offset:4px;padding:12px 4px}
+.evf-side{margin:0;font-size:14px;color:var(--mute);text-align:center;flex:1}
+.evf-next{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 28px;border:0;border-radius:var(--br);background:var(--acc);color:var(--acc-ink);font:500 16px var(--f);cursor:pointer;transition:filter .2s,opacity .2s,transform .15s}
+.evf-next svg{width:18px;height:18px}
+.evf-next:hover:not([disabled]){filter:brightness(1.08)}
+.evf-next[disabled]{opacity:.35;cursor:not-allowed}
+@media (max-width:767px){
+  .evf-bar{height:60px;padding:0 16px}.evf-logo img{height:28px}.evf-count{font-size:13px}
+  .evf-body{padding:36px 16px 24px}
+  .evf-step h2{font-size:28px}.evf-step>p{font-size:16px;margin-bottom:24px}
+  .evf-opt{min-height:64px;padding:14px 16px}.evf-ot b{font-size:16px}
+  .evf-fin{padding:12px 16px}.evf-side{display:none}.evf-next{height:50px;padding:0 22px}
+}
+@media (prefers-reduced-motion:reduce){.evf,.evf-step.in,.evf-prog i{transition:none;animation:none}}
