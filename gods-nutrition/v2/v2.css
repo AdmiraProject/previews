@@ -1,6 +1,4 @@
-/* God's Nutrition — v2 (structure 1:1 with the editorial benchmark; skinned to God's).
-   Two families only: Inter Tight (display/body/UI) + IBM Plex Mono (labels, dosages).
-   One ink (navy), soft ice surfaces, one highlight. No shadows except the cart panel. */
+
 :root {
   --ink: #010D29;
   --ink-2: #1A2740;
@@ -1251,7 +1249,7 @@ body[data-page="home"] .hdr.hero-light:not(.is-glass) .hdr__a:hover { background
 }
 
 /* ===== parity round 4: structure + content slots ===== */
-/* header: home right pill = one text button (like the benchmark); shop/PDP = text link + light cart pill */
+
 body[data-page="home"] .hdr__r { height: 40px; margin-top: 8px; padding: 6px; }
 body[data-page="home"] .hdr__r .hdr__lang { display: none; }
 body[data-page="home"] .hdr__r .hdr__cart { height: 28px; padding: 7px 14px; background: none; color: inherit; font-size: 14px; line-height: 14px; }
@@ -1565,10 +1563,7 @@ body:not([data-page="home"]) .hdr__cart { padding: 0 12px; }
 @media (max-width: 900px) { .flav__list { gap: 6px; overflow: visible; } .fl { width: 36px; height: 36px; padding: 2px; } .fl img { width: 30px; height: 30px; } }
 @media (max-width: 900px) { .flav { margin-top: 14px; } }
 
-/* ===== benchmark colour + type system (round 5) =====
-   Seed's palette 1:1: ink #1C3A13 · soft green #3D5B34 · lime #D3FA99 · page #FCFCF7 · sage band #EFF1E4 · card #F6F7EF
-   · media card #EEEEE9 · reviews #F9F9F9 · glass rgba(87,94,85,.35). God's brand shows only through logo, packaging and photos.
-   Type: Figtree (closest free match to the benchmark neo-grotesk, default 350), Geist Mono 300 eyebrows, Source Code Pro dosages. */
+
 :root {
   --ink: #1C3A13;
   --ink-2: #3D5B34;
@@ -1615,7 +1610,7 @@ body { font-weight: 350; }
 .pill { color: var(--ink); }
 .fl.is-on { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
 .gn-drawer__panel { background: #FCFCF7; }
-/* explainer: the benchmark's grey glass over a blurred product scene, cream text */
+
 .tech__bg img { filter: blur(6px) saturate(.75); transform: scale(1.06); }
 .tech__panel { background: var(--glass); -webkit-backdrop-filter: blur(37.5px); backdrop-filter: blur(37.5px); border: 0; color: var(--cream); }
 .tech__panel .stat { border-color: rgba(255, 255, 255, .25); }
@@ -1634,7 +1629,7 @@ body { background: #3D5B34; }
 .hero--ink .hero__media::after { background: linear-gradient(90deg, rgba(252, 252, 247, .55) 0%, rgba(252, 252, 247, .15) 40%, rgba(252, 252, 247, 0) 60%); }
 .hdr__l { padding-right: 30px; }
 
-/* ===== per-component colour parity (measured vs live benchmark) ===== */
+
 .btn { color: #FCFCF7; }
 .btn--light, .hero .btn--light, .tech__l .btn, .sq .btn--light, .fcard .btn--light { background: #FCFCF7 !important; color: #1C3A13 !important; }
 .btn:hover, .playbtn:hover, .cbtn:hover { opacity: 1; }
@@ -1697,7 +1692,7 @@ body { background: #1C3A13; }
 .cmp::after { content: ''; position: absolute; inset: 0; background: rgba(28, 58, 19, .8); z-index: -1; }
 .hero__media img, .hero__media video { object-position: 70% 50%; }
 
-/* ===== per-component pass 2: container ink + cream children (as the benchmark) ===== */
+
 .hdr__pill { color: #1C3A13; }
 .hdr__a, .hdr__lang, body[data-page="home"] .hdr__r .hdr__cart { color: var(--hdr-c); }
 .hero, .hero__head, .hero__cta { color: #1C3A13; }

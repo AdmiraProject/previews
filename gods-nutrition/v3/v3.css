@@ -1,6 +1,4 @@
-/* God's Nutrition v3 — 1:1 structural rebuild of the benchmark (Figtree 400 ≈ Visuelt Pro, root 14px, 1344/1302 container, 48px gutters, hairlines).
-   Palette = benchmark 100% (black/white, #555, #EBEBEB, #F7F9FB/#EDF1F5 tiles, #222 buttons, accent gradient #D05845→#A12790, chip #C54D56,
-   gold hover #B49B57, savings #2F8B68). God's brand appears only through logo, packaging and photos. Stars yellow. */
+
 :root {
   --ink: #000; --ink2: #0A0A0A; --ink3: #222; --ink4: #191919; --slate: #0F172A;
   --g7: #555; --g6: #494949; --g5: #999; --line: #EBEBEB; --line2: #DCDCDC;

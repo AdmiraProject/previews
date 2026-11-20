@@ -1,5 +1,4 @@
-/* God’s Nutrition v4 — 1:1 structural rebuild of the benchmark (US market), skinned to God’s.
-   Tokens measured from the benchmark captures (1440 / 390). Desktop ≥1024, mobile <1024. */
+
 :root {
   --ink: #000; --tx: #000; --mut: #4B5563; --mut2: #6B7280; --mut3: #757575;
   --grey: #F6F6F5; --pgrey: #F6F6F4; --foot: #F1F1F1; --cream: #FAF7EE; --badge: #FFED92; --chk: #29D027;
@@ -165,7 +164,7 @@ ul { padding: 0; list-style: none; }
 }
 @media (min-width: 640px) and (max-width: 1023px) { .hero__img { width: 50%; height: 70%; } .hero__p { max-width: 460px; } }
 
-/* ---------- S2 spec strip ---------- */
+
 .spec { display: grid; grid-template-columns: repeat(5, 1fr); height: 178px; background: #000; color: #fff; border-top: 1px solid #444; }
 .spec__c { padding: 44px 32px 0; border-left: 1px solid #444; min-width: 0; }
 .spec__c:first-child { border-left: 0; }
@@ -709,7 +708,7 @@ ul { padding: 0; list-style: none; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
 body.has-satc { padding-bottom: 96px; }
 @media (max-width: 1023px) { body.has-satc { padding-bottom: 86px; } }
-/* desktop: the product rail is clipped to the 60px container (4 cards visible at 1440), like the benchmark */
+
 @media (min-width: 1024px) {
   .rail__vp { margin-inline: var(--gut); scroll-padding-inline: 0; }
   .rail__track { padding-inline: 0; }
