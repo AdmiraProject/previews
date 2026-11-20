@@ -731,3 +731,11 @@ body:has(.mi.open) .nav-scrim{opacity:1}
 .v2 .mbar .btn{--h:50px}
 .chr{rotate:-90deg}
 .flip{rotate:180deg}
+/* strip in brand color (Andre, Nov 19) */
+.strip .mq{color:var(--ink-3)}
+.strip .mq b{color:var(--blue)}
+.strip .mq--o b{color:var(--orange)}
+.strip .mq--word{height:44px;padding:0 18px;border-radius:999px;font-size:19px;flex-direction:row;align-items:center}
+.strip .mq--word.mq--o{color:var(--orange);background:var(--orange-50)}
+.strip .mq--word.mq--b{color:var(--blue-700);background:var(--blue-50)}
+.strip .mq-img{opacity:1;filter:none}
