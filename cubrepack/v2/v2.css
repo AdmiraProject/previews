@@ -155,8 +155,8 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 /* ---------- 4 trust row ---------- */
 .trust{display:flex;align-items:center;justify-content:center;gap:40px;max-width:1280px;margin:24px auto 0;padding:0 32px;flex-wrap:nowrap}
 .trust p{margin:0;font-size:14px;line-height:18px;color:var(--mut);white-space:nowrap}
-.trust img{width:auto;opacity:.7;filter:grayscale(1) contrast(1.1);mix-blend-mode:multiply;transition:opacity .25s}
-.trust img:hover{opacity:.9}
+.trust img{width:auto;opacity:1;transition:transform .25s}
+.trust img:hover{transform:translateY(-1px)}
 
 /* ---------- tab pills ---------- */
 .pills{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:var(--surf);max-width:100%;overflow-x:auto;scrollbar-width:none}
@@ -490,9 +490,9 @@ video.fv.on{opacity:1}
   .hero-btns{flex-direction:column;align-items:stretch;gap:12px}
   .hero-btns .btn{width:100%}
   .hero-btns .lnk{margin:4px 0 0;align-self:center}
-  .trust{flex-wrap:wrap;gap:24px 28px;padding:0 32px;justify-content:center}
-  .trust p{width:100%;text-align:center}
-  .trust img{height:28px}
+  .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:22px 14px;padding:0 20px;justify-items:center;align-items:center}
+  .trust p{grid-column:1/-1;width:100%;text-align:center}
+  .trust img{height:calc(var(--h) * .7)!important;max-width:100%;object-fit:contain}
   .cat .wrap,.cat-w{width:calc(100% - 32px)}
   .cat .sl{margin-right:-16px}
   .ct,.ct .im{width:119px}.ct .im{height:119px}
