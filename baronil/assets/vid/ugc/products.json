@@ -1,0 +1,322 @@
+{
+ "boxer-clasico": [
+  {
+   "video": "vid/ugc/ugc-06.mp4",
+   "poster": "vid/ugc/ugc-06.jpg",
+   "color": "white",
+   "kind": "onbody",
+   "alt_es": "Hombre en su cocina con Bóxer Clásico blanco y camisilla blanca, tomando café",
+   "alt_en": "Man in his kitchen wearing the white Classic Boxer Brief and white A-shirt, sipping coffee"
+  },
+  {
+   "video": "vid/ugc/ugc-07.mp4",
+   "poster": "vid/ugc/ugc-07.jpg",
+   "color": "navy",
+   "kind": "onbody",
+   "alt_es": "Hombre sentado en la cama con Bóxer Clásico azul marino amarrándose los tenis",
+   "alt_en": "Man sitting on the bed in the navy Classic Boxer Brief, tying his sneakers"
+  },
+  {
+   "video": "vid/ugc/p/boxer-clasico-grey-1.mp4",
+   "poster": "vid/ugc/p/boxer-clasico-grey-1.jpg",
+   "color": "grey",
+   "kind": "flatlay",
+   "alt_es": "Manos acomodando una camiseta cuello V blanca y un Bóxer Clásico gris jaspeado sobre la cama",
+   "alt_en": "Hands laying out a white V-neck undershirt and a heather-grey Classic Boxer Brief on the bed"
+  }
+ ],
+ "boxer-stretch": [
+  {
+   "video": "vid/ugc/ugc-01.mp4",
+   "poster": "vid/ugc/ugc-01.jpg",
+   "color": "navy",
+   "kind": "onbody",
+   "alt_es": "Hombre poniéndose la camisa con Bóxer Stretch azul marino y camiseta cuello V blanca",
+   "alt_en": "Man putting on a dress shirt, wearing the navy Stretch Boxer Brief and white V-neck undershirt"
+  },
+  {
+   "video": "vid/ugc/ugc-02.mp4",
+   "poster": "vid/ugc/ugc-02.jpg",
+   "color": "grey",
+   "kind": "onbody",
+   "alt_es": "Hombre abriendo las cortinas por la mañana con Bóxer Stretch gris jaspeado",
+   "alt_en": "Man opening the curtains in the morning, wearing the heather-grey Stretch Boxer Brief"
+  },
+  {
+   "video": "vid/ugc/ugc-03.mp4",
+   "poster": "vid/ugc/ugc-03.jpg",
+   "color": "grey",
+   "kind": "onbody",
+   "alt_es": "Hombre haciendo la maleta con Bóxer Stretch gris y camisilla azul marino",
+   "alt_en": "Man packing a weekend bag in the grey Stretch Boxer Brief and navy A-shirt"
+  },
+  {
+   "video": "vid/ugc/p/boxer-stretch-white-1.mp4",
+   "poster": "vid/ugc/p/boxer-stretch-white-1.jpg",
+   "color": "white",
+   "kind": "flatlay",
+   "alt_es": "Manos acomodando un Bóxer Stretch blanco y una camiseta V sin mangas azul marino en el piso",
+   "alt_en": "Hands laying out a white Stretch Boxer Brief and a navy sleeveless V-neck on the floor"
+  }
+ ],
+ "boxer-fashion": [
+  {
+   "video": "vid/ugc/ugc-05.mp4",
+   "poster": "vid/ugc/ugc-05.jpg",
+   "color": "red",
+   "kind": "onbody",
+   "alt_es": "Hombre frente al espejo con Bóxer Stretch Fashion rojo y camiseta blanca",
+   "alt_en": "Man at the mirror in the red Fashion Stretch Boxer and a white crew-neck undershirt"
+  },
+  {
+   "video": "vid/ugc/p/boxer-fashion-orange-1.mp4",
+   "poster": "vid/ugc/p/boxer-fashion-orange-1.jpg",
+   "color": "orange",
+   "kind": "onbody",
+   "alt_es": "Hombre sonriendo frente al espejo con Bóxer Stretch Fashion naranja y camiseta V sin mangas gris",
+   "alt_en": "Man smiling at the mirror in the orange Fashion Stretch Boxer and grey sleeveless V-neck"
+  },
+  {
+   "video": "vid/ugc/p/boxer-fashion-orange-2.mp4",
+   "poster": "vid/ugc/p/boxer-fashion-orange-2.jpg",
+   "color": "orange",
+   "kind": "unboxing",
+   "alt_es": "Manos sacando un Bóxer Stretch Fashion naranja de su caja con lazo azul",
+   "alt_en": "Hands unboxing an orange Fashion Stretch Boxer from a kraft box with a navy ribbon"
+  }
+ ],
+ "brief-clasico": [
+  {
+   "video": "vid/ugc/p/brief-clasico-white-1.mp4",
+   "poster": "vid/ugc/p/brief-clasico-white-1.jpg",
+   "color": "white",
+   "kind": "unboxing",
+   "alt_es": "Manos sacando un Brief Clásico blanco de su caja con lazo azul",
+   "alt_en": "Hands unboxing a white Classic Brief from a kraft box with a navy ribbon"
+  },
+  {
+   "video": "vid/ugc/p/brief-clasico-navy-1.mp4",
+   "poster": "vid/ugc/p/brief-clasico-navy-1.jpg",
+   "color": "navy",
+   "kind": "flatlay",
+   "alt_es": "Manos doblando una camiseta cuello redondo blanca junto a un Brief Clásico azul marino",
+   "alt_en": "Hands folding a white crew-neck undershirt next to a navy Classic Brief"
+  }
+ ],
+ "mini-brief": [
+  {
+   "video": "vid/ugc/ugc-04.mp4",
+   "poster": "vid/ugc/ugc-04.jpg",
+   "color": "navy",
+   "kind": "onbody",
+   "alt_es": "Hombre riendo en un balcón con Mini Brief Clásico azul marino y camisa de lino abierta",
+   "alt_en": "Man laughing on a balcony in the navy Classic Mini Brief and an open linen shirt"
+  },
+  {
+   "video": "vid/ugc/p/mini-brief-white-1.mp4",
+   "poster": "vid/ugc/p/mini-brief-white-1.jpg",
+   "color": "white",
+   "kind": "unboxing",
+   "alt_es": "Manos sacando un Mini Brief Clásico blanco de su caja con lazo azul",
+   "alt_en": "Hands unboxing a white Classic Mini Brief from a kraft box with a navy ribbon"
+  },
+  {
+   "video": "vid/ugc/p/mini-brief-grey-1.mp4",
+   "poster": "vid/ugc/p/mini-brief-grey-1.jpg",
+   "color": "grey",
+   "kind": "flatlay",
+   "alt_es": "Manos acomodando una camiseta cuello V blanca y un Mini Brief Clásico gris sobre la cama",
+   "alt_en": "Hands laying out a white V-neck undershirt and a grey Classic Mini Brief on the bed"
+  }
+ ],
+ "brief-stretch": [
+  {
+   "video": "vid/ugc/p/brief-stretch-white-1.mp4",
+   "poster": "vid/ugc/p/brief-stretch-white-1.jpg",
+   "color": "white",
+   "kind": "unboxing",
+   "alt_es": "Manos sacando un Brief Stretch blanco de su caja con lazo azul",
+   "alt_en": "Hands unboxing a white Stretch Brief from a kraft box with a navy ribbon"
+  },
+  {
+   "video": "vid/ugc/p/brief-stretch-white-2.mp4",
+   "poster": "vid/ugc/p/brief-stretch-white-2.jpg",
+   "color": "white",
+   "kind": "flatlay",
+   "alt_es": "Manos acomodando una camiseta V sin mangas blanca y un Brief Stretch blanco sobre lino",
+   "alt_en": "Hands laying out a white sleeveless V-neck and a white Stretch Brief on linen"
+  },
+  {
+   "video": "vid/ugc/p/brief-stretch-white-3.mp4",
+   "poster": "vid/ugc/p/brief-stretch-white-3.jpg",
+   "color": "white",
+   "kind": "gift",
+   "alt_es": "Momento de regalo: un hombre saca un Brief Stretch blanco de una caja de regalo",
+   "alt_en": "Gift moment: a man lifts a white Stretch Brief out of a gift box"
+  }
+ ],
+ "brief-relax": [
+  {
+   "video": "vid/ugc/p/brief-relax-white-1.mp4",
+   "poster": "vid/ugc/p/brief-relax-white-1.jpg",
+   "color": "white",
+   "kind": "unboxing",
+   "alt_es": "Manos sacando un Brief Relax blanco de su caja con lazo azul",
+   "alt_en": "Hands unboxing a white Relax Brief from a kraft box with a navy ribbon"
+  },
+  {
+   "video": "vid/ugc/p/brief-relax-white-2.mp4",
+   "poster": "vid/ugc/p/brief-relax-white-2.jpg",
+   "color": "white",
+   "kind": "flatlay",
+   "alt_es": "Manos acomodando una camisilla blanca y un Brief Relax blanco sobre sábanas celestes",
+   "alt_en": "Hands laying out a white A-shirt and a white Relax Brief on pale-blue sheets"
+  },
+  {
+   "video": "vid/ugc/p/brief-relax-white-3.mp4",
+   "poster": "vid/ugc/p/brief-relax-white-3.jpg",
+   "color": "white",
+   "kind": "gift",
+   "alt_es": "Momento de regalo en la cocina: ella le entrega una caja con un Brief Relax blanco",
+   "alt_en": "Gift moment in the kitchen: she hands him a box with a white Relax Brief"
+  }
+ ],
+ "hip-brief": [
+  {
+   "video": "vid/ugc/p/hip-brief-white-1.mp4",
+   "poster": "vid/ugc/p/hip-brief-white-1.jpg",
+   "color": "white",
+   "kind": "unboxing",
+   "alt_es": "Manos sacando un Mini Brief Stretch blanco de su caja con lazo azul",
+   "alt_en": "Hands unboxing a white Stretch Hip Brief from a kraft box with a navy ribbon"
+  },
+  {
+   "video": "vid/ugc/p/hip-brief-white-2.mp4",
+   "poster": "vid/ugc/p/hip-brief-white-2.jpg",
+   "color": "white",
+   "kind": "flatlay",
+   "alt_es": "Manos acomodando una camiseta cuello redondo blanca y un Mini Brief Stretch blanco sobre sábanas grises",
+   "alt_en": "Hands laying out a white crew-neck undershirt and a white Stretch Hip Brief on grey sheets"
+  },
+  {
+   "video": "vid/ugc/p/hip-brief-white-3.mp4",
+   "poster": "vid/ugc/p/hip-brief-white-3.jpg",
+   "color": "white",
+   "kind": "gift",
+   "alt_es": "Momento de regalo: un hombre muestra el Mini Brief Stretch blanco que le regalaron",
+   "alt_en": "Gift moment: a man holds up the white Stretch Hip Brief he just unwrapped"
+  }
+ ],
+ "camiseta-v": [
+  {
+   "video": "vid/ugc/ugc-01.mp4",
+   "poster": "vid/ugc/ugc-01.jpg",
+   "color": "white",
+   "kind": "onbody",
+   "alt_es": "Hombre con camiseta cuello V blanca debajo de la camisa de vestir",
+   "alt_en": "Man wearing the white V-neck undershirt under his dress shirt"
+  },
+  {
+   "video": "vid/ugc/p/boxer-clasico-grey-1.mp4",
+   "poster": "vid/ugc/p/boxer-clasico-grey-1.jpg",
+   "color": "white",
+   "kind": "flatlay",
+   "alt_es": "Manos acomodando una camiseta cuello V blanca y un Bóxer Clásico gris sobre la cama",
+   "alt_en": "Hands laying out a white V-neck undershirt and a grey Classic Boxer Brief on the bed"
+  },
+  {
+   "video": "vid/ugc/p/mini-brief-grey-1.mp4",
+   "poster": "vid/ugc/p/mini-brief-grey-1.jpg",
+   "color": "white",
+   "kind": "flatlay",
+   "alt_es": "Manos estirando una camiseta cuello V blanca sobre la cama",
+   "alt_en": "Hands smoothing out a white V-neck undershirt on the bed"
+  }
+ ],
+ "camiseta-redonda": [
+  {
+   "video": "vid/ugc/ugc-05.mp4",
+   "poster": "vid/ugc/ugc-05.jpg",
+   "color": "white",
+   "kind": "onbody",
+   "alt_es": "Hombre frente al espejo con camiseta cuello redondo blanca",
+   "alt_en": "Man at the mirror wearing the white crew-neck undershirt"
+  },
+  {
+   "video": "vid/ugc/ugc-07.mp4",
+   "poster": "vid/ugc/ugc-07.jpg",
+   "color": "white",
+   "kind": "onbody",
+   "alt_es": "Hombre con camiseta cuello redondo blanca amarrándose los tenis",
+   "alt_en": "Man in the white crew-neck undershirt tying his sneakers"
+  },
+  {
+   "video": "vid/ugc/p/brief-clasico-navy-1.mp4",
+   "poster": "vid/ugc/p/brief-clasico-navy-1.jpg",
+   "color": "white",
+   "kind": "flatlay",
+   "alt_es": "Manos doblando las mangas de una camiseta cuello redondo blanca",
+   "alt_en": "Hands folding the sleeves of a white crew-neck undershirt"
+  },
+  {
+   "video": "vid/ugc/p/hip-brief-white-2.mp4",
+   "poster": "vid/ugc/p/hip-brief-white-2.jpg",
+   "color": "white",
+   "kind": "flatlay",
+   "alt_es": "Manos estirando una camiseta cuello redondo blanca sobre sábanas grises",
+   "alt_en": "Hands smoothing out a white crew-neck undershirt on grey sheets"
+  }
+ ],
+ "camiseta-v-sm": [
+  {
+   "video": "vid/ugc/p/boxer-stretch-white-1.mp4",
+   "poster": "vid/ugc/p/boxer-stretch-white-1.jpg",
+   "color": "navy",
+   "kind": "flatlay",
+   "alt_es": "Manos acomodando una camiseta V sin mangas azul marino",
+   "alt_en": "Hands laying out a navy sleeveless V-neck undershirt"
+  },
+  {
+   "video": "vid/ugc/p/boxer-fashion-orange-1.mp4",
+   "poster": "vid/ugc/p/boxer-fashion-orange-1.jpg",
+   "color": "grey",
+   "kind": "onbody",
+   "alt_es": "Hombre frente al espejo con camiseta V sin mangas gris",
+   "alt_en": "Man at the mirror wearing the grey sleeveless V-neck"
+  },
+  {
+   "video": "vid/ugc/p/brief-stretch-white-2.mp4",
+   "poster": "vid/ugc/p/brief-stretch-white-2.jpg",
+   "color": "white",
+   "kind": "flatlay",
+   "alt_es": "Manos acomodando una camiseta V sin mangas blanca sobre lino",
+   "alt_en": "Hands laying out a white sleeveless V-neck on linen"
+  }
+ ],
+ "camisilla": [
+  {
+   "video": "vid/ugc/ugc-03.mp4",
+   "poster": "vid/ugc/ugc-03.jpg",
+   "color": "navy",
+   "kind": "onbody",
+   "alt_es": "Hombre haciendo la maleta con camisilla azul marino",
+   "alt_en": "Man packing a weekend bag in the navy A-shirt"
+  },
+  {
+   "video": "vid/ugc/ugc-06.mp4",
+   "poster": "vid/ugc/ugc-06.jpg",
+   "color": "white",
+   "kind": "onbody",
+   "alt_es": "Hombre en su cocina con camisilla blanca, tomando café",
+   "alt_en": "Man in his kitchen in the white A-shirt, sipping coffee"
+  },
+  {
+   "video": "vid/ugc/p/brief-relax-white-2.mp4",
+   "poster": "vid/ugc/p/brief-relax-white-2.jpg",
+   "color": "white",
+   "kind": "flatlay",
+   "alt_es": "Manos estirando una camisilla blanca sobre sábanas celestes",
+   "alt_en": "Hands smoothing out a white ribbed A-shirt on pale-blue sheets"
+  }
+ ]
+}

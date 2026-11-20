@@ -1,0 +1,10 @@
+{
+ "_note": "Amazon.com USD item prices + ratings scraped 2026-11-19 (logged out). VALIDAR before launch; prices change.",
+ "boxer-clasico":   {"asin":"B0HJ4542Z8","price":"$29.99","pack":{"en":"4-pack color · 5-pack white","es":"Paquete de 4 color · 5 blanco"}},
+ "brief-clasico":   {"asin":"B0HHVJYMLC","price":"$24.99","pack":{"en":"4-pack color · 5-pack white","es":"Paquete de 4 color · 5 blanco"}},
+ "mini-brief":      {"asin":"B0HJ71NH8Y","price":"$15.99","pack":{"en":"4-pack color · 5-pack white","es":"Paquete de 4 color · 5 blanco"}},
+ "camiseta-redonda":{"asin":"B0FZDZP567","price":"$29.99","rating":5.0,"count":4,"pack":{"en":"6-pack","es":"Paquete de 6"}},
+ "camiseta-v":      {"asin":"B0FW11J4ND","price":"$29.99","rating":5.0,"count":3,"pack":{"en":"6-pack","es":"Paquete de 6"}},
+ "camiseta-v-sm":   {"asin":"B0HJS1ZN8H","price":"$24.99","priceAlt":"$26.99","pack":{"en":"4-pack","es":"Paquete de 4"}},
+ "camisilla":       {"asin":"B0HJSQP91L","price":"$19.99","priceAlt":"$24.99","rating":4.3,"count":5,"pack":{"en":"4-pack color · 6-pack white","es":"Paquete de 4 color · 6 blanco"}}
+}

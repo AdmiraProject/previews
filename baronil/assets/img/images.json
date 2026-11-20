@@ -1,0 +1,385 @@
+{
+ "boxer-clasico": {
+  "navy": {
+   "card": "img/products/boxer-clasico-navy-front-sm.jpg",
+   "pdp": [
+    "img/products/boxer-clasico-navy-front.jpg",
+    "img/pdp/boxer-clasico-navy-model-front.jpg",
+    "img/pdp/boxer-clasico-navy-model-back.jpg",
+    "img/pdp/boxer-clasico-navy-model-side.jpg",
+    "img/products/boxer-clasico-navy-side.jpg",
+    "img/pdp/boxer-clasico-navy-lifestyle.jpg",
+    "img/pdp/boxer-clasico-navy-detail-waistband.jpg",
+    "img/pdp/boxer-clasico-navy-detail-fabric.jpg"
+   ],
+   "large": "img/products/boxer-clasico-navy-front.jpg",
+   "hover": "img/pdp/boxer-clasico-navy-model-front-sm.jpg",
+   "loop": "vid/card-boxer-clasico-navy-loop.mp4",
+   "loopPoster": "vid/card-boxer-clasico-navy-loop.jpg"
+  },
+  "grey": {
+   "card": "img/products/boxer-clasico-grey-side-sm.jpg",
+   "pdp": [
+    "img/products/boxer-clasico-grey-side.jpg",
+    "img/pdp/boxer-clasico-grey-model-front.jpg",
+    "img/pdp/boxer-clasico-grey-model-back.jpg",
+    "img/pdp/boxer-clasico-grey-model-side.jpg",
+    "img/pdp/boxer-clasico-grey-lifestyle.jpg",
+    "img/pdp/boxer-clasico-grey-detail-waistband.jpg",
+    "img/pdp/boxer-clasico-grey-detail-fabric.jpg"
+   ],
+   "large": "img/products/boxer-clasico-grey-side.jpg",
+   "hover": "img/pdp/boxer-clasico-grey-model-front-sm.jpg"
+  },
+  "white": {
+   "card": "img/products/boxer-clasico-white-front-sm.jpg",
+   "pdp": [
+    "img/products/boxer-clasico-white-front.jpg",
+    "img/pdp/boxer-clasico-white-model-front.jpg",
+    "img/pdp/boxer-clasico-white-model-back.jpg",
+    "img/pdp/boxer-clasico-white-model-side.jpg",
+    "img/products/boxer-clasico-white-side.jpg",
+    "img/pdp/boxer-clasico-white-lifestyle.jpg",
+    "img/pdp/boxer-clasico-white-detail-waistband.jpg",
+    "img/pdp/boxer-clasico-white-detail-fabric.jpg"
+   ],
+   "large": "img/products/boxer-clasico-white-front.jpg",
+   "hover": "img/pdp/boxer-clasico-white-model-front-sm.jpg"
+  }
+ },
+ "boxer-stretch": {
+  "navy": {
+   "card": "img/products/boxer-stretch-navy-front-sm.jpg",
+   "pdp": [
+    "img/products/boxer-stretch-navy-front.jpg",
+    "img/pdp/boxer-stretch-navy-model-front.jpg",
+    "img/pdp/boxer-stretch-navy-model-back.jpg",
+    "img/pdp/boxer-stretch-navy-model-side.jpg",
+    "img/pdp/boxer-stretch-navy-lifestyle.jpg",
+    "img/pdp/boxer-stretch-navy-detail-waistband.jpg",
+    "img/pdp/boxer-stretch-navy-detail-fabric.jpg"
+   ],
+   "large": "img/products/boxer-stretch-navy-front.jpg",
+   "hover": "img/pdp/boxer-stretch-navy-model-front-sm.jpg"
+  },
+  "white": {
+   "card": "img/products/boxer-stretch-white-front-sm.jpg",
+   "pdp": [
+    "img/products/boxer-stretch-white-front.jpg",
+    "img/pdp/boxer-stretch-white-model-front.jpg",
+    "img/pdp/boxer-stretch-white-model-back.jpg",
+    "img/pdp/boxer-stretch-white-model-side.jpg",
+    "img/products/boxer-stretch-white-side.jpg",
+    "img/pdp/boxer-stretch-white-lifestyle.jpg",
+    "img/pdp/boxer-stretch-white-detail-waistband.jpg",
+    "img/pdp/boxer-stretch-white-detail-fabric.jpg"
+   ],
+   "large": "img/products/boxer-stretch-white-front.jpg",
+   "hover": "img/pdp/boxer-stretch-white-model-front-sm.jpg"
+  },
+  "grey": {
+   "card": "img/products/boxer-stretch-grey-front-sm.jpg",
+   "pdp": [
+    "img/products/boxer-stretch-grey-front.jpg",
+    "img/pdp/boxer-stretch-grey-model-front.jpg",
+    "img/pdp/boxer-stretch-grey-model-back.jpg",
+    "img/pdp/boxer-stretch-grey-model-side.jpg",
+    "img/pdp/boxer-stretch-grey-lifestyle.jpg",
+    "img/pdp/boxer-stretch-grey-detail-waistband.jpg",
+    "img/pdp/boxer-stretch-grey-detail-fabric.jpg"
+   ],
+   "large": "img/products/boxer-stretch-grey-front.jpg",
+   "hover": "img/pdp/boxer-stretch-grey-model-front-sm.jpg"
+  }
+ },
+ "boxer-fashion": {
+  "red": {
+   "card": "img/products/boxer-stretch-fashion-red-front-sm.jpg",
+   "pdp": [
+    "img/products/boxer-stretch-fashion-red-front.jpg",
+    "img/pdp/boxer-fashion-red-model-front.jpg",
+    "img/pdp/boxer-fashion-red-model-back.jpg",
+    "img/pdp/boxer-fashion-red-model-side.jpg",
+    "img/products/boxer-stretch-fashion-red-side.jpg",
+    "img/pdp/boxer-fashion-red-lifestyle.jpg",
+    "img/pdp/boxer-fashion-red-detail-waistband.jpg",
+    "img/pdp/boxer-fashion-red-detail-fabric.jpg"
+   ],
+   "large": "img/products/boxer-stretch-fashion-red-front.jpg",
+   "hover": "img/pdp/boxer-fashion-red-model-front-sm.jpg",
+   "loop": "vid/card-boxer-stretch-fashion-red-loop.mp4",
+   "loopPoster": "vid/card-boxer-stretch-fashion-red-loop.jpg"
+  },
+  "orange": {
+   "card": "img/products/boxer-stretch-fashion-orange-front-sm.jpg",
+   "pdp": [
+    "img/products/boxer-stretch-fashion-orange-front.jpg",
+    "img/pdp/boxer-fashion-orange-model-front.jpg",
+    "img/pdp/boxer-fashion-orange-model-back.jpg",
+    "img/pdp/boxer-fashion-orange-model-side.jpg",
+    "img/pdp/boxer-fashion-orange-lifestyle.jpg",
+    "img/pdp/boxer-fashion-orange-detail-waistband.jpg",
+    "img/pdp/boxer-fashion-orange-detail-fabric.jpg"
+   ],
+   "large": "img/products/boxer-stretch-fashion-orange-front.jpg",
+   "hover": "img/pdp/boxer-fashion-orange-model-front-sm.jpg"
+  }
+ },
+ "brief-clasico": {
+  "white": {
+   "card": "img/products/brief-clasico-white-front-sm.jpg",
+   "pdp": [
+    "img/products/brief-clasico-white-front.jpg",
+    "img/pdp/brief-clasico-white-model-front.jpg",
+    "img/pdp/brief-clasico-white-model-back.jpg",
+    "img/pdp/brief-clasico-white-model-side.jpg",
+    "img/products/brief-clasico-white-side.jpg",
+    "img/pdp/brief-clasico-white-lifestyle.jpg",
+    "img/pdp/brief-clasico-white-detail-waistband.jpg",
+    "img/pdp/brief-clasico-white-detail-fabric.jpg"
+   ],
+   "large": "img/products/brief-clasico-white-front.jpg",
+   "hover": "img/pdp/brief-clasico-white-model-front-sm.jpg"
+  },
+  "grey": {
+   "card": "img/products/brief-clasico-grey-front-sm.jpg",
+   "pdp": [
+    "img/products/brief-clasico-grey-front.jpg",
+    "img/pdp/brief-clasico-grey-model-back.jpg",
+    "img/products/brief-clasico-grey-threequarter.jpg",
+    "img/pdp/brief-clasico-grey-detail-waistband.jpg",
+    "img/pdp/brief-clasico-grey-detail-fabric.jpg"
+   ],
+   "large": "img/products/brief-clasico-grey-front.jpg",
+   "hover": "img/products/brief-clasico-grey-front-sm.jpg",
+   "loop": "vid/card-brief-clasico-grey-loop.mp4",
+   "loopPoster": "vid/card-brief-clasico-grey-loop.jpg"
+  },
+  "navy": {
+   "card": "img/products/brief-clasico-navy-threequarter-sm.jpg",
+   "pdp": [
+    "img/products/brief-clasico-navy-threequarter.jpg",
+    "img/pdp/brief-clasico-navy-model-back.jpg",
+    "img/pdp/brief-clasico-navy-detail-waistband.jpg",
+    "img/pdp/brief-clasico-navy-detail-fabric.jpg"
+   ],
+   "large": "img/products/brief-clasico-navy-threequarter.jpg",
+   "hover": "img/products/brief-clasico-navy-threequarter-sm.jpg"
+  }
+ },
+ "mini-brief": {
+  "navy": {
+   "card": "img/products/mini-brief-clasico-navy-front-sm.jpg",
+   "pdp": [
+    "img/products/mini-brief-clasico-navy-front.jpg",
+    "img/pdp/mini-brief-navy-model-front.jpg",
+    "img/pdp/mini-brief-navy-model-back.jpg",
+    "img/pdp/mini-brief-navy-model-side.jpg",
+    "img/pdp/mini-brief-navy-lifestyle.jpg",
+    "img/pdp/mini-brief-navy-detail-waistband.jpg",
+    "img/pdp/mini-brief-navy-detail-fabric.jpg"
+   ],
+   "large": "img/products/mini-brief-clasico-navy-front.jpg",
+   "hover": "img/pdp/mini-brief-navy-model-front-sm.jpg"
+  },
+  "grey": {
+   "card": "img/products/mini-brief-clasico-grey-side-sm.jpg",
+   "pdp": [
+    "img/products/mini-brief-clasico-grey-side.jpg",
+    "img/pdp/mini-brief-grey-model-front.jpg",
+    "img/pdp/mini-brief-grey-model-back.jpg",
+    "img/pdp/mini-brief-grey-model-side.jpg",
+    "img/pdp/mini-brief-grey-lifestyle.jpg",
+    "img/pdp/mini-brief-grey-detail-waistband.jpg",
+    "img/pdp/mini-brief-grey-detail-fabric.jpg"
+   ],
+   "large": "img/products/mini-brief-clasico-grey-side.jpg",
+   "hover": "img/pdp/mini-brief-grey-model-front-sm.jpg"
+  },
+  "white": {
+   "card": "img/products/mini-brief-clasico-white-front-sm.jpg",
+   "pdp": [
+    "img/products/mini-brief-clasico-white-front.jpg",
+    "img/pdp/mini-brief-white-model-front.jpg",
+    "img/pdp/mini-brief-white-model-back.jpg",
+    "img/pdp/mini-brief-white-model-side.jpg",
+    "img/pdp/mini-brief-white-lifestyle.jpg",
+    "img/pdp/mini-brief-white-detail-waistband.jpg",
+    "img/pdp/mini-brief-white-detail-fabric.jpg"
+   ],
+   "large": "img/products/mini-brief-clasico-white-front.jpg",
+   "hover": "img/pdp/mini-brief-white-model-front-sm.jpg"
+  }
+ },
+ "brief-stretch": {
+  "white": {
+   "card": "img/products/brief-stretch-white-front-sm.jpg",
+   "pdp": [
+    "img/products/brief-stretch-white-front.jpg",
+    "img/pdp/brief-stretch-white-model-front.jpg",
+    "img/pdp/brief-stretch-white-model-back.jpg",
+    "img/pdp/brief-stretch-white-model-side.jpg",
+    "img/pdp/brief-stretch-white-lifestyle.jpg",
+    "img/pdp/brief-stretch-white-detail-waistband.jpg",
+    "img/pdp/brief-stretch-white-detail-fabric.jpg"
+   ],
+   "large": "img/products/brief-stretch-white-front.jpg",
+   "hover": "img/pdp/brief-stretch-white-model-front-sm.jpg"
+  }
+ },
+ "brief-relax": {
+  "white": {
+   "card": "img/products/brief-relax-white-front-sm.jpg",
+   "pdp": [
+    "img/products/brief-relax-white-front.jpg",
+    "img/pdp/brief-relax-white-model-front.jpg",
+    "img/pdp/brief-relax-white-model-back.jpg",
+    "img/pdp/brief-relax-white-model-side.jpg",
+    "img/pdp/brief-relax-white-lifestyle.jpg",
+    "img/pdp/brief-relax-white-detail-waistband.jpg",
+    "img/pdp/brief-relax-white-detail-fabric.jpg"
+   ],
+   "large": "img/products/brief-relax-white-front.jpg",
+   "hover": "img/pdp/brief-relax-white-model-front-sm.jpg"
+  }
+ },
+ "hip-brief": {
+  "white": {
+   "card": "img/products/mini-brief-stretch-white-front-sm.jpg",
+   "pdp": [
+    "img/products/mini-brief-stretch-white-front.jpg",
+    "img/pdp/hip-brief-white-model-front.jpg",
+    "img/pdp/hip-brief-white-model-back.jpg",
+    "img/pdp/hip-brief-white-model-side.jpg",
+    "img/products/mini-brief-stretch-white-back.jpg",
+    "img/pdp/hip-brief-white-lifestyle.jpg",
+    "img/pdp/hip-brief-white-detail-waistband.jpg",
+    "img/pdp/hip-brief-white-detail-fabric.jpg"
+   ],
+   "large": "img/products/mini-brief-stretch-white-front.jpg",
+   "hover": "img/pdp/hip-brief-white-model-front-sm.jpg"
+  }
+ },
+ "camiseta-v": {
+  "white": {
+   "card": "img/products/camiseta-cuello-v-white-front-sm.jpg",
+   "pdp": [
+    "img/pdp/camiseta-v-white-model-front.jpg",
+    "img/pdp/camiseta-v-white-model-back.jpg",
+    "img/pdp/camiseta-v-white-model-side.jpg",
+    "img/pdp/camiseta-v-white-styling.jpg",
+    "img/pdp/camiseta-v-white-detail-neckline.jpg",
+    "img/pdp/camiseta-v-white-detail-fabric.jpg",
+    "img/products/camiseta-cuello-v-white-front.jpg"
+   ],
+   "large": "img/pdp/camiseta-v-white-model-front.jpg",
+   "hover": "img/pdp/camiseta-v-white-model-front-sm.jpg"
+  }
+ },
+ "camiseta-redonda": {
+  "white": {
+   "card": "img/products/camiseta-cuello-redondo-white-front-sm.jpg",
+   "pdp": [
+    "img/pdp/camiseta-redonda-white-model-front.jpg",
+    "img/pdp/camiseta-redonda-white-model-back.jpg",
+    "img/pdp/camiseta-redonda-white-model-side.jpg",
+    "img/pdp/camiseta-redonda-white-styling.jpg",
+    "img/pdp/camiseta-redonda-white-detail-neckline.jpg",
+    "img/pdp/camiseta-redonda-white-detail-fabric.jpg",
+    "img/products/camiseta-cuello-redondo-white-front.jpg"
+   ],
+   "large": "img/pdp/camiseta-redonda-white-model-front.jpg",
+   "hover": "img/pdp/camiseta-redonda-white-model-front-sm.jpg"
+  }
+ },
+ "camiseta-v-sm": {
+  "white": {
+   "card": "img/products/camiseta-v-sin-mangas-white-side-sm.jpg",
+   "pdp": [
+    "img/pdp/camiseta-v-sm-white-model-front.jpg",
+    "img/pdp/camiseta-v-sm-white-model-back.jpg",
+    "img/pdp/camiseta-v-sm-white-model-side.jpg",
+    "img/pdp/camiseta-v-sm-white-styling.jpg",
+    "img/pdp/camiseta-v-sm-white-detail-neckline.jpg",
+    "img/pdp/camiseta-v-sm-white-detail-fabric.jpg",
+    "img/products/camiseta-v-sin-mangas-white-side.jpg"
+   ],
+   "large": "img/pdp/camiseta-v-sm-white-model-front.jpg",
+   "hover": "img/pdp/camiseta-v-sm-white-model-front-sm.jpg"
+  },
+  "navy": {
+   "card": "img/products/camiseta-v-sin-mangas-navy-front-sm.jpg",
+   "pdp": [
+    "img/pdp/camiseta-v-sm-navy-model-front.jpg",
+    "img/pdp/camiseta-v-sm-navy-model-back.jpg",
+    "img/pdp/camiseta-v-sm-navy-model-side.jpg",
+    "img/pdp/camiseta-v-sm-navy-styling.jpg",
+    "img/pdp/camiseta-v-sm-navy-detail-neckline.jpg",
+    "img/pdp/camiseta-v-sm-navy-detail-fabric.jpg",
+    "img/products/camiseta-v-sin-mangas-navy-front.jpg"
+   ],
+   "large": "img/pdp/camiseta-v-sm-navy-model-front.jpg",
+   "hover": "img/pdp/camiseta-v-sm-navy-model-front-sm.jpg"
+  },
+  "grey": {
+   "card": "img/products/camiseta-v-sin-mangas-grey-back-sm.jpg",
+   "pdp": [
+    "img/pdp/camiseta-v-sm-grey-model-front.jpg",
+    "img/pdp/camiseta-v-sm-grey-model-back.jpg",
+    "img/pdp/camiseta-v-sm-grey-model-side.jpg",
+    "img/pdp/camiseta-v-sm-grey-styling.jpg",
+    "img/pdp/camiseta-v-sm-grey-detail-neckline.jpg",
+    "img/pdp/camiseta-v-sm-grey-detail-fabric.jpg",
+    "img/products/camiseta-v-sin-mangas-grey-back.jpg"
+   ],
+   "large": "img/pdp/camiseta-v-sm-grey-model-front.jpg",
+   "hover": "img/pdp/camiseta-v-sm-grey-model-front-sm.jpg"
+  }
+ },
+ "camisilla": {
+  "navy": {
+   "card": "img/products/camisilla-navy-side-sm.jpg",
+   "pdp": [
+    "img/pdp/camisilla-navy-model-front.jpg",
+    "img/pdp/camisilla-navy-model-back.jpg",
+    "img/pdp/camisilla-navy-model-side.jpg",
+    "img/pdp/camisilla-navy-styling.jpg",
+    "img/pdp/camisilla-navy-detail-neckline.jpg",
+    "img/pdp/camisilla-navy-detail-fabric.jpg",
+    "img/products/camisilla-navy-side.jpg"
+   ],
+   "large": "img/pdp/camisilla-navy-model-front.jpg",
+   "hover": "img/pdp/camisilla-navy-model-front-sm.jpg"
+  },
+  "grey": {
+   "card": "img/products/camisilla-grey-front-sm.jpg",
+   "pdp": [
+    "img/pdp/camisilla-grey-model-front.jpg",
+    "img/pdp/camisilla-grey-model-back.jpg",
+    "img/pdp/camisilla-grey-model-side.jpg",
+    "img/pdp/camisilla-grey-styling.jpg",
+    "img/pdp/camisilla-grey-detail-neckline.jpg",
+    "img/pdp/camisilla-grey-detail-fabric.jpg",
+    "img/products/camisilla-grey-front.jpg"
+   ],
+   "large": "img/pdp/camisilla-grey-model-front.jpg",
+   "hover": "img/pdp/camisilla-grey-model-front-sm.jpg"
+  },
+  "white": {
+   "card": "img/products/camisilla-white-front-sm.jpg",
+   "pdp": [
+    "img/pdp/camisilla-white-model-front.jpg",
+    "img/pdp/camisilla-white-model-back.jpg",
+    "img/pdp/camisilla-white-model-side.jpg",
+    "img/pdp/camisilla-white-styling.jpg",
+    "img/pdp/camisilla-white-detail-neckline.jpg",
+    "img/pdp/camisilla-white-detail-fabric.jpg",
+    "img/products/camisilla-white-front.jpg"
+   ],
+   "large": "img/pdp/camisilla-white-model-front.jpg",
+   "loop": "vid/card-camisilla-white-loop.mp4",
+   "loopPoster": "vid/card-camisilla-white-loop.jpg",
+   "hover": "img/pdp/camisilla-white-model-front-sm.jpg"
+  }
+ }
+}
