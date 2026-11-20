@@ -1,0 +1,943 @@
+<!doctype html>
+<html lang="en" class="v2">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0081BC">
+<link rel="icon" href="../../assets/brand/favicon_site.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="alternate" hreflang="es-MX" href="../../v2/">
+<link rel="alternate" hreflang="en" href="../../v2/en/">
+<link rel="stylesheet" href="../../assets/css/fx.css">
+<script>document.documentElement.classList.add('no-js')</script>
+
+<link rel="stylesheet" href="../../assets/css/v2.css">
+<title>Facturador.com · CFDI 4.0 invoicing, payroll and accounting for Mexico</title>
+<meta name="description" content="Cloud system to issue CFDI 4.0 invoices, stamp payroll and keep your books in Mexico. Stamping included, always up to date with SAT. Try Premium free for 7 days, no card.">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 20 20"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-ur" viewBox="0 0 20 20"><path d="M6 14L14 6M7.5 6H14v6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 20 20"><path d="M6 8l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 20 20"><path d="M5 10.5l3.2 3.2L15 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-x" viewBox="0 0 20 20"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-logo" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 8h8M10 11.5h6M12 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4.5 19.5L9 15m0 0H5.8M9 15v3.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-invoice" viewBox="0 0 24 24"><path d="M6 3h9l4 4v13.5a.5.5 0 0 1-.8.4L16 19.5l-2 1.5-2-1.5-2 1.5-2-1.5-2.2 1.4a.5.5 0 0 1-.8-.4V4a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 8h5M9 11.5h6M9 15h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-stamp" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 12.3l2.7 2.7L16.2 9.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-payroll" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M15.5 6.5h5M15.5 10h5M17.5 13.5h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-books" viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5zM13 4h5.5A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5H13z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M7 8h1.5M15.5 8H17M15.5 11.5H17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v10m-4-4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 15v2.5A2.5 2.5 0 0 0 7 20h10a2.5 2.5 0 0 0 2.5-2.5V15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 10h17M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M9 14.5l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 1-7.4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M4 4v5h5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 8v4l2.5 1.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M16 8V6.5A2.5 2.5 0 0 0 13.5 4h-7A2.5 2.5 0 0 0 4 6.5v7A2.5 2.5 0 0 0 6.5 16H8" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5h2.6l1.5 4-2 1.3a11 11 0 0 0 6.5 6.5l1.3-2 4 1.5v2.6a2 2 0 0 1-2.2 2A16.6 16.6 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 3.5V17A2.5 2.5 0 0 1 4 14.5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4.5" y="8" width="15" height="11" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 4.5V8M9.5 13h.01M14.5 13h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M2.5 12.5v2M21.5 12.5v2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.8 12.2l2.2 2.2 4.2-4.3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18.5h10a4 4 0 0 0 .6-8 6 6 0 0 0-11.5 1.6A3.3 3.3 0 0 0 7 18.5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 19c.6-3.1 2.8-5 5.5-5s4.9 1.9 5.5 5M15.5 5.5a3.2 3.2 0 0 1 0 6.2M17 14.2c1.8.6 3.1 2.3 3.5 4.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><rect x="5.5" y="11" width="3" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="10.5" y="7" width="3" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="15.5" y="4" width="3" height="13" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M10 20.5a2 2 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6.5h11v10H3zM14 10h3.8l3.2 3.3v3.2h-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7" cy="17.5" r="1.8" fill="#fff" stroke="currentColor" stroke-width="1.7"/><circle cx="17.5" cy="17.5" r="1.8" fill="#fff" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5L12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5.5h-5V20H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-inbox" viewBox="0 0 24 24"><path d="M4 13.5l2.4-8A2 2 0 0 1 8.3 4h7.4a2 2 0 0 1 1.9 1.5l2.4 8V18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M4 13.5h4.5l1 2h5l1-2H20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 12h17M12 3.5c2.4 2.4 3.5 5.3 3.5 8.5s-1.1 6.1-3.5 8.5c-2.4-2.4-3.5-5.3-3.5-8.5s1.1-6.1 3.5-8.5z" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13a.8.8 0 0 0 1.2.7l10.3-6.5a.8.8 0 0 0 0-1.4L9.2 4.8A.8.8 0 0 0 8 5.5z" fill="currentColor"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3.5V8M15 3.5V8M6.5 8h11v3a5.5 5.5 0 0 1-11 0zM12 16.5V21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3 10h18M6.5 14.5h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4.5 14v-2a7.5 7.5 0 0 1 15 0v2" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="3.5" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="16.5" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M18.5 19c0 1.4-1.6 2-4.5 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- S0a · announcement bar -->
+<div class="promo" data-promo>
+  <div class="promo__in">
+    <p><b>CFDI 4.0 and Carta Porte 3.1:</b> Facturador updates itself with every SAT change. <a href="#" data-activate>Try Premium free for 7 days</a></p>
+    <button class="promo__x" type="button" data-promo-close aria-label="Close notice"><svg><use href="#i-x"/></svg></button>
+  </div>
+</div>
+
+<!-- S0b · persona switcher -->
+<div class="wrap personas">
+  <div class="personas__tabs" data-toggle="persona" role="group" aria-label="Choose your profile">
+    <button type="button" data-value="negocios" aria-pressed="true"><svg><use href="#i-home"/></svg>Businesses &amp; freelancers</button>
+    <button type="button" data-value="contadores" aria-pressed="false"><svg><use href="#i-books"/></svg>Accountants &amp; firms</button>
+    <button type="button" data-value="erp" aria-pressed="false"><svg><use href="#i-plug"/></svg>Companies with an ERP</button>
+  </div>
+  <a class="personas__login" href="https://auth.facturador.com/">Log in</a>
+</div>
+
+<!-- S0c · floating nav -->
+<span class="stick-sentinel" data-stick-sentinel aria-hidden="true"></span>
+<header class="hdr" data-nav>
+  <div class="wrap hdr__wrap">
+    <nav class="bar" aria-label="Main">
+      <a class="bar__logo" href="./" aria-label="Facturador.com">
+        <img class="lg-w" src="../../assets/brand/logo-white_landing-efirma_956w.png" alt="Facturador.com" width="167" height="24">
+        <img class="lg-c" src="../../assets/brand/logo-color_landing-efirma_848w.png" alt="" width="167" height="24">
+      </a>
+      <ul class="bar__links">
+        <li class="mi" data-mega>
+          <button type="button" aria-expanded="false">Product <svg><use href="#i-chev"/></svg></button>
+          <div class="mega">
+            <div class="mega__grid">
+              <a class="mega__it" href="https://www.facturadorelectronico.com/cfdi-4-0-factura-4-0.html"><i><svg><use href="#i-invoice"/></svg></i><span><b>CFDI 4.0 invoicing</b><small>Issue, cancel and send in seconds.</small></span></a>
+              <a class="mega__it" href="https://www.facturadorelectronico.com/recibos-de-nomina-en-linea.html"><i><svg><use href="#i-payroll"/></svg></i><span><b>Payroll</b><small>Automatic calculations, bulk stamping.</small></span></a>
+              <a class="mega__it" href="https://www.facturadorelectronico.com/contabilidad-en-linea.html"><i><svg><use href="#i-books"/></svg></i><span><b>Accounting</b><small>Journal entries straight from your CFDIs.</small></span></a>
+              <a class="mega__it" href="https://www.facturadorelectronico.com/plan-premium.html"><i><svg><use href="#i-download"/></svg></i><span><b>SAT downloads</b><small>Never lose a supplier invoice again.</small></span></a>
+              <a class="mega__it" href="https://www.facturadorelectronico.com/plan-premium.html"><i><svg><use href="#i-calendar"/></svg></i><span><b>Scheduled invoices</b><small>Recurring invoices go out on their own.</small></span></a>
+              <a class="mega__it" href="https://www.facturadorelectronico.com/erp.html"><i><svg><use href="#i-plug"/></svg></i><span><b>Integrations &amp; API</b><small>REST API and a connector for your ERP.</small></span></a>
+            </div>
+            <div class="mega__card">
+              <div class="mega__mini">
+                <span class="ui-stamp"><svg><use href="#i-stamp"/></svg>Invoice A-1043 stamped</span>
+                <span class="ui-uuid">UUID 6F2C…A91E · CFDI 4.0</span>
+              </div>
+              <b>Premium free for 7 days</b>
+              <p>Unlimited folios, payroll and accounting. No card.</p>
+              <a class="btn btn--primary" href="#" data-activate>Start free trial <svg class="arr chr"><use href="#i-chev"/></svg></a>
+            </div>
+            <div class="mega__foot">
+              <a class="link-u" href="https://www.facturadorelectronico.com/nuestros-planes.html">All features <svg><use href="#i-arrow"/></svg></a>
+              <a class="link-u" href="https://www.facturadorelectronico.com/desarrolladores.html">For developers <svg><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+        </li>
+        <li class="mi" data-mega>
+          <button type="button" aria-expanded="false">Solutions <svg><use href="#i-chev"/></svg></button>
+          <div class="mega">
+            <div class="mega__grid">
+              <a class="mega__it" href="#historias"><i><svg><use href="#i-home"/></svg></i><span><b>Restaurants</b><small>Invoice from your phone, at the table.</small></span></a>
+              <a class="mega__it" href="#historias"><i><svg><use href="#i-users"/></svg></i><span><b>Medical practices</b><small>Doctors, dentists and psychologists.</small></span></a>
+              <a class="mega__it" href="#historias"><i><svg><use href="#i-books"/></svg></i><span><b>Accountants &amp; firms</b><small>Scheduled retainers and SAT downloads.</small></span></a>
+              <a class="mega__it" href="https://www.facturadorelectronico.com/carta-porte.html"><i><svg><use href="#i-truck"/></svg></i><span><b>Carriers</b><small>Carta Porte 3.1 before you load.</small></span></a>
+              <a class="mega__it" href="#historias"><i><svg><use href="#i-card"/></svg></i><span><b>Shops &amp; freelancers</b><small>Boutiques, hardware stores, designers.</small></span></a>
+              <a class="mega__it" href="https://www.facturadorelectronico.com/erp.html"><i><svg><use href="#i-plug"/></svg></i><span><b>Companies with an ERP</b><small>SAP, Oracle, Dynamics 365 and more.</small></span></a>
+            </div>
+            <div class="mega__card">
+              <figure class="media mega__vid"><img src="../../assets/poster/scene-contadoras.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" data-src="../../assets/vid/scene-contadoras.mp4"></video></figure>
+              <b>Facturador Contable</b>
+              <p>An assigned team of accountants, plus the platform.</p>
+              <a class="btn btn--primary" href="https://contable.facturadorelectronico.com/">See the service <svg class="arr chr"><use href="#i-chev"/></svg></a>
+            </div>
+            <div class="mega__foot">
+              <a class="link-u" href="#historias">Stories by business type <svg><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+        </li>
+        <li><a href="https://contable.facturadorelectronico.com/">Facturador Contable</a></li>
+        <li><a href="#precios">Pricing</a></li>
+        <li><a href="https://ayuda.facturador.com/">Help</a></li>
+      </ul>
+      <div class="bar__end">
+        <a class="lang" href="../" hreflang="es-MX" aria-label="Versión en español"><svg><use href="#i-globe"/></svg>ES</a>
+        <a class="btn btn--primary bar__cta" href="#" data-activate>Try free for 7 days <svg class="arr chr"><use href="#i-chev"/></svg></a>
+        <button class="burger" type="button" data-burger aria-expanded="false" aria-label="Open menu"><svg><use href="#i-menu"/></svg></button>
+      </div>
+    </nav>
+  </div>
+  <div class="mnav">
+    <div class="wrap">
+      <p class="mnav__h">Product</p>
+      <a href="https://www.facturadorelectronico.com/cfdi-4-0-factura-4-0.html"><svg><use href="#i-invoice"/></svg>CFDI 4.0 invoicing</a>
+      <a href="https://www.facturadorelectronico.com/recibos-de-nomina-en-linea.html"><svg><use href="#i-payroll"/></svg>Payroll</a>
+      <a href="https://www.facturadorelectronico.com/contabilidad-en-linea.html"><svg><use href="#i-books"/></svg>Accounting</a>
+      <a href="https://www.facturadorelectronico.com/erp.html"><svg><use href="#i-plug"/></svg>Integrations &amp; API</a>
+      <p class="mnav__h">More</p>
+      <a href="#historias"><svg><use href="#i-users"/></svg>Stories by business type</a>
+      <a href="https://contable.facturadorelectronico.com/"><svg><use href="#i-headset"/></svg>Facturador Contable</a>
+      <a href="#precios"><svg><use href="#i-card"/></svg>Pricing</a>
+      <a href="https://ayuda.facturador.com/"><svg><use href="#i-chat"/></svg>Help</a>
+      <a href="../"><svg><use href="#i-globe"/></svg>Español</a>
+      <div class="mnav__cta">
+        <a class="btn btn--primary btn--lg" href="#" data-activate>Try free for 7 days</a>
+        <a class="btn btn--outline btn--lg" href="https://auth.facturador.com/">Log in</a>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="nav-scrim" aria-hidden="true"></div>
+
+<main id="main">
+
+<!-- S1 · hero -->
+<section class="hero" data-hero>
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <div class="rate" aria-label="Recommended by 88% on Facebook">
+        <span class="rate__rot">
+          <span><img src="../../assets/social/facebook.svg" alt="" width="18" height="18"><b>88%</b> recommend us on Facebook</span>
+          <span><svg><use href="#i-users"/></svg><b>+100,000</b> customers in Mexico</span>
+        </span>
+      </div>
+      <div class="hero__txt" data-when-persona="negocios">
+        <h1 class="h1">Invoice, run payroll and keep your books in one place</h1>
+        <p class="hero__sub">CFDI 4.0 invoices from your laptop or phone. Stamping included, always up to date with SAT.</p>
+      </div>
+      <div class="hero__txt" data-when-persona="contadores" hidden>
+        <h1 class="h1">Your clients’ books, without chasing a single XML</h1>
+        <p class="hero__sub">Log in to your client’s account: issued and received CFDIs, SAT downloads, automatic entries and DIOT.</p>
+      </div>
+      <div class="hero__txt" data-when-persona="erp" hidden>
+        <h1 class="h1">Stamp your ERP’s CFDIs without leaving your system</h1>
+        <p class="hero__sub">REST API (JSON) and a connector for SAP, Oracle, Microsoft Dynamics 365, JD Edwards, PeopleSoft or any ERP.</p>
+      </div>
+      <div class="hero__cta">
+        <a class="btn btn--primary btn--hero" href="#" data-activate>Try free for 7 days <svg class="arr chr"><use href="#i-chev"/></svg></a>
+        <a class="link-u" data-wa href="https://api.whatsapp.com/send?phone=5219984955506" target="_blank" rel="noopener">Talk to an advisor <svg class="chr"><use href="#i-chev"/></svg></a>
+      </div>
+      <p class="hero__micro"><span><svg><use href="#i-check"/></svg>No card</span><span><svg><use href="#i-check"/></svg>Guidance in under 10 min</span><span><svg><use href="#i-check"/></svg>Stamping included</span></p>
+    </div>
+
+    <div class="hero__vis" data-scene data-loop="11000">
+      <div class="hero__frame">
+        <figure class="media hero__media" data-when-persona="negocios"><img src="../../assets/poster/scene-restaurante.jpg" alt="Restaurant owner invoicing on her laptop" fetchpriority="high"><video autoplay muted loop playsinline preload="auto" poster="../../assets/poster/scene-restaurante.jpg" src="../../assets/vid/scene-restaurante.mp4"></video></figure>
+        <figure class="media hero__media" data-when-persona="contadores" hidden><img src="../../assets/poster/scene-contadoras.jpg" alt="Two accountants reviewing documents" loading="lazy"><video muted loop playsinline preload="none" poster="../../assets/poster/scene-contadoras.jpg" data-src="../../assets/vid/scene-contadoras.mp4"></video></figure>
+        <figure class="media hero__media hero__media--erp" data-when-persona="erp" hidden><img src="../../assets/poster/scene-taller.jpg" alt="Business owner on the phone in his office" loading="lazy"><video muted loop playsinline preload="none" poster="../../assets/poster/scene-taller.jpg" data-src="../../assets/vid/scene-taller.mp4"></video></figure>
+        <span class="ui-label">Illustrative interface</span>
+      </div>
+
+      <!-- floating UI: invoice -->
+      <div class="hc hc--inv" data-at="900">
+        <div class="hc__row"><b>New invoice</b><span class="tag tag--blue">CFDI 4.0</span></div>
+        <div class="ui-field"><label>Customer RFC</label><div class="in focus"><span class="mono" data-type="GCE950712HJ4" data-speed="70"></span><span class="ui-caret"></span></div></div>
+        <div class="hc__line"><span>Restaurant service</span><b>$1,200.00</b></div>
+        <div class="hc__line"><span>IVA 16%</span><b>$192.00</b></div>
+        <div class="hc__tot"><span>Total</span><b>$1,392.00</b></div>
+        <div class="hc__go"><span class="ui-btn">Stamp</span><span class="ui-stamp" data-at="3600"><svg><use href="#i-stamp"/></svg>Stamped</span></div>
+      </div>
+      <!-- floating UI: whatsapp -->
+      <div class="hc hc--wa" data-at="4600">
+        <img src="../../assets/social/whatsapp.svg" alt="" width="28" height="28">
+        <div><b>Facturador.com</b><span>Invoice A-1043 sent to your customer ✓</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S2 · numbers strip -->
+<section class="strip" aria-label="Facturador in numbers">
+  <div class="wrap strip__grid">
+    <div class="marquee strip__mq" style="--mq-dur:64s;--mq-gap:64px">
+      <div class="marquee__track">
+        <span class="mq"><b>+137 M</b><small>invoices issued</small></span>
+        <span class="mq mq--word">CFDI 4.0</span>
+        <span class="mq"><b>12</b><small>years in the market</small></span>
+        <img class="mq-img" src="../../assets/brand/partners/Azure.png" alt="Microsoft Azure" width="84" height="50">
+        <span class="mq mq--word">Carta Porte 3.1</span>
+        <span class="mq"><b>100%</b><small>Mexican, from Cancún</small></span>
+        <img class="mq-img mq-img--ms" src="../../assets/brand/partners/ic_microsoft.png" alt="Microsoft" width="120" height="27">
+        <span class="mq"><b>+5</b><small>years we store your CFDIs</small></span>
+        <span aria-hidden="true" class="mq"><b>+137 M</b><small>invoices issued</small></span>
+        <span aria-hidden="true" class="mq mq--word">CFDI 4.0</span>
+        <span aria-hidden="true" class="mq"><b>12</b><small>years in the market</small></span>
+        <img aria-hidden="true" class="mq-img" src="../../assets/brand/partners/Azure.png" alt="" width="84" height="50">
+        <span aria-hidden="true" class="mq mq--word">Carta Porte 3.1</span>
+        <span aria-hidden="true" class="mq"><b>100%</b><small>Mexican, from Cancún</small></span>
+        <img aria-hidden="true" class="mq-img mq-img--ms" src="../../assets/brand/partners/ic_microsoft.png" alt="" width="120" height="27">
+        <span aria-hidden="true" class="mq"><b>+5</b><small>years we store your CFDIs</small></span>
+      </div>
+    </div>
+    <div class="strip__stat">
+      <p><b class="o" data-count="100000" data-pre="+">+100,000</b> businesses, freelancers and accountants already invoice with Facturador.</p>
+      <a class="link-u" href="#historias">See stories by business <svg class="chr"><use href="#i-chev"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- S3 · regulatory banner -->
+<section class="sec sec--tight">
+  <div class="wrap">
+    <div class="banner" data-reveal>
+      <svg class="banner__sw banner__sw--a" viewBox="0 0 300 260" aria-hidden="true"><path d="M-20 215 C 70 205 130 150 118 86 C 106 22 28 26 42 92 C 56 158 190 128 236 -24" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round"/></svg>
+      <svg class="banner__sw banner__sw--b" viewBox="0 0 300 260" aria-hidden="true"><path d="M-20 215 C 70 205 130 150 118 86 C 106 22 28 26 42 92 C 56 158 190 128 236 -24" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round"/></svg>
+      <div class="banner__brand">
+        <img src="../../assets/brand/logo-white_landing-efirma_956w.png" alt="Facturador.com" width="160" height="23">
+        <span class="banner__seal"><svg><use href="#i-stamp"/></svg><span><b>CFDI 4.0</b><small>Carta Porte 3.1</small></span></span>
+      </div>
+      <h2 class="h2">CFDI 4.0 and Carta Porte 3.1, always up to date with SAT</h2>
+      <ul class="banner__chips">
+        <li><i><svg><use href="#i-stamp"/></svg></i>Stamping included in every plan</li>
+        <li><i><svg><use href="#i-inbox"/></svg></i>SAT catalogs preloaded</li>
+        <li><i><svg><use href="#i-spark"/></svg></i>Every SAT change, at no extra cost</li>
+      </ul>
+      <a class="btn btn--primary btn--hero" href="#" data-activate>Try free for 7 days <svg class="arr chr"><use href="#i-chev"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- S4 · product bento -->
+<section class="sec" id="producto">
+  <div class="wrap">
+    <h2 class="h2 sec__h">Invoicing, payroll and accounting. <br>All in one place<span class="dot-o">.</span></h2>
+    <div class="bento">
+
+      <a class="bc bc--6" href="https://www.facturadorelectronico.com/cfdi-4-0-factura-4-0.html" data-reveal>
+        <span class="bc__h"><b>CFDI 4.0 invoicing</b><small>Invoices, payment complements and cancellations in seconds.</small></span>
+        <i class="bc__arr"><svg><use href="#i-arrow-ur"/></svg></i>
+        <div class="bc__vis" data-scene data-loop="10000">
+          <div class="ui bx-inv">
+            <div class="bx-inv__top"><b>New invoice</b><span class="ui-uuid">Series A · Folio 1043</span></div>
+            <div class="bx-inv__grid">
+              <div class="ui-field"><label>Customer RFC</label><div class="in focus"><span class="mono" data-at="200" data-type="GCE950712HJ4" data-speed="60"></span></div></div>
+              <div class="ui-field"><label>CFDI use</label><div class="in">G03 · General expenses</div></div>
+            </div>
+            <table class="bx-tb">
+              <thead><tr><th>SAT code</th><th>Description</th><th>Amount</th></tr></thead>
+              <tbody>
+                <tr><td class="mono">90101501</td><td>Restaurant service</td><td>$1,200.00</td></tr>
+                <tr><td class="mono">002</td><td>IVA 16%</td><td>$192.00</td></tr>
+                <tr class="tot"><td></td><td>Total</td><td>$1,392.00</td></tr>
+              </tbody>
+            </table>
+            <div class="bx-inv__go"><span class="ui-btn">Stamp invoice</span><span class="ui-stamp" data-at="2600"><svg><use href="#i-stamp"/></svg>Stamped · UUID 6F2C…A91E</span></div>
+          </div>
+          <span class="bx-chip bx-chip--xml" data-at="3400"><i><svg><use href="#i-invoice"/></svg></i>XML + PDF sent</span>
+        </div>
+      </a>
+
+      <a class="bc bc--3" href="https://www.facturadorelectronico.com/plan-premium.html" data-reveal data-reveal-delay="1">
+        <span class="bc__h"><b>SAT downloads</b><small>Your purchases arrive on their own.</small></span>
+        <i class="bc__arr"><svg><use href="#i-arrow-ur"/></svg></i>
+        <div class="bc__vis bx-buy" data-scene data-loop="9000">
+          <div class="bx-buy__panel"><b>Purchases · November</b></div>
+          <div class="bx-buy__c" data-at="300"><small>Downloaded from SAT</small><b>128 CFDI</b></div>
+          <div class="bx-buy__c bx-buy__c--d" data-at="900"><small>To pay</small><b>$84,210.50 <i>MXN</i></b></div>
+          <div class="bx-buy__c" data-at="1500"><small>Cancelled by issuer <span class="tag tag--warn">2</span></small><b>$3,480.00 <i>MXN</i></b></div>
+        </div>
+      </a>
+
+      <a class="bc bc--3" href="https://www.facturadorelectronico.com/plan-premium.html" data-reveal data-reveal-delay="2">
+        <span class="bc__h"><b>Scheduled invoices</b><small>Recurring ones go out alone.</small></span>
+        <i class="bc__arr"><svg><use href="#i-arrow-ur"/></svg></i>
+        <div class="bc__vis bx-cal" data-scene data-loop="9000">
+          <div class="bx-cal__m">
+            <b>Next to go out</b>
+            <div class="bx-cal__r" data-at="300"><i>1</i><span><b>Monthly retainer</b><small>Grupo Ceiba</small></span><em>$4,640</em></div>
+            <div class="bx-cal__r" data-at="700"><i>1</i><span><b>Store rent</b><small>Monthly</small></span><em>$12,180</em></div>
+            <div class="bx-cal__r" data-at="1100"><i class="o">15</i><span><b>Maintenance</b><small>Bi-weekly</small></span><em>$2,320</em></div>
+          </div>
+          <span class="bx-chip bx-chip--a" data-at="400"><i><svg><use href="#i-calendar"/></svg></i>Monthly · day 1</span>
+        </div>
+      </a>
+
+      <a class="bc bc--4" href="https://www.facturadorelectronico.com/recibos-de-nomina-en-linea.html" data-reveal>
+        <span class="bc__h"><b>Stamped payroll</b><small>Automatic calculations, severance and bonuses.</small></span>
+        <i class="bc__arr"><svg><use href="#i-arrow-ur"/></svg></i>
+        <div class="bc__vis bx-pay">
+          <div class="bx-phone">
+            <div class="bx-phone__sc">
+              <div class="bx-phone__bar"><span>9:41</span><i></i><span>●●●</span></div>
+              <small>Payslip · 2nd half of month</small>
+              <b class="bx-phone__amt">$9,850.40</b>
+              <small class="muted">Net pay</small>
+              <div class="bx-phone__rows">
+                <span><em>Salary</em><em>$11,200.00</em></span>
+                <span><em>ISR + IMSS</em><em>−$1,349.60</em></span>
+              </div>
+              <span class="ui-stamp"><svg><use href="#i-stamp"/></svg>Stamped</span>
+            </div>
+          </div>
+          <div class="bx-slip">
+            <span class="bx-slip__k">Bulk stamping</span>
+            <b>8 payslips</b>
+            <span class="bx-slip__ok"><svg><use href="#i-check"/></svg>All stamped</span>
+            <span class="bx-slip__logo"><svg><use href="#i-payroll"/></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a class="bc bc--4" href="https://www.facturadorelectronico.com/contabilidad-en-linea.html" data-reveal data-reveal-delay="1">
+        <span class="bc__h"><b>Automatic accounting</b><small>Entries from your CFDIs, DIOT and trial balance.</small></span>
+        <i class="bc__arr"><svg><use href="#i-arrow-ur"/></svg></i>
+        <div class="bc__vis bx-acc" data-scene data-loop="9000">
+          <div class="bx-acc__card">
+            <span class="bx-acc__pill"><svg><use href="#i-spark"/></svg>Automatic entry <em>P-0342</em></span>
+            <b class="bx-acc__amt">$12,480.00</b>
+            <span class="bx-acc__acc"><i></i>601.84 · Other general expenses</span>
+            <span class="bx-acc__row"><em>Supplier</em><em class="mono">PEM9104123A1</em></span>
+          </div>
+          <span class="bx-acc__match" data-at="900"><span class="ui-stamp"><svg><use href="#i-check"/></svg></span><span><b>CFDI B-2231 reconciled</b><small>Downloaded from SAT · today 09:12</small></span></span>
+        </div>
+      </a>
+
+      <a class="bc bc--4" href="https://www.facturadorelectronico.com/plan-premium.html" data-reveal data-reveal-delay="2">
+        <span class="bc__h"><b>FacturaBOT &amp; WhatsApp</b><small>Your AI assistant and SAT alerts on WhatsApp.</small></span>
+        <i class="bc__arr"><svg><use href="#i-arrow-ur"/></svg></i>
+        <div class="bc__vis bx-ai" data-scene data-loop="10000">
+          <div class="bx-ai__panel"><b>Smart WhatsApp</b></div>
+          <div class="bx-ai__r" data-at="200"><i><svg><use href="#i-shield"/></svg></i><span><small>Compliance opinion</small><b>Positive · November</b></span></div>
+          <div class="bx-ai__r" data-at="800"><i class="w"><svg><use href="#i-bell"/></svg></i><span><small>Your CSD expires soon</small><b>In 30 days</b></span></div>
+          <div class="bx-ai__bot" data-at="1600"><i><svg><use href="#i-bot"/></svg></i><span>FacturaBOT: “Which CFDI use should my customer get?”</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- S5 · stories by business type (video tabs) + reviews -->
+<section class="sec" id="historias">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2 class="h2">Stories by business type<span class="dot-o">.</span></h2>
+      <p class="sec__note">How Facturador handles each day’s work.</p>
+    </div>
+    <div class="show" data-tabs data-interval="11000" data-reveal>
+      <div class="show__tabs" role="tablist" aria-label="Business type">
+        <button type="button" role="tab" data-tab><svg><use href="#i-home"/></svg><span>Restaurant</span></button>
+        <button type="button" role="tab" data-tab><svg><use href="#i-users"/></svg><span>Medical practice</span></button>
+        <button type="button" role="tab" data-tab><svg><use href="#i-books"/></svg><span>Accounting firm</span></button>
+        <button type="button" role="tab" data-tab><svg><use href="#i-truck"/></svg><span>Carrier</span></button>
+      </div>
+      <div class="show__stage">
+        <article class="story" data-panel>
+          <figure class="media"><img src="../../assets/poster/scene-restaurante.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="../../assets/poster/scene-restaurante.jpg" data-src="../../assets/vid/scene-restaurante.mp4"></video></figure>
+          <div class="story__ui" data-scene><span class="ui-stamp" data-at="600"><svg><use href="#i-stamp"/></svg><span>Invoice A-1043 stamped<small>$1,392.00 · CFDI 4.0</small></span></span></div>
+          <div class="story__txt">
+            <p class="story__k">Restaurant · invoicing at the table</p>
+            <p class="story__q">Invoice mid-meal, from your phone, before the table asks for the check.</p>
+            <button type="button" class="btn btn--primary" data-yt="kUHYkxHmnTE"><svg><use href="#i-play"/></svg>Watch tutorial · 6:45</button>
+          </div>
+        </article>
+        <article class="story" data-panel hidden>
+          <figure class="media"><img src="../../assets/poster/scene-doctor.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="../../assets/poster/scene-doctor.jpg" data-src="../../assets/vid/scene-doctor.mp4"></video></figure>
+          <div class="story__ui" data-scene><span class="ui-stamp" data-at="600"><svg><use href="#i-back"/></svg><span>Issued with an earlier date<small>Up to 72 hours back</small></span></span></div>
+          <div class="story__txt">
+            <p class="story__k">Practice · doctors, dentists, psychologists</p>
+            <p class="story__q">Your patient asked for an invoice two days later: issue it with an earlier date, done.</p>
+            <button type="button" class="btn btn--primary" data-yt="Gu80ocSQTAo"><svg><use href="#i-play"/></svg>Watch tutorial · 2:08</button>
+          </div>
+        </article>
+        <article class="story" data-panel hidden>
+          <figure class="media"><img src="../../assets/poster/scene-contadoras.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="../../assets/poster/scene-contadoras.jpg" data-src="../../assets/vid/scene-contadoras.mp4"></video></figure>
+          <div class="story__ui" data-scene><span class="ui-stamp" data-at="600"><svg><use href="#i-calendar"/></svg><span>Scheduled retainers<small>Issued on the 1st of each month</small></span></span></div>
+          <div class="story__txt">
+            <p class="story__k">Accounting firm · retainers and closings</p>
+            <p class="story__q">Retainers go out on their own each month and purchases arrive from SAT without asking for an XML.</p>
+            <button type="button" class="btn btn--primary" data-yt="R4ewyLoylfw"><svg><use href="#i-play"/></svg>Watch tutorial · 5:55</button>
+          </div>
+        </article>
+        <article class="story story--taller" data-panel hidden>
+          <figure class="media"><img src="../../assets/poster/scene-taller.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="../../assets/poster/scene-taller.jpg" data-src="../../assets/vid/scene-taller.mp4"></video></figure>
+          <div class="story__ui" data-scene><span class="ui-stamp" data-at="600"><svg><use href="#i-truck"/></svg><span>Carta Porte 3.1 stamped<small>Goods, origin and destination</small></span></span></div>
+          <div class="story__txt">
+            <p class="story__k">Carrier · the truck leaves today</p>
+            <p class="story__q">Carta Porte 3.1 with goods, origin and destination, stamped before loading.</p>
+            <button type="button" class="btn btn--primary" data-yt="-RNZXaanjKw"><svg><use href="#i-play"/></svg>Watch tutorial · 2:15</button>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="rvs">
+      <div class="rvs__head">
+        <div>
+          <h3 class="h3">What people who invoice with us say</h3>
+          <div class="rating-badge"><img src="../../assets/social/facebook.svg" alt="Facebook" width="22" height="22"><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg></span><span>Recommended by <b>88%</b> · 214 reviews</span></div>
+        </div>
+        <div class="rvs__nav"><button type="button" data-rv="-1" aria-label="Previous"><svg class="flip"><use href="#i-arrow"/></svg></button><button type="button" data-rv="1" aria-label="Next"><svg><use href="#i-arrow"/></svg></button></div>
+      </div>
+      <div class="rvs__track" data-rv-track>
+        <article class="yt-card">
+          <button type="button" class="yt-facade" data-yt-inline="kUHYkxHmnTE" aria-label="Play: How to issue a CFDI 4.0 invoice with 16% VAT">
+            <img src="https://i.ytimg.com/vi/kUHYkxHmnTE/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+            <span class="yt-facade__play"><svg><use href="#i-play"/></svg></span>
+            <span class="yt-facade__dur">6:45</span>
+          </button>
+          <div class="yt-card__b">
+            <span class="tag tag--o">YouTube tutorial</span>
+            <b>How to issue a CFDI 4.0 invoice with 16% VAT (in Spanish)</b>
+            <small>43K views · official Facturador.com channel</small>
+          </div>
+        </article>
+        <article class="rv rv--v2" data-example="True">
+  <header class="rv__head">
+    <img class="rv__avatar" src="../../assets/people/p01_taqueria.jpg" alt="" loading="lazy" width="48" height="48">
+    <div class="rv__who"><strong>Lupita Hernández</strong><span>Taquería · Mexico City</span></div>
+    <img class="rv__src" src="../../assets/social/google.svg" alt="Google" width="22" height="22">
+  </header>
+  <span class="stars" aria-label="5/5"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg></span>
+  <p class="rv__quote">“Customers ask for an invoice mid-meal and I issue it from my phone while they pay. I don't owe anyone an invoice anymore.”</p>
+  <footer class="rv__foot"><span>Verified review on Google</span><span>Nov 2026</span></footer>
+</article>
+<article class="rv rv--v2" data-example="True">
+  <header class="rv__head">
+    <img class="rv__avatar" src="../../assets/people/p02_dentista.jpg" alt="" loading="lazy" width="48" height="48">
+    <div class="rv__who"><strong>Dr. Ricardo Salinas</strong><span>Dentist · Guadalajara</span></div>
+    <img class="rv__src" src="../../assets/social/google.svg" alt="Google" width="22" height="22">
+  </header>
+  <span class="stars" aria-label="5/5"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg></span>
+  <p class="rv__quote">“My patients ask for their CFDI when they pay. With the SAT catalogs preloaded I issue it between appointments.”</p>
+  <footer class="rv__foot"><span>Verified review on Google</span><span>Oct 2026</span></footer>
+</article>
+<article class="rv rv--v2" data-example="True">
+  <header class="rv__head">
+    <img class="rv__avatar" src="../../assets/people/p03_contadora.jpg" alt="" loading="lazy" width="48" height="48">
+    <div class="rv__who"><strong>Mariana Ortiz</strong><span>Accountant · Monterrey</span></div>
+    <img class="rv__src" src="../../assets/social/facebook.svg" alt="Facebook" width="22" height="22">
+  </header>
+  <span class="stars" aria-label="5/5"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg></span>
+  <p class="rv__quote">“I manage several client RFCs. The automatic SAT download saves me days of work at every month-end close.”</p>
+  <footer class="rv__foot"><span>Verified review on Facebook</span><span>Nov 2026</span></footer>
+</article>
+<article class="rv rv--v2" data-example="True">
+  <header class="rv__head">
+    <img class="rv__avatar" src="../../assets/people/p04_disenador.jpg" alt="" loading="lazy" width="48" height="48">
+    <div class="rv__who"><strong>Daniel Romero</strong><span>Freelance designer · Querétaro</span></div>
+    <img class="rv__src" src="../../assets/social/instagram.svg" alt="Instagram" width="22" height="22">
+  </header>
+  <span class="stars" aria-label="5/5"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg></span>
+  <p class="rv__quote">“I scheduled my recurring invoices and they go out on their own every month. When I have questions, they answer fast.”</p>
+  <footer class="rv__foot"><span>Verified review on Instagram</span><span>Sep 2026</span></footer>
+</article>
+<article class="rv rv--v2" data-example="True">
+  <header class="rv__head">
+    <img class="rv__avatar" src="../../assets/people/p05_boutique.jpg" alt="" loading="lazy" width="48" height="48">
+    <div class="rv__who"><strong>Patricia Gómez</strong><span>Clothing boutique · Puebla</span></div>
+    <img class="rv__src" src="../../assets/social/facebook.svg" alt="Facebook" width="22" height="22">
+  </header>
+  <span class="stars" aria-label="5/5"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg></span>
+  <p class="rv__quote">“I moved from the SAT portal to Facturador and it's night and day. WhatsApp support sorted out everything.”</p>
+  <footer class="rv__foot"><span>Verified review on Facebook</span><span>Oct 2026</span></footer>
+</article>
+<article class="rv rv--v2" data-example="True">
+  <header class="rv__head">
+    <img class="rv__avatar" src="../../assets/people/p06_ferreteria.jpg" alt="" loading="lazy" width="48" height="48">
+    <div class="rv__who"><strong>Jorge Villanueva</strong><span>Hardware store · León</span></div>
+    <img class="rv__src" src="../../assets/social/google.svg" alt="Google" width="22" height="22">
+  </header>
+  <span class="stars" aria-label="5/5"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg></span>
+  <p class="rv__quote">“With six employees, stamping payroll was my headache. Now I calculate and stamp it in minutes.”</p>
+  <footer class="rv__foot"><span>Verified review on Google</span><span>Nov 2026</span></footer>
+</article>
+<article class="rv rv--v2" data-example="True">
+  <header class="rv__head">
+    <img class="rv__avatar" src="../../assets/people/p07_psicologa.jpg" alt="" loading="lazy" width="48" height="48">
+    <div class="rv__who"><strong>Andrea Castillo</strong><span>Psychologist · Mérida</span></div>
+    <img class="rv__src" src="../../assets/social/tiktok.svg" alt="Tiktok" width="22" height="22">
+  </header>
+  <span class="stars" aria-label="5/5"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg></span>
+  <p class="rv__quote">“I issued my first CFDI 4.0 with phone guidance. They walked me through it and it was done in minutes.”</p>
+  <footer class="rv__foot"><span>Verified review on TikTok</span><span>Aug 2026</span></footer>
+</article>
+<article class="rv rv--v2" data-example="True">
+  <header class="rv__head">
+    <img class="rv__avatar" src="../../assets/people/p08_panaderia.jpg" alt="" loading="lazy" width="48" height="48">
+    <div class="rv__who"><strong>Sofía Méndez</strong><span>Bakery · Cancún</span></div>
+    <img class="rv__src" src="../../assets/social/google.svg" alt="Google" width="22" height="22">
+  </header>
+  <span class="stars" aria-label="5/5"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg></span>
+  <p class="rv__quote">“I invoice hotels every single day. Duplicating invoices without retyping changed how I run things.”</p>
+  <footer class="rv__foot"><span>Verified review on Google</span><span>Nov 2026</span></footer>
+</article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S6 · integrations band -->
+<section class="integ" id="integraciones">
+  <div class="wrap integ__grid">
+    <div class="integ__copy" data-reveal>
+      <h2 class="h2">Connect Facturador <br>to your ERP or system</h2>
+      <p class="integ__p"><span class="o">REST API (JSON)</span>, a stamping web service and a connector for any ERP or back-office system.</p>
+      <div class="integ__links">
+        <a class="link-u" href="https://www.facturadorelectronico.com/erp.html">See the ERP connector <svg class="chr"><use href="#i-chev"/></svg></a>
+        <a class="link-u" href="https://www.facturadorelectronico.com/desarrolladores.html">Developer docs <svg class="chr"><use href="#i-chev"/></svg></a>
+      </div>
+    </div>
+    <div class="orbit" aria-hidden="true">
+      <i class="orbit__ring r1"></i><i class="orbit__ring r2"></i><i class="orbit__ring r3"></i><i class="orbit__ring r4"></i>
+      <span class="orbit__core"><svg><use href="#i-logo"/></svg></span>
+      <div class="orbit__spin s1"><span class="ob" style="--a:20deg"><b>SAP</b></span><span class="ob" style="--a:140deg"><b>Oracle</b></span><span class="ob" style="--a:260deg"><b>API REST</b></span></div>
+      <div class="orbit__spin s2"><span class="ob" style="--a:70deg"><b>Dynamics 365</b></span><span class="ob" style="--a:310deg"><b>JD Edwards</b></span></div>
+      <div class="orbit__spin s3"><span class="ob" style="--a:150deg"><b>PeopleSoft</b></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- S7 · trust cards -->
+<section class="sec sec--trust">
+  <h2 class="sr-only">Why trust Facturador</h2>
+  <div class="wrap trust">
+    <article class="tc" data-reveal>
+      <svg class="tc__art" viewBox="0 0 220 220" aria-hidden="true">
+        <g fill="none" stroke="var(--orange)" stroke-width="1.6" opacity=".9"><ellipse cx="110" cy="110" rx="98" ry="40"/><ellipse cx="110" cy="110" rx="98" ry="40" transform="rotate(60 110 110)"/><ellipse cx="110" cy="110" rx="98" ry="40" transform="rotate(120 110 110)"/><ellipse cx="110" cy="110" rx="98" ry="40" transform="rotate(30 110 110)" stroke="var(--blue-300)" opacity=".7"/><ellipse cx="110" cy="110" rx="98" ry="40" transform="rotate(90 110 110)" stroke="var(--blue-300)" opacity=".7"/><ellipse cx="110" cy="110" rx="98" ry="40" transform="rotate(150 110 110)" stroke="var(--blue-300)" opacity=".7"/></g>
+        <circle cx="110" cy="110" r="52" fill="#fff"/>
+        <path d="M110 84l22 8.8v16.2c0 13.5-9.4 24.4-22 27.9-12.6-3.5-22-14.4-22-27.9V92.8z" fill="none" stroke="var(--night)" stroke-width="4" stroke-linejoin="round"/><path d="M100 110l7 7 13-13.5" fill="none" stroke="var(--orange)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3 class="tc__h">Processes based on ISO/IEC 27001</h3>
+      <p class="tc__p">Encryption, Microsoft Azure servers and automatic backups.</p>
+    </article>
+    <article class="tc" data-reveal data-reveal-delay="1">
+      <svg class="tc__art" viewBox="0 0 220 220" aria-hidden="true">
+        <g fill="none" stroke-width="1.6"><circle cx="110" cy="110" r="64" stroke="var(--blue-300)" opacity=".5"/><circle cx="110" cy="110" r="82" stroke="var(--blue-300)" opacity=".35"/><circle cx="110" cy="110" r="100" stroke="var(--blue-300)" opacity=".2"/></g>
+        <path class="tc__wave" d="M168 78a72 72 0 0 1 0 64M182 64a92 92 0 0 1 0 92M52 78a72 72 0 0 0 0 64M38 64a92 92 0 0 0 0 92" fill="none" stroke="var(--orange)" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="110" cy="110" r="46" fill="#fff"/>
+        <g transform="translate(83 83) scale(2.25)" fill="none" stroke="var(--night)" stroke-width="1.7"><path d="M4.5 14v-2a7.5 7.5 0 0 1 15 0v2"/><rect x="3.5" y="13" width="4" height="6" rx="1.5"/><rect x="16.5" y="13" width="4" height="6" rx="1.5"/><path d="M18.5 19c0 1.4-1.6 2-4.5 2" stroke="var(--orange)" stroke-linecap="round"/></g>
+      </svg>
+      <h3 class="tc__h">Human support, by phone and WhatsApp</h3>
+      <p class="tc__p">Mon–Fri 9:00–18:00 · Sat 10:00–14:00 (Mexico City time).</p>
+    </article>
+    <article class="tc" data-reveal data-reveal-delay="2">
+      <svg class="tc__art" viewBox="0 0 220 220" aria-hidden="true">
+        <defs><clipPath id="v2-globe"><circle cx="110" cy="110" r="100"/></clipPath></defs>
+        <g clip-path="url(#v2-globe)" fill="#fff"><path d="M30 38h160v18H30zM14 66h192v12H14zM8 142h204v12H8zM30 164h160v18H30z" opacity=".95"/></g>
+        <g fill="none" stroke="#fff" stroke-width="1.6" opacity=".4"><circle cx="110" cy="110" r="100"/><ellipse cx="110" cy="110" rx="46" ry="100"/></g>
+        <text x="110" y="132" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="68" letter-spacing="-4" fill="var(--orange)">12</text>
+      </svg>
+      <h3 class="tc__h">12 years, 100% Mexican</h3>
+      <p class="tc__p">Engineers and accountants in Cancún. 137M+ invoices issued.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ADD · pricing -->
+<section class="sec sec--paper" id="precios">
+  <div class="wrap">
+    <div class="sec__head sec__head--row">
+      <div>
+        <h2 class="h2">Clear plans, VAT included<span class="dot-o">.</span></h2>
+        <p class="sec__note">Start with Premium free for 7 days. Then pick a plan: no automatic charges.</p>
+      </div>
+      <div class="seg" data-toggle="billing" role="group" aria-label="Billing period">
+        <button type="button" data-value="mensual" aria-pressed="true">Monthly</button>
+        <button type="button" data-value="anual" aria-pressed="false">Yearly</button>
+      </div>
+    </div>
+    <div class="plans">
+      <article class="plan" data-reveal>
+        <header><h3>Basic</h3><p>10 folios a month · 1 user</p></header>
+        <div class="plan__price"><span data-when-billing="mensual"><b>$99</b><small>/month</small></span><span data-when-billing="anual" hidden><b>$1,188</b><small>/year</small></span><em>VAT included · MXN</em></div>
+        <a class="btn btn--outline plan__cta" href="#" data-activate>Start free <svg class="arr chr"><use href="#i-chev"/></svg></a>
+        <ul>
+          <li class="check">Issue invoices and payment complements</li>
+          <li class="check">Cancel CFDIs from your platform</li>
+          <li class="check">SAT catalogs preloaded</li>
+          <li class="check">Every SAT update</li>
+          <li class="check">Free support</li>
+        </ul>
+      </article>
+      <article class="plan" data-reveal data-reveal-delay="1">
+        <header><h3>Standard</h3><p>25 folios a month · 5 users</p></header>
+        <div class="plan__price"><span data-when-billing="mensual"><b>$199</b><small>/month</small></span><span data-when-billing="anual" hidden><b>$2,388</b><small>/year</small></span><em>VAT included · MXN</em></div>
+        <a class="btn btn--outline plan__cta" href="#" data-activate>Start free <svg class="arr chr"><use href="#i-chev"/></svg></a>
+        <ul>
+          <li class="check"><b>Everything in Basic, plus:</b></li>
+          <li class="check">Duplicate CFDIs without retyping</li>
+          <li class="check">Your purchase invoices in 1 click</li>
+          <li class="check">Complements and addendas</li>
+          <li class="check">Payment terms and factoring</li>
+          <li class="check">Basic payroll (up to 3 employees)</li>
+        </ul>
+      </article>
+      <article class="plan plan--pro" data-reveal data-reveal-delay="2">
+        <header><h3>Premium <span class="tag tag--o">7 days free</span></h3><p>Unlimited folios* · unlimited users</p></header>
+        <div class="plan__price"><span data-when-billing="mensual"><b>$399</b><small>/month</small></span><span data-when-billing="anual" hidden><b>$4,788</b><small>/year</small></span><em>VAT included · MXN</em></div>
+        <a class="btn btn--primary plan__cta" href="#" data-activate>Try Premium free <svg class="arr chr"><use href="#i-chev"/></svg></a>
+        <ul>
+          <li class="check"><b>Everything in Standard, plus:</b></li>
+          <li class="check">Earlier dates (72 h) and scheduled invoices</li>
+          <li class="check">Automatic SAT download of your purchases</li>
+          <li class="check">Reports, payroll (up to 10 employees) and accounting</li>
+          <li class="check">Withholdings and premium addendas</li>
+          <li class="check">WhatsApp alerts and AI-powered FacturaBOT</li>
+        </ul>
+      </article>
+    </div>
+
+    <article class="contable" data-reveal>
+      <figure class="media contable__media"><img src="../../assets/poster/portrait-contadora.jpg" alt="Accountant on the Facturador Contable team" loading="lazy"><video muted loop playsinline preload="none" poster="../../assets/poster/portrait-contadora.jpg" data-src="../../assets/vid/portrait-contadora.mp4"></video></figure>
+      <div class="contable__body">
+        <span class="tag tag--o">Accounting service</span>
+        <h3>Facturador Contable: your team of accountants, plus the platform</h3>
+        <ul class="contable__list">
+          <li class="check">An assigned team, not a single accountant</li>
+          <li class="check">Federal taxes and DIOT filed for you</li>
+          <li class="check">You see what you’ll pay before filing</li>
+          <li class="check">Your SAT tax mailbox, monitored</li>
+        </ul>
+      </div>
+      <div class="contable__prices">
+        <div><small>Individual (Persona Física)</small><b>$1,786</b><em>/month</em></div>
+        <div><small>Company (Persona Moral)</small><b>$3,190</b><em>/month</em></div>
+        <p data-when-billing="mensual">Paying yearly: pay 10 months, get 2 free.</p>
+        <p data-when-billing="anual" hidden class="o">Yearly: pay 10 months, get 2 free.</p>
+        <a class="btn btn--primary" href="https://contable.facturadorelectronico.com/">See the service <svg class="arr chr"><use href="#i-chev"/></svg></a>
+      </div>
+    </article>
+
+    <div class="fine">
+      <p>*Unlimited folios apply to use on the web platform only. Prices subject to change. One plan covers one RFC.</p>
+      <div class="fine__pay"><span>Pay with</span><img src="../../assets/brand/payments/visa-master-paypal.png" alt="Visa, Mastercard, PayPal" height="22"><img src="../../assets/brand/payments/oxxo.png" alt="OXXO" height="22"><span>or bank transfer</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ADD · FAQ -->
+<section class="sec" id="preguntas">
+  <div class="wrap faqw">
+    <div class="faqw__side">
+      <h2 class="h2">Frequently asked questions<span class="dot-o">.</span></h2>
+      <p class="sec__note">If your question isn’t here, a person will answer it.</p>
+      <div class="help">
+        <a href="tel:+529988723293"><i><svg><use href="#i-phone"/></svg></i><span><small>Phone</small><b>(998) 872 3293</b></span></a>
+        <a data-wa href="https://api.whatsapp.com/send?phone=5219984955506" target="_blank" rel="noopener"><i class="g"><img src="../../assets/social/whatsapp.svg" alt="" width="20" height="20"></i><span><small>Sales WhatsApp</small><b>998 495 5506</b></span></a>
+        <p><svg><use href="#i-clock"/></svg>Mon–Fri 9:00–18:00 · Sat 10:00–14:00 (CST)</p>
+      </div>
+    </div>
+    <div class="faq">
+      <details open><summary>Why pay if SAT’s portal is free?<i></i></summary><div class="faq__a"><p>SAT’s portal issues one invoice at a time. Facturador saves your customers and products, duplicates and schedules invoices, downloads your purchases, stamps your payroll and keeps your books. And if you get stuck, a person answers.</p></div></details>
+      <details><summary>What do I need to start invoicing?<i></i></summary><div class="faq__a"><p>Your RFC (tax ID), your e.firma (SAT digital signature) and your CSD (digital seal certificate). With those you’re invoicing in 5 minutes, and an advisor calls within 10 to help with the first one.</p></div></details>
+      <details><summary>Do I have to drop my accountant?<i></i></summary><div class="faq__a"><p>No. Your accountant can log in to your account and see your CFDIs, your SAT purchase downloads and your reports. If you don’t have one, Facturador Contable assigns you a team.</p></div></details>
+      <details><summary>Can I cancel invoices?<i></i></summary><div class="faq__a"><p>Yes. You cancel CFDIs from the platform, without going into SAT’s portal. For payroll you can also cancel in bulk.</p></div></details>
+      <details><summary>What happens after the 7 free days?<i></i></summary><div class="faq__a"><p>Nothing is charged on its own: we don’t ask for a card and there are no automatic charges. If you liked it, you pick the plan that fits.</p></div></details>
+      <details><summary>Is my information safe?<i></i></summary><div class="faq__a"><p>Our processes are based on the ISO/IEC 27001 standard. We use encryption, secure Microsoft Azure servers and automatic backups, and we keep your CFDIs for more than 5 years.</p></div></details>
+      <details><summary>Can I invoice from my phone?<i></i></summary><div class="faq__a"><p>Yes. Facturador runs in the cloud: use it from your laptop or phone, nothing to install.</p></div></details>
+      <details><summary>Which payment methods do you accept?<i></i></summary><div class="faq__a"><p>Credit or debit card, OXXO (cash at convenience stores), bank transfer and PayPal.</p></div></details>
+      <details><summary>Can I change plans?<i></i></summary><div class="faq__a"><p>Yes, any time, from your payment portal.</p></div></details>
+      <details><summary>Does one plan cover several RFCs?<i></i></summary><div class="faq__a"><p>One plan covers one RFC. If you handle several, call us at +52 998 872 3293 and we’ll put an option together.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- S8 · final CTA + device render -->
+<section class="sec final" data-nav-theme="light">
+  <div class="wrap">
+    <div class="final__head" data-reveal>
+      <h2 class="h2">Start today and issue your first <br>CFDI 4.0 invoice in 5 minutes<span class="dot-o">.</span></h2>
+      <p class="final__rate"><img src="../../assets/social/facebook.svg" alt="" width="20" height="20"><b>88%</b> recommend us on Facebook</p>
+      <a class="btn btn--primary btn--hero" href="#" data-activate>Try free for 7 days <svg class="arr chr"><use href="#i-chev"/></svg></a>
+      <p class="final__micro">No card · No automatic charges · Guidance in under 10 min</p>
+    </div>
+
+    <div class="devices" data-scene data-loop="12000">
+      <!-- laptop -->
+      <div class="lap" data-reveal>
+        <div class="lap__lid">
+          <div class="lap__screen ui">
+            <div class="ui-app">
+              <aside class="ui-side">
+                <span class="mk"><svg><use href="#i-logo"/></svg></span>
+                <a class="on"><svg><use href="#i-chart"/></svg>Home</a>
+                <a><svg><use href="#i-invoice"/></svg>Issue</a>
+                <a><svg><use href="#i-inbox"/></svg>Received</a>
+                <a><svg><use href="#i-payroll"/></svg>Payroll</a>
+                <a><svg><use href="#i-books"/></svg>Books</a>
+              </aside>
+              <div class="ui-main">
+                <div class="ui-top"><div><h5>Dashboard</h5><p>November 2026 · DOF exchange rate $18.42</p></div><span class="ui-rfc"><b>MO</b>OIMM850312AB1</span></div>
+                <div class="dash">
+                  <div class="ui-card"><h6>Income</h6><div class="ui-kpi">$186,450</div><span class="ui-delta">▲ 12.4%</span></div>
+                  <div class="ui-card"><h6>Expenses</h6><div class="ui-kpi">$72,310</div><span class="ui-delta" style="color:var(--muted)">128 CFDIs received</span></div>
+                  <div class="ui-card"><h6>Receivable</h6><div class="ui-kpi">$41,980</div><span class="ui-delta" style="color:var(--amber)">9 invoices</span></div>
+                  <div class="ui-card dash__chart"><h6>Collected per month</h6>
+                    <div class="ui-bars"><span class="on" style="--h:46%"></span><span class="on" style="--h:58%"></span><span class="on" style="--h:52%"></span><span class="on" style="--h:66%"></span><span class="on" style="--h:74%"></span><span class="o" style="--h:92%"></span></div>
+                    <div class="ui-legend"><span><i style="background:var(--blue)"></i>Jun – Oct</span><span><i style="background:var(--orange)"></i>November</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lap__base"><i></i></div>
+      </div>
+      <!-- phone -->
+      <div class="phn" data-reveal data-reveal-delay="1">
+        <div class="phn__sc">
+          <div class="phn__bar"><span>9:41</span><i></i><span>●●●</span></div>
+          <div class="ui-wa">
+            <div class="msg">Hi Mariana, your November compliance opinion is <b>positive</b> ✅<time>09:02</time></div>
+            <div class="msg" data-at="1200">Your e.firma expires in 30 days. Want help renewing it?<time>09:03</time></div>
+            <div class="msg me" data-at="2600">Yes, please 🙏<time>09:05</time></div>
+          </div>
+          <div class="phn__inv"><span class="ui-stamp"><svg><use href="#i-stamp"/></svg>A-1043</span><b>$1,392.00</b></div>
+        </div>
+      </div>
+      <!-- printed invoice -->
+      <div class="paper" data-reveal data-reveal-delay="2">
+        <img src="../../assets/brand/logo-color_landing-efirma_848w.png" alt="" width="120" height="17">
+        <b>INVOICE A-1043</b>
+        <span class="ui-uuid">UUID 6F2C1B7E-…-A91E</span>
+        <i></i><i></i><i class="s"></i><i></i><i class="s"></i>
+        <div class="paper__tot"><span>Total</span><b>$1,392.00</b></div>
+        <svg class="paper__qr" viewBox="0 0 21 21" aria-hidden="true"><path d="M0 0h7v7H0zM14 0h7v7h-7zM0 14h7v7H0zM2 2v3h3V2zM16 2v3h3V2zM2 16v3h3v-3zM9 0h2v2H9zM9 4h3v3H9zM8 9h4v2H8zM14 9h2v3h-2zM18 9h3v2h-3zM9 13h2v4H9zM13 14h3v2h-3zM17 13h2v3h-2zM14 18h2v3h-2zM18 18h3v3h-3zM12 17h1v4h-1z"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- S9 · footer -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <img class="foot__logo" src="../../assets/brand/logo-white_landing-efirma_956w.png" alt="Facturador.com" width="240" height="35">
+      <div class="foot__soc">
+        <a href="https://www.facebook.com/Facturador" target="_blank" rel="noopener" aria-label="Facebook"><img src="../../assets/social/facebook.svg" alt=""></a>
+        <a href="https://www.instagram.com/facturadorelectronico/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../../assets/social/instagram.svg" alt=""></a>
+        <a data-wa href="https://api.whatsapp.com/send?phone=5219984955506" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="../../assets/social/whatsapp.svg" alt=""></a>
+        <a class="foot__lang" href="../"><svg><use href="#i-globe"/></svg>Mexico · English <span>→ Español</span></a>
+      </div>
+    </div>
+    <div class="foot__grid">
+      <div class="foot__rate">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg></span>
+        <p>Recommended by 88% on Facebook (214 reviews).</p>
+        <p class="foot__aw">Banamex National Award for Internet Evolution · INNOVA Award</p>
+      </div>
+      <nav class="foot__col" aria-label="Product"><h4>Product</h4>
+        <a href="https://www.facturadorelectronico.com/cfdi-4-0-factura-4-0.html">CFDI 4.0 invoicing</a>
+        <a href="https://www.facturadorelectronico.com/carta-porte.html">Carta Porte 3.1</a>
+        <a href="https://www.facturadorelectronico.com/recibos-de-nomina-en-linea.html">Payroll</a>
+        <a href="https://www.facturadorelectronico.com/contabilidad-en-linea.html">Accounting</a>
+        <a href="https://www.facturadorelectronico.com/Addendas.html">Addendas</a>
+        <a href="https://www.facturadorelectronico.com/precios.html">Pricing</a>
+      </nav>
+      <nav class="foot__col" aria-label="Solutions"><h4>Solutions</h4>
+        <a href="#historias">Restaurants</a>
+        <a href="#historias">Medical practices</a>
+        <a href="#historias">Accountants &amp; firms</a>
+        <a href="https://www.facturadorelectronico.com/carta-porte.html">Carriers</a>
+        <a href="https://www.facturadorelectronico.com/erp.html">Companies with an ERP</a>
+        <a href="https://contable.facturadorelectronico.com/">Facturador Contable</a>
+      </nav>
+      <nav class="foot__col" aria-label="Resources"><h4>Resources</h4>
+        <a href="https://ayuda.facturador.com/">Help center</a>
+        <a href="https://www.facturadorelectronico.com/Blog">Blog</a>
+        <a href="https://www.facturadorelectronico.com/Preguntas.html">FAQ</a>
+        <a href="https://www.facturadorelectronico.com/desarrolladores.html">Developers (API)</a>
+        <a href="https://www.facturadorelectronico.com/validar-cfdi.html">Validate a CFDI</a>
+      </nav>
+      <nav class="foot__col" aria-label="Company"><h4>Company</h4>
+        <a href="https://www.facturadorelectronico.com/nosotros.html">About us</a>
+        <a href="https://www.facturadorelectronico.com/hechos-sobre-facturadorelectronico.html">Facts about Facturador</a>
+        <a href="https://www.facturadorelectronico.com/PoliticaSGSI.html">Security policy</a>
+        <a href="https://www.facturadorelectronico.com/trabajo-de-facturacion-desde-casa.html">Resellers</a>
+        <a href="https://www.facturadorelectronico.com/contacto.html">Contact</a>
+      </nav>
+      <div class="foot__col"><h4>Contact</h4>
+        <a href="tel:+529988723293">(998) 872 3293</a>
+        <a data-wa href="https://api.whatsapp.com/send?phone=5219984955506" target="_blank" rel="noopener">Sales WhatsApp 998 495 5506</a>
+        <a href="https://api.whatsapp.com/send?phone=5219981255693" target="_blank" rel="noopener">Support WhatsApp 998 125 5693</a>
+        <a href="mailto:info@facturador.com">info@facturador.com</a>
+        <span>Mon–Fri 9:00–18:00 · Sat 10:00–14:00</span>
+      </div>
+    </div>
+    <div class="foot__badges">
+      <span class="fb"><img src="../../assets/brand/partners/LogoGoldMSP.png" alt="Microsoft Gold Partner" height="44"></span>
+      <span class="fb"><img src="../../assets/brand/partners/Azure.png" alt="Microsoft Azure" height="44"></span>
+      <span class="fb"><img src="../../assets/brand/partners/dotnet-desarrollado-por.png" alt="Built by Dot Net Desarrollo de Sistemas" height="44"></span>
+      <p>Processes based on the ISO/IEC 27001 standard · Microsoft Azure servers · CFDIs stored for 5+ years.</p>
+    </div>
+    <div class="foot__legal">
+      <span>© 2026 Facturador.com · Dot Net Desarrollo de Sistemas · Cancún, Q. Roo</span>
+      <a href="https://www.facturadorelectronico.com/terminos-y-condiciones.html">Terms and conditions</a>
+      <a href="https://www.facturadorelectronico.com/aviso-de-privacidad.html">Privacy notice</a>
+      <a href="https://auth.facturador.com/">Log in</a>
+    </div>
+  </div>
+</footer>
+
+<div class="ytbox" data-ytbox hidden role="dialog" aria-modal="true" aria-label="Video tutorial">
+  <div class="ytbox__scrim" data-ytclose></div>
+  <div class="ytbox__in"><button type="button" class="ytbox__x" data-ytclose aria-label="Close video"><svg><use href="#i-x"/></svg></button><div class="ytbox__frame" data-ytframe></div></div>
+</div>
+
+<div class="mbar"><button class="btn btn--primary" data-activate>Try free for 7 days <svg class="arr"><use href="#i-arrow"/></svg></button><small>No card · Guidance in under 10 min</small></div>
+
+<!-- ACTIVATION FLOW: email → goals → datos (nombre, teléfono) → cuenta lista → redirect -->
+<div class="act" id="activate" role="dialog" aria-modal="true" aria-labelledby="act-t1">
+  <div class="act__scrim" data-close></div>
+  <div class="act__card">
+    <button class="act__close" type="button" data-close aria-label="Close"><svg><use href="#i-x"/></svg></button>
+    <div class="act__form">
+      <img class="act__logo" src="../../assets/brand/logo-color_landing-efirma_848w.png" alt="Facturador.com" width="167" height="24">
+      <div class="act__progress" aria-hidden="true"><i></i><i></i><i></i></div>
+
+      <!-- step 1 -->
+      <section class="act__step on" aria-labelledby="act-t1">
+        <p class="act__kicker">Step 1 of 2</p>
+        <h2 class="act__title" id="act-t1">What do you want to solve first?</h2>
+        <p class="act__sub">Pick one or more. Your advisor will call with your setup ready.</p>
+        <div class="act__offer"><svg width="22" height="22"><use href="#i-spark"/></svg><span><b>Premium free for 7 days</b><br>No card · no automatic charges</span><span class="tag">✓ Applied</span></div>
+        <div class="act__choices">
+          <button type="button" class="act__choice" data-goal="facturar" aria-pressed="true"><svg><use href="#i-invoice"/></svg><b>Issue CFDI 4.0 invoices</b><span>Invoices, complements, cancellations</span></button>
+          <button type="button" class="act__choice" data-goal="nomina" aria-pressed="false"><svg><use href="#i-payroll"/></svg><b>Stamp payroll</b><span>Payslips, severance, bonuses, PTU</span></button>
+          <button type="button" class="act__choice" data-goal="sat" aria-pressed="false"><svg><use href="#i-download"/></svg><b>Download from SAT</b><span>Your purchase invoices, automatically</span></button>
+          <button type="button" class="act__choice" data-goal="contabilidad" aria-pressed="false"><svg><use href="#i-books"/></svg><b>Accounting</b><span>Do it yourself or with our accountants</span></button>
+        </div>
+        <div class="fld"><label for="act-email">Email address</label><input id="act-email" name="email" type="email" autocomplete="email" placeholder="you@business.com"><span class="msg">Check your email: it looks incomplete.</span></div>
+        <button type="button" class="btn btn--primary act__submit" data-next>Continue <svg class="arr"><use href="#i-arrow"/></svg></button>
+        <p class="act__alt">Rather talk to someone? <a data-wa href="#" target="_blank" rel="noopener"><img src="../../assets/social/whatsapp.svg" alt="">WhatsApp</a></p>
+      </section>
+
+      <!-- step 2 -->
+      <section class="act__step" aria-labelledby="act-t2">
+        <p class="act__kicker">Step 2 of 2</p>
+        <h2 class="act__title" id="act-t2">Who are we activating this for?</h2>
+        <p class="act__sub">Just 3 details. We set up the rest with you over the phone.</p>
+        <form id="act-form" novalidate>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div class="fld"><label for="act-name">Full name</label><input id="act-name" name="name" autocomplete="name" placeholder="e.g. Mariana Ortiz" required><span class="msg">Enter your first and last name.</span></div>
+            <div class="fld"><label for="act-email2">Email address</label><input id="act-email2" name="email" type="email" autocomplete="email" placeholder="you@business.com" required><span class="msg">Check your email: it looks incomplete.</span></div>
+            <div class="fld fld--tel"><label for="act-phone">Phone (WhatsApp)</label><div class="tel"><span class="cc">🇲🇽 +52</span><input id="act-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="998 123 4567" required></div><span class="msg">We need 10 digits to call you.</span></div>
+            <button type="submit" class="btn btn--primary act__submit">Activate my free trial <svg class="arr"><use href="#i-arrow"/></svg></button>
+            <div class="act__trust"><span><svg><use href="#i-check"/></svg>No card</span><span><svg><use href="#i-check"/></svg>Cancel anytime</span><span><svg><use href="#i-check"/></svg>Free onboarding call</span></div>
+            <p class="act__legal">By continuing you accept the <a href="https://www.facturadorelectronico.com/terminos-y-condiciones.html" target="_blank" rel="noopener">Terms</a> and <a href="https://www.facturadorelectronico.com/aviso-de-privacidad.html" target="_blank" rel="noopener">Privacy notice</a>. · <button type="button" data-back style="text-decoration:underline">Back</button></p>
+          </div>
+        </form>
+      </section>
+
+      <!-- step 3: success + redirect -->
+      <section class="act__step act__done" aria-live="polite">
+        <div class="act__ok"><svg><use href="#i-check"/></svg></div>
+        <h2 class="act__title">Done, <span data-name></span>! Your trial is live.</h2>
+        <p class="act__sub">An advisor will call you within 10 minutes from a Cancún (998) number to help you issue your first invoice.</p>
+        <ul class="act__list">
+          <li><i></i>Creating your account</li>
+          <li><i></i>Activating Premium for 7 days</li>
+          <li><i></i>Loading SAT catalogs</li>
+          <li><i></i>Assigning your advisor</li>
+        </ul>
+        <div class="act__redirect" style="flex-direction:column;align-items:stretch">
+          <div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><span>Taking you to your platform in <b><span data-sec>6</span> s</b></span><button type="button" class="link-arrow" data-go>Go now <svg><use href="#i-arrow"/></svg></button></div>
+          <div class="act__bar"><i></i></div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="act__aside">
+      <figure class="media"><img src="../../assets/people/p03_contadora.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" data-src="../../assets/vid/portrait-contadora.mp4" poster="../../assets/people/p03_contadora.jpg"></video></figure>
+      <div class="ui-float" style="display:flex;align-items:center;gap:12px">
+        <span class="ui-stamp" style="padding:8px"><svg><use href="#i-stamp"/></svg></span>
+        <div style="flex:1"><b style="display:block;font-size:13.5px">Invoice A-1042 stamped</b><span class="ui-uuid">UUID 6F2C…A91E · CFDI 4.0</span></div>
+        <span class="tag tag--ok">Sent</span>
+      </div>
+      <h4>Your first invoice, with a human by your side.</h4>
+      <ul>
+        <li class="check">Full Premium: unlimited folios during the trial</li>
+        <li class="check">Phone guidance in under 10 minutes</li>
+        <li class="check">All you need is your RFC, e.firma and CSD</li>
+      </ul>
+    </aside>
+  </div>
+</div>
+
+<script src="../../assets/js/fx.js" defer></script>
+
+<script src="../../assets/js/v2.js" defer></script>
+</body>
+</html>
