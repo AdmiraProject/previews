@@ -1,4 +1,3 @@
-/* Baronil v2 — Mack Weldon structure. Header/mega, drawer, search, media loops, carousels, cards, reviews, PDP, shop filters. */
 (function () {
   'use strict';
   var V = window.V2 || {}, B = window.BARONIL || { products: [], colors: {}, fits: {}, cats: {}, contact: {} };

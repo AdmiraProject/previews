@@ -1,26 +1,23 @@
-/* ==========================================================================
-   Baronil v1 — MeUndies structure 1:1 (home · PDP · collection), Baronil skin
-   Tokens map MeUndies roles → Baronil palette (see templates/v1/BUILD_NOTES.md)
-   ========================================================================== */
+
 :root{
   /* colour roles */
-  --canvas:#FBFAF7;          /* MeUndies #fffbf1 page canvas */
+  --canvas:#FBFAF7;          
   --white:#fff;
-  --tile:#F4F2EE;            /* MeUndies #d4bea5 product backdrop → Baronil photo backdrop (exact, per PHOTOS.md) */
+  --tile:#F4F2EE;            
   --tint-img:#D9DCF3;        /* tint photo backdrops measure #D8DBF2–#DBDFF6 → banner/club fields match the art */
   --sand-img:#EBDDCB;
-  --row:#EFEDE8;             /* MeUndies #f2efe9 nav row / mega / size chips */
-  --strip:#EDEFF8;           /* MeUndies #f7f0e6 value + press strips → soft Baronil blue tint */
-  --tint:#E8EAF6;            /* MeUndies #e4d8c1 review band / cards → Baronil blue tint */
+  --row:#EFEDE8;             
+  --strip:#EDEFF8;           
+  --tint:#E8EAF6;            
   --tint-2:#C9CDE8;
-  --ink:#020A69;             /* MeUndies #1e1e1d UI black + #000 text → Baronil blue */
+  --ink:#020A69;             
   --ink-2:#01074D;
   --muted:#4B4F6E;           /* gray-800 */
   --soft:#7D80A0;
   --line:#D3D5E2;            /* gray-300 dividers */
   --line-2:#ABAEC6;          /* gray-400 */
   --track:#DEE0EC;           /* star track */
-  --red:#D11523;             /* MeUndies lime #d9ff6e accent → Baronil red, SOLID only, marquee only */
+  --red:#D11523;             
   --grey:#3F3F3F;
   /* type */
   --f:"Montserrat",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
@@ -698,9 +695,7 @@ html.menu-lock,html.bag-lock,html.drawer-lock{overflow:hidden}
 .hero--dark .hero__link{max-width:var(--container);margin-inline:auto}
 @media (min-width:1441px){.hero--dark .hero__media{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 22%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent 0,#000 22%,#000 88%,transparent)}}
 
-/* ==========================================================================
-   NEW HERO · Grüns "three-prop" split hero (measured 1440 + 390), Baronil skin
-   ========================================================================== */
+
 :root{--hero-bg:#F7F5F0;--near:#14161F;--blob:#C9CDE8}
 .gh{background:var(--hero-bg);padding:64px 80px 80px;overflow:hidden}
 .gh__in{max-width:1280px;margin-inline:auto;display:flex;align-items:center;gap:40px}
@@ -759,9 +754,7 @@ html.menu-lock,html.bag-lock,html.drawer-lock{overflow:hidden}
 }
 @media (min-width:600px) and (max-width:991px){.gh__card{max-width:640px;margin-inline:auto}.gh__media{width:100%;max-width:640px;margin-inline:auto}}
 
-/* ==========================================================================
-   WHOOP-style customer wall (masonry 3-col / 2-col), Baronil skin
-   ========================================================================== */
+
 .wall{position:relative;background:#fff;padding:100px 0 96px;margin-top:24px}
 .wall__in{max-width:calc(1242px + 32px);margin-inline:auto;padding:0 16px}
 .wall__h{max-width:1030px;font-size:clamp(44px,6.1vw,88px);line-height:.95;font-weight:800;letter-spacing:-.045em;color:var(--ink)}
@@ -836,10 +829,7 @@ html.menu-lock,html.bag-lock,html.drawer-lock{overflow:hidden}
   .wall__float{bottom:20px;padding:16px 32px;font-size:14px}
 }
 
-/* ==========================================================================
-   Grüns "social fan" (orbit geometry measured: card 300×420 r24 / 230.8×323.1 r18.47,
-   orbit Ø min(196vw,2000px) top 70% · mobile Ø min(460vw,2000px) top 65%)
-   ========================================================================== */
+
 .fan{position:relative;height:900px;overflow:hidden;background:var(--canvas)}
 .fan__arc{position:absolute;left:50%;top:calc(70% + 150px);width:min(150vw,1560px);height:auto;transform:translateX(-50%);fill:var(--tint);z-index:1;pointer-events:none}
 .fan__content{position:absolute;left:50%;top:72px;transform:translateX(-50%);z-index:20;width:100%;padding:0 32px;display:flex;flex-direction:column;align-items:center;gap:16px}
@@ -890,7 +880,7 @@ html.menu-lock,html.bag-lock,html.drawer-lock{overflow:hidden}
 .gh__made img{height:20px;width:auto}
 .gh__stat:first-child .gh__blob b{font-size:38px}
 @media (max-width:991px){.gh__stat:first-child .gh__blob b{font-size:28px}}
-/* section rhythm closer to MeUndies (cats 636, club 888) */
+
 .cats-sec{margin-bottom:40px}
 .club__list{gap:56px}
 /* mega menu: last link never orphans its arrow */
@@ -1037,10 +1027,7 @@ html.menu-lock,html.bag-lock,html.drawer-lock{overflow:hidden}
 .ftr__links{gap:6px 18px}
 .gh__sticker small{letter-spacing:.08em;white-space:nowrap;font-size:.56em}
 
-/* ==========================================================================
-   PDP EXPANSION (PDP_SPEC.md), MeUndies language: light Montserrat, 16px gutter,
-   centred 40/300 H2s, radius 8 media, #F4F2EE backdrops, 1px #D3D5E2 rules
-   ========================================================================== */
+
 .crumb{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding-top:14px;padding-bottom:0;font-size:12px;line-height:16px;color:var(--muted)}
 .crumb a:hover{text-decoration:underline;text-underline-offset:3px}
 .crumb [aria-current]{color:var(--ink)}
@@ -1242,9 +1229,7 @@ html.menu-lock,html.bag-lock,html.drawer-lock{overflow:hidden}
 .pdp__fact--made strong{color:#fff}
 .pdp__fact--made span{color:rgba(255,255,255,.75)!important}
 
-/* ==========================================================================
-   Measured parity pass vs meundies.com (scripts/parity.mjs)
-   ========================================================================== */
+
 /* pills use the same infinite radius Tailwind emits */
 .btn,.gh__btn,.tile__qa,.badge.is-pill,.pill,.uc__chip,.opt__chip,.wall__float,.bag__cta,.rv__pill,.nav__lang,.fitc__here{border-radius:calc(infinity * 1px)}
 .nl input{border-radius:calc(infinity * 1px) 0 0 calc(infinity * 1px)}
@@ -1263,7 +1248,7 @@ html.menu-lock,html.bag-lock,html.drawer-lock{overflow:hidden}
 .val__s{line-height:normal}
 @media (max-width:1180px) and (min-width:768px){.vals{padding:16px 24px 15px}.val__t{font-size:20px;line-height:28px}}
 @media (max-width:767px){.vals{padding:8px 24px}.vals__in{padding:0}.val__t{font-size:10px;line-height:13px;font-weight:600}}
-/* tile: MeUndies spacing (image +8 eyebrow 20, name 28, +4 price 28, +4 colour 24) */
+
 .tile__eb{font-weight:300}
 .tile__clr{margin-top:0}
 .tile__qa{letter-spacing:0;padding:8px 16px 8px 12px}
@@ -1358,7 +1343,7 @@ html.menu-lock,html.bag-lock,html.drawer-lock{overflow:hidden}
 .acc__i summary:hover .acc__t{text-decoration:underline;text-underline-offset:4px}
 .revband{padding:32px 16px 40px}
 .revband__act{display:flex;justify-content:center;margin-top:16px}
-/* Grüns parity (live 2026-11-20) */
+
 .gh__h{font-weight:700}
 .gh__h strong{font-weight:700}
 .gh__card{border-radius:0;overflow:visible;background:none}
@@ -1375,7 +1360,7 @@ html.menu-lock,html.bag-lock,html.drawer-lock{overflow:hidden}
   .fan{height:740px}
 }
 
-/* WHOOP parity */
+
 .wall__grid{gap:8px}
 .wcard{gap:16px}
 .wcard__foot{display:flex;flex-direction:column}
@@ -1402,13 +1387,11 @@ html.menu-lock,html.bag-lock,html.drawer-lock{overflow:hidden}
 .fan__content{padding:0 16px;gap:19px}
 @media (max-width:991px){.fan{height:791px}}
 
-/* strict parity (coordinator standard 2026-11-20): WHOOP wall heading = their 6.944vw / 11.99vw size + line-height */
+
 .wall__h{font-size:6.944vw;line-height:.8496}
 @media (max-width:767px){.wall__h{font-size:11.99vw;line-height:10.42vw}.wcard__label{padding:8px 16px;letter-spacing:.02em}}
 
-/* ==========================================================================
-   Strict parity vs gruns.co (2026-11-20 standard)
-   ========================================================================== */
+
 .gh,.fan{font-size:20px;line-height:32px}
 .gh__h{margin-inline:auto}
 .gh__h p{margin:0;font:inherit;letter-spacing:inherit;color:inherit}
@@ -1439,10 +1422,8 @@ html.menu-lock,html.bag-lock,html.drawer-lock{overflow:hidden}
 @media (max-width:991px){.gh__blob{width:72px;height:64px}.gh__card{aspect-ratio:358/267}}
 @media (max-width:991px){.fan__l{display:inline}.gh__dot{display:none}}
 
-/* ==========================================================================
-   Strict parity vs meundies.com home (2026-11-20 standard)
-   ========================================================================== */
-/* value strip: desktop title/sub (hidden on mobile, keep their 24/32 metrics) + mobile-only label, like MeUndies' two DOMs */
+
+
 .val__m{display:none}
 .plats__l{display:block}
 .plats__seal{display:block;aspect-ratio:68/44;background:url(../brand/hecho-rd-white.png) center/contain no-repeat}
@@ -1462,9 +1443,7 @@ html.menu-lock,html.bag-lock,html.drawer-lock{overflow:hidden}
 .plats__seal{box-sizing:border-box;height:46px;width:86px;padding:6px 16px;background:var(--ink) url(../brand/hecho-rd-white.png) center/contain no-repeat;background-origin:content-box;aspect-ratio:auto}
 @media (max-width:900px){.plats__seal{height:32px;width:58px;padding:4px 10px}}
 
-/* ==========================================================================
-   Strict parity vs meundies.com PDP (2026-11-20 standard)
-   ========================================================================== */
+
 .pdp__pr{margin:0;font-size:18px;line-height:28px}
 .pdp__stars{text-decoration:none}
 .pdp__tabs a{padding:8px 4px}
@@ -1479,9 +1458,7 @@ html.menu-lock,html.bag-lock,html.drawer-lock{overflow:hidden}
 @media (min-width:768px){.wall__h{font-size:min(6.944vw,100px)}}
 .gh__card{aspect-ratio:620/470}@media (max-width:991px){.gh__card{aspect-ratio:358/272}}
 
-/* ==========================================================================
-   Banner slider: full-bleed like MeUndies (1440x480 / 390x585 photo), live HTML copy over a soft gradient (2026-11-20 decision)
-   ========================================================================== */
+
 .gh__h{margin:0}
 .gh__hl{display:block}
 .bnr__slide{display:block;color:#fff;background:var(--ink)}

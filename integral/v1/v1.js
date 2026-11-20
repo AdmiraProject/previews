@@ -1,5 +1,3 @@
-/* Integral Design · v1 (Tom Howley structure). Vanilla: mega menu, drawer, hero sequence,
-   Slick-style sliders (infinite, 2-up / 4-up, bar dots, drag; unslick ≤767), tabs, video IO, reels lightbox. */
 (function () {
   'use strict';
   var html = document.documentElement;

@@ -1,8 +1,3 @@
-/* Inbasix shared commerce engine (all versions).
-   Luuna-style flow: Agregar al carrito → drawer → "Finalizar compra" → popup (nombre, teléfono, correo) → checkout.
-   - Lines with a real price  → real Shopify cart permalink on inbasixmedical.com with the checkout prefilled.
-   - Lines "precio bajo cotización" (price 0 / 99,999,999 placeholders on their store) → quote sent to Inbasix WhatsApp.
-   Data: window.IBX (assets/data.js, scraped from inbasixmedical.com). Markup is themed by each version's CSS. */
 (function () {
   const P = window.IBX || [];
   const byH = Object.fromEntries(P.map(p => [p.h, p]));

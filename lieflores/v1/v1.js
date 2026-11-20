@@ -1,5 +1,3 @@
-/* Liefloré v1 (bouqs.com structure) — home + PDP behaviour.
-   Uses window.LFK from ../assets/lf-core.js for data, cart drawer and checkout popup. */
 (function () {
   const K = window.LFK;
   const $ = (s, r) => (r || document).querySelector(s);
@@ -159,7 +157,6 @@
 
   const TITLE = { 'bouquet-de-rosas-clasica': 'Bouquet de rosas clásica', 'bouquet-corazon-de-rosas': 'Bouquet corazón de rosas', 'bouquet-de-peonias': 'Bouquet de peonías', 'osito-con-bombones': 'Osito con chocolates Ferrero Rocher', 'orquidea-cimbidium-en-maceta': 'Orquídea cymbidium en maceta' };
   const T = p => TITLE[p.h] || p.t;
-  /* ---------- product card (bouqs 260 card anatomy) ---------- */
   function card(p) {
     const c = cheapest(p); const hasR = K.priceLabel(p).startsWith('Desde');
     return `<article class="pc">
@@ -418,7 +415,6 @@
     const dt = $('[data-desc-tog]', root);
     if (dt) dt.addEventListener('click', () => { const o = $('[data-desc]', root).classList.toggle('is-open'); dt.setAttribute('aria-expanded', String(o)); dt.textContent = o ? 'Leer menos' : 'Leer más'; });
 
-    /* zone gate → date picker (bouqs zip gate adapted) */
     const zipOk = $('[data-zip-ok]', root), dateB = $('[data-date-btn]', root), dateT = $('[data-date-txt]', root), dp = $('[data-dp]', root), hint = $('[data-date-hint]', root);
     const sel = $('[data-zip-sel]', root);
     const why = $('[data-why]', root), whyT = $('[data-why-t]', root);

@@ -1,4 +1,4 @@
-/* Cubre Pack v1 — FrogTape homepage structure, Cubre Pack skin. Shared by /v1/ (ES) and /v1/en/ (EN). */
+
 :root{
   --red:#ED1718;--red-h:#C8100F;--ink:#1D1A1C;--gray:#3C373B;--cream:#F9F6F2;--band:#2A2628;
   --mut:#6B666A;--line:#E0E0E0;--line2:#ECEAE8;--dot:#E5E7EB;--btn-hb:#CCD6DB;
@@ -50,7 +50,7 @@ sup{font-size:.5em;line-height:0}
 .ulink:hover,.ulink:focus-visible{text-decoration-color:var(--red)}
 :focus-visible{outline:2px solid var(--red);outline-offset:3px}
 
-/* torn-tape CTA (FrogTape "Where to Buy") */
+
 .tape{--c:var(--red);position:relative;display:inline-flex;align-items:center;height:38px;padding:0 19px;margin-left:4px;background:var(--c);color:#fff;font-size:16px;font-weight:700;white-space:nowrap;transition:background-color .3s var(--ease)}
 .tape::before{content:"";position:absolute;top:0;width:4px;height:100%;background:linear-gradient(-137deg,var(--c) 5px,transparent 0),linear-gradient(320deg,var(--c) 5px,transparent 0);background-size:8px 8px;background-position:left top}
 .tape::before{left:-4px}

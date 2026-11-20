@@ -40,7 +40,6 @@
   safe('header', function () {
     onScroll.push(function (y) { hdr.classList.toggle('is-scrolled', y > 8); });
     var groups = $$('.nav > ul > li').filter(function (li) { return $('.dd', li); });
-    // like the benchmark, a closed panel is [hidden] (out of the tab order); it is unhidden first, then faded in
     var shut = function (panel, tog) {
       if (!panel.classList.contains('is-open')) return;
       panel.classList.remove('is-open'); tog.setAttribute('aria-expanded', 'false');
@@ -196,15 +195,12 @@
       reel.setAttribute('data-phase', 'burst');
       w.setTimeout(function () { reel.setAttribute('data-phase', 'drift'); setPaused(false); }, (maxBd + 0.72) * 1000 + 150);
     };
-    // like the benchmark (measured: its burst starts at the load event): wait for load and for the tiles in view to decode,
     // so they are painted while they scale out; capped so a slow image never holds the wall back
     var kick = function () {
       var fr = reel.getBoundingClientRect();
       var media = $$('.reel__set:last-child .tile img', reel).filter(function (im) { var r = im.getBoundingClientRect(); return r.left < fr.right && r.right > fr.left; });
       var waits = media.map(function (im) { return im.decode ? im.decode().catch(function () {}) : Promise.resolve(); });
       var cap = new Promise(function (res) { w.setTimeout(res, 1500); });
-      // the benchmark's burst begins at its load event, measured 460 to 890 ms after navigation; ours loads sooner,
-      // so it never starts before 800 ms, which lines the burst up with the benchmark's in side-by-side recordings
       Promise.race([Promise.all(waits), cap]).then(function () {
         w.setTimeout(function () { w.requestAnimationFrame(function () { w.requestAnimationFrame(start); }); }, Math.max(0, 800 - w.performance.now()));
       });

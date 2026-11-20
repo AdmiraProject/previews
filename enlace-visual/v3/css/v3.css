@@ -1,6 +1,4 @@
-/* Enlace Visual v3 — sofiasalud.com home structure, Enlace skin.
-   Measurements in comments refer to Sofía @1440 (research/benchmarks/sofia/SPEC.md). Outfit stands in for Moderat:
-   same px sizes keep cap heights; letter-spacing (--lsb/--lsr) restores Moderat's line lengths (measured +2.4% bold, +4% regular). */
+
 :root {
   --acc: #0B67CD; --acc-d: #073F80; --ink: #0A1F3C; --grey: #5A6B82; --cream: #F3F7FC; --lav: #CFE0F6; --mint: #D9ECFB; --peach: #E3EEFB;
   --line: #E6ECF3; --line2: #D3DCE8; --sky: #99BBE5; --legal: #9AA8BA; --navy: #0A1F3C;
@@ -267,7 +265,7 @@ html.js .ci[data-reveal].in { opacity: 1; transform: none; }
 .gchip .st:first-of-type { margin-left: 0; }
 .gchip span { color: var(--grey); }
 .gchip:hover span { text-decoration: underline; }
-/* Luuna coverflow (core.js positions the cards) */
+
 .cf { position: relative; height: 520px; margin-top: 24px; overflow: hidden; }
 .cf-track { position: absolute; inset: 0; }
 .cf-c { position: absolute; left: 50%; top: 50%; width: 250px; height: 350px; margin: 0; border-radius: 16px; overflow: hidden; background: var(--navy); cursor: pointer; transition: transform .6s var(--ease), width .6s var(--ease), height .6s var(--ease), opacity .4s, box-shadow .6s; }

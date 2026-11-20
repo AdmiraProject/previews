@@ -1,4 +1,4 @@
-/* Ultra Techos v6 — B2B landing. Flow: energiareal.mx · Craft: Attio (H1 64/60.8 -1.28, H2 40/44 w500, 1px grid rails) · Skin: Figma brand */
+
 :root{
   --navy:#00263A; --navy2:#001A28; --navy3:#0A3349; --ink:#0B1D28; --orange:#E77204; --orange2:#F7931E;
   --cream:#FCF9F3; --paper:#F7F3EC; --grey:#5B6B78; --grey2:#8796A1; --line:#E6E1D8; --line-d:rgba(255,255,255,.12);
@@ -17,7 +17,7 @@ h1,h2,h3,h4{margin:0;font-family:var(--fh);text-wrap:balance}
 p{margin:0}
 :focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:6px}
 
-/* grid rails (Attio) */
+
 .gl{display:flow-root;position:relative;max-width:var(--max);margin:0 auto;padding-inline:max(32px,env(safe-area-inset-left,0px)) max(32px,env(safe-area-inset-right,0px))}
 section{position:relative}
 .sys,.cmp,.ind,.cases,.eng,.voices,.fichas,.faq{border-top:1px solid var(--line)}
@@ -279,7 +279,7 @@ section{position:relative}
 .logi__vid figcaption{display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
 .logi__sound{flex:none;font:600 12px/1 var(--fh);color:#fff;background:rgba(255,255,255,.18);backdrop-filter:blur(6px);padding:9px 12px;border-radius:999px}
 
-/* 11 SOCIAL PROOF — Mill "What they're saying" bento, Attio skin */
+
 .proof{background:var(--cream);border-top:1px solid var(--line)}
 .proof>.gl{border-inline:1px solid var(--line);padding-bottom:110px}
 .proof__head{text-align:center;max-width:780px;margin:0 auto;padding-top:110px}

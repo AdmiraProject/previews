@@ -152,7 +152,6 @@
       return `<div class="rsum-i"><img class="rsum-l ${k}" src="${K.BASE}assets/brand/reviews/${WORD[k]}" alt="${esc(pl.name || k)}" loading="lazy"><b>${avg.toFixed(1)}</b>${starRow(Math.round(avg), pl.starColor || '#FBBC04', 'rs rs-lg')}<span>en ${esc(pl.name || k)}</span></div>`; }).join('');
   }
 
-  /* ---------- header: mega menus (click, like the benchmark) ---------- */
   function mega() {
     const items = $$('.nav-i');
     const close = except => items.forEach(i => { if (i !== except) { i.classList.remove('is-open'); const b = i.querySelector('.nav-b'); b && b.setAttribute('aria-expanded', 'false'); } });
@@ -188,7 +187,6 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && mm.classList.contains('is-open')) set(false); });
   }
 
-  /* ---------- marquees (linear, px/s like the benchmark) ---------- */
   function marquees() {
     $$('[data-mq]').forEach(t => {
       const pxs = +t.dataset.mq || 60;

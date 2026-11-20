@@ -1,4 +1,3 @@
-/* Ultra Techos v3 — interactions (Jetson motion model) */
 (() => {
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -38,7 +37,6 @@
   const closeMM = () => { mm.classList.remove('open'); mm.setAttribute('aria-hidden', 'true'); };
   $('#mclose').addEventListener('click', closeMM); $$('#mmenu a, #mmenu button').forEach(a => a.addEventListener('click', closeMM));
 
-  /* ---------- hero question bar (Tesla "Ask a question" → real FAQ answers) ---------- */
   const FAQ = [
     'Sí. Los polímeros de Ultra Techos no tienen metal: no se oxidan con la humedad ni con el salitre. Por eso los elegimos para casas de playa y para un hotel dentro del Parque Nacional Tortuguero.',
     'Evaluamos tu proyecto: podemos instalar nosotros o compartirte un listado de instaladores certificados.',
@@ -118,7 +116,6 @@
     if (y > lastY + 4 && y > 140 && !mega.classList.contains('open')) hdr.classList.add('hide');
     else if (y < lastY - 4) hdr.classList.remove('hide');
     hdr.classList.toggle('scrolled', y > 40); lastY = y;
-    // hero → inset rounded card (Jetson)
     if (!m) {
       const p = clamp(y / (vh * .3));
       const ins = p * 20;
@@ -160,7 +157,6 @@
       qcard.style.height = (418 + (H - 418) * e) + 'px';
       quote.classList.toggle('full', p > .82);
     } else { qcard.style.width = ''; qcard.style.height = ''; quote.classList.add('full'); }
-    // offer modal once (Jetson shows it while browsing)
     if (!offered && y > (document.documentElement.scrollHeight - vh) * .34) { offered = true; if (!store.get('ut-offer')) { store.set('ut-offer', '1'); openOv($('#offer')); } }
   };
   const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } };

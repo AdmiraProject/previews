@@ -1,12 +1,10 @@
-/* Baronil v3 — Bombas 1:1 structural rebuild in Baronil's brand.
-   Measurements from research/benchmarks/bombas/SPEC.md (1440 / 390). Montserrat only:
-   UI/body → 400/500/700/800 · editorial "light serif" role → 300 tight · poster caps role → 900 lh .8 */
+
 :root{
   --f: "Montserrat", "Montserrat Fallback", Arial, sans-serif;
   /* brand */
   --blue:#020A69; --blue-d:#01064A; --blue-h:#0B178A; --blue-m:#3E4FA8; --tint:#E8EAF6; --tint-2:#C9CDE8;
   --red:#D11523; --grey:#3F3F3F; --white:#fff;
-  /* neutrals (Bombas roles → Baronil) */
+  
   --ink:#0C0E2E; --page:#FBFAF7; --cream:#F4F2EE; --off:#ECE9E3; --grey-20:#E4E0D8; --ph:#F4F2EE; --warm:#E8EAF6;
   --muted:#5C5B66; --line:#D8D4CC;
   --cta-dark:var(--blue); --backdrop:rgba(1,6,74,.55);
@@ -19,7 +17,7 @@
   --t-btn:border-radius .3s var(--ease),background-color .3s var(--ease),box-shadow .3s var(--ease),color .3s var(--ease);
   --sh-in:inset 0 4px 16px 4px rgba(2,10,105,.02);
   --sh-plate:0 0 6px rgba(2,10,105,.06),-3px 10px 20px rgba(2,10,105,.07);
-  /* type scale (vw-scaled like Bombas content cards) */
+  
   --fs-hero:clamp(34px,4.8vw,69.12px);
   --fs-number:clamp(44px,5.5vw,79.2px);
   --fs-stmt:clamp(38px,4.45vw,64px);
@@ -238,7 +236,7 @@ legend{padding:0}
   .prow__ctas-m .btn{font-size:14px;padding:0 10px;white-space:normal;text-align:center;line-height:1.1}
 }
 
-/* Product card (Bombas anatomy + emboss hover) */
+
 .card{position:relative;display:flex;flex-direction:column;min-width:0}
 .card::before{content:"";position:absolute;inset:-12px;background:#fff;border-radius:var(--r-plate);box-shadow:var(--sh-plate);opacity:0;transition:opacity .25s ease;z-index:-1}
 .card{z-index:0}
@@ -661,7 +659,7 @@ legend{padding:0}
 .toast{position:fixed;left:50%;top:76px;transform:translate(-50%,-20px);background:var(--blue);color:#fff;padding:10px 16px;border-radius:12px;font:700 14px/1 var(--f);opacity:0;transition:opacity .25s,transform .35s var(--ease);z-index:1800;pointer-events:none}
 .toast.is-on{opacity:1;transform:translate(-50%,0)}
 
-/* reveal-on-load fade for images (Bombas: opacity .1s ease-in) */
+
 .card__img:not(.card__img--hover),.media__img,.gal__s img{animation:fadeIn .3s ease-in both}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 
@@ -707,7 +705,7 @@ html.bag-lock .float,html.lock .float{opacity:0;pointer-events:none}
 @media (max-width:767px){.tile__foot{height:84px}.tile__foot .tile__l{font-size:28px}}
 /* media zoom (feature cards cropping a product still) */
 .media[style*="--zoom"] .media__img{transform:scale(var(--zoom));transform-origin:var(--pos)}
-/* review video strip (WHOOP-style UGC cards) */
+
 .revs__vids{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);margin-bottom:var(--gap)}
 .rvv{position:relative;aspect-ratio:3/4;border-radius:var(--r-btn);overflow:hidden;background:#1a1d3a;color:#fff;isolation:isolate}
 .rvv .media__img,.rvv .media__v{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -889,7 +887,7 @@ html.bag-lock .float,html.lock .float{opacity:0;pointer-events:none}
 .gal__s img{cursor:zoom-in}
 @media (max-width:1023px){.gal__zoom{right:16px;top:16px}}
 
-/* section rhythm (Bombas bands: 64/72) */
+
 .feat--det{background:var(--warm)}
 .ugcr,.fitl,.packs,.faq{padding:64px 0 72px}
 .ugcr__head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:28px}
@@ -1028,7 +1026,7 @@ html.sbar-on .float{opacity:0;pointer-events:none}
 @media (max-width:767px){.pack{grid-template-columns:96px 1fr;gap:14px}.pack__img{width:96px}.pack--amz{grid-template-columns:110px 1fr}.pack--amz .pack__img{width:110px}}
 @media (max-width:767px){.feat--det .feat__m{aspect-ratio:4/3}.feat--det .feat__grid{gap:28px}}
 
-/* ───────── measured parity pass (scripts/parity.mjs vs live Bombas) ───────── */
+
 body{line-height:1}
 p,li,dd,td,th,label,legend,figcaption,summary,blockquote{line-height:1.33}
 button,.btn,.atc,.chip{line-height:1.15}
@@ -1099,7 +1097,7 @@ button,.btn,.atc,.chip{line-height:1.15}
 @media (max-width:767px){.ftr__col{min-height:0}.band__title{margin-bottom:32px}}
 .fit__h{display:inline-block}
 .card__info{margin-bottom:6px}
-@media (max-width:767px){.ql__grid{padding:0;gap:12px}} /* audit #11 not applied: measured Bombas tile is 189px = flush (parity quicklink-tile) */
+@media (max-width:767px){.ql__grid{padding:0;gap:12px}} 
 /* parity round 3 — 390 */
 @media (max-width:767px){
   .alert{font-size:14px;line-height:1.33}
@@ -1123,7 +1121,7 @@ button,.btn,.atc,.chip{line-height:1.15}
   .band__grid{gap:47px}
   .impact__side{min-height:401px}
 }
-/* parity — PDP (vs Bombas Product-styled) */
+
 @media (min-width:1024px){
   .pdp{padding:0 0 0 max(48px,calc((100% - 1424px) / 2 + 40px));grid-template-rows:minmax(996px,auto)}
   .pdp__buy{justify-self:center;width:424px;padding:24px 0}
@@ -1211,7 +1209,7 @@ inset shadow) ───────── */
 .prow__links-m{display:none}
 @media (max-width:1023px){.prow__links{flex-direction:row}}
 @media (max-width:767px){.prow__links{display:none}.prow__links-m{display:grid;grid-template-columns:1fr 1fr;gap:12px;grid-column:1/-1}.prow__links-m .bx{font-size:14px;padding:0 10px;white-space:nowrap;height:40px}}
-/* radii as clip (Bombas bakes corners into the image; computed border-radius stays 0) */
+
 .tile,.fit,.card__media{border-radius:0}
 .tile{clip-path:inset(0 round 12px)}
 .fit{clip-path:inset(0 round 12px)}
@@ -1220,7 +1218,7 @@ inset shadow) ───────── */
 .card__qa-b{display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
 .sw{display:inline-block;cursor:pointer}
 .size{cursor:pointer}
-/* hero: the media box is the full 720×540 (4:3) column like Bombas; the loop sits in the keyline card inside */
+
 @media (min-width:768px){
   .hero__media{padding:0}
   .hero__m{width:100%;max-width:none;aspect-ratio:4/3;border-radius:0;box-shadow:none;background:var(--blue)}
@@ -1234,7 +1232,7 @@ inset shadow) ───────── */
 .impact__bt{z-index:1}
 .band__sq{display:block;width:100%;max-width:1328px;height:29px;margin-top:8px}
 @media (max-width:767px){.impact__img{display:none}.band__sq{height:24px}}
-/* PDP: Bombas DOM order (buy box first) — gallery stays first visually on mobile */
+
 @media (max-width:1023px){.pdp__mhead{order:0}.pdp__gal{order:1}.pdp__buy{order:2}}
 @media (min-width:1024px){.pdp__buy{grid-column:1/6}.pdp__gal{grid-column:6/13}}
 .info__t{font:700 16px/1.15 var(--f);padding-top:4px;margin:0}

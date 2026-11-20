@@ -69,7 +69,6 @@
     pos(false);
   });
 
-  /* auto-scrolling strip ≈120px/s (measured on the benchmark), infinite, pause on hover, draggable */
   $$('[data-strip]').forEach(v => {
     const list = $('.strip-l', v); if (RM) return;
     $$('.ac', list).forEach(c => { const d = c.cloneNode(true); d.setAttribute('aria-hidden', 'true'); list.appendChild(d); });

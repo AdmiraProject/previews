@@ -1,14 +1,14 @@
-/* Inbasix Medical · v1 — structure 1:1 with the measured benchmark */
+
 :root{
   /* PALETTE v2 (PALETTE.md): Ink for strong roles, Ice for light roles, cyan only as a small accent */
-  --k:#0F1B4C;         /* Ink: buttons, dark blocks (benchmark black + yellow-button roles) */
+  --k:#0F1B4C;         
   --brand:#1E2D7D;     /* logo navy: hovers, secondary headings */
   --acc:#00BADB;       /* cyan accent: thin rules, icons, active states only */
-  --cy:#EAF6F9;        /* Ice: benchmark yellow as a light surface (header, chips, label bars) */
+  --cy:#EAF6F9;        
   --cy-h:#DCEFF4;
-  --teal:#0F1B4C;      /* benchmark PDP teal button role → Ink */
+  --teal:#0F1B4C;      
   --teal-h:#1E2D7D;
-  --navy:#0F1B4C;      /* benchmark black role → Ink */
+  --navy:#0F1B4C;      
   --navy-2:#0C1640;
   --navy-3:#091233;
   --red:#0F1B4C;       /* announcement bar → Ink (logo red never as a fill) */
@@ -989,7 +989,7 @@ ul{margin:0;padding:0;list-style:none}
 .cat.ph[data-photo="fillers"]>img{object-position:center 72%}
 @media (max-width:768px){.why{justify-content:flex-start}.why-lock{flex:0 0 119px;height:31px;margin-left:14px}.why-lock .l1{font-size:11px;line-height:11px}.why-lock .stk{left:44px;top:10px}.why-lock .stk img{width:50px}.why-list{margin-left:auto;margin-right:13px}.why-i p{font-size:7px;line-height:8.4px}}
 
-/* ================= PLP · coleccion.html (benchmark collection page: grey page, split banner, sticky icon tabs, 4×288 grid, table, FAQ) ================= */
+
 .mega-prod{flex-wrap:wrap;gap:16px 32px;max-width:1100px;margin:0 auto}
 .mega-prod a{font-size:17px}
 body:has(.plp){background:#F1F2F2}
@@ -1059,7 +1059,7 @@ body:has(.plp){background:#F1F2F2}
 .empty p{font-size:15px;color:var(--ink);margin:10px auto 0;max-width:460px}
 .empty div{display:flex;gap:12px;justify-content:center;margin-top:22px;flex-wrap:wrap}
 .empty .btn-y{padding:14px 24px}
-/* guide table (benchmark size table) */
+
 .guide{max-width:1240px;margin:0 auto;padding:84px 20px 0}
 .guide h2{font-size:24px;font-weight:700;line-height:36px;color:rgba(0,0,0,.87)}
 .guide>p{font-size:16px;line-height:24px;color:rgba(0,0,0,.87);margin-top:20px}
@@ -1073,7 +1073,7 @@ body:has(.plp){background:#F1F2F2}
 .plp-faq .acc-i{border-bottom:1px solid var(--line-2)}
 .plp-faq .acc-b{color:var(--brand);font-weight:500}
 .plp~.sec-logos{background:#F1F2F2}
-/* filter drawer (same motion as the benchmark's menu drawer) */
+
 .fd{position:fixed;inset:0;z-index:350;visibility:hidden;transition:visibility 0s .2s}
 .fd.is-open{visibility:visible;transition:none}
 .fd-scrim{position:absolute;inset:0;background:rgba(15,27,76,.35);opacity:0;transition:opacity .1s}

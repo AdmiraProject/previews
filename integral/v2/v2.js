@@ -1,4 +1,3 @@
-/* Integral Design · v2 (Officine Gullo structure). Plain JS + GSAP 3.12.5/ScrollTrigger + Swiper 11.1.14. */
 (function () {
   'use strict';
   var root = document.documentElement;
@@ -109,8 +108,6 @@
     setOffsets();
     window.addEventListener('resize', setOffsets);
 
-    /* Ranges: image slider (loop, autoplay 6s) drives the text slider; bullets drive both.
-       The section is hidden ≤800px (Gullo mobile), so init only when it is displayed. */
     var initRanges = function () {
       if (initRanges.done || MQ_M.matches) return; initRanges.done = true;
       var bullets = $('#r-bullets');

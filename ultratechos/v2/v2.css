@@ -1,4 +1,4 @@
-/* Ultra Techos v2 — Tesla hero × Westlake build film × Mill reviews. Brand: Figma Fullwebsite V2.0 */
+
 :root{
   --navy:#00263A; --navy2:#001A28; --navy3:#0B3550; --orange:#E77204; --orange2:#F7931E;
   --cream:#FCF9F3; --sand:#F4EFE6; --grey:#5B6B78; --grey2:#8A97A1; --line:#E5E2DC; --white:#fff; --blue:#E6EEF6;
@@ -31,7 +31,7 @@ p{margin:0}
 .btn--hero{min-width:244px;height:48px;font-size:15px}
 .btn--wide{min-width:200px}
 
-/* promo bar (Tesla) */
+
 .promo{position:relative;z-index:60;background:#F4E5C8;color:var(--navy);text-align:center;font:500 13px/1.35 var(--fb);padding:9px var(--gut)}
 .promo strong{font-weight:700}
 .promo__link{text-decoration:underline;text-underline-offset:2px;font-weight:600}
@@ -58,7 +58,7 @@ p{margin:0}
 .nav__burger[aria-expanded=true] span:last-child{transform:translateY(-4px) rotate(-45deg)}
 .mnav{display:none}
 
-/* ── HERO (Tesla /solarpanels geometry: title at ~15vh, sub, 2 CTAs, footer bar) */
+
 .hero{position:relative;height:100svh;min-height:640px;max-height:1100px;margin-top:-1px;overflow:hidden;color:#fff;background:var(--navy)}
 .hero__slides,.hero__slide{position:absolute;inset:0;margin:0}
 .hero__slide{opacity:0;transition:opacity 1.4s var(--ease)}
@@ -152,7 +152,7 @@ p{margin:0}
 .mat__chips button:hover{transform:translateY(-2px)}
 .mat__chips button[aria-selected=true]{background:var(--navy);color:#fff}
 
-/* ── BENEFITS (Tesla card row) */
+
 .ben{padding:120px 0 100px;background:var(--cream)}
 .ben__head{max-width:760px}
 .ben__head h2{font:700 clamp(32px,3.4vw,48px)/1.1 var(--fh);letter-spacing:-.015em}
@@ -185,7 +185,7 @@ p{margin:0}
 .pcard__cap span{font:600 13px/1 var(--fb);letter-spacing:.6px;text-transform:uppercase;opacity:.85}
 .pcard__cap h3{font:700 30px/1.15 var(--fh);margin-top:8px}
 
-/* ── REVIEWS (Mill 1:1: section m-5 rounded-xl, 64px/104% title, 4×294 cols gap16, 12px radii) */
+
 .rev{margin:0 20px;padding:96px 0 120px;border-radius:12px;background:#fff}
 .rev__head{text-align:center;max-width:860px;margin:0 auto;padding:0 var(--gut)}
 .rev__head h2{font:500 clamp(36px,4.45vw,64px)/1.04 var(--fh);letter-spacing:-.01em;color:#0E1E28}
@@ -409,7 +409,7 @@ p{margin:0}
   .ticker__track{animation:none}
 }
 
-/* ── v2.1: single hero = Westlake masthead (build film loop + chips) with Tesla/Figma copy */
+
 .mat.hero{height:100svh;min-height:680px;max-height:1100px}
 .mat__poster,.mat__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%}
 .mat__video{opacity:0;transition:opacity .8s}

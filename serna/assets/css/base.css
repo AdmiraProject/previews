@@ -52,7 +52,7 @@ ul, ol { list-style: none; }
 .src { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--mute); }
 .src svg { width: 16px; height: 16px; }
 
-/* ── Luuna-style testimonial coverflow (shared component, themed per version) ── */
+
 .cf { position: relative; }
 .cf-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 40px; }
 .cf-more { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 15px; color: var(--ink); white-space: nowrap; }

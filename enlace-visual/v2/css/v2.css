@@ -1,5 +1,4 @@
-/* Enlace Visual — v2 (One Medical structure). Measured from research/benchmarks/onemedical/SPEC.md.
-   Type recalibrated for DM Serif Display (cap 0.66em vs GT Super 0.694em → ×1.05) and Outfit (≈ Ginto cap). */
+
 :root {
   --blue: #073F80;      /* jade #005450 → deep blue (pills, footer, menu) */
   --navy: #0A1F3C;      /* ink / jade-text → ink navy */
@@ -384,7 +383,7 @@ html.menu-open .burger:hover { color: var(--sky); }
 .st-part > svg { fill: var(--line); }
 .st-f { position: absolute; left: 0; top: 0; width: 90%; height: 100%; overflow: hidden; }
 .st-f svg { width: 16px; max-width: none; fill: #FBBC04; }
-/* Luuna coverflow (core.js [data-cf]) */
+
 .cf { position: relative; height: 540px; max-width: 1000px; margin: 40px auto 0; overflow: hidden; container-type: inline-size; }
 .cf-track { position: absolute; inset: 0; }
 .cf-c { position: absolute; left: 50%; top: 50%; width: 250px; height: 350px; border-radius: 16px; overflow: hidden; background: var(--navy); cursor: pointer; transition: transform .6s var(--ease), width .6s var(--ease), height .6s var(--ease), opacity .4s, box-shadow .6s; }

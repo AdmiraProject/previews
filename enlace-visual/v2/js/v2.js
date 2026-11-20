@@ -1,5 +1,3 @@
-/* Enlace Visual — v2 (One Medical structure) page behaviour.
- * Shared runtime (core.js / flow.js / reviews.js) loads first; this file only adds v2 UI. */
 (function () {
   'use strict';
   var $ = function (s, c) { return (c || document).querySelector(s); };

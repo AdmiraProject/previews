@@ -1,4 +1,3 @@
-/* Inbasix v2 — category / listing page (coleccion.html). Structure 1:1 with the benchmark catalog. */
 (function () {
   const I = window.IBK, K = window.K, { $, $$, esc, IC } = K;
   K.mountShell({ search: true, plp: true });
@@ -125,7 +124,6 @@
     const cards = slice.map(p => `<div class="c-cell">${K.pcard(p, { actions: true })}</div>`);
     if (cards.length) { if (S.page === 1) { cards.splice(Math.min(2, cards.length), 0, promoSell); if (cards.length > 7) cards.splice(6, 0, promoAsk()); } }
     $('[data-grid]').innerHTML = cards.join('') || `<div class="c-empty">${IC.search}<h3>No encontramos productos con estos filtros</h3><p>Quita algún filtro o pídele a un asesor que te ayude a encontrar el equipo que buscas.</p><div><button type="button" class="k-btn k-btn--ghost" data-clear>Limpiar filtros</button><a class="k-btn" href="${K.WA('Hola Inbasix, busco un equipo: ' + (S.q || ''))}" target="_blank" rel="noopener">Pedir cotización por WhatsApp</a></div></div>`;
-    // pagination: numbers with ellipsis like the benchmark (1 2 3 4 … N ›)
     const pg = $('[data-pag]');
     if (pages < 2) { pg.innerHTML = ''; return; }
     const nums = []; const c = S.page;
@@ -212,7 +210,6 @@
   const hs = $('.k-search-row [data-search]');
   if (hs) { hs.dataset.local = 1; hs.addEventListener('k:search', e => { S.q = e.detail; commit(true); $('.c-res').scrollIntoView({ block: 'start' }); }); }
 
-  /* floating help banner (benchmark's "¿No encuentras lo que buscas?") */
   const help = $('[data-help]'); $('[data-help-wa]').href = K.WA('Hola Inbasix, no encuentro el equipo que busco. ¿Me ayudan?');
   let dismissed = false; try { dismissed = sessionStorage.getItem('k-help-x') === '1'; } catch (er) {}
   if (!dismissed) addEventListener('scroll', function onS() { if (scrollY > 900) { help.hidden = false; removeEventListener('scroll', onS); } }, { passive: true });

@@ -1,4 +1,3 @@
-/* Cubre Pack v2 — interactions (Packhelp-structure home + full-page quote flow). Shared by ES and EN. */
 (function () {
   'use strict';
   var doc = document, root = doc.documentElement;

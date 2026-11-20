@@ -1,7 +1,4 @@
-/* Baronil v2 — structural 1:1 of Mack Weldon (home, PDP, collection) in Baronil's brand.
-   Benchmark tokens → Baronil: navy #001237 → #020A69 · interaction #0074e0 → #3446E0 (6.6:1 on white)
-   grey tile #f7f7f7 → #F3F2EE (the studio-photo backdrop, so product shots blend) · footer #2d2d2d → deep blue
-   National 2 Condensed 500 caps → Montserrat 700 caps, tightened · Untitled Sans → Montserrat 400/500/600 */
+
 :root {
   --ink: #020A69;
   --accent: #020A69;

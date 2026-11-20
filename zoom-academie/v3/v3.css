@@ -1,4 +1,4 @@
-/* Zoom Académie v3 — structural rebuild, Zoom skin. Metrics follow research/benchmarks/<bench>/SPEC.md (1440 / 390). */
+
 :root {
   --navy: #021836; --ink: #021836; --blue: #3C89F3; --blue-d: #2D74DA; --sky: #E1EEFF; --lav: #EFE8FD;
   --cream: #FCF7F3; --sand: #F3EEE8; --line: #E6E3DF; --muted: #5D6270; --white: #fff;
@@ -851,7 +851,7 @@ div.scard__media { cursor: default; }
 
 .bcard--cert .bcard__who img { width: 44px; height: 44px; padding: 0; background: none; border-radius: 50%; object-fit: contain; }
 
-/* ================= ROUND 2: benchmark typography + light hero ================= */
+
 :root { --head: "Space Grotesk", system-ui, sans-serif; --body: "Sora", system-ui, -apple-system, "Segoe UI", sans-serif; --za-font: var(--body); --za-head: var(--head); }
 .display, .h2, .h4, .h4-alt, .h5, .hstat b, .istat b, .seal b, .plan__price, .plan__name, .mega__title, .mnav__item, .addon b, .addon__p { letter-spacing: -0.02em; }
 .hero { padding: 125px 0 80px; background: var(--cream); color: var(--ink); text-align: center; overflow: visible; isolation: auto; }
@@ -872,11 +872,11 @@ div.scard__media { cursor: default; }
   .hero__sub { font-size: 16px; line-height: 24px; }
 }
 
-/* ================= ROUND 2: benchmark color system + type roles ================= */
+
 :root {
   --ink: #0E1633; --cream: #FCF7F3; --sand: #F4EDE5; --sky: #DFEDFD; --lav: #EFE8FD; --muted: #626A70; --grey-400: #A7B1B9;
-  --navy: #021836; /* nav + footer (benchmark #10284A → Zoom navy) */
-  --dark: #0E1633; /* benchmark ink bands */
+  --navy: #021836; 
+  --dark: #0E1633; 
   --trade: "Archivo", "Helvetica Neue", Arial, sans-serif; --din: "Barlow Condensed", "Arial Narrow", sans-serif;
   --za-ink: #0E1633; --za-sand: #F4EDE5; --za-tint: #DFEDFD; --za-muted: #626A70;
 }
@@ -1098,20 +1098,20 @@ body.v3 { background: #FFFFFF; color: var(--ink); font-family: var(--body); }
 .pbody { padding-top: 64px; }
 @media (max-width: 767px) { .page-program .phero { padding-bottom: 80px; } .pbody { padding-top: 0; } }
 
-/* ================= 1:1 interactions (measured on the benchmark) ================= */
+
 .nav { z-index: 12; }
 .mega { transition: max-height .3s, opacity .2s, visibility 0s .3s; }
 .has-mega.is-open .mega { transition: max-height .3s, opacity .2s; max-height: 700px; }
 .mega__in { min-height: 582px; box-sizing: border-box; }
-/* buttons: instant state change, hover = opacity .7 (benchmark) */
+
 .btn, .btn:active { transition: all 0s; transform: none; }
 .btn--primary:hover, .btn--sky:hover { background: var(--blue); color: #fff; opacity: .7; }
 .btn--secondary:hover, .btn--onwhite:hover { background: transparent; color: var(--ink); border-color: var(--ink); opacity: .7; }
 .btn--onwhite:hover { background: #fff; }
-/* cards: no hover effect on the benchmark */
+
 .pcard { transition: all 0s; }
 .pcard:hover { box-shadow: none; }
-/* lazy images fade in like the benchmark (opacity .3s) */
+
 img[loading="lazy"] { transition: opacity .3s; }
 img[loading="lazy"].is-pending { opacity: 0; }
 /* carousels: no snap, JS-animated step */
@@ -1123,7 +1123,7 @@ img[loading="lazy"].is-pending { opacity: 0; }
 .ccard { min-height: 144px; box-sizing: border-box; }
 .side__in { top: 45px; }
 .prompts span { animation: none; }
-/* inline video playback (benchmark plays posters in place) */
+
 .is-playing > video.inline-play { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 3; background: #000; border-radius: inherit; }
 .vposter.is-playing > video.inline-play { border-radius: 50px; }
 .scard__media.is-playing > video.inline-play { border-radius: 20px 20px 0 0; object-fit: contain; }
@@ -1156,14 +1156,14 @@ img[loading="lazy"].is-pending { opacity: 0; }
 .bcard--video::before, .scard__media::before, .hero__media::after { content: none; }
 .scard__media video, .scard__media img, .bcard--video video, .phero__media > img, .usp__media > img, .pwho__img, .hcard img, .flexban img, .advisor__media img { filter: none; mix-blend-mode: normal; }
 
-/* curriculum phase cards (benchmark: 4 cards, modules inside) */
+
 .cmods { padding: 0 0 24px 56px; display: grid; gap: 24px; }
 .cmod .h5 { margin-bottom: 12px; }
 .cmods .ccard__list { padding: 0; }
 .scard__media > .scard__img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; border-radius: 20px 20px 0 0; }
 @media (max-width: 767px) { .cmods { padding-left: 0; } }
 
-/* curriculum vertical rhythm = benchmark (tabs 32 · timeline 186 · info 16 · box padding 40 · banner gap 56) */
+
 .pcurr .toggle { box-sizing: border-box; height: 32px; margin-top: 39px; border: 0; box-shadow: inset 0 0 0 1px var(--line); }
 .pcurr .toggle > div { height: 32px; }
 .tl { margin-top: 0; height: 202px; display: flex; flex-direction: column; justify-content: flex-end; }
@@ -1172,7 +1172,7 @@ img[loading="lazy"].is-pending { opacity: 0; }
 .pcurr .aiban { margin-top: 56px; }
 .pwho__grid { min-height: 722px; }
 
-/* mobile section rhythm = benchmark @390 (section tops ±10px) */
+
 @media (max-width: 767px) {
   body.v3 { padding-top: 0; }
   body.v3.page-program { padding-top: 10px; }
@@ -1203,7 +1203,7 @@ img[loading="lazy"].is-pending { opacity: 0; }
 .logos__row .lg--cirque { height: 40px; } .logos__row .lg--f1 { height: 24px; } .logos__row .lg--celine { height: 26px; }
 .logos__row .lg--unick { height: 30px; } .logos__row .lg--premium { height: 44px; } .logos__row .lg--knl { height: 24px; }
 .logos__row .lg--bleiv { height: 36px; } .logos__row .lg--ambiance { height: 36px; }
-/* awards slot: 4 partner/press marks, 110px row like the benchmark badges */
+
 .badges__row { display: flex; align-items: center; justify-content: center; gap: 40px; height: 110px; width: auto; margin: 40px auto 0; }
 .badges__row .bd { height: 56px; width: auto; filter: grayscale(1); opacity: .8; transition: filter .3s, opacity .3s; }
 .badges__row .bd:hover { filter: none; opacity: 1; }
@@ -1231,7 +1231,7 @@ img[loading="lazy"].is-pending { opacity: 0; }
 .badges__row .bd--tribune, .badges__row .bd--tribune:hover { height: 44px; padding: 10px 14px; box-sizing: border-box; background: #021836; border-radius: 10px; }
 @media (max-width: 767px) { .badges__row .bd--tribune { height: 38px; padding: 8px 12px; } }
 
-/* awards slot: 4 badge tiles (benchmark badge row: 110px tall, 40px gaps, 615px row) */
+
 .badges__row { gap: 40px; height: 110px; }
 .badge { width: 124px; height: 110px; flex: none; display: grid; place-items: center; padding: 14px; border-radius: 12px; background: #fff; border: 1px solid #E6E3DF; box-sizing: border-box; }
 .badge img { max-width: 96px; max-height: 64px; width: auto; height: auto; object-fit: contain; filter: none; opacity: 1; }

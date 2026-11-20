@@ -1,7 +1,6 @@
-/* Zoom Académie v2 — structural 1:1 rebuild (benchmark metrics), Zoom skin.
-   Metrics: container 1280 + 12 gutter, 96 inner padding, H2 44/48 → 28/36, radii 8/16/24, buttons 53/49/44. */
+
 :root {
-  /* FINAL COLOR RULE: benchmark structure, Zoom palette, white main */
+  
   --ink: #1C1A17; --white: #fff; --p: #3C89F3; --p-h: #2D74DA; --p-hb: #2D74DA; --deep: #3C89F3;
   --tint: #E1EEFF; --tint2: #E1EEFF; --tint-line: #E6E3DF; --band: #021836; --on-dark: #3C89F3;
   --sand: #F3F1EF; --cream: #F3F1EF; --orange-tint: #E1EEFF; --orange-ink: #3C89F3; --lav: #E1EEFF; --lav-line: #E6E3DF; --next-red: #3C89F3; --red: #3C89F3;
@@ -801,7 +800,7 @@ hr { color: var(--line); }
 .ev { background: var(--ev); -webkit-background-clip: text; background-clip: text; color: transparent; }
 h1, h2, h3, h4, .h2, .qa-t, .seal b, .stat-n, .pstat-n, .f-title, .checks li, .tsb-h { word-spacing: .14em; }
 
-/* section-top alignment vs live benchmark (research/qa/v2/SECTIONS.md), desktop */
+
 @media (min-width: 992px) {
   .progs-c { padding-bottom: 29px; }
   .rank-c { padding-top: 123px; margin-bottom: 22px; }
@@ -843,7 +842,7 @@ h1, h2, h3, h4, .h2, .qa-t, .seal b, .stat-n, .pstat-n, .f-title, .checks li, .t
 .ac-tile { background: #F3F1EF; border-radius: 8px; }
 .ac-tile { display: grid !important; place-items: center; } .ac-tile > img.ac-big { width: 140px; height: auto; padding: 0; }
 
-/* award-style badges holding the instructor logos (benchmark badge slot) */
+
 .bdg { position: relative; width: 152px; height: 187px; display: flex; align-items: flex-start; justify-content: center; padding-top: 8px; }
 .bdg-in { position: relative; z-index: 1; display: grid; place-items: center; width: 140px; height: 140px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 6px #021836, 0 0 0 8px #3C89F3, 0 8px 20px rgba(0,0,0,.12); }
 .bdg-in img { width: 104px; height: 48px; object-fit: contain; }

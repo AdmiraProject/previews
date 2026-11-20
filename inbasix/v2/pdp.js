@@ -169,7 +169,6 @@
     <button class="k-btn" type="button" data-add="${p.h}" data-vid="${cur.id}" data-sb-cta>${cur.p ? 'Agregar al carrito' : 'Cotizar'}</button>
   </div></div>`;
 
-  /* mobile: move buy box under the gallery (benchmark mobile order) */
   const mobBox = $('.v-mob-box'), right = $('[data-right]');
   const mq = matchMedia('(max-width: 1023px)');
   const place = () => { const box = $('[data-box]'), s = $('[data-sel]'); if (mq.matches) { mobBox.append(box, s); mobBox.style.display = 'flex'; mobBox.style.flexDirection = 'column'; mobBox.style.gap = '24px'; } else { right.prepend(box, s); mobBox.style.display = 'none'; } };

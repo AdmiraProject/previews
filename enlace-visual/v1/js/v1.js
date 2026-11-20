@@ -1,4 +1,3 @@
-/* Enlace Visual v1 — page behaviour (everbody.com interaction model) */
 (function () {
   'use strict';
   var $ = function (s, c) { return (c || document).querySelector(s); };

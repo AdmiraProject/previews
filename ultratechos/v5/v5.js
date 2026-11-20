@@ -1,4 +1,3 @@
-/* Ultra Techos v5 — Figma 1:1 + motion */
 (() => {
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];

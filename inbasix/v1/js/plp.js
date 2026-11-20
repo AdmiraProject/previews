@@ -91,7 +91,6 @@
   function render() {
     const grp = S.cat ? groupOf(S.cat) : null;
     const base = P.filter(p => okBrand(p, S.brand) && okPrice(p, S.price) && okQ(p, S.q)); // for tab counts
-    // tabs (benchmark sticky icon tabs)
     tabsIn.innerHTML = [['', 'Todos los productos'], ...ORDER.map(k => [k, G[k].t])].map(([k, t]) => {
       const n = base.filter(p => inCat(p, k)).length, on = (k || '') === (grp || '');
       return `<a class="tab${on ? ' is-on' : ''}" href="coleccion.html${k ? '?cat=' + k : ''}" data-cat="${k}"${on ? ' aria-current="page"' : ''}><span class="tab-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[k || 'all']}</svg></span><span class="tab-tx"><strong>${esc(t)}</strong><em>${n} ${n === 1 ? 'equipo' : 'equipos'}</em></span></a>`;

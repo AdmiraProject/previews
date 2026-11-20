@@ -1,6 +1,4 @@
-/* Enlace Visual — v1 (everbody.com structure, measured). Brand skin: Enlace blues.
-   Benchmark → Enlace: Lora → Playfair Display · Manrope → Outfit · teal #005453 → cobalt #0B67CD ·
-   black → ink navy #0A1F3C · beige panel #F7F5F2 → #F1F5FA · taupe pill #D9CEC3 → #DCE7F5 */
+
 :root{
   --ink:#0A1F3C;--ink2:#33445C;--blue:#0B67CD;--blue-d:#0957AE;--sky:#99BBE5;--ice:#AFCAEB;
   --panel:#F1F5FA;--pill:#DCE7F5;--line:#CBD6E4;--hair:#E3E9F1;--paper:#fff;
@@ -360,7 +358,7 @@ h2{font-size:24px;line-height:30px}
 }
 @media (min-width:1440px){.tsi{flex-basis:1004px}.tsi__q{font-size:30px;line-height:41.6px}.tsi__tags li{font-size:15px}.ts__sub{font-size:22px}}
 
-/* Luuna coverflow + review rail */
+
 .lv__hd{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:12px}
 .lv__hd .b--t{font-size:14px}
 .cf{position:relative;height:400px;overflow:hidden;max-width:1766px}

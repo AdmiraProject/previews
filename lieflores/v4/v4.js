@@ -78,7 +78,6 @@
     </article>`;
   }
 
-  /* ---------------- carousels: arrows + UrbanStems scrollbar ---------------- */
   function initCar(car) {
     const rail = $('.rail', car); if (!rail || car._init) return; car._init = 1;
     const p = $('.arw--p', car), n = $('.arw--n', car), bar = $('.sbar i', car);
@@ -236,7 +235,6 @@
     close() { if (!this.el) return; document.removeEventListener('keydown', this.onKey, true); this.v.pause(); this.v.removeAttribute('src'); this.v.load(); cancelAnimationFrame(this.raf); this.el.classList.remove('is-open'); document.documentElement.classList.remove('lf-lock'); this.from && this.from.focus(); }
   };
 
-  /* ---------------- calendar modal (Freddie's: greyed days, legend, "date not available?") ---------------- */
   const Cal = {
     el: null, cb: null, view: null,
     build() {
@@ -287,7 +285,6 @@
     $$('.pill', sec).forEach(b => b.addEventListener('click', () => { $$('.pill', sec).forEach(x => x.setAttribute('aria-selected', x === b)); render(b.dataset.set); }));
     render('fav'); initCar($('.car', sec)); initWave(sec, '.pc');
   }
-  // Olipop data-hover-wave-card (simplified): a wavy clip rises from the bottom over the hovered card's media
   function initWave(sec, item) {
     const path = $('#lfWave path'); if (!path) return;
     if (RM.matches) { path.setAttribute('d', 'M0,0 L1,0 L1,1 L0,1 Z'); return; }
@@ -321,7 +318,6 @@
     };
     $$('.ot-chip', sec).forEach(b => b.addEventListener('click', () => { $$('.ot-chip', sec).forEach(x => x.setAttribute('aria-selected', x === b)); render(b.dataset.tab); }));
     render('rosas'); initCar($('.car', sec));
-    // animated wave clip-path (Olipop data-hover-wave-card, simplified): wave rises from the bottom
     const path = $('#lfWave path');
     if (path && !RM.matches) {
       let t = 0, lvl = 1, raf = 0, hovering = 0;
@@ -546,7 +542,6 @@
     K.Cart.upsell = extras.map(x => x.h);
   }
 
-  /* ---------------- TIENDA (UrbanStems collection) ---------------- */
   const OCC = {
     aniversario: { n: 'Aniversario y amor', f: p => /rosa|coraz|te amo/i.test(p.t) && !p.cats.includes('condolencias') },
     cumpleanos: { n: 'Cumpleaños', f: p => /gerbera|girasol|primaveral|tulip|globo|caja/i.test(p.t) },

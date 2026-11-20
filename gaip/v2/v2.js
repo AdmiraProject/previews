@@ -1,4 +1,3 @@
-/* GAIP v2 — interactions (Samsara-equivalent behaviours). No backend. */
 (() => {
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -191,7 +190,6 @@
       p.setAttribute('d', `M${x1.toFixed(1)} ${y1.toFixed(1)} A${R} ${R} 0 0 1 ${x2.toFixed(1)} ${y2.toFixed(1)}`);
       arcs.appendChild(p);
     });
-    // Samsara flywheel: a highlighter block sweeps behind each step label in order (12 s loop)
     const drawHL = () => hlq.forEach(([hl, t]) => {
       hl.textContent = '';
       [...t.querySelectorAll('tspan')].forEach(ts => {

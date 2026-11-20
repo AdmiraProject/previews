@@ -1,5 +1,3 @@
-/* Enlace Visual — shared runtime: video autoplay-on-load/visible, scroll reveal, Luuna-style video coverflow,
- * review cards with channel logos. Versions style everything; this file only adds behaviour + markup. */
 (function () {
   'use strict';
   var $ = function (s, c) { return (c || document).querySelector(s); };
@@ -34,7 +32,6 @@
     el.innerHTML = D.cards.map(card).join('');
   });
 
-  /* ---------- Luuna-style video coverflow: [data-cf] ---------- */
   $$('[data-cf]').forEach(function (cf) {
     var D = window.EV_REVIEWS; if (!D) return;
     var lab = LANG === 'en' ? { p: 'Previous', n: 'Next', play: 'Play testimonial from ' } : { p: 'Anterior', n: 'Siguiente', play: 'Ver testimonio de ' };
@@ -47,7 +44,6 @@
     var cards = $$('.cf-c', cf), ci = Math.min(1, cards.length - 1), n = cards.length;
     function layout() {
       var w = cf.clientWidth, mob = w < 700;
-      // Luuna measures: centre 320×450, sides 250×350, 20px gap (mobile scales ×0.78)
       var k = mob ? .78 : 1, cw = 320 * k, sw = 250 * k, gap = 20 * k;
       cards.forEach(function (c, i) {
         var d = i - ci; if (d > n / 2) d -= n; if (d < -n / 2) d += n;

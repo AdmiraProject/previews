@@ -1,4 +1,4 @@
-/* Inbasix v2 — design system measured from the benchmark */
+
 :root{
   /* Palette v2 (PALETTE.md): Ink for strong roles, Ice for light roles, cyan only as a small accent */
   --bg:#F4F6F8; --surface:#fff; --line:#E3E7EC; --line2:#EDF0F3;
@@ -950,7 +950,7 @@ body.has-sbar .k-wa{bottom:120px}
 .k-menu__grp a{padding-left:36px!important;font-size:15px!important;background:var(--bg)}
 @media (max-width:767px){.k-allp{padding:20px}.k-allp b{font-size:19px}.k-allp small{font-size:14px}}
 
-/* ============ PLP (coleccion.html) — benchmark catalog ============ */
+
 .k-search-row{display:flex;gap:8px;align-items:center}
 .k-search-row .k-searchbox{flex:1;min-width:0}
 .k-sqbtn{display:none;position:relative;flex:none;width:40px;height:40px;border:1px solid var(--line);border-radius:var(--r8);background:#fff;color:var(--ink);place-items:center}

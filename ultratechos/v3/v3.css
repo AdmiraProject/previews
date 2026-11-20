@@ -1,4 +1,4 @@
-/* Ultra Techos v3 — Jetson 1:1 structure, Tesla-style hero. Measured from jetsonhome.com @1440 / 390. */
+
 :root{
   --navy:#00263A; --navy-2:#001A28; --navy-3:#0B3247;
   --orange:#E77204; --orange-2:#F7931E;
@@ -33,7 +33,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .wrap{padding-left:max(var(--g),env(safe-area-inset-left,0px));padding-right:max(var(--g),env(safe-area-inset-right,0px))}
 .bal{text-wrap:balance}
 
-/* ---------- buttons (Jetson action-button: text rolls up on hover) ---------- */
+
 .btn{position:relative;display:inline-flex;align-items:center;justify-content:center;overflow:hidden;border-radius:var(--r-md);height:48px;padding:0 20px;font-size:20px;font-weight:700;line-height:24px;white-space:nowrap;isolation:isolate}
 .btn .roll{display:grid;overflow:hidden;height:24px}
 .btn .roll>span{grid-area:1/1;transition:transform .3s var(--ease-btn)}
@@ -88,7 +88,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .mmenu a{font-family:var(--disp);font-stretch:62%;font-variation-settings:"wdth" 62;font-weight:900;font-size:48px;line-height:1;letter-spacing:-1.4px}
 .mmenu .x{position:absolute;top:28px;right:20px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);font-size:22px}
 
-/* ---------- hero (Jetson 130vh sticky + Tesla centered copy) ---------- */
+
 .hero{position:relative;height:130vh}
 .hero-stick{position:sticky;top:0;height:100vh;overflow:hidden}
 .hero-card{position:absolute;inset:0;overflow:hidden;background:var(--navy);will-change:clip-path}
@@ -377,7 +377,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .collage .f{display:none}
 }
 
-/* ---------- mobile (Jetson 390 values) ---------- */
+
 @media (max-width:767px){
   :root{--g:20px}
   .d-xl{font-size:64px;line-height:53.12px;letter-spacing:-1.92px}

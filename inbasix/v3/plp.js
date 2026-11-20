@@ -1,5 +1,3 @@
-/* Inbasix v3 — category page (coleccion.html): benchmark collection layout + filter drawer.
-   URL: ?cat=<group|collection,...>&brand=<vendor,...>&price=<linea|cotizacion|min-max,...>&q=<text>&sort=<featured|price-asc|price-desc|az>&page=n */
 (function () {
   const { inCol, colTitle, GROUPS, groupOf, inGroup, nm, K, B, esc, WA, tile, vendorName, I, photos } = window.V3;
   const main = document.querySelector('[data-plp]');

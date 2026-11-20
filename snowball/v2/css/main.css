@@ -1,11 +1,11 @@
-/* Snowball Partners v2 — layout, type and spacing measured from the benchmark; colours from the Snowball palette map */
+
 :root{
   --snow:#F2F6FB; --ink:#070A13; --ink-2:#1B2232; --grey:#5A6478; --line:#BECEE4; --white:#FBFCFE;
-  /* blue family (benchmark lavender) */
+  
   --blue-card:#C9D3FF; --blue-ink:#0A1B8C; --blue-title:#2A3A9E; --blue-body:#0A1B6B; --blue-line:#2F45C9; --blue-mute:#5E6A9A;
-  /* cyan family (benchmark teal) */
+  
   --cyan-card:#BDEFF8; --cyan-tint:#CDF2F9; --cyan-ink:#00505C; --cyan-title:#0A8194; --cyan-body:#06707F; --cyan-line:#0B8FA3; --cyan-mute:#5C8088;
-  /* solid-blue family (benchmark coral) */
+  
   --solid:#022AFD; --solid-tint:#DCE4FF; --solid-ink:#0A1B8C; --solid-line:#022AFD;
   --hl-1:#8FA2FF; --hl-2:#7FE9FF; --hl-3:#022AFD;
   --f-display:"Clash Display","Inter",system-ui,sans-serif;
@@ -57,7 +57,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .nav-dd-panel a{font-size:15px;line-height:19.5px;font-weight:400;color:var(--ink)}
 .nav-dd.is-open .nav-dd-panel{display:flex}
 .nav-cta{color:var(--snow)}
-/* opening state (benchmark: empty 149px pill that springs open) */
+
 .js .nav-pill.is-closed{width:149px;justify-content:flex-start}
 .js .nav-pill.is-closed>*{visibility:hidden}
 .js .nav-pill.is-opening{justify-content:flex-start}
@@ -77,14 +77,14 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .hero-h .b{font-weight:700;letter-spacing:-1.76px}
 .c1{color:var(--hl-1)} .c2{color:var(--hl-2)} .c3{color:var(--hl-3)}
 .hico{--s:1;position:relative;flex:none;display:block;width:calc(69px * var(--s));height:calc(71px * var(--s))}
-/* tile measured on the benchmark: 66.7x67 inside the 69x71 box, 1px from the left, 2.6px border, 15.5px radius, soft drop below */
+
 .hico::before{content:"";position:absolute;left:calc(1px * var(--s));top:0;width:calc(66.7px * var(--s));height:calc(67px * var(--s));box-sizing:border-box;background:#fff;border:calc(2.6px * var(--s)) solid var(--ink);border-radius:calc(15.5px * var(--s));box-shadow:0 calc(1.5px * var(--s)) calc(2.5px * var(--s)) rgba(7,10,19,.32)}
-/* logo ink box = the benchmark glyph's 39.5x39.5, centred on the tile */
+
 .hico .mk{position:absolute;left:calc(14.6px * var(--s));top:calc(13.8px * var(--s));width:calc(39.5px * var(--s));height:calc(39.5px * var(--s))}
 .hero-sub{max-width:1100px;font-size:24px;line-height:26.4px;font-weight:500;letter-spacing:.24px;color:var(--ink-2)}
 .hero-row{display:flex;align-items:center;justify-content:space-between;width:1170px;max-width:100%}
 .facts{display:flex;align-items:center}
-/* benchmark "Agency facts": badge cell (pad-right 22) | 3 facts with 1px dividers, pad 0 22, gap 10 */
+
 .fact{display:flex;align-items:center;gap:10px;height:50px;padding:0 22px;border-left:1px solid rgba(7,10,19,.16)}
 .fact:last-child{padding-right:0}
 .fact b{font-size:28px;line-height:28px;font-weight:700;letter-spacing:-.56px;color:var(--ink)}
@@ -94,7 +94,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .fact-rating .stars{width:72px;height:13px;fill:#E62415}
 .fact-rating .lbl{white-space:nowrap}
 .flag{width:28px;height:15px;flex:none;box-shadow:0 0 0 .5px rgba(7,10,19,.25)}
-/* badge box = the benchmark's Meta badge box: 80x46, 1px dark border, logo filling it */
+
 .badge{flex:none;display:flex;align-items:center;justify-content:center;width:80px;height:46px;padding:4px;background:#fff;box-shadow:inset 0 0 0 1px #1F2B33;border-radius:2px}
 .badge img{display:block;max-width:100%;max-height:100%;width:auto;height:auto}
 
@@ -263,7 +263,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .foot-social{font-size:14px;line-height:16.8px;font-weight:700;letter-spacing:-.7px}
 .foot-brand{display:flex;flex-direction:column;align-items:center;gap:32px}
 .foot-markbox{position:relative;display:block;width:50%;aspect-ratio:1360/338}
-/* ink box = the benchmark wordmark's visible ink: 51.3% of the box height, centred at 54.6% */
+
 .foot-mark{position:absolute;left:50%;top:54.6%;height:51.3%;width:auto;max-width:none;transform:translate(-50%,-50%)}
 .foot-legal{width:359px;max-width:100%;text-align:center;font-size:12px;line-height:20.4px;font-weight:700;letter-spacing:-.6px}
 
@@ -286,7 +286,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .cases .title-xl,.blog .title-xl{font-size:88px;line-height:96.8px;letter-spacing:-2.64px}
 }
 @media (max-width:1199.98px) and (min-width:810px){
-  /* benchmark tablet variant (810-1199), measured at 1000 */
+  
   .nav-pill{gap:32px}
   .hero-h{font-size:56px;line-height:61.6px}
   .hrow{height:62px;gap:10px}

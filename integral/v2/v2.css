@@ -1,6 +1,4 @@
-/* Integral Design · v2 (structure: Officine Gullo US home, measured in research/benchmarks/gullo/SPEC.md)
-   Palette map: Gullo #FEFEFE → white · #1F1F21 ink → navy #2D4255 (headings/UI) + charcoal #2F2F2F (body)
-   #F6F5F3 warm panel → Integral light grey #EDEFF0 · gold #C4A771 → taupe #B5A799 · dark footer → navy. */
+
 :root {
   --navy: #2D4255;
   --taupe: #B5A799;
@@ -296,9 +294,7 @@ strong { font-weight: 700; }
 .lb__v { max-width: min(90vw, 1600px); max-height: 86vh; width: auto; height: auto; background: #000; }
 .lb__x { position: absolute; top: 20px; right: 20px; width: 44px; height: 44px; color: var(--white); }
 
-/* =========================================================
-   MOBILE REEL (Gullo .scroll-section) — hidden on desktop
-   ========================================================= */
+
 .mreel { display: none; }
 
 /* ---------- tablet ---------- */

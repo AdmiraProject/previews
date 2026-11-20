@@ -1,5 +1,4 @@
-/* Ultra Techos — shared quote pop-up, 1:1 with Figma "FORM" (nodes 2298:2998 step 1 · 2298:2941 step 2).
-   Card 691×600, padding 40, radius 16 · stepper 60px circles · cream fields · orange glow pill. Namespaced .utl-* */
+
 .utl{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;padding:24px;
   font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;color:#00263A}
 .utl[hidden]{display:none}

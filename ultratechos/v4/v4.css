@@ -1,16 +1,14 @@
-/* Ultra Techos v4 — Cosentino (cosentino.com/en-gb) 1:1 structure, Ultra Techos skin.
-   Measured from Cosentino @1440: container gutter 38px, top bar 44px, header 96px (32px pad), hero 100vh,
-   display 75/200 lh .73 uppercase, h2 38.45/300 uppercase, cards 439x585 gap 16, novedades 444x370, gallery 325 squares. */
+
 :root{
-  --ink:#00263A;            /* Cosentino #3C3C3B → navy */
-  --ink-2:#0B3349;          /* Cosentino #3F3F3E (buttons) */
-  --deep:#001A28;           /* Cosentino footer #232323 */
+  --ink:#00263A;            
+  --ink-2:#0B3349;          
+  --deep:#001A28;           
   --orange:#E77204;
   --orange-2:#F7931E;
   --cream:#FCF9F3;
-  --bar:#F3EEE3;            /* Cosentino quote bar #F0EFE4 */
-  --grey:#ECE8E0;           /* Cosentino bg-gris-claro #E7E7E6 */
-  --mute:#7F8A92;           /* Cosentino #898985 */
+  --bar:#F3EEE3;            
+  --grey:#ECE8E0;           
+  --mute:#7F8A92;           
   --body:#5B6B78;
   --line:#E5E2DC;
   --white:#fff;
@@ -66,7 +64,7 @@ ul{list-style:none;margin:0;padding:0}
 .burger span::before,.burger span::after{content:"";position:absolute;left:0;width:20px;height:1.5px;background:currentColor}
 .burger span::before{top:-6px}.burger span::after{top:6px}
 
-/* mega menu (Cosentino .menu-submenu .first-wrapper: #3c3c3b, 50vh-25px, padding 0 120px, slides from -150%) */
+
 .mega{position:fixed;left:0;right:0;top:140px;z-index:50;height:calc(50vh - 25px);min-height:330px;background:var(--ink);color:#fff;padding:0 120px;display:flex;justify-content:center;
   transform:translateY(-150%);transition:transform .55s var(--ease);pointer-events:none}
 .hdr.is-scrolled~.mega{top:102px}
@@ -296,7 +294,7 @@ a:hover>.zoom img,.zoom:hover img,.card:hover .zoom img{transform:scale(1.1);fil
 .ftr__legal{border-top:1px solid rgba(255,255,255,.08);margin-top:56px;padding:26px 0 56px;display:flex;justify-content:space-between;gap:20px;font-family:var(--f-b);font-size:14px;line-height:22px;color:rgba(255,255,255,.8)}
 .ftr__legal a{text-decoration:underline;text-underline-offset:2px;color:#fff}
 
-/* ---------- floating help (Cosentino "Can we help you?" + chat) ---------- */
+
 .help{position:fixed;right:20px;bottom:20px;z-index:45;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
 .help__b{background:#fff;color:#111;font-size:15px;line-height:20px;padding:13px 20px;box-shadow:0 6px 20px rgba(0,0,0,.12);transition:opacity .3s ease,transform .3s ease}
 .help__wa{width:60px;height:60px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(231,114,4,.35);transition:transform .25s ease}
@@ -350,7 +348,7 @@ a:hover>.zoom img,.zoom:hover img,.card:hover .zoom img{transform:scale(1.1);fil
 .js .rv:not(.in){opacity:.001;transform:translateY(24px)}
 
 /* ---------- responsive ---------- */
-/* ---------- LO QUE DICEN (Mill bento, Cosentino skin: square corners, light uppercase) ---------- */
+
 .bnt{padding-block:100px 100px;background:#fff}
 .bnt__head{text-align:center;max-width:760px;margin:0 auto}
 .bnt__head p{font-family:var(--f-b);font-size:16px;line-height:24px;color:var(--body);margin:18px auto 0;max-width:560px}
@@ -536,5 +534,5 @@ a:hover>.zoom img,.zoom:hover img,.card:hover .zoom img{transform:scale(1.1);fil
   .hero__bg{transform:none}
 }
 
-/* bleed sliders/grid to the right viewport edge like Cosentino (cards peek past the gutter) */
+
 .wrap .track,.gal__grid{margin-right:calc(-1 * var(--gut));padding-right:var(--gut);scroll-padding-left:0}

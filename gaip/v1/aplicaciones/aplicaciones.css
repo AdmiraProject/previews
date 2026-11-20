@@ -1,4 +1,4 @@
-/* GAIP — Aplicaciones · 1:1 formic.co/general-purpose-robots (tokens remapped to GAIP) */
+
 :root{--white:#F2F4F8;--black:#0B1640;--lgrey:#DFE4EC;--mgrey:#46527D;--dgrey:#132563;--orange:#00A0D6;--bone:#FFFFFF;--border-l:rgba(11,22,64,.08);--ill-ink:#14204A;--ill-grid:#D3DAE4;--ill-ink-soft:#6B7699;--ill-label:#46527D;--ill-accent:#00A0D6;--ill-accent-l:#3CC3F0;--ill-accent-r:#8FD8F3}
 body{background:var(--white);color:var(--black);cursor:auto}
 .db-light{--t-bg:var(--white);--t-card:var(--bone);--t-tile:color-mix(in srgb,var(--black) 5%,var(--bone));--t-fg:var(--black);--t-fg2:var(--dgrey);--t-fg3:var(--mgrey);--t-line:color-mix(in srgb,var(--black) 13%,transparent);--t-guide:color-mix(in srgb,var(--black) 3%,transparent)}
@@ -114,7 +114,7 @@ body{background:var(--white);color:var(--black);cursor:auto}
 .db-form .ok{display:none;padding:40px 0;text-align:center;font:500 19px/1.4 var(--sans)}
 .db-form.sent form{display:none}.db-form.sent .ok{display:block}
 
-/* footer (formic) */
+
 .ffoot{background:#0B1640;color:#EEF2F8}
 .footer-statement{padding:96px 80px 88px;border-bottom:1px solid rgba(255,255,255,.05);max-width:1700px;margin:0 auto}
 .footer-statement p{font-family:var(--sans);font-weight:600;font-size:clamp(40px,5.6vw,80.64px);line-height:.96;letter-spacing:-.025em;color:#EEF2F8;max-width:1100px;margin:0}

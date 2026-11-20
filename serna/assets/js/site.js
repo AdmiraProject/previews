@@ -52,7 +52,6 @@
     tr.addEventListener('scroll', () => requestAnimationFrame(draw), { passive: true }); addEventListener('resize', draw); draw();
   });
 
-  /* Coverflow (Luuna-style) */
   d.querySelectorAll('[data-cf]').forEach(cf => {
     const cards = [...cf.querySelectorAll('.cf-card')], n = cards.length, dots = cf.querySelector('.cf-dots');
     let cur = Math.min(2, n - 1), timer;

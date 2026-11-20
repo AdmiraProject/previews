@@ -1,5 +1,3 @@
-/* Liefloré v3 — interactions for the freddiesflowers.com structure.
-   Uses window.LFK (lf-core.js) for cart/drawer/checkout. Real data only (window.LF). */
 (function () {
   'use strict';
   const K = window.LFK;
@@ -170,7 +168,6 @@
       });
     }
 
-    // gentle parallax on the Membresía band (Freddie's "Art of flowers")
     const pb = $('[data-parallax]');
     if (pb && !RM) {
       let raf = 0;
@@ -313,7 +310,6 @@
     if (c0) { const a = $('[data-bc-cat]'); a.href = 'tienda.html?cat=' + c0; a.textContent = CATN[c0] || 'Arreglos'; }
     $('[data-pd-wa]').href = WA + encodeURIComponent(`Hola Liefloré, quiero pedir: ${p.t}`);
 
-    /* gallery: main 1:1 + 2-col grid (desktop), swipe slider + counter (mobile); real clip as a gallery tile when one exists */
     const VID = {
       '200-rosas-rojas': ['social/tt-7604022030635142408', '200 rosas rojas · TikTok'],
       'ramo-de-100-rosas-mexicali': ['social/tt-7602653570340506887', '100 rosas · TikTok'],
@@ -435,7 +431,6 @@
     $('[data-msg-n]').textContent = msg.value.length;
     msg.addEventListener('input', () => { $('[data-msg-n]').textContent = msg.value.length; setLead({ msg: msg.value }); });
 
-    /* CONTINUAR → date required (Freddie's flow) → shared drawer */
     const buy = () => {
       if (!date) { openCM('Elige la fecha de entrega para continuar'); afterPick = buy; return; }
       setLead({ fecha: iso(date), msg: msg.value });

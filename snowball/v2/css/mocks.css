@@ -107,7 +107,7 @@
 .mv-ads{width:600px;height:562px}
 .mv-content{width:612px;height:509px}
 .mv-ops{width:612px;height:508px}
-/* 1200-1399: cards 2 and 3 are 430 tall on the benchmark; the phones shrink to 400 tall */
+
 @media (min-width:1200px) and (max-width:1399.98px){
   .mv-ops{height:430px;display:flex;align-items:center}
   .st-ops{font-size:7.874px}

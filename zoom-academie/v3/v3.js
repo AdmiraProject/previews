@@ -53,7 +53,6 @@
     matchMedia('(min-width: 1024px)').addEventListener('change', e => { if (e.matches) set(false); });
   }
 
-  /* accordions (one open at a time, like the benchmark) */
   $$('[data-acc]').forEach(group => {
     $$(':scope > .acc__item > .acc__q', group).forEach(q => q.addEventListener('click', () => {
       const item = q.parentElement, on = !item.classList.contains('is-open');
@@ -130,7 +129,6 @@
     img.addEventListener('load', done, { once: true }); img.addEventListener('error', done, { once: true });
   });
 
-  /* video posters play in place (benchmark plays its embeds inline) */
   document.addEventListener('click', e => {
     const box = e.target.closest('.vposter[data-video], .scard__media[data-video], .bcard--video[data-video]');
     if (!box || box.classList.contains('is-playing')) return;

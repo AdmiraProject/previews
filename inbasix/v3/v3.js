@@ -103,7 +103,6 @@
     return `<img src="${still}" alt="${esc(opts.alt || '')}" loading="${opts.eager ? 'eager' : 'lazy'}">`;
   }
 
-  /* product tile — benchmark card anatomy */
   function tile(p, o) {
     o = o || {};
     const v = defVar(p), q = K.isQuote(p);
@@ -249,7 +248,6 @@
   /* ---------- behaviours ---------- */
   function initHeader() {
     const wrap = document.querySelector('[data-hdr]'); if (!wrap) return;
-    // Sticky "on scroll up" (benchmark: hide on scroll down, reveal on scroll up, transform .15s ease-out)
     let last = scrollY, ticking = false;
     addEventListener('scroll', () => { if (ticking) return; ticking = true; requestAnimationFrame(() => {
       const y = scrollY, h = wrap.offsetHeight + 39;

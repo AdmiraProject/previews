@@ -1,6 +1,5 @@
 (() => {
   const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
-  /* player timecode + pause (formic db-player) */
   const v = $('#pv'), tc = $('#tc'), pp = $('#pp');
   if (v) {
     const tick = () => { tc.textContent = v.currentTime.toFixed(1).padStart(4, '0') + ' s'; requestAnimationFrame(tick); }; tick();

@@ -20,7 +20,6 @@
   }), { rootMargin: '200px 0px' });
   vids.forEach(v => vio.observe(v));
 
-  /* feature cards: fixed 671x451 stage scaled to the card (keeps overlay geometry 1:1 at any width) */
   $$('.card').forEach(card => {
     const st = document.createElement('div'); st.className = 'stage';
     while (card.firstChild) st.appendChild(card.firstChild); card.appendChild(st);
@@ -86,7 +85,6 @@
     if (!bad.length) f.classList.add('sent');
   });
 
-  /* solutions tiles: play clip only while hovered, reset on leave (formic) */
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) $$('.sol-tile').forEach(t => {
     const v = $('video.sol-anim', t); if (!v) return;
     t.addEventListener('mouseenter', () => { if (!v.src) v.src = v.dataset.src; v.play().catch(() => {}); });

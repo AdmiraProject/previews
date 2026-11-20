@@ -1,8 +1,8 @@
-/* GAIP v1 — hero 1:1 formic.co · sections 1:1 gomotive.com/es-mx (measured @1440) */
+
 :root{
   --ink:#0B1640; --paper:#F2F4F8; --fg:#EEF2F8; --navy:#0B1640; --navy7:#111E4F; --navy6:#192A63; --muted:#46527D; --line:#DFE4EC;
   --cyan:#00A0D6; --blue:#0082C4; --royal:#1E428E; --indigo:#312D6C;
-  --acc:#00A0D6;                                   /* formic orange -> arcoiris cyan */
+  --acc:#00A0D6;                                   
   --grad:linear-gradient(286deg,#3CC3F0 1.81%,#0082C4 56.35%,#0B1640 110.42%); /* motive button gradient, GAIP ramp */
   --sans:"DM Sans",ui-sans-serif,system-ui,sans-serif; --mono:"DM Mono",ui-monospace,Menlo,monospace;
   --c:1160px;
@@ -14,7 +14,7 @@ a{color:inherit;text-decoration:none}
 img,video,svg{display:block;max-width:100%}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
-/* ---------- NAV (formic 1:1) ---------- */
+
 .nav{position:fixed;top:0;left:0;right:0;height:64px;z-index:100;display:flex;align-items:center;padding:0 36px;background:rgba(11,22,64,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(238,242,248,.08)}
 .nav-logo{display:flex;align-items:center;height:24px}
 .nav-logo img{height:30px;width:auto}
@@ -30,7 +30,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .nav-burger{display:none;margin-left:auto;width:40px;height:40px;align-items:center;justify-content:center}
 .nav-burger span{display:block;width:18px;height:1px;background:var(--fg);box-shadow:0 -6px 0 var(--fg),0 6px 0 var(--fg)}
 
-/* ---------- HERO (formic 1:1) ---------- */
+
 .hero{position:relative;height:900px;min-height:640px;max-height:100vh;padding:0 80px 96px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--ink);color:var(--fg)}
 @media (min-height:900px){.hero{height:100vh;max-height:none}}
 .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -58,7 +58,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .scroll-hint i{display:block;width:1px;height:62px;background:linear-gradient(var(--acc),rgba(0,160,214,0))}
 .scroll-hint span{writing-mode:vertical-rl;font:400 9px/14.4px var(--mono);letter-spacing:1.8px;text-transform:uppercase;color:rgba(238,242,248,.25)}
 
-/* ---------- RESULTS STRIP (formic 1:1) ---------- */
+
 .results{position:relative;z-index:1;background:var(--ink);border-top:1px solid rgba(0,160,214,.55);border-bottom:1px solid rgba(0,160,214,.55);padding:38px 80px 44px;color:var(--fg)}
 .rs-eyebrow{display:flex;align-items:center;gap:10px;font:500 11px/17.6px var(--mono);letter-spacing:2.42px;text-transform:uppercase;color:var(--acc)}
 .rs-pulse{width:7px;height:7px;border-radius:50%;background:#3FBE6B;box-shadow:0 0 0 0 rgba(63,190,107,.6);animation:pulse 2s infinite}
@@ -69,7 +69,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .rs-lbl{margin-top:10px;font:500 10px/14px var(--mono);letter-spacing:1.8px;text-transform:uppercase;color:rgba(238,242,248,.55)}
 
 
-/* ---------- SOLUTIONS (formic 1:1) ---------- */
+
 .sols{position:relative;overflow:hidden;background:var(--ink);color:var(--fg);padding-bottom:40px}
 .hsection-head{padding:72px 80px 36px;max-width:1280px;margin:0 auto}
 .slabel{font:500 10px/16px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--acc);margin-bottom:16px;display:flex;align-items:center;gap:8px}

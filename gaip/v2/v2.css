@@ -1,11 +1,4 @@
-/* GAIP v2 — 1:1 structural copy of samsara.com/mx (measured at 1440 / 1024 / 390), GAIP brand swap.
-   Samsara token → GAIP token
-   #1C1917 black   → --ink #0B1640 (deep navy from logo ramp)
-   #221F1B gray-800→ --ink-800 #111E4F
-   #403D37 gray-700→ --ink-700 #192A63 (footer)
-   #FEAE0F yellow  → --accent #00A0D6 (cyan)
-   #F5F4F1 gray-50 → --g50 #F2F4F8 ; #E0DDD5 gray-200 → --g200 #DFE4EC ; #716F67 → --line-d #46527D
-   FK Grotesk → Schibsted Grotesk · FK Grotesk Mono → Martian Mono · Samsara Sans → Archivo Expanded 900 · Samsara Script → Covered By Your Grace */
+
 :root{
   --ink:#0B1640; --ink-800:#111E4F; --ink-700:#192A63; --line-d:#46527D;
   --accent:#00A0D6; --accent-h:#0082C4; --royal:#1E428E; --indigo:#312D6C; --sky:#3CC3F0;
@@ -353,9 +346,7 @@ body.is-scrolled .mnav{top:72px}
 .qdone .btn{margin-top:24px}
 body.modal-open{overflow:hidden}
 
-/* =====================================================================
-   TABLET  (768–1199)  — matches Samsara @1024: hamburger nav, 36px h2, stacked accordion
-   ===================================================================== */
+
 @media (max-width:1199px){
   :root{--pad:20px}
   .nav{top:56px;left:16px;right:16px}
@@ -418,9 +409,7 @@ body.modal-open{overflow:hidden}
   .foot__bottom{grid-template-columns:300px 1fr}
 }
 
-/* =====================================================================
-   MOBILE (<768) — matches Samsara @390
-   ===================================================================== */
+
 @media (max-width:767px){
   .banner__link{font-size:12px;line-height:12px}
   .hero{padding:131px 20px 63px;min-height:640px}
@@ -552,7 +541,7 @@ body.modal-open{overflow:hidden}
   .fa__slide:not(.is-active) .spec{transform:translateY(14px);opacity:0}
 }
 
-/* Samsara flywheel highlighter: each step label lights in sequence, 1.8 s apart, 12 s loop */
+
 .cycle__hl rect{fill:#00A0D6}
 .cycle__hl{opacity:0;animation:cycleHL 12s linear infinite both;animation-play-state:paused}
 .cycle.is-play .cycle__hl{animation-play-state:running}

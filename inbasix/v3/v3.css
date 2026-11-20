@@ -1,4 +1,4 @@
-/* Inbasix v3 — structure measured from the benchmark (see research/bench/THERA_SPEC.md) */
+
 :root{
   /* palette v2 (PALETTE.md): Ink for strong roles, Ice for light roles, cyan only as a small accent */
   --bg:#fff; --card:#F4F6F8; --band:#EAF6F9; --chip:#DCEFF4;
@@ -52,7 +52,7 @@ ul{margin:0;padding:0;list-style:none}
 .btn--full{width:100%}
 .ib-btn{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 24px;border-radius:9px;font:600 15px/1 var(--f);text-decoration:none;border:0}
 
-/* reveal (benchmark has none beyond hover; we keep a light rise like Dawn's scroll-trigger) */
+
 [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
 [data-reveal].is-in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none}*{scroll-behavior:auto!important}}
@@ -128,7 +128,7 @@ html.no-js [data-reveal]{opacity:1;transform:none}
 .mnav__foot{margin-top:auto;padding:20px 16px;background:var(--card);display:grid;gap:10px}
 .mnav__foot a{display:flex;gap:10px;align-items:center;font:500 15px/1.2 var(--f);color:var(--navy);text-decoration:none}
 
-/* ---------- hero carousel (benchmark: copy on a clean light field left, imagery right; 550px; 6s segmented progress) ---------- */
+
 .hero{position:relative;height:550px;overflow:hidden;background:var(--card);color:var(--ink)}
 .hero__slides{position:absolute;inset:0}
 .hero__slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .8s var(--ease),visibility .8s}
@@ -165,7 +165,7 @@ html.no-js [data-reveal]{opacity:1;transform:none}
 .sec-h{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:32px}
 .sec-h p{margin-top:16px;max-width:670px}
 
-/* tabs (underline, benchmark PDP tab language) */
+
 .tabs{display:flex;gap:32px;flex-wrap:wrap}
 .tabs button{font:400 18px/1.2 var(--f);color:var(--muted);padding:0 0 6px;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
 .tabs button[aria-selected=true]{color:var(--navy);border-color:var(--navy)}
@@ -427,7 +427,7 @@ html.no-js [data-reveal]{opacity:1;transform:none}
 .cart__ft .ib-btn,.cart__ft .btn{width:100%;height:47px}
 .cart__pay{display:flex;justify-content:center;gap:14px;font-size:11px;color:var(--body)}
 
-/* ---------- checkout popup (.ib-co) — benchmark modal language ---------- */
+
 .ib-co{position:fixed;inset:0;z-index:120;display:grid;place-items:center;padding:16px;visibility:hidden;transition:visibility .25s}
 .ib-co.is-open{visibility:visible}
 .ib-co-scrim{position:absolute;inset:0;background:rgba(14,22,70,.6);opacity:0;transition:opacity .25s}
@@ -875,7 +875,7 @@ img[src*="color/mindray.png"]{object-fit:cover!important;object-position:top!imp
 .ocard__img--render.photo img{width:100%!important;height:100%!important;object-fit:cover!important;mix-blend-mode:normal}
 .ocard__img--render.photo .ocard__tag{z-index:2}
 
-/* ======================= category page (coleccion.html) — benchmark collection layout ======================= */
+
 .cban{position:relative;height:300px;background:var(--card);overflow:hidden}
 .cban__img{position:absolute;top:0;right:0;bottom:0;left:max(42%,calc((100% - var(--pw))/2 + var(--gut) + 600px))}
 .cban__img img{width:100%;height:100%;object-fit:cover}
@@ -909,7 +909,7 @@ img[src*="color/mindray.png"]{object-fit:cover!important;object-position:top!imp
 .plx__more .btn{margin-top:12px;height:48px;min-width:126px}
 .plx__empty{grid-column:1/-1;padding:64px 0;text-align:center;display:grid;gap:16px;justify-items:center}
 .plx__empty > div{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-/* filter drawer (benchmark: right panel 500px, accordion cards, sticky footer) */
+
 .fdr{position:fixed;inset:0;z-index:110;visibility:hidden;transition:visibility .3s}
 .fdr.is-open{visibility:visible}
 .fdr__scrim{position:absolute;inset:0;background:rgba(15,27,76,.45);opacity:0;transition:opacity .3s}

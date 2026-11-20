@@ -1,4 +1,3 @@
-/* Integral Design · v3 (Pluck structure). Plain JS, no dependencies. */
 (function () {
   'use strict';
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

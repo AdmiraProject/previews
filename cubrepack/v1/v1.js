@@ -1,4 +1,3 @@
-/* Cubre Pack v1 — interactions (FrogTape structure). No dependencies. */
 (function () {
   var d = document, html = d.documentElement;
   var RM = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;

@@ -1,5 +1,3 @@
-/* Snowball v2 motion. Every spring below uses the stiffness / damping / mass measured on the benchmark,
-   solved numerically and played through the Web Animations API. */
 (function () {
   'use strict';
   var doc = document, root = doc.documentElement;
@@ -91,7 +89,6 @@
     function enter(it) {
       var el = it.el;
       if (it.kind === 'fade') {
-        // benchmark: the section fades in once (~0.35s) and never fades out
         el.classList.remove('rv-pre');
         if (el.animate) {
           var f = el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 350, easing: 'ease-out' });
@@ -234,17 +231,14 @@
     carousel();
     ticker();
     if (reduce) { showAll(); return; }
-    // the benchmark starts its opening sequence when the page becomes interactive
     var started = false;
     function start() {
       if (started) return; started = true;
       var b = $('.mnav'); if (b) b.classList.remove('is-pre');
-      // benchmark: both springs carry a 0.3s delay and leave rest in the same frame on desktop
       setTimeout(openPill, 300);
       heroIn(300);
     }
     if (mqMobile.matches) {
-      // mobile: the bar drops first, the hero follows ~0.4s later (benchmark)
       var p = $('.nav-pill'); if (p) p.classList.remove('is-closed');
       dropMobileBar();
       heroIn(700);

@@ -814,7 +814,7 @@ img.nf{filter:none!important;opacity:1!important}
 .hcap{position:absolute;right:24px;bottom:14px;z-index:3;margin:0;font:400 11px/16px var(--body);color:rgba(255,255,255,.7)}
 .ph>.hcap{position:absolute;z-index:3}
 @media (max-width:767px){.hcap{right:24px;left:24px;bottom:12px;text-align:right}}
-/* round 2: benchmark color system */
+
 .fc::before,.mega::before{display:none}
 .ft-b .rb{display:none}
 .hero::after{background:rgba(8,10,14,.4)}
@@ -921,7 +921,7 @@ img.nf{filter:none!important;opacity:1!important}
 video{background:#021836}
 .fld--ph select option{color:#1C1A17}
 .hp input{color:#1C1A17;border-color:#E6E3DF}
-/* 1:1 motion: remove extras the benchmark doesn't have */
+
 .hero-v{animation:none;transform:none}
 .hd{backdrop-filter:none;-webkit-backdrop-filter:none}
 .tmq:hover .tmq-t{animation-play-state:running}

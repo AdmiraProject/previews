@@ -1,7 +1,4 @@
-/* Liefloré v1 — bouqs.com structure 1:1 (measured in research/benchmarks/bouqs/SPEC.md)
-   Bouqs tokens → Liefloré: ivypresto → Dastin (display), proxima-nova → Montserrat,
-   #214b37 green → plum #3F113B/#4D1C49, creams kept warm, lime/sage → gold-light/plum-light tints.
-   Fix vs bouqs G3: every section's content sits in a centered 1440 container (.wrap); backgrounds bleed. */
+
 
 @font-face { font-family: "Dastin"; src: url("../assets/fonts/dastin-2.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 
@@ -40,7 +37,7 @@ svg .f, svg.f { fill: currentColor; stroke: none; }
 .disp { font-family: var(--disp); font-weight: 400; font-size: 44px; line-height: 52px; letter-spacing: .25px; color: var(--plum); }
 .h2 { font-family: var(--disp); font-weight: 400; font-size: 32px; line-height: 48px; letter-spacing: .25px; color: var(--plum); }
 
-/* ---------- buttons (bouqs: square, h48, 12px 24px, 16/24 600) ---------- */
+
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 11px 24px; border: 1px solid transparent; border-radius: 0; font: 600 16px/24px var(--ui); text-decoration: none; white-space: nowrap; transition: background-color .2s, color .2s, border-color .2s, opacity .2s; }
 .btn svg { width: 20px; height: 20px; }
 .btn-p { background: var(--plum-d); color: #fff; }
@@ -389,7 +386,7 @@ svg .f, svg.f { fill: currentColor; stroke: none; }
   .hd-quick a { flex: none; font: 400 16px/24px var(--ui); color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
 }
 
-/* ============ mobile (<768): bouqs 390 layout ============ */
+
 @media (max-width: 767px) {
   :root { --inset: 20px; }
   .ann { padding: 0 16px; }

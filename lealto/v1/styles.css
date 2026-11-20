@@ -1,11 +1,10 @@
-/* Lealto v1 — structure benchmarked 1:1 on Attio (framed 1440 grid, hairline borders,
-   two-tone headlines, sticky side tabs, dark signature section). Brand: Lealto. */
+
 
 @font-face{font-family:"Metropolis";src:url("../assets/fonts/Metropolis-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:"Metropolis";src:url("../assets/fonts/Metropolis-Medium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Metropolis";src:url("../assets/fonts/Metropolis-SemiBold.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Metropolis";src:url("../assets/fonts/Metropolis-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
-/* Serif for the single quote only (Attio uses a serif for its quote) */
+
 @font-face{font-family:"Newsreader";src:url("https://cdn.jsdelivr.net/npm/@fontsource/newsreader@5.2.5/files/newsreader-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 
 :root{
@@ -55,7 +54,7 @@ ul,ol{list-style:none}
 .i--sm{width:12px;height:12px}
 .i--lg{width:24px;height:24px}
 
-/* ---------- grid frame (Attio: 1440 container, 24px gutters, bordered 1392 frame) ---------- */
+
 .container{max-width:1440px;margin:0 auto;padding:0 24px}
 .frame{border-left:1px solid var(--line);border-right:1px solid var(--line);position:relative}
 .frame--dark{border-color:var(--dline)}
@@ -837,7 +836,7 @@ html.js .in .bars__g i,html.js .well.in .bars__g i{transform:none}
   .foot__cols a{min-height:44px}
 }
 @media (min-width:1441px){
-  /* 2560: content stays in the centered 1440 frame; horizontal rules run full-bleed (Attio) */
+  
   .hero__bg{left:0;right:0}
 }
 
@@ -974,7 +973,7 @@ html.js .in .bars__g i,html.js .well.in .bars__g i{transform:none}
 .stat-grid dt{white-space:nowrap}
 @media (max-width:767px){.stat-grid dt{font-size:25px}}
 
-/* ============ demo popup (Attio language) ============ */
+
 .dm{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:24px}
 .dm[hidden]{display:none}
 .dm__backdrop{position:absolute;inset:0;background:rgba(3,17,37,.55);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);opacity:0;transition:opacity .25s var(--ease)}
@@ -1031,7 +1030,7 @@ body.dm-lock{overflow:hidden}
 }
 .dm__fallback[hidden],.dm__step[hidden]{display:none}
 
-/* ============ footer v4 — Attio footer 1:1 (logo block + 4 × 232px columns, 28px rows, 12px bottom bar), Lealto skin ============ */
+
 .ft{background:var(--dark);color:#fff;border-top:1px solid var(--dline)}
 .ft__in{padding:75px 0 40px}
 .ft__top{display:grid;grid-template-columns:minmax(0,1fr) repeat(4,232px);align-items:start}
@@ -1077,7 +1076,7 @@ body.dm-lock{overflow:hidden}
   .ft__legal a{min-height:44px}
 }
 
-/* ============ use-case pages — Attio /solutions/* 1:1 (no frame; 1156 content; split hero; logos; centered "organize" + tabbed product; pipeline split + accordion; quote; 3 line-art cards) ============ */
+
 .uc-wrap{max-width:1204px;margin:0 auto;padding:0 24px}
 .uc-pill{display:inline-flex;align-items:center;height:32px;padding:0 12px;border:1px solid var(--line-2);border-radius:999px;font-size:14px;font-weight:500;color:var(--ink);background:#fff}
 .uc-hero{padding:128px 0 112px}
@@ -1184,7 +1183,7 @@ html.js .uc-gal__panel:not(.is-on){display:none}
   .uc-faq{padding:88px 0}
 }
 
-/* ---- copy-review round (v5): mobile back to 1:1 with Attio (stacked), board static ---- */
+
 .uc-quote__line{margin-top:14px;font-size:15px;color:var(--ink-2)}
 .uc-quote__line .text-link{font-size:15px}
 @media (max-width:767px){

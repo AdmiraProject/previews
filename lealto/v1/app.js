@@ -14,7 +14,6 @@ const LEALTO_CALENDLY_URL = ""; // VALIDAR: Lealto's Calendly event URL (e.g. ht
   setHH();
   window.addEventListener('resize', setHH);
 
-  /* ---------- header turns dark over dark sections (Attio) ---------- */
   var darkSecs = $$('.dark, .final, .foot');
   if (header && darkSecs.length && 'IntersectionObserver' in window) {
     var darkOn = [];
@@ -145,7 +144,6 @@ const LEALTO_CALENDLY_URL = ""; // VALIDAR: Lealto's Calendly event URL (e.g. ht
     });
   }
 
-  /* ---------- dark section accordion with progress (Attio "signals" pattern) ---------- */
   var acc = $('[data-acc]');
   if (acc) {
     var items = $$('.acc__item', acc);
@@ -379,7 +377,6 @@ const LEALTO_CALENDLY_URL = ""; // VALIDAR: Lealto's Calendly event URL (e.g. ht
   });
 })();
 
-/* ---------- Use-case pages: mechanics tabs (Attio solution-page tab switcher) ---------- */
 (function () {
   'use strict';
   Array.prototype.forEach.call(document.querySelectorAll('[data-uc-tabs]'), function (box) {

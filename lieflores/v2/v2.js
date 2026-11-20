@@ -1,4 +1,3 @@
-/* Liefloré v2 — urbanstems.com structure. Uses window.LFK (lf-core.js) for cart, drawer and checkout. */
 (function () {
   const K = window.LFK; if (!K) return;
   const $ = (s, r = document) => r.querySelector(s);

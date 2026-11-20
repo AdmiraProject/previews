@@ -1,4 +1,3 @@
-/* Baronil v3 (Bombas structure) — behaviour layer. Content is SSR'd; this only enhances. */
 (function () {
   'use strict';
   const $ = (s, r = document) => r.querySelector(s);

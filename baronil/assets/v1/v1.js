@@ -1,6 +1,3 @@
-/* Baronil v1 — MeUndies-structure interactions (vanilla, no deps).
-   Header marquee · mega menu · drawer · search · swipe rails · quick-add · banner slider · UGC coverflow ·
-   media autoplay (IntersectionObserver, reduced-motion) · PDP render from data.js · reviews band + drawer · shop filters */
 (function () {
   'use strict';
   var d = document, w = window, html = d.documentElement;
@@ -603,11 +600,6 @@
   }
 
 
-  /* ======================================================================
-     Grüns "social fan": same math as the live section (vanilla rAF, no GSAP).
-     rotation = relativeIndex x 18deg (>=992px) / 15deg; phase += 1 card every 3s (linear, endless);
-     runs only while intersecting (rootMargin -10% 0, threshold .2) and the tab is visible; static under reduced motion
-     ====================================================================== */
   function initFan() {
     var s = $('[data-fan]'); if (!s) return;
     var orbits = $$('[data-fan-orbit]', s), n = orbits.length; if (!n) return;
@@ -635,7 +627,6 @@
   }
   initFan();
 
-  /* --- WHOOP wall: play/pause per video card; floating "shop now" pill while the wall is in view --- */
   var wall = $('[data-wall]');
   if (wall) {
     $$('.wcard', wall).forEach(function (c) { if ($('.mm__v', c)) c.classList.add('has-video'); });

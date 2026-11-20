@@ -1,6 +1,4 @@
-/* Integral Design · v1 (structural 1:1 of tomhowley.co.uk, measured in SPEC.md)
-   Palette mapping: #262525 → charcoal #2F2F2F · #767070 → grey #6F7275 · #A19387 → taupe #B5A799 (text #998B7D)
-   #393837 / sage CTA → navy #2D4255 · #F2F2F2 → #EDEFF0 · #E6E5E5 → #E4E6E7 · hero slate gradient → navy */
+
 :root{
   --ink:#2F2F2F; --body:#6F7275; --taupe:#B5A799; --taupe-ink:#998B7D;
   --navy:#2D4255; --navy-h:#3E5B75; --panel:#EDEFF0; --rule:#E4E6E7; --off:#FAF8F5;
