@@ -91,3 +91,6 @@ html.ph-lock, html.ph-lock body { overflow: hidden; }
   .bag__head, .bag__lines, .bag__foot { padding-left: 20px; padding-right: 20px; }
 }
 @media (prefers-reduced-motion: reduce) { .bag *, .co * { transition-duration: .01ms !important; animation: none !important; } }
+
+
+.co [hidden] { display: none !important; }

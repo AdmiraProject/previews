@@ -10,12 +10,14 @@
       eyebrow: 'Último paso antes de pagar', h: '¿A dónde te enviamos tu prueba?', p: 'Escribe tus datos y te llevamos al pago seguro con todo ya capturado.',
       name: 'Nombre completo', namePh: 'Ana López', email: 'Correo electrónico', emailPh: 'tu@correo.com', phone: 'Celular', phonePh: '55 1234 5678',
       errName: 'Escribe tu nombre y apellido', errEmail: 'Revisa tu correo', errPhone: 'Escribe un celular de 10 dígitos',
-      go: 'Continuar al pago seguro', going: 'Llevándote al pago seguro…', total: 'Total', privacy: 'Usamos tus datos solo para enviarte tu pedido.', privacyLink: 'Aviso de privacidad', secure: 'Pago seguro en tiendapharmath.com', soldout: 'Agotado' },
+      go: 'Continuar al pago seguro', going: 'Llevándote al pago seguro…', total: 'Total', privacy: 'Usamos tus datos solo para enviarte tu pedido.', privacyLink: 'Aviso de privacidad', secure: 'Pago seguro en tiendapharmath.com', soldout: 'Agotado',
+      waEyebrow: 'Antes de abrir WhatsApp', waH: '¿Con quién tenemos el gusto?', waP: 'Déjanos tus datos y te respondemos por WhatsApp. Tu conversación es privada.', waGo: 'Continuar a WhatsApp', waGoing: 'Abriendo WhatsApp…', waHi: 'Hola Pharmath 👋', waData: 'Mis datos', waPrivacy: 'Usamos tus datos solo para atenderte.' },
     en: { bag: 'Your cart', empty: 'Your cart is empty', emptySub: 'Pick the test you need and get it at home.', shop: 'Shop tests', sub: 'Subtotal', ship: 'Shipping and taxes calculated at checkout', checkout: 'Check out', added: 'Added to cart', rm: 'Remove', close: 'Close', qty: 'Quantity',
       eyebrow: 'One last step before payment', h: 'Where should we ship your test?', p: "Add your details and we'll take you to secure checkout with everything filled in.",
       name: 'Full name', namePh: 'Ana López', email: 'Email', emailPh: 'you@email.com', phone: 'Mobile', phonePh: '55 1234 5678',
       errName: 'Enter your first and last name', errEmail: 'Check your email', errPhone: 'Enter a 10-digit mobile number',
-      go: 'Continue to secure checkout', going: 'Taking you to secure checkout…', total: 'Total', privacy: 'We only use your details to ship your order.', privacyLink: 'Privacy notice', secure: 'Secure checkout on tiendapharmath.com', soldout: 'Sold out' }
+      go: 'Continue to secure checkout', going: 'Taking you to secure checkout…', total: 'Total', privacy: 'We only use your details to ship your order.', privacyLink: 'Privacy notice', secure: 'Secure checkout on tiendapharmath.com', soldout: 'Sold out',
+      waEyebrow: 'Before opening WhatsApp', waH: 'Who are we talking to?', waP: "Leave your details and we'll reply on WhatsApp. Your chat is private.", waGo: 'Continue to WhatsApp', waGoing: 'Opening WhatsApp…', waHi: 'Hi Pharmath 👋', waData: 'My details', waPrivacy: 'We only use your details to help you.' }
   }[LANG];
   const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -114,7 +116,7 @@
           <div class="co__field co__field--tel" data-f="phone"><label for="co-phone">${T.phone}</label><div class="co__tel"><span class="co__cc" aria-hidden="true">+52</span><input id="co-phone" name="phone" type="tel" autocomplete="tel-national" inputmode="numeric" placeholder="${T.phonePh}" required></div><small>${T.errPhone}</small></div>
           <button type="submit" class="co__go"><span class="co__go-t">${T.go}</span><span class="co__spin" aria-hidden="true"></span></button>
           <p class="co__secure">${lockSvg()}${T.secure}</p>
-          <p class="co__legal">${T.privacy} <a href="${D.privacy}" target="_blank" rel="noopener">${T.privacyLink}</a></p>
+          <p class="co__legal"><span class="co__legal-t">${T.privacy}</span> <a href="${D.privacy}" target="_blank" rel="noopener">${T.privacyLink}</a></p>
         </form>
       </div>`;
     document.body.appendChild(m);
@@ -130,6 +132,14 @@
       if (bad.length) { f.elements[bad[0]].focus(); m.querySelector('.co__card').animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-6px)' }, { transform: 'translateX(5px)' }, { transform: 'translateX(0)' }], { duration: 260, easing: 'ease-out' }); return; }
       const lead = { name: f.elements.name.value.trim().replace(/\s+/g, ' '), email: f.elements.email.value.trim(), phone: f.elements.phone.value.replace(/\D/g, '').slice(-10) };
       try { localStorage.setItem(LEAD, JSON.stringify(lead)); } catch (er) {}
+      if (m.dataset.mode === 'wa') {
+        const wurl = waWithLead(m._waUrl, lead);
+        document.dispatchEvent(new CustomEvent('ph:lead', { detail: { lead, source: 'whatsapp', url: wurl } }));
+        const g = $('.co__go', m); g.disabled = true; g.classList.add('is-loading'); $('.co__go-t', m).textContent = T.waGoing;
+        const w = nativeOpen(wurl, '_blank', 'noopener');
+        if (!w) location.href = wurl; // popup blocked → same tab
+        setTimeout(closeCo, 400); return;
+      }
       const url = checkoutUrl(lead);
       document.dispatchEvent(new CustomEvent('ph:lead', { detail: { lead, lines: bag.slice(), url } }));
       const go = $('.co__go', m); go.disabled = true; go.classList.add('is-loading'); $('.co__go-t', m).textContent = T.going;
@@ -142,18 +152,48 @@
     });
     return m;
   }
-  function openCo() {
-    if (!bag.length) return;
-    const m = ensureCo(), lead = getLead() || {};
+  function setMode(m, mode) {
+    m.dataset.mode = mode; const wa = mode === 'wa';
+    $('.co__eyebrow', m).textContent = wa ? T.waEyebrow : T.eyebrow; $('.co__h', m).textContent = wa ? T.waH : T.h; $('.co__p', m).textContent = wa ? T.waP : T.p;
+    $('[data-co-sum]', m).hidden = wa; $('.co__secure', m).hidden = wa; $('.co__legal-t', m).textContent = wa ? T.waPrivacy : T.privacy;
+    m.classList.toggle('co--wa', wa);
+  }
+  function showCo(m) {
+    const lead = getLead() || {};
     ['name', 'email', 'phone'].forEach(k => { const i = m.querySelector(`[name=${k}]`); if (lead[k] && !i.value) i.value = k === 'phone' ? fmtPhone(lead[k]) : lead[k]; i.closest('.co__field').classList.remove('is-bad'); });
-    const go = $('.co__go', m); go.disabled = false; go.classList.remove('is-loading'); $('.co__go-t', m).textContent = T.go;
-    $('[data-co-sum]', m).innerHTML = bag.map(l => { const p = P(l.id), t = thumb(p);
-      return `<div class="co__li">${t ? `<img src="${esc(t)}" alt="" width="48" height="48">` : '<span></span>'}<span class="co__li-n">${esc(name(p))}${l.q > 1 ? ` <em>× ${l.q}</em>` : ''}</span><b>${money(p.price * l.q)}</b></div>`; }).join('') +
-      `<div class="co__tot"><span>${T.total}</span><b>${money(subtotal())}</b></div>`;
+    const go = $('.co__go', m); go.disabled = false; go.classList.remove('is-loading'); $('.co__go-t', m).textContent = m.dataset.mode === 'wa' ? T.waGo : T.go;
     const b = $('#bag'); if (b) b.classList.remove('is-open');
     if (!lastFocus || !m.contains(lastFocus)) lastFocus = document.activeElement;
     m.classList.add('is-open'); document.documentElement.classList.add('ph-lock');
     setTimeout(() => { const first = ['name', 'email', 'phone'].map(k => m.querySelector(`[name=${k}]`)).find(i => !i.value) || $('.co__go', m); first.focus({ preventScroll: true }); }, 80);
+  }
+  
+  const isWa = u => /^(https?:)?\/\/(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)\//i.test(u || '') || /^whatsapp:/i.test(u || '');
+  const nativeOpen = window.open.bind(window);
+  function waWithLead(url, lead) {
+    try {
+      const u = new URL(url, location.href);
+      let t = u.searchParams.get('text') || T.waHi;
+      if (t.indexOf(T.waData + ':') < 0) t = `${t}\n\n${T.waData}:\n${lead.name}\n+52 ${fmtPhone(lead.phone)}\n${lead.email}`;
+      u.searchParams.delete('text'); const rest = u.searchParams.toString();
+      return `${u.origin}${u.pathname}?text=${encodeURIComponent(t)}${rest ? '&' + rest : ''}`;
+    } catch (e) { return url; }
+  }
+  function openWa(url) { const m = ensureCo(); m._waUrl = url || 'https://wa.me/525518449629'; setMode(m, 'wa'); showCo(m); }
+  document.addEventListener('click', e => {
+    if (e.defaultPrevented || e.button > 0 || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    const a = e.target.closest('a[href]');
+    if (!a || a.closest('#co') || !isWa(a.getAttribute('href'))) return;
+    e.preventDefault(); e.stopImmediatePropagation(); openWa(a.href);
+  }, true);
+  window.open = function (url, ...rest) { if (isWa(String(url || ''))) { openWa(String(url)); return null; } return nativeOpen(url, ...rest); };
+  function openCo() {
+    if (!bag.length) return;
+    const m = ensureCo(); setMode(m, 'checkout');
+    $('[data-co-sum]', m).innerHTML = bag.map(l => { const p = P(l.id), t = thumb(p);
+      return `<div class="co__li">${t ? `<img src="${esc(t)}" alt="" width="48" height="48">` : '<span></span>'}<span class="co__li-n">${esc(name(p))}${l.q > 1 ? ` <em>× ${l.q}</em>` : ''}</span><b>${money(p.price * l.q)}</b></div>`; }).join('') +
+      `<div class="co__tot"><span>${T.total}</span><b>${money(subtotal())}</b></div>`;
+    showCo(m);
   }
   function closeCo() { const m = $('#co'); if (!m) return; m.classList.remove('is-open'); if (!$('#bag.is-open')) document.documentElement.classList.remove('ph-lock'); }
 
@@ -177,8 +217,8 @@
       if (e.target.closest('[data-inc]')) setQ(id, l.q + 1); else if (e.target.closest('[data-dec]')) setQ(id, l.q - 1); else if (e.target.closest('[data-rm]')) setQ(id, 0); }
   });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#co.is-open')) closeBag(); });
-  window.addEventListener('pageshow', () => { const go = $('#co .co__go'); if (go) { go.disabled = false; go.classList.remove('is-loading'); $('.co__go-t', $('#co')).textContent = T.go; } });
+  window.addEventListener('pageshow', () => { const go = $('#co .co__go'); if (go) { go.disabled = false; go.classList.remove('is-loading'); $('.co__go-t', $('#co')).textContent = $('#co').dataset.mode === 'wa' ? T.waGo : T.go; } });
   const init = () => { ensureBag(); render(); $$('[data-add], [data-buy]').forEach(b => { const p = P(b.dataset.id); if (p && p.available === false) { b.disabled = true; b.classList.add('is-soldout'); } }); };
   document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', init) : init();
-  window.PHCart = { add, open: openBag, close: closeBag, checkout: openCo, checkoutUrl, lines: () => bag.slice(), count, subtotal, money, T };
+  window.PHCart = { add, open: openBag, close: closeBag, checkout: openCo, whatsapp: openWa, checkoutUrl, lines: () => bag.slice(), count, subtotal, money, T };
 })();
