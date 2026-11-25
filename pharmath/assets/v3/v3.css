@@ -1253,3 +1253,6 @@ body { line-height: 1.4; }
 .icard__kit img { width: 100%; height: auto; }
 @media (min-width: 990px) and (hover: hover) { .icard:hover .icard__kit { transform: translateX(-50%) scale(1.04); } }
 @media (max-width: 989px) { .icard__kit { width: 26rem; } }
+.ccards .icard__phone { width: 17rem; top: 6rem; right: -2.4rem; }
+.ft__mark { width: auto; height: 29.6rem; max-width: 100%; }
+@media (max-width: 989px) { .ft__mark { height: auto; width: 100%; max-width: 18rem; } }

@@ -60,6 +60,20 @@ Escribir por WhatsApp</a><a class="auth__btn auth__btn--ghost" href="index.html"
   </div>
 </div>
 </main>
+<div id="bag" class="bag"><div class="bag__scrim" data-bag-close></div>
+  <aside class="bag__panel" role="dialog" aria-modal="true" aria-labelledby="bag-h" tabindex="-1">
+    <header class="bag__head"><h2 id="bag-h" class="bag__title">Tu carrito <span class="bag__n" data-bag-count></span></h2><button type="button" class="bag__x" data-bag-close aria-label="Cerrar"><svg class="ic " width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m4 4 16 16M20 4 4 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+</button></header>
+    <div class="bag__scroll">
+      <p class="bag__ship"><svg class="ic " width="16" height="16" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2 6.3 2.6 2.6L10 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+Envío gratis en todos tus pedidos</p>
+      <div class="bag__empty" data-bag-empty><p class="bag__empty-p">Tu carrito está vacío.</p></div>
+      <div class="bag__lines" data-bag-lines></div>
+      <div class="bag__up"><p class="bag__up-h"><span></span>Tu resultado es solo el comienzo</p>
+        <div class="bag__up-b"><img src="../../assets/v1/img/people/c-vph.webp" alt="" width="64" height="64" loading="lazy"><div><b>Kit VPH Femenino</b><span>Autotoma en casa y análisis PCR en laboratorio.</span><b class="bag__up-p">$2,099 MXN</b></div><button type="button" class="bag__up-add" data-add data-id="kit-vph-femenino" data-no-drawer>Agregar</button></div></div>
+    </div>
+    <footer class="bag__foot"><div class="bag__row bag__row--s"><span>Envío</span><b>GRATIS</b></div><div class="bag__row"><span>Total</span><b data-bag-total></b></div><p class="bag__note">Precios en MXN con IVA incluido</p><button type="button" class="bag__go" data-checkout>Pagar de forma segura</button><p class="bag__secure">Tarjeta, meses sin intereses (Clip) u OXXO</p></footer>
+  </aside><div class="bag__toast" role="status" aria-live="polite"></div></div>
 <script src="../../assets/core/data.js?v=3"></script>
 <script src="../../assets/core/cart.js?v=3"></script>
 <script src="../../assets/v1/v1.js?v=9"></script>

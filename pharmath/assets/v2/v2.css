@@ -1007,3 +1007,22 @@ main { overflow-x: clip; }
 .gal__s .tile img { width: 100%; margin-bottom: 11%; }
 .gc .tile .tile__bg { height: 52%; }
 .fd__kit .tile img { width: 86%; }
+
+.tile__bg { height: 62%; }
+.tile img { width: auto; height: 100%; max-width: 100%; margin: 0; object-fit: contain; object-position: 50% 100%; }
+.gal__s .tile { width: 70%; height: 92%; }
+.gal__s .tile .tile__bg { height: 62%; bottom: 0; border-radius: 40px; }
+.gal__s .tile img { width: auto; height: 100%; margin: 0; }
+.gc .tile .tile__bg { height: 62%; }
+.fd__kit .tile img { width: auto; }
+.mega__p .tile, .bag__rec .tile { width: auto; aspect-ratio: .77; }
+
+.rv__track i { background: #F5B301; }
+.pdp__stars { color: var(--ink); }
+.rv__who { display: flex; align-items: center; gap: 12px; }
+.rv__ph { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.rv__date { display: flex; align-items: center; gap: 8px; }
+.rv__date img { width: 18px; height: 18px; }
+.rv__num { font: 700 14px/1 "DM Sans", sans-serif; }
+.rv__score .stars { color: #F5B301; }
+@media (max-width: 767px) { .pdp__t { font-size: 32px; line-height: 40px; } }

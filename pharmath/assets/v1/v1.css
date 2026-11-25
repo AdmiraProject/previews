@@ -9,7 +9,7 @@
   
   --co-font: var(--bf); --co-head-font: var(--bf); --co-ink: var(--navy); --co-muted: #5f6b78; --co-line: var(--sand); --co-bg: var(--body); --co-soft: var(--peach1);
   --co-accent: var(--pink); --co-accent-ink: var(--cream); --co-radius: 3px; --co-field-radius: 5px; --co-btn-radius: 2px; --co-btn-h: 44px; --co-field-h: 50px;
-  --co-h-size: 24px; --co-h-weight: 600; --co-h-ls: -.24px; --co-scrim: rgba(0, 29, 59, .19); --bag-w: 560px;
+  --co-h-size: 24px; --co-h-weight: 600; --co-h-ls: -.24px; --co-head-font: var(--hf); --co-scrim: rgba(0, 29, 59, .19); --bag-w: 560px;
 }
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-padding-top: 90px; }
@@ -1286,3 +1286,47 @@ body.pg-auth { min-height: 100vh; background: linear-gradient(180deg, #faead6, #
 
 .stor__top { display: flex; align-items: center; gap: 6px; font: 700 12px/1 var(--bf); } .stor__top .srcl { margin-left: auto; }
 .stor__c figcaption { display: flex; align-items: center; gap: 6px; } .stor__c figcaption img { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; background: var(--peach1); }
+
+
+.bag__panel { background: var(--body); box-shadow: none; }
+.bag__head { position: relative; padding: 50px 60px 0; border: 0; }
+.bag__title { font: 700 18px/1.3 var(--bf); letter-spacing: 0; }
+.bag__n { background: var(--gold-d); color: var(--cream); }
+.bag__x { position: absolute; top: 20px; right: 28px; width: 40px; height: 40px; margin: 0; }
+.bag__scroll { flex: 1; overflow-y: auto; padding: 0 60px 30px; overscroll-behavior: contain; }
+.bag__ship { display: flex; align-items: center; gap: 8px; margin: 22px 0 8px; font: 700 14px/1.4 var(--bf); color: var(--green); }
+.bag__ship .ic { width: 18px; height: 18px; color: #2e7d32; }
+.bag__empty { flex: none; align-items: flex-start; padding: 16px 0 24px; border-bottom: 1px solid var(--sand); }
+.bag__empty-p { margin: 0; font: 400 16px/1.4 var(--bf); color: #8a8f96; }
+.bag__lines { flex: none; overflow: visible; padding: 0; }
+.bag__line { grid-template-columns: 64px 1fr auto; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--sand); }
+.bag__img { width: 64px; height: 64px; border-radius: 8px; object-fit: contain; background: #fff; }
+.bag__name { font: 400 14px/19.6px var(--bf); }
+.bag__meta s { font-size: 14px; }
+.bag__price { color: var(--pink); font: 700 14px/19.6px var(--bf); }
+.bag__qty { height: 24px; border: 1px solid var(--gold); border-radius: 999px; }
+.bag__qty button { width: 24px; height: 22px; font-size: 14px; }
+.bag__up { margin-top: 30px; border: 1px solid var(--gold); border-radius: 12px; overflow: hidden; }
+.bag__up-h { display: flex; align-items: center; gap: 8px; padding: 6px 16px; background: var(--gold); font: 700 12px/16.8px var(--bf); }
+.bag__up-h span { width: 6px; height: 6px; border-radius: 50%; background: var(--pink); }
+.bag__up-b { display: grid; grid-template-columns: 64px 1fr auto; gap: 14px; align-items: center; padding: 12px 16px; }
+.bag__up-b img { width: 64px; height: 64px; border-radius: 8px; object-fit: cover; object-position: top; background: var(--sky); }
+.bag__up-b div { display: flex; flex-direction: column; gap: 2px; font: 400 12px/16.8px var(--bf); }
+.bag__up-b b { font: 700 14px/19.6px var(--bf); }
+.bag__up-add { height: 32px; padding: 0 10px; border: 0; border-radius: 2px; background: var(--pink); color: var(--cream); font: 700 12px/1 var(--bf); letter-spacing: 1px; text-transform: uppercase; cursor: pointer; }
+.bag__up-add:hover { background: var(--navy); }
+.bag__foot { padding: 24px 60px; border: 0; background: var(--peach1); }
+.bag__row { font: 700 14px/1.4 var(--bf); margin-top: 6px; }
+.bag__row--s { font-weight: 400; } .bag__row--s b { font-weight: 700; }
+.bag__row [data-bag-total] { color: var(--pink); }
+.bag__note { margin: 2px 0 16px; font-size: 12px; color: var(--navy); }
+.bag__go { height: 44px; border-radius: 2px; background: var(--pink); font: 700 14px/1 var(--bf); letter-spacing: 1px; text-transform: uppercase; }
+.bag__go:hover { filter: none; background: var(--navy); }
+.bag__secure { font-size: 12px; color: #6b7482; }
+.co__go { border-radius: 2px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; font-size: 14px; }
+.co__go:hover { filter: none; background: var(--navy); }
+.co__card { background: var(--cream); }
+@media (max-width: 768px) {
+  .bag__head { padding: 24px 20px 0; } .bag__x { top: 14px; right: 12px; }
+  .bag__scroll { padding: 0 20px 20px; } .bag__foot { padding: 20px; }
+}

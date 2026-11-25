@@ -46,7 +46,7 @@
     const idx = () => Math.min(pages() - 1, Math.round(vp.scrollLeft / Math.max(1, vp.clientWidth)));
     const go = i => { const n = pages(); i = (i + n) % n; vp.scrollTo({ left: i * vp.clientWidth, behavior: 'smooth' }); };
     function sync() { if (dots) [...dots.children].forEach((b, i) => b.classList.toggle('is-on', i === idx())); }
-    vp.addEventListener('scroll', () => requestAnimationFrame(sync), { passive: true }); build(); addEventListener('resize', build);
+    vp.addEventListener('scroll', () => requestAnimationFrame(sync), { passive: true }); build(); addEventListener('resize', build); addEventListener('load', build);
     dots && dots.addEventListener('click', e => { const b = e.target.closest('button'); if (b) go([...dots.children].indexOf(b)); });
     $$('.car__arr', car).forEach(a => a.addEventListener('click', () => go(idx() + (a.classList.contains('car__arr--n') ? 1 : -1))));
   });
