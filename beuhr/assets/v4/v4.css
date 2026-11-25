@@ -1327,3 +1327,9 @@ section.sec:has(.faq__grid) { min-height: 583px; }
   .pg-pricing .oe { min-height: 906px; padding-top: 40px; padding-bottom: 40px; }
   .pr-get { padding-bottom: 182px; }
 }
+@media (max-width: 767px) {
+  .pi { padding-bottom: 0; }
+  .ping { padding-bottom: 44px; }
+  .g365__in { padding-bottom: 13px; }
+}
+@media (max-width: 767px) { .why3 { padding-top: 0; } }

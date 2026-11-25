@@ -1160,3 +1160,11 @@ video.dome__img { position: absolute; left: 50%; top: 0; width: 100%; height: 10
 .kproto__p { font-size: 20px; line-height: 30px; }
 
 .rv-on [data-rv="k"] { translate: 0 50px; transition: opacity .5s ease-out, translate .5s ease-out; }
+
+@media (min-width: 1024px) {
+  .sworks { padding-bottom: 160px; }
+  .swhy { padding: 24px 0; }
+  .swhy__in { min-height: 853px; }
+  .swhy__img { padding-top: 54px; }
+  .swhy__txt { padding-top: 24px; }
+}
