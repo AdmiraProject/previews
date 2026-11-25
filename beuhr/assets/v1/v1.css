@@ -1168,3 +1168,12 @@ video.dome__img { position: absolute; left: 50%; top: 0; width: 100%; height: 10
   .swhy__img { padding-top: 54px; }
   .swhy__txt { padding-top: 24px; }
 }
+
+@media (max-width: 1023px) {
+  .sworks { padding-top: 48px; }
+  .sworks__img { order: -1; }
+  .sworks__it p, .swhy__it p { font-size: 14px; line-height: 21px; }
+  .still__img { height: 197px; object-fit: contain; object-position: 50% 100%; margin-bottom: 0; }
+}
+@media (min-width: 768px) { .sban__art { right: 4%; width: 40%; background: radial-gradient(closest-side, rgba(255,128,138,.95), rgba(255,70,80,.45) 55%, rgba(165,1,17,0) 100%); } }
+@media (min-width: 1024px) { .sban__cut { height: 220px; } }

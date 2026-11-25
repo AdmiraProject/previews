@@ -234,7 +234,7 @@
         rendered = true;
         wire(id, q);
       };
-      if (prev && !REDUCED) { prev.classList.remove('is-in'); prev.classList.add('is-out'); clearTimeout(swapT); swapT = setTimeout(paint, OUT_MS); }
+      if (prev && !REDUCED) { prev.classList.remove('is-in'); prev.classList.add('is-out'); clearTimeout(swapT); swapT = setTimeout(paint, +root.dataset.outMs || OUT_MS); }
       else paint();
       root.dispatchEvent(new CustomEvent('qz:render', { detail: { id: state === 'q' ? id : state, index: i, total: seq.length, block: blk } }));
       const top = root.getBoundingClientRect().top; if (top < 0) window.scrollTo({ top: window.scrollY + top - 80, behavior: 'smooth' });
