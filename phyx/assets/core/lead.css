@@ -1,0 +1,86 @@
+
+:root {
+  --lf-font: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; --lf-head: var(--lf-font);
+  --lf-ink: #111; --lf-muted: #6b6b6b; --lf-line: #e4e4e4; --lf-bg: #fff; --lf-soft: #f4f4f2; --lf-accent: #111; --lf-accent-ink: #fff;
+  --lf-bad: #c8362d; --lf-wa: #25d366; --lf-radius: 18px; --lf-field-r: 10px; --lf-btn-r: 999px; --lf-btn-h: 52px; --lf-field-h: 50px;
+  --lf-h: 28px; --lf-hw: 500; --lf-hls: -0.015em; --lf-scrim: rgba(12, 12, 12, .5); --lf-ease: cubic-bezier(.2, .8, .2, 1); --lf-w: 620px;
+}
+html.lf-lock, html.lf-lock body { overflow: hidden; }
+.lf { position: fixed; inset: 0; z-index: 990; display: grid; place-items: center; padding: 24px; pointer-events: none; font-family: var(--lf-font); color: var(--lf-ink); }
+.lf__scrim { position: absolute; inset: 0; background: var(--lf-scrim); opacity: 0; transition: opacity .35s var(--lf-ease); backdrop-filter: blur(2px); }
+.lf__card { position: relative; width: min(var(--lf-w), 100%); max-height: calc(100dvh - 48px); overflow-y: auto; background: var(--lf-bg); border-radius: var(--lf-radius);
+  box-shadow: 0 40px 90px rgba(0, 0, 0, .22); opacity: 0; transform: translateY(16px) scale(.985); transition: opacity .3s var(--lf-ease), transform .45s var(--lf-ease); overscroll-behavior: contain; }
+.lf.is-open { pointer-events: auto; } .lf.is-open .lf__scrim { opacity: 1; } .lf.is-open .lf__card { opacity: 1; transform: none; }
+.lf[data-step="2"] { --lf-w: 860px; }
+.lf__top { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: 20px; padding: 18px 22px 16px 28px; background: var(--lf-bg); }
+.lf__logo { height: 22px; width: auto; display: block; }
+.lf__steps { display: flex; gap: 18px; margin: 0 auto; padding: 0; list-style: none; font-size: 13px; color: var(--lf-muted); }
+.lf__steps li { display: flex; align-items: center; gap: 7px; transition: color .25s; }
+.lf__steps li span { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--lf-line); font-size: 11.5px; font-weight: 600; transition: .25s; }
+.lf__steps li.is-on { color: var(--lf-ink); } .lf__steps li.is-on span { background: var(--lf-accent); border-color: var(--lf-accent); color: var(--lf-accent-ink); }
+.lf__steps li.is-done span { background: var(--lf-soft); border-color: var(--lf-soft); color: var(--lf-ink); }
+.lf__x { display: grid; place-items: center; width: 36px; height: 36px; border: 0; border-radius: 50%; background: none; color: var(--lf-muted); cursor: pointer; }
+.lf__x:hover { background: var(--lf-soft); color: var(--lf-ink); }
+.lf__bar { height: 2px; background: var(--lf-line); } .lf__bar i { display: block; height: 100%; width: 33%; background: var(--lf-accent); transition: width .5s var(--lf-ease); }
+.lf__pane { display: none; padding: 30px 32px 30px; animation: lfIn .45s var(--lf-ease); }
+.lf[data-step="1"] [data-pane="1"], .lf[data-step="2"] [data-pane="2"], .lf[data-step="3"] [data-pane="3"] { display: block; }
+@keyframes lfIn { from { opacity: 0; transform: translateX(14px); } }
+.lf__h { margin: 0 0 8px; font: var(--lf-hw) var(--lf-h)/1.12 var(--lf-head); letter-spacing: var(--lf-hls); }
+.lf__p { margin: 0 0 24px; font-size: 15px; line-height: 1.5; color: var(--lf-muted); } .lf__p--meta { margin-bottom: 20px; }
+.lf__row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.lf__field { margin: 0 0 16px; }
+.lf__field > label { display: block; margin: 0 0 7px; font-size: 13.5px; font-weight: 500; }
+.lf__field input:not([type=radio]), .lf__field select { width: 100%; height: var(--lf-field-h); box-sizing: border-box; padding: 0 16px; border: 1px solid var(--lf-line); border-radius: var(--lf-field-r); background: var(--lf-bg); font: 400 16px/1 var(--lf-font); color: var(--lf-ink); outline: none; transition: border-color .2s, box-shadow .2s; -webkit-appearance: none; appearance: none; }
+.lf__field select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23777' fill='none' stroke-width='1.5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
+.lf__field input:focus, .lf__field select:focus { border-color: var(--lf-ink); box-shadow: 0 0 0 3px color-mix(in srgb, var(--lf-accent) 14%, transparent); }
+.lf__tel { display: flex; } .lf__tel span { display: grid; place-items: center; padding: 0 14px; border: 1px solid var(--lf-line); border-right: 0; border-radius: var(--lf-field-r) 0 0 var(--lf-field-r); background: var(--lf-soft); font-size: 15px; color: var(--lf-muted); }
+.lf__tel input { border-radius: 0 var(--lf-field-r) var(--lf-field-r) 0 !important; }
+.lf__chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.lf__chip input { position: absolute; opacity: 0; pointer-events: none; }
+.lf__chip span { display: inline-flex; align-items: center; height: 42px; padding: 0 18px; border: 1px solid var(--lf-line); border-radius: var(--lf-btn-r); font-size: 14.5px; cursor: pointer; transition: .2s; }
+.lf__chip span:hover { border-color: var(--lf-ink); }
+.lf__chip input:checked + span { background: var(--lf-accent); border-color: var(--lf-accent); color: var(--lf-accent-ink); }
+.lf__chip input:focus-visible + span { box-shadow: 0 0 0 3px color-mix(in srgb, var(--lf-accent) 25%, transparent); }
+.lf__field small { display: block; max-height: 0; overflow: hidden; color: var(--lf-bad); font-size: 12.5px; transition: max-height .2s, margin .2s; }
+.lf__field.is-bad input, .lf__field.is-bad .lf__tel span { border-color: var(--lf-bad); } .lf__field.is-bad small { max-height: 20px; margin-top: 6px; }
+.lf__go { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; height: var(--lf-btn-h); margin-top: 8px; border: 0; border-radius: var(--lf-btn-r); background: var(--lf-accent); color: var(--lf-accent-ink); font: 500 16px/1 var(--lf-font); cursor: pointer; transition: transform .15s, filter .2s, opacity .2s; }
+.lf__go:hover:not(:disabled) { filter: brightness(1.1); } .lf__go:active:not(:disabled) { transform: scale(.985); } .lf__go:disabled { opacity: .35; cursor: not-allowed; }
+.lf__go--wa { background: var(--lf-wa); color: #fff; } .lf__go.is-loading { opacity: .8; cursor: progress; }
+.lf__legal { margin: 12px 0 0; text-align: center; font-size: 12px; color: var(--lf-muted); } .lf__legal a { color: inherit; }
+.lf__back { display: inline-flex; align-items: center; gap: 6px; margin: -6px 0 14px; padding: 0; border: 0; background: none; font: 500 13.5px/1 var(--lf-font); color: var(--lf-muted); cursor: pointer; }
+.lf__back:hover { color: var(--lf-ink); }
+
+.lf__cal { display: grid; grid-template-columns: 1.15fr 1fr; gap: 32px; }
+.lf__mhead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; } .lf__mhead b { font-size: 16px; font-weight: 600; text-transform: capitalize; }
+.lf__mhead button { width: 34px; height: 34px; border: 1px solid var(--lf-line); border-radius: 50%; background: none; font-size: 18px; line-height: 1; color: var(--lf-ink); cursor: pointer; margin-left: 6px; }
+.lf__mhead button:disabled { opacity: .3; cursor: default; }
+.lf__dow, .lf__grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; }
+.lf__dow span { font-size: 11.5px; font-weight: 600; color: var(--lf-muted); text-transform: uppercase; letter-spacing: .04em; padding-bottom: 6px; }
+.lf__day { aspect-ratio: 1; border: 0; border-radius: 50%; background: color-mix(in srgb, var(--lf-accent) 9%, transparent); color: var(--lf-accent); font: 600 14.5px/1 var(--lf-font); cursor: pointer; transition: .18s; }
+.lf__day:hover:not(:disabled) { background: color-mix(in srgb, var(--lf-accent) 18%, transparent); }
+.lf__day:disabled { background: none; color: var(--lf-muted); opacity: .45; font-weight: 400; cursor: default; }
+.lf__day.is-on { background: var(--lf-accent); color: var(--lf-accent-ink); } .lf__day.is-today:not(.is-on) { box-shadow: inset 0 0 0 1px var(--lf-accent); }
+.lf__times { display: flex; flex-direction: column; min-height: 0; }
+.lf__tday { margin: 6px 0 14px; font-size: 15px; font-weight: 600; }
+.lf__slots { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; max-height: 284px; overflow-y: auto; padding-right: 4px; }
+.lf__slot { height: 46px; border: 1px solid color-mix(in srgb, var(--lf-accent) 45%, transparent); border-radius: var(--lf-field-r); background: var(--lf-bg); color: var(--lf-accent); font: 600 15px/1 var(--lf-font); cursor: pointer; transition: .18s; }
+.lf__slot:hover { border-color: var(--lf-accent); box-shadow: inset 0 0 0 1px var(--lf-accent); } .lf__slot.is-on { background: var(--lf-accent); color: var(--lf-accent-ink); }
+.lf__none { grid-column: 1/-1; color: var(--lf-muted); font-size: 14px; }
+.lf__times .lf__go { margin-top: auto; }
+.lf__calendly { grid-column: 1/-1; width: 100%; height: 640px; border: 0; border-radius: var(--lf-field-r); }
+
+.lf__ok { color: var(--lf-wa); margin-bottom: 14px; }
+.lf__sum { margin: 0 0 18px; border: 1px solid var(--lf-line); border-radius: var(--lf-field-r); }
+.lf__sum > div { display: grid; grid-template-columns: 110px 1fr auto; gap: 12px; align-items: baseline; padding: 14px 16px; border-top: 1px solid var(--lf-line); }
+.lf__sum > div:first-child { border-top: 0; }
+.lf__sum dt { font-size: 12.5px; color: var(--lf-muted); } .lf__sum dd { margin: 0; font-size: 15px; font-weight: 500; } .lf__sum dd small { display: block; margin-top: 3px; font-size: 12.5px; font-weight: 400; color: var(--lf-muted); }
+.lf__edit { border: 0; background: none; padding: 0; font: 500 12.5px/1 var(--lf-font); color: var(--lf-muted); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+@media (max-width: 720px) {
+  .lf { place-items: end stretch; padding: 0; }
+  .lf__card { width: 100%; max-height: 94dvh; border-radius: var(--lf-radius) var(--lf-radius) 0 0; transform: translateY(100%); transition: transform .45s var(--lf-ease), opacity .2s; }
+  .lf__top { padding: 14px 16px 12px 20px; gap: 12px; } .lf__steps { gap: 10px; font-size: 0; } .lf__steps li.is-on { font-size: 12.5px; }
+  .lf__pane { padding: 22px 20px calc(24px + env(safe-area-inset-bottom)); } .lf__h { font-size: calc(var(--lf-h) - 4px); }
+  .lf__row, .lf__cal { grid-template-columns: 1fr; } .lf__cal { gap: 18px; } .lf__slots { grid-template-columns: repeat(3, 1fr); max-height: none; }
+  .lf__sum > div { grid-template-columns: 1fr auto; } .lf__sum dt { grid-column: 1/-1; }
+}
+@media (prefers-reduced-motion: reduce) { .lf *, .lf { transition-duration: .01ms !important; animation: none !important; } }
